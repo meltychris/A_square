@@ -19,9 +19,13 @@ This project is based on JAVA language, running on PC/Android smartphones, featu
 Target user:
 Students in HKUST
 
+
+
+
 (Content added abit from whatsapps)
 
 - Student Timetable Assistant
+
 (?)
 By inputting courses taken in particular semester by the users, the Student Timetable Assistant can print out all section of lectures, tutorials, labs within a single timetable.
 
@@ -30,17 +34,30 @@ OR help you to compute the conflicts between courses
 Compute the best arrangement to give out a dayoff
 
 
+
+
+
 - Academic Advisor 
+
 1.Basic on yr major, proposed courses and remaining credit, help you to make a route wt u needa stdy before graduate
-2. TGA calculator, input target CGA and get info of GPA, cal wt he needa get next sem to achieve target   
+
+2.TGA calculator, input target CGA and get info of GPA, cal wt he needa get next sem to achieve target   
+
+
+
 
 - Course information
+
 1. Notification
 2. Information
 If cannot attend one of the lecture, which next timeslot still can be in 
 3. Discussion for each course 
 
+
+
+
 - Discussion
+
 1. Diff Courses(same link as above)
 2. UST Secret
 3. HKU Dryclub... 
