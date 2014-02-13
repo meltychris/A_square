@@ -6,16 +6,29 @@ Member list:
 <table>
 <tr><td>Name</td><td>ITSC</td><td>Student ID</td><td>Role</td></tr>
 <tr><td>HO CHEUK HEI BRAIN</td><td>chb**</td><td>****8572</td><td></td></tr>
-<tr><td>A+ HSIEH MAN YEE</td><td>myhsi**</td><td>****4485</td><td>Team Leader, Programmer , Database developer</td></tr>
-<tr><td>WONG KRIT</td><td>kwong**</td><td>****4473</td><td>Programmer, Database developer</td></tr>
+<tr><td>HSIEH MAN YEE</td><td>myhsi**</td><td>****4485</td><td> Programmer, Database developer</td></tr>
+<tr><td>WONG KRIT</td><td>kwong**</td><td>****4473</td><td>Team Leader, Programmer, Database developer</td></tr>
 <tr><td>SZETO SAI KIT</td><td>skszet**</td><td>****7000</td><td>Programmer, Database developer</td></tr>
 <tr><td>ALAN</td><td>alan</td><td></td><td></td></tr>
 </table>
 ---
 
 Brief description:
-This project is based on JAVA language, running on PC/Android smartphones, featuring at UST-related applications by providing an integrated solution to the users. These features includes student timetable assistant, GPA calculator and academic advisor, UST Map, course discussion, ...
+This project is based on JAVA language, running on PC/Android smartphones, featuring at UST-related applications by providing an integrated solution to the users. These features includes
 
+Student timetable assistant: Help student to make the best timetable that satisfies their wants.
+
+GPA calculator and academic advisor: Easy way to keep track of the academic result and seek help from advisor
+
+UST Map: Provide the map for student to figure out the short path to have lesson
+
+Course discussion platform: Allow students to talk and comment about the course they are studying
+
+Moblie print job: Allow students to print the document whenever they want using mobile phone
+
+Useful links: Provide the links related to UST that is useful for students
+
+---
 Target user: (?)
 All Students in HKUST
 OR
