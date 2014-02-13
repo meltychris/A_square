@@ -22,7 +22,7 @@ Students in HKUST
 
 
 
-(Content added abit from whatsapps)
+(Content added a bit from whatsapps)
 
 - Student Timetable Assistant
 
