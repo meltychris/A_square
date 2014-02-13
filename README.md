@@ -4,12 +4,12 @@
 ---
 Member list:
 <table>
-<tr><td>Name</td><td>ITSC</td><td>Student ID</td></tr>
-<tr><td>HO CHEUK HEI BRAIN</td><td>chb**</td><td></td></tr>
-<tr><td>HSIEH MAN YEE</td><td>myhsi**</td><td></td></tr>
-<tr><td>WONG KRIT</td><td>kwong</td><td></td>****4473</tr>
-<tr><td>A+ SK</td><td>aplussk</td><td></td></tr>
-<tr><td>ALAN</td><td>alan</td><td></td></tr>
+<tr><td>Name</td><td>ITSC</td><td>Student ID</td><td>Role</td></tr>
+<tr><td>HO CHEUK HEI BRAIN</td><td>chb**</td><td></td><td></td></tr>
+<tr><td>HSIEH MAN YEE</td><td>myhsi**</td><td>****4485</td><td></td></tr>
+<tr><td>WONG KRIT</td><td>kwong**</td><td>****4473</td><td>Programmer, Database developer</td></tr>
+<tr><td>A+ SK</td><td>aplussk</td><td></td><td></td></tr>
+<tr><td>ALAN</td><td>alan</td><td></td><td></td></tr>
 </table>
 ---
 
@@ -18,5 +18,23 @@ This project is based on JAVA language, running on PC/Android smartphones, featu
 
 ---
 
-Last update: 2014/02/13 1:11 HKT
+Development tools:
+
+  1. Eclipse version
+  2. Java SDK
+  3. MySQL Database Server
+  4. Apache (?)
+  
+MORE..
+ 
+  
+---
+
+Project management plan:
+
+This project will deploy _
+
+
+---
+Last update: 2014/02/13 12:12 HKT
 
