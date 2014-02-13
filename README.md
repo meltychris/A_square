@@ -6,9 +6,9 @@ Member list:
 <table>
 <tr><td>Name</td><td>ITSC</td><td>Student ID</td><td>Role</td></tr>
 <tr><td>HO CHEUK HEI BRAIN</td><td>chb**</td><td>****8572</td><td></td></tr>
-<tr><td>HSIEH MAN YEE</td><td>myhsi**</td><td>****4485</td><td>Programmer , Database developer</td></tr>
+<tr><td>A+ HSIEH MAN YEE</td><td>myhsi**</td><td>****4485</td><td>Team Leader, Programmer , Database developer</td></tr>
 <tr><td>WONG KRIT</td><td>kwong**</td><td>****4473</td><td>Programmer, Database developer</td></tr>
-<tr><td>A+ SK</td><td>aplussk</td><td></td><td></td></tr>
+<tr><td>SZETO SAI KIT</td><td>skszet**</td><td>****7000</td><td>Programmer, Database developer</td></tr>
 <tr><td>ALAN</td><td>alan</td><td></td><td></td></tr>
 </table>
 ---
@@ -52,7 +52,7 @@ Compute the best arrangement to give out a dayoff
 
 1. Notification
 2. Information
-If cannot attend one of the lecture, which next timeslot still can be in 
+      If cannot attend one of the lecture, which next timeslot still can be in 
 3. Discussion for each course 
 
 
@@ -71,7 +71,7 @@ If cannot attend one of the lecture, which next timeslot still can be in
 Development tools:
 
   1. Eclipse version
-  2. Java SDK
+  2. Android SDK
   3. MySQL Database Server
   4. Apache (?)
   
