@@ -20,6 +20,7 @@ Target user:
 Students in HKUST
 
 (Content added abit from whatsapps)
+
 - Student Timetable Assistant
 (?)
 By inputting courses taken in particular semester by the users, the Student Timetable Assistant can print out all section of lectures, tutorials, labs within a single timetable.
