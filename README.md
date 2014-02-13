@@ -6,7 +6,7 @@ Member list:
 <table>
 <tr><td>Name</td><td>ITSC</td><td>Student ID</td><td>Role</td></tr>
 <tr><td>HO CHEUK HEI BRAIN</td><td>chb**</td><td>****8572</td><td></td></tr>
-<tr><td>HSIEH MAN YEE</td><td>myhsi**</td><td>****4485</td><td></td></tr>
+<tr><td>HSIEH MAN YEE</td><td>myhsi**</td><td>****4485</td><td>Programmer , Database developer</td></tr>
 <tr><td>WONG KRIT</td><td>kwong**</td><td>****4473</td><td>Programmer, Database developer</td></tr>
 <tr><td>A+ SK</td><td>aplussk</td><td></td><td></td></tr>
 <tr><td>ALAN</td><td>alan</td><td></td><td></td></tr>
