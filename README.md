@@ -1,6 +1,9 @@
-ust_atrium
-==========
 Academic Advisor
+==========
 A^2
+==========
+Welcome to our comp3111 Project.
 
-Proposla and system requirement both in wiki
+The new proposal is in wiki.
+
+The system requirement is still in progress.
