@@ -1,8 +1,7 @@
-Academic Advisor
-==========
-A<sup>2</sup>
-==========
-Welcome to our OOMP3111 Project.
+#A<sup>2</sup> - Academic Advisor
+
+
+Welcome to our COMP3111 Project.
 
 The new proposal is in wiki.
 
