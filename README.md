@@ -1,8 +1,8 @@
 Academic Advisor
 ==========
-A^2
+A<sup>2</sup>
 ==========
-Welcome to our comp3111 Project.
+Welcome to our OOMP3111 Project.
 
 The new proposal is in wiki.
 
