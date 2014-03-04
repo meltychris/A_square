@@ -779,6 +779,10 @@ dt {
   margin-right: 10px;
   font-size: 11px;
 }
+#header nav li.content {
+  float: left;
+  margin-left: 5px;
+}
 
 section {
   max-width: 650px;
