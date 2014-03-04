@@ -6,4 +6,6 @@
 
 The new proposal is in wiki.
 
-The system requirement is still in progress.
+System requirements created.
+
+Implementation schedule and Sprint backlog created.
