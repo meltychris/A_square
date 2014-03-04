@@ -120,7 +120,7 @@ public class MainActivity extends Activity {
 		return true;
 	}
 	
-	/** Called when the activity is first created. */
+	/** Called when the activity is first created. */ 
 	    private ImageView button01;
 	    private TextView textView1; 
 	    private ImageView button03;
