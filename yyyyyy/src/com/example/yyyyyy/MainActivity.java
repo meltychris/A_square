@@ -1,11 +1,12 @@
 package com.example.yyyyyy;
 
-import android.os.Bundle;
+
 import android.app.Activity;
 import android.app.AlertDialog;
-import android.app.AlertDialog.Builder;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.content.pm.ActivityInfo;
+import android.os.Bundle;
 import android.util.Log;
 import android.view.Display;
 import android.view.Menu;
@@ -49,11 +50,13 @@ public class MainActivity extends Activity {
                 // TODO Auto-generated method stub
             	new AlertDialog.Builder( MainActivity.this )
                 .setTitle( "Message box" )
-                .setMessage( "This is a message box." )
+                .setMessage( "Go to newActivity" )
                 .setPositiveButton( "OK", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int which) {
-                        Log.d( "AlertDialog", "Positive" );
-                    }
+                        Intent intent = new Intent();
+                        intent.setClass(MainActivity.this, newActivity.class);
+                        startActivity(intent);
+                   }
                 })
                 .setNegativeButton( "Cancel", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int which) {
