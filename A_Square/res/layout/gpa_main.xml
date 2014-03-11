@@ -1,17 +1,86 @@
-<?xml version="1.0" encoding="utf-8"?>
-<AbsoluteLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".GPA_calculator" >
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/textView1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_x="49dp"
-        android:layout_y="85dp"
-        android:text="TextView"
-        android:textSize="60dip" />
+<LinearLayout android:id="@+id/linearLayout1" 
+android:layout_height="fill_parent" 
+android:layout_weight="1"
+android:layout_alignParentLeft="true" 
+android:layout_width="fill_parent"
+android:orientation="horizontal">
 
-</AbsoluteLayout>
+    <ImageButton
+        android:id="@+id/imageButton1"
+        android:layout_width="100dip"
+        android:layout_height="100dip"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/doublea"
+        android:src="@dimen/activity_horizontal_margin" />
+    
+    <ImageButton
+        android:id="@+id/imageButton2"
+        android:layout_width="100dip"
+        android:layout_height="100dip"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/doublea"
+        android:src="@dimen/activity_horizontal_margin" />
+    
+
+</LinearLayout>
+
+<LinearLayout android:id="@+id/linearLayout2" 
+android:layout_height="fill_parent" 
+android:layout_weight="1"
+android:layout_alignParentLeft="true" 
+android:layout_width="fill_parent"
+android:orientation="horizontal">
+
+        <ImageButton
+        android:id="@+id/imageButton3"
+        android:layout_width="100dip"
+        android:layout_height="100dip"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/doublea"
+        android:src="@dimen/activity_horizontal_margin" />
+    
+    <ImageButton
+        android:id="@+id/imageButton4"
+        android:layout_width="100dip"
+        android:layout_height="100dip"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/doublea"
+        android:src="@dimen/activity_horizontal_margin" />
+
+</LinearLayout>
+
+<LinearLayout android:id="@+id/linearLayout3" 
+android:layout_height="fill_parent"
+android:layout_weight="1"
+android:layout_alignParentLeft="true" 
+android:layout_width="fill_parent"
+android:orientation="horizontal">
+    <ImageButton
+        android:id="@+id/imageButton5"
+        android:layout_width="100dip"
+        android:layout_height="100dip"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/doublea"
+        android:src="@dimen/activity_horizontal_margin" />
+    
+    <ImageButton
+        android:id="@+id/imageButton6"
+        android:layout_width="100dip"
+        android:layout_height="100dip"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/doublea"
+        android:src="@dimen/activity_horizontal_margin" />
+    
+</LinearLayout>
+</LinearLayout>
