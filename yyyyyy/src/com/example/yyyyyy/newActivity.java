@@ -10,6 +10,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 
+<<<<<<< HEAD
 public class newActivity extends Activity {
 
 	/** Called when the activity is first created. */
@@ -43,4 +44,8 @@ public class newActivity extends Activity {
 	}
     private Button button1;
 
+=======
+public class newActivity {
+    // kim sung is handsome than stsk
+>>>>>>> refs/remotes/origin/master
 }
