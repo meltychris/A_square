@@ -44,4 +44,3 @@ public class newActivity extends Activity {
     private Button button1;
 
 }
-
