@@ -1,5 +1,5 @@
 package com.example.asquare;
-//don't change it !!
+//don't change it and the layout of main !!
 
 import android.os.Bundle;
 import android.app.Activity;
