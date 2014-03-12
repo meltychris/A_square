@@ -71,27 +71,24 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text=""
-                        android:textSize="30sp" />
-
-               
+                        android:textSize="30sp" /> 
             </ScrollView>
-
         </LinearLayout>
 
         <LinearLayout
-        android:id="@+id/linearLayout5"
-		android:layout_height="fill_parent" 
-		android:layout_weight="1"
-		android:layout_width="fill_parent"
-		android:orientation="horizontal"
-		android:background="#E8A2B4">
+	        android:id="@+id/linearLayout5"
+			android:layout_height="fill_parent" 
+			android:layout_weight="1"
+			android:layout_width="fill_parent"
+			android:orientation="horizontal"
+			android:background="#E8A2B4">
 
-            <TextView
-                        android:id="@+id/year2"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Year2:"
-                        android:textSize="30sp" />
+        <TextView
+            android:id="@+id/year2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Year2:"
+            android:textSize="30sp" />
             <ScrollView
                 android:id="@+id/scrollView2"
                 android:layout_height="fill_parent"
@@ -103,38 +100,32 @@
                         android:text=""
                         android:textSize="30sp" />
             </ScrollView>
-
         </LinearLayout>
 
-
         <LinearLayout
-        android:id="@+id/linearLayout6"
-		android:layout_height="fill_parent" 
-		android:layout_weight="1"
-		android:layout_width="fill_parent"
-		android:orientation="horizontal"
-		android:background="#A832B4">
+	        android:id="@+id/linearLayout6"
+			android:layout_height="fill_parent" 
+			android:layout_weight="1"
+			android:layout_width="fill_parent"
+			android:orientation="horizontal"
+			android:background="#A832B4">
 			<TextView
                 android:id="@+id/year3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Year3:"
                 android:textSize="30sp" />
-            <ScrollView
-                android:id="@+id/scrollView3"
-                android:layout_height="fill_parent"
-				android:layout_width="fill_parent" >
-                    <TextView
-                        android:id="@+id/textView4"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text=""
-                        android:textSize="30sp" />
-            </ScrollView>
-
+	            <ScrollView
+	                android:id="@+id/scrollView3"
+	                android:layout_height="fill_parent"
+					android:layout_width="fill_parent" >
+	                    <TextView
+	                        android:id="@+id/textView4"
+	                        android:layout_width="wrap_content"
+	                        android:layout_height="wrap_content"
+	                        android:text=""
+	                        android:textSize="30sp" />
+	            </ScrollView>
         </LinearLayout>
-
-
-   
 
 </LinearLayout>
