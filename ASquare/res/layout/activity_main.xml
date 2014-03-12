@@ -3,81 +3,106 @@ android:layout_width="match_parent"
 android:layout_height="match_parent"
 android:orientation="vertical">
 
-<LinearLayout android:id="@+id/linearLayout1" 
-android:layout_height="fill_parent" 
-android:layout_weight="1"
-android:layout_width="fill_parent"
-android:orientation="horizontal">
 
-    <ImageButton
-        android:id="@+id/imageButton1"
-        android:layout_width="150dip"
-        android:layout_height="150dip"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="10dp"
+	<LinearLayout android:id="@+id/linearLayout1" 
+		android:layout_height="fill_parent" 
+		android:layout_weight="1"
+		android:layout_width="fill_parent"
+		android:orientation="horizontal">
+		
+		<LinearLayout android:id="@+id/linearLayout11" 
+			android:layout_height="fill_parent" 
+			android:layout_weight="1"
+			android:layout_width="fill_parent"
+			android:orientation="vertical">
 
-        android:background="@drawable/ic_launcher"
-         />
-    
-    <ImageButton
-        android:id="@+id/imageButton2"
-        android:layout_width="150dip"
-        android:layout_height="150dip"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="10dp"
-        android:background="@drawable/ic_launcher"
-        />
-    
+	        <ImageButton
+		        android:id="@+id/imageButton1"
+		        android:layout_width="fill_parent"
+		        android:layout_height="fill_parent"
+		        android:background="@drawable/ic_launcher"/>
+            
+		</LinearLayout>
+    	<LinearLayout android:id="@+id/linearLayout12" 
+			android:layout_height="fill_parent" 
+			android:layout_weight="1"
+			android:layout_width="fill_parent"
+			android:orientation="vertical">
+		       
+    	    <ImageButton
+		        android:id="@+id/imageButton2"
+		        android:layout_width="fill_parent"
+		        android:layout_height="fill_parent"
+		        android:background="@drawable/ic_launcher"/>
+            
+		</LinearLayout>
+	</LinearLayout>
 
-</LinearLayout>
-
-<LinearLayout android:id="@+id/linearLayout2" 
-android:layout_height="fill_parent" 
-android:layout_weight="1"
-android:layout_width="fill_parent"
-android:orientation="horizontal">
-
-        <ImageButton
-        android:id="@+id/imageButton3"
-        android:layout_width="150dip"
-        android:layout_height="150dip"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="10dp"
-        android:background="@drawable/ic_launcher"
-         />
-    
-    <ImageButton
-        android:id="@+id/imageButton4"
-        android:layout_width="150dip"
-        android:layout_height="150dip"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="10dp"
-        android:background="@drawable/ic_launcher"
-        />
-
-</LinearLayout>
-<LinearLayout android:id="@+id/linearLayout3" 
-android:layout_height="fill_parent"
-android:layout_weight="1"
-android:layout_width="fill_parent"
-android:orientation="horizontal">
-    <ImageButton
-        android:id="@+id/imageButton5"
-        android:layout_width="150dip"
-        android:layout_height="150dip"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="10dp"
-        android:background="@drawable/ic_launcher"
-        />
-    
-    <ImageButton
-        android:id="@+id/imageButton6"
-        android:layout_width="150dip"
-        android:layout_height="150dip"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="10dp"
-        android:background="@drawable/ic_launcher"
-         />
-    
-</LinearLayout>
+	<LinearLayout android:id="@+id/linearLayout2" 
+		android:layout_height="fill_parent" 
+		android:layout_weight="1"
+		android:layout_width="fill_parent"
+		android:orientation="horizontal">
+	
+			<LinearLayout android:id="@+id/linearLayout21" 
+				android:layout_height="fill_parent" 
+				android:layout_weight="1"
+				android:layout_width="fill_parent"
+				android:orientation="vertical">
+	
+		        <ImageButton
+			        android:id="@+id/imageButton3"
+			        android:layout_width="fill_parent"
+			        android:layout_height="fill_parent"
+			        android:background="@drawable/ic_launcher"/>
+	            
+			</LinearLayout>
+	    	<LinearLayout android:id="@+id/linearLayout22" 
+				android:layout_height="fill_parent" 
+				android:layout_weight="1"
+				android:layout_width="fill_parent"
+				android:orientation="vertical">
+			       
+	    	    <ImageButton
+			        android:id="@+id/imageButton4"
+			        android:layout_width="fill_parent"
+			        android:layout_height="fill_parent"
+			        android:background="@drawable/ic_launcher"/>
+	            
+			</LinearLayout>
+	</LinearLayout>
+	
+	<LinearLayout android:id="@+id/linearLayout3" 
+		android:layout_height="fill_parent"
+		android:layout_weight="1"
+		android:layout_width="fill_parent"
+		android:orientation="horizontal">
+	   
+	    <LinearLayout android:id="@+id/linearLayout31" 
+			android:layout_height="fill_parent" 
+			android:layout_weight="1"
+			android:layout_width="fill_parent"
+			android:orientation="vertical">
+	
+		    <ImageButton
+				android:id="@+id/imageButton5"
+			    android:layout_width="fill_parent"
+			    android:layout_height="fill_parent"
+			    android:background="@drawable/ic_launcher"/>
+	            
+		</LinearLayout>
+	    <LinearLayout android:id="@+id/linearLayout32" 
+			android:layout_height="fill_parent" 
+			android:layout_weight="1"
+			android:layout_width="fill_parent"
+			android:orientation="vertical">
+			       
+	    	<ImageButton
+				android:id="@+id/imageButton6"
+			    android:layout_width="fill_parent"
+			    android:layout_height="fill_parent"
+			    android:background="@drawable/ic_launcher"/>
+	            
+		</LinearLayout>
+	</LinearLayout>
 </LinearLayout>
