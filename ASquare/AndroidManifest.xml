@@ -23,7 +23,6 @@
             </intent-filter>
         </activity>
         <activity android:name="GPA_Calculator" android:label="GPA Calculator" android:screenOrientation="portrait"></activity>
-        <activity android:name="DataList"></activity>
     </application>
 
 </manifest>
