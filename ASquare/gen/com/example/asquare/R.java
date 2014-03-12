@@ -24,7 +24,9 @@ public final class R {
         public static final int ic_launcher=0x7f020000;
     }
     public static final class id {
-        public static final int action_settings=0x7f080010;
+        public static final int action_settings=0x7f08001e;
+        public static final int button1=0x7f080011;
+        public static final int editText1=0x7f080010;
         public static final int imageButton1=0x7f080002;
         public static final int imageButton2=0x7f080004;
         public static final int imageButton3=0x7f080007;
@@ -40,11 +42,24 @@ public final class R {
         public static final int linearLayout3=0x7f08000a;
         public static final int linearLayout31=0x7f08000b;
         public static final int linearLayout32=0x7f08000d;
+        public static final int linearLayout4=0x7f080012;
+        public static final int linearLayout5=0x7f080016;
+        public static final int linearLayout6=0x7f08001a;
+        public static final int scrollView1=0x7f080014;
+        public static final int scrollView2=0x7f080018;
+        public static final int scrollView3=0x7f08001c;
         public static final int textView1=0x7f08000f;
+        public static final int textView2=0x7f080015;
+        public static final int textView3=0x7f080019;
+        public static final int textView4=0x7f08001d;
+        public static final int year1=0x7f080013;
+        public static final int year2=0x7f080017;
+        public static final int year3=0x7f08001b;
     }
     public static final class layout {
         public static final int activity_main=0x7f030000;
         public static final int gpa_main=0x7f030001;
+        public static final int path_main=0x7f030002;
     }
     public static final class menu {
         public static final int main=0x7f070000;

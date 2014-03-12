@@ -1,6 +1,8 @@
 package com.example.asquare;
 //don't change the MainActivity and the layout of main !!
 
+import com.example.study_path.Study_Path;
+
 import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;
@@ -32,10 +34,10 @@ public class MainActivity extends Activity {
             public void onClick(View v) {
                 // TODO Auto-generated method stub
             	Intent intent = new Intent();
-                intent.setClass(MainActivity.this, MainActivity.class);
-                startActivity(intent);
-               
-        }});
+                intent.setClass(MainActivity.this, Study_Path.class);
+                startActivity(intent);      
+            }
+        });
         
         button3 = (ImageButton)findViewById(R.id.imageButton3);
         button3.setOnClickListener(new ImageButton.OnClickListener(){ 
