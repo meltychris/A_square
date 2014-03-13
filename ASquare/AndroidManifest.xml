@@ -23,7 +23,7 @@
             </intent-filter>
         </activity>
         <activity android:name="GPA_Calculator" android:label="GPA Calculator" android:screenOrientation="unspecified"></activity>
-        <activity android:name="com.example.study_path.Study_Path" android:label="Study Path"></activity>
+        <activity android:name="com.example.study_path.Study_Path" android:label="Study Path" android:windowSoftInputMode="adjustPan"></activity>
         <activity android:name="com.example.study_path.data"></activity>
     </application>
 
