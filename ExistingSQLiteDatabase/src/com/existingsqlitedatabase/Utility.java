@@ -11,7 +11,7 @@ public class Utility {
 
  	public static String GetColumnValue(Cursor cur, String ColumnName) {
 		try {
-			return cur.getString(cur.getColumnIndex(ColumnName)+1);
+			return cur.getString(cur.getColumnIndex(ColumnName));
 		} catch (Exception ex) {
 			return "";
 		}

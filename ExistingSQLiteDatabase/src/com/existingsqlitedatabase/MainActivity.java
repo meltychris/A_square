@@ -51,12 +51,22 @@ public class MainActivity extends Activity {
     	mDbHelper.createDatabase();       
     	mDbHelper.open(); 
     	 
+    	
     	Cursor testdata = mDbHelper.getTestData(); 
-    	 
+    	String result ="";
     	String name = Utility.GetColumnValue(testdata, "Course");
     	String email = Utility.GetColumnValue(testdata, "Number");
+    	result = "Course: "+ name + "\nNumber: "+ email + "\n";
+
+    	while (testdata.moveToNext()){
+    		 
+	    	 name = Utility.GetColumnValue(testdata, "Course");
+	    	email = Utility.GetColumnValue(testdata, "Number");
+	    	
+	    	result = result + "Course: "+ name + "\nNumber: "+ email + "\n";
+    	}
     	
-    	Utility.ShowMessageBox(this, "Course: "+ name + "\nNumber: "+ email);
+    	Utility.ShowMessageBox(this, result);
     	mDbHelper.close();
     }
 }
