@@ -1,4 +1,4 @@
-package com.existingsqlitedatabase;
+package com.example.study_path;
 
 import java.io.IOException; 
 
@@ -58,11 +58,10 @@ public class TestAdapter
         mDbHelper.close(); 
     } 
  
-     public Cursor getTestData() 
+     public Cursor getTestData(String sql) 
      { 
          try 
          { 
-             String sql ="select COMP.code, Course.Name, COMP.Fall from Course, COMP where Course.Code = COMP.code"; 
  
              Cursor mCur = mDb.rawQuery(sql, null); 
              if (mCur!=null) 

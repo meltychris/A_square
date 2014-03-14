@@ -51,19 +51,23 @@ public class MainActivity extends Activity {
     	mDbHelper.createDatabase();       
     	mDbHelper.open(); 
     	 
-    	
+    	//Utility.ShowMessageBox(this, "hi");
+
     	Cursor testdata = mDbHelper.getTestData(); 
     	String result ="";
-    	String name = Utility.GetColumnValue(testdata, "Course");
-    	String email = Utility.GetColumnValue(testdata, "Number");
-    	result = "Course: "+ name + "\nNumber: "+ email + "\n";
+    	String code = Utility.GetColumnValue(testdata, "Code");
+    	String name = Utility.GetColumnValue(testdata, "Name");
+    	String spring = Utility.GetColumnValue(testdata, "Spring");
+    	result = "Code: "+ code + "\nName: "+ name + "\nSpring? " + (spring=="TRUE"?"yes":"no") + "\n";
+
 
     	while (testdata.moveToNext()){
     		 
-	    	 name = Utility.GetColumnValue(testdata, "Course");
-	    	email = Utility.GetColumnValue(testdata, "Number");
+        	code = Utility.GetColumnValue(testdata, "Code");
+        	name = Utility.GetColumnValue(testdata, "Name");
+        	spring = Utility.GetColumnValue(testdata, "Spring");
 	    	
-	    	result = result + "Course: "+ name + "\nNumber: "+ email + "\n";
+	    	result = result + "Code: "+ code + "\nName: "+ name + "\nSpring? " + (spring=="TRUE"?"yes":"no") + "\n";
     	}
     	
     	Utility.ShowMessageBox(this, result);

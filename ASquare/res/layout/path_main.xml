@@ -62,17 +62,15 @@
               android:layout_height="wrap_content"
              android:text="Year1:"
              android:textSize="30sp" />
-            <ScrollView
-                android:id="@+id/scrollView1"
-                android:layout_height="fill_parent"
-				android:layout_width="fill_parent">
-                    <TextView
-                        android:id="@+id/textView2"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text=""
-                        android:textSize="30sp" /> 
-            </ScrollView>
+		
+		<ListView
+               android:id="@+id/listView1"
+               android:layout_width="fill_parent" 
+               android:layout_height="fill_parent"
+               android:layout_weight="1"
+               android:drawSelectorOnTop="false">
+                </ListView> 
+           
         </LinearLayout>
 
         <LinearLayout
@@ -89,17 +87,14 @@
             android:layout_height="wrap_content"
             android:text="Year2:"
             android:textSize="30sp" />
-            <ScrollView
-                android:id="@+id/scrollView2"
-                android:layout_height="fill_parent"
-				android:layout_width="fill_parent" >
-                    <TextView
-                        android:id="@+id/textView3"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text=""
-                        android:textSize="30sp" />
-            </ScrollView>
+        
+		<ListView
+               android:id="@+id/listView2"
+               android:layout_width="fill_parent" 
+               android:layout_height="fill_parent"
+               android:layout_weight="1"
+               android:drawSelectorOnTop="false">
+                </ListView> 
         </LinearLayout>
 
         <LinearLayout
@@ -115,17 +110,14 @@
                 android:layout_height="wrap_content"
                 android:text="Year3:"
                 android:textSize="30sp" />
-	            <ScrollView
-	                android:id="@+id/scrollView3"
-	                android:layout_height="fill_parent"
-					android:layout_width="fill_parent" >
-	                    <TextView
-	                        android:id="@+id/textView4"
-	                        android:layout_width="wrap_content"
-	                        android:layout_height="wrap_content"
-	                        android:text=""
-	                        android:textSize="30sp" />
-	            </ScrollView>
+	         
+			<ListView
+               android:id="@+id/listView3"
+               android:layout_width="fill_parent" 
+               android:layout_height="fill_parent"
+               android:layout_weight="1"
+               android:drawSelectorOnTop="false">
+                </ListView> 
         </LinearLayout>
 
 </LinearLayout>
