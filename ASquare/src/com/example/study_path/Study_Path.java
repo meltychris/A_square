@@ -46,7 +46,8 @@ public class Study_Path extends Activity {
             	
             	if	(C.equals(" "))
             			Toast.makeText(Study_Path.this, "Wrong Major", Toast.LENGTH_LONG).show();
-            */}
+            */
+        		}
         });
         
         listView1.setOnItemClickListener(new AdapterView.OnItemClickListener() {
