@@ -62,7 +62,7 @@ public class TestAdapter
      { 
          try 
          { 
-             String sql ="SELECT EmployeeId, Name, Email FROm Employees"; 
+             String sql ="SELECT EmployeeId, Course, Number FROm Employees"; 
  
              Cursor mCur = mDb.rawQuery(sql, null); 
              if (mCur!=null) 
@@ -85,8 +85,8 @@ public class TestAdapter
  		try
  		{
  			ContentValues cv = new ContentValues();
- 			cv.put("Name", name);
- 			cv.put("Email", email);
+ 			cv.put("Course", name);
+ 			cv.put("Number", email);
  			
  			mDb.insert("Employees", null, cv);
 
