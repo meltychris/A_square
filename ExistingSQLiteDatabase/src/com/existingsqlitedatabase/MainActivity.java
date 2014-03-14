@@ -53,10 +53,10 @@ public class MainActivity extends Activity {
     	 
     	Cursor testdata = mDbHelper.getTestData(); 
     	 
-    	String name = Utility.GetColumnValue(testdata, "Name");
-    	String email = Utility.GetColumnValue(testdata, "Email");
+    	String name = Utility.GetColumnValue(testdata, "Course");
+    	String email = Utility.GetColumnValue(testdata, "Number");
     	
-    	Utility.ShowMessageBox(this, "Name: "+ name + " and Email: "+ email);
+    	Utility.ShowMessageBox(this, "Course: "+ name + "\nNumber: "+ email);
     	mDbHelper.close();
     }
 }
