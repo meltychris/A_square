@@ -12,112 +12,89 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal" >
 
-        <TextView
-            android:id="@+id/textView1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="What is your major?"
-            android:textSize="30sp" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/linearLayout2"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal" >
-
         <EditText
             android:id="@+id/editText1"
-            android:layout_width="match_parent"
+            android:layout_width="176dp"
             android:layout_height="wrap_content"
+            android:layout_weight="0.10"
             android:ems="10"
-            android:hint="COMP..." />
-    </LinearLayout>
+            android:hint="COMP..." >
 
-    <LinearLayout
-        android:id="@+id/linearLayout3"
-        android:layout_width="wrap_content"
-        android:layout_height="66dp"
-        android:layout_gravity="right"
-        android:orientation="horizontal" >
+            <requestFocus />
+        </EditText>
 
         <Button
             android:id="@+id/button1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:text="Check" />
+
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/linearLayout4"
+        android:layout_width="match_parent"
+        android:layout_height="34dp"
+        android:dividerPadding="@dimen/activity_vertical_margin"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:background="#FFFFFF"
+            android:text="Year1"/>
+        <View
+		    android:layout_width="1dp"
+		    android:layout_height="match_parent"
+		    android:background="#EEEEFF" />
+
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:background="#FFFFFF"
+            android:text="Year2"
+             />
+		<View
+		    android:layout_width="1dp"
+		    android:layout_height="match_parent"
+		    android:background="#FFFFFF" />
+
+        <Button
+            android:id="@+id/button4"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:background="#FFFFFF"
+            android:text="Year3"
+            />
+
+    </LinearLayout>
+
+  <View
+      android:layout_width="match_parent"
+      android:layout_height="3dp"
+      android:layout_alignParentBottom="true"
+      android:background="#1188FF" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout3"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        android:layout_weight="1"
-        android:orientation="horizontal" 
-        android:background="#ef3">
+        android:layout_gravity="right"
+        android:orientation="horizontal" >
 
-		<TextView
-            android:id="@+id/year1"
-           android:layout_width="wrap_content"
-              android:layout_height="wrap_content"
-             android:text="Year1:"
-             android:textSize="30sp" />
-		
-		<ListView
-               android:id="@+id/listView1"
-               android:layout_width="fill_parent" 
-               android:layout_height="fill_parent"
-               android:layout_weight="1"
-               android:drawSelectorOnTop="false">
-                </ListView> 
-           
-        </LinearLayout>
+        <ListView
+            android:id="@+id/listView1"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:drawSelectorOnTop="false" >
+        </ListView>
 
-        <LinearLayout
-	        android:id="@+id/linearLayout5"
-			android:layout_height="fill_parent" 
-			android:layout_weight="1"
-			android:layout_width="fill_parent"
-			android:orientation="horizontal"
-			android:background="#E8A2B4">
-
-        <TextView
-            android:id="@+id/year2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Year2:"
-            android:textSize="30sp" />
-        
-		<ListView
-               android:id="@+id/listView2"
-               android:layout_width="fill_parent" 
-               android:layout_height="fill_parent"
-               android:layout_weight="1"
-               android:drawSelectorOnTop="false">
-                </ListView> 
-        </LinearLayout>
-
-        <LinearLayout
-	        android:id="@+id/linearLayout6"
-			android:layout_height="fill_parent" 
-			android:layout_weight="1"
-			android:layout_width="fill_parent"
-			android:orientation="horizontal"
-			android:background="#A832B4">
-			<TextView
-                android:id="@+id/year3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Year3:"
-                android:textSize="30sp" />
-	         
-			<ListView
-               android:id="@+id/listView3"
-               android:layout_width="fill_parent" 
-               android:layout_height="fill_parent"
-               android:layout_weight="1"
-               android:drawSelectorOnTop="false">
-                </ListView> 
-        </LinearLayout>
+    </LinearLayout>
 
 </LinearLayout>
