@@ -6,40 +6,40 @@
     android:orientation="vertical"
     tools:context="com.example.study_path.Study_Path" >
 
-    <LinearLayout
-        android:id="@+id/linearLayout1"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal" >
 
-        <EditText
-            android:id="@+id/editText1"
-            android:layout_width="176dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="0.10"
-            android:ems="10"
-            android:hint="COMP..." >
-
-            <requestFocus />
-        </EditText>
-
-        <Button
-            android:id="@+id/button1"
+	<RadioGroup 
+	    android:id="@+id/RadioGroup1"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:orientation="horizontal">
+	    <RadioButton
+            android:id="@+id/radioButton1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Check" />
+            android:onClick="onClick"
+            android:checked="true"
+            android:text="COMP" />
 
-    </LinearLayout>
+        <RadioButton
+            android:id="@+id/radioButton2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="onClick"
+            android:text="CPEG" />
+    </RadioGroup>
 
     <LinearLayout
+        android:id="@+id/linearLayout2"
         android:layout_width="match_parent"
         android:layout_height="34dp"
+        android:background="#FFFFFF"
         android:dividerPadding="@dimen/activity_vertical_margin"
         android:orientation="horizontal" >
 
         <Button
-            android:id="@+id/button2"
+            android:id="@+id/button1"
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
             android:layout_weight="1"
@@ -51,7 +51,7 @@
 		    android:background="#EEEEFF" />
 
         <Button
-            android:id="@+id/button3"
+            android:id="@+id/button2"
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
             android:layout_weight="1"
@@ -61,10 +61,10 @@
 		<View
 		    android:layout_width="1dp"
 		    android:layout_height="match_parent"
-		    android:background="#FFFFFF" />
+		    android:background="#EEEEFF" />
 
         <Button
-            android:id="@+id/button4"
+            android:id="@+id/button3"
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
             android:layout_weight="1"
@@ -73,15 +73,46 @@
             />
 
     </LinearLayout>
+    
+     <LinearLayout
+        android:layout_width="match_parent"
+         android:id="@+id/linearLayout3"
+        android:layout_height="wrap_content"
+        android:dividerPadding="@dimen/activity_vertical_margin"
+        android:orientation="horizontal" >
 
   <View
-      android:layout_width="match_parent"
+      android:id="@+id/View1"
+      android:layout_width="fill_parent"
+      android:layout_weight="1"
       android:layout_height="3dp"
       android:layout_alignParentBottom="true"
       android:background="#1188FF" />
+    <View
+      android:id="@+id/View2"
+	  android:layout_width="fill_parent"
+      android:layout_weight="1"
+	  android:layout_height="3dp"
+      android:layout_alignParentBottom="true"
+      android:background="#1188FF" />
+      <View
+      android:id="@+id/View3"
+      android:layout_width="fill_parent"
+      android:layout_weight="1"
+      android:layout_height="3dp"
+      android:layout_alignParentBottom="true"
+      android:background="#1188FF" />
+        </LinearLayout>
+        
+              <View
+      android:layout_width="match_parent"
+      android:layout_height="1dp"
+      android:layout_alignParentBottom="true"
+      android:background="#111111" />
+  
 
     <LinearLayout
-        android:id="@+id/linearLayout3"
+        android:id="@+id/linearLayout4"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:layout_gravity="right"
