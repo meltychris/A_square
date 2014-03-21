@@ -118,6 +118,9 @@ class Comp_Advancedpath extends UserInfor{
 				Year3 = Year3 + Fail;
 		}
 		
+		if(Year1.equals(CC));
+			// delete the record
+		
 	}
 	public static void printout(){
 		if (Defer == true)
