@@ -66,19 +66,23 @@ class UserInfor{
 				Year=Integer.parseInt(input.nextLine());
 				
 				
+				System.out.print("Semester:(Fall/Spring):");
+				Sem=input.nextLine();
+				
+				
 				System.out.print("Credits Studied:");
 				Credone=Integer.parseInt(input.nextLine());
 				
 				
-				System.out.print("Common Core Studied:");
+				System.out.print("Common Core Studied:(HUMA/SCIS/SOSC)"); // checkbox huma, science, sosc 
 				CC=input.nextLine();
 				
 				
-				System.out.print("Elective Studied:");
+				System.out.print("Elective Studied:"); // checkbox COMP, ELEC, ENGG
 				Elective=input.nextLine();
 				
 				
-				System.out.print("Recommend path's course failed/skipped:");
+				System.out.print("Recommend path's course failed/skipped:"); // checkbox of recommended path
 				Fail=input.nextLine();
 				
 
@@ -89,28 +93,41 @@ class UserInfor{
 	static public String Major;
 	static public String Pure;
 	static public int Year;
+	static public String Sem;
 	static public int Credone;
 	static public String CC;
 	static public String Elective;
 	static public String Fail;
 }
 
+
 class Comp_Advancedpath extends UserInfor{
 	public static void suggestion(){	
 		
-		if ((Credneed/(3 - Year))>=42)
-			Defer = true;
-		else Defer = false;
+		if (Sem.equals("fall"))
+			{
+				if((Credneed/(2*(3-Year)+1))>=21)
+				Defer = true;
+				else Defer = false;
+				SemtoGrad= 2*(3-Year)+1;
+			}
+		else 
+			{
+			if( Year==3 && Credneed!=0 || (Credneed/(2*(3-Year)))>=21)
+				Defer = true;
+				else Defer = false;
+			SemtoGrad= 2*(3-Year);
+			}
 		
 		Year1Suggest= "SELECT Course from Year1 where course name != 'CC'";
 		Year1Suggest = "SELECT Course from Year1Suggest where course name != 'Elective'";
-		
+		// checkbox
 		Year2Suggest= "SELECT Course from Year2 where course name != 'CC'";
 		Year2Suggest = "SELECT Course from Year2Suggest where course name != 'Elective'";
-		
+		//checkbox
 		Year3Suggest= "SELECT Course from Year3 where course name != 'CC'";
 		Year3Suggest = "SELECT Course from Year3Suggest where course name != 'Elective'";
-		
+		//checkbox
 		
 		if (Pure.equals("N") == true&& Year == 1 )
 		{
@@ -133,28 +150,64 @@ class Comp_Advancedpath extends UserInfor{
 	}
 	public static void printout(){
 		if (Defer == true)
-			System.out.println("Sorry you need to defer");
+			 System.out.println("Sorry you need to defer");
 		else System.out.println("Congraduation! you can grad on time");
 		
-		System.out.println("Suggest Year1 study:");
-		System.out.println(Year1Suggest);
-		System.out.println("Suggest Year2 study:");
-		System.out.println(Year2Suggest);
-		System.out.println("Suggest Year1 study:");
-		System.out.println(Year3Suggest);
+		if (Year==1&&Sem.equals("Spring")==false)
+		{	
+			System.out.println("In Year 1 Spring, please choose "+(Credneed/SemtoGrad)+" Credits from Advanced path of Year 1 below:");
+			System.out.println(Year1Suggest);
+		}
+		if (Year==1)
+		{
+			System.out.println("In Year 2 Fall, please choose "+(Credneed/SemtoGrad)+" Credits from Advanced path of Year 1 below:");
+			System.out.println(Year1Suggest);
+		}
+		if (Year==1||Year==2&&Sem.equals("Spring")==false)
+		{
+			System.out.println("In Year 2 Spring, please choose "+(Credneed/SemtoGrad)+" Credits from Advanced path of Year 2 below:");
+			System.out.println(Year2Suggest);
+		}
+		if (Year==1||Year==2)
+		{
+			System.out.println("In Year 3 fall, please choose "+(Credneed/SemtoGrad)+" Credits from Advanced path of Year 3 below:");
+			System.out.println(Year3Suggest);
+		}
+
+			System.out.println("In Year 3 fall, please choose "+(Credneed/SemtoGrad)+" Credits from Advanced path of Year 3 below:");
+			System.out.println(Year3Suggest);
+		
 	}
 	static String Year1 = "Select course code from database where recommended year = year1";
 	static String Year2 = "Select course code from database where recommended year = year2";
 	static String Year3 = "Select course code from database where recommended year = year3";
 	static int Credneed = 90 - Credone;
+	static int SemtoGrad;
 	static boolean Defer;
 	static String Year1Suggest;
 	static String Year2Suggest;
 	static String Year3Suggest;
 }
 
+
 class Cpeg_Advancedpath extends UserInfor{
 	public static void suggestion(){
+		
+		if (Sem.equals("fall"))
+			{
+				if((Credneed/(2*(3-Year)+1))>=21)
+				Defer = true;
+				else Defer = false;
+				SemtoGrad=(2*3-Year)+1;
+			}
+		else 
+			{
+			if( Year==3 && Credneed!=0 || (Credneed/(2*(3-Year)))>=21)
+				Defer = true;
+				else Defer = false;
+			SemtoGrad=(2*(3-Year));
+			}
+		
 		Scanner input3 = new Scanner(System.in);
 		System.out.println("As CPEG student, choose COMP or ELEC approach?");
 		approach= input3.nextLine();
@@ -168,6 +221,22 @@ class Cpeg_Advancedpath extends UserInfor{
 		Year3Suggest= "SELECT Course from Year3 where course name != 'CC'";
 		Year3Suggest = "SELECT Course from Year3Suggest where course name != 'Elective'";
 		
+		if (Pure.equals("N") == true&& Year == 1 )
+		{
+			Year2Suggest = Year2Suggest+"MATH 2011"+"MATH 2111";
+		}
+		
+		if (Year==1)
+		{
+			if (Fail.equals("SELECT Course from Year1Suggest where course name= 'Fail")==true)
+				Year2Suggest = Year2Suggest + Fail;
+		}
+		else if (Year==2)
+		{
+			if (Fail.equals("SELECT Course from Year1Suggest where course name= 'Fail")||
+					Fail.equals("SELECT Course from Year2Suggest where course name= 'Fail")==true)
+				Year3Suggest = Year3Suggest + Fail;
+		}
 	}
 	
 	
@@ -176,18 +245,37 @@ class Cpeg_Advancedpath extends UserInfor{
 			System.out.println("Sorry you need to defer");
 		else System.out.println("Congraduation! you can grad on time");
 		
-		System.out.println("Suggest Year1 study:");
-		System.out.println(Year1Suggest);
-		System.out.println("Suggest Year2 study:");
-		System.out.println(Year2Suggest);
-		System.out.println("Suggest Year1 study:");
-		System.out.println(Year3Suggest);
+		if (Year==1&&Sem.equals("Spring")==false)
+		{	
+			System.out.println("In Year 1 Spring, please choose "+(Credneed/SemtoGrad)+" Credits from Advanced path of Year 1 below:");
+			System.out.println(Year1Suggest);
+		}
+		if (Year==1)
+		{
+			System.out.println("In Year 2 Fall, please choose "+(Credneed/SemtoGrad)+" Credits from Advanced path of Year 1 below:");
+			System.out.println(Year1Suggest);
+		}
+		if (Year==1||Year==2&&Sem.equals("Spring")==false)
+		{
+			System.out.println("In Year 2 Spring, please choose "+(Credneed/SemtoGrad)+" Credits from Advanced path of Year 2 below:");
+			System.out.println(Year2Suggest);
+		}
+		if (Year==1||Year==2)
+		{
+			System.out.println("In Year 3 fall, please choose "+(Credneed/SemtoGrad)+" Credits from Advanced path of Year 3 below:");
+			System.out.println(Year3Suggest);
+		}
+		
+			System.out.println("In Year 3 fall, please choose "+(Credneed/SemtoGrad)+" Credits from Advanced path of Year 3 below:");
+			System.out.println(Year3Suggest);
+		
 	}
 	static String approach;
 	static String Year1 = "Select course code from database where recommended year = year1";
 	static String Year2 = "Select course code from database where recommended year = year2";
 	static String Year3 = "Select course code from database where recommended year = year3";
 	static int Credneed = 90 - Credone;
+	static int SemtoGrad;
 	static boolean Defer;
 	static String Year1Suggest;
 	static String Year2Suggest;
