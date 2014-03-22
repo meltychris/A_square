@@ -102,24 +102,33 @@ class Comp_Advancedpath extends UserInfor{
 			Defer = true;
 		else Defer = false;
 		
+		Year1Suggest= "SELECT Course from Year1 where course name != 'CC'";
+		Year1Suggest = "SELECT Course from Year1Suggest where course name != 'Elective'";
+		
+		Year2Suggest= "SELECT Course from Year2 where course name != 'CC'";
+		Year2Suggest = "SELECT Course from Year2Suggest where course name != 'Elective'";
+		
+		Year3Suggest= "SELECT Course from Year3 where course name != 'CC'";
+		Year3Suggest = "SELECT Course from Year3Suggest where course name != 'Elective'";
+		
+		
 		if (Pure.equals("N") == true&& Year == 1 )
 		{
-			Year2 = Year2+"MATH 2011"+"MATH 2111";
+			Year2Suggest = Year2Suggest+"MATH 2011"+"MATH 2111";
 		}
 		
 		if (Year==1)
 		{
-			if (Fail.equals(Year1)==true)
-				Year2 = Year2 + Fail;
+			if (Fail.equals("SELECT Course from Year1Suggest where course name= 'Fail")==true)
+				Year2Suggest = Year2Suggest + Fail;
 		}
 		else if (Year==2)
 		{
-			if (Fail.equals(Year1)||Fail.equals(Year2)==true)
-				Year3 = Year3 + Fail;
+			if (Fail.equals("SELECT Course from Year1Suggest where course name= 'Fail")||
+					Fail.equals("SELECT Course from Year2Suggest where course name= 'Fail")==true)
+				Year3Suggest = Year3Suggest + Fail;
 		}
-		
-		if(Year1.equals(CC));
-			// delete the record
+
 		
 	}
 	public static void printout(){
@@ -128,17 +137,20 @@ class Comp_Advancedpath extends UserInfor{
 		else System.out.println("Congraduation! you can grad on time");
 		
 		System.out.println("Suggest Year1 study:");
-		System.out.println(Year1);
+		System.out.println(Year1Suggest);
 		System.out.println("Suggest Year2 study:");
-		System.out.println(Year2);
+		System.out.println(Year2Suggest);
 		System.out.println("Suggest Year1 study:");
-		System.out.println(Year3);
+		System.out.println(Year3Suggest);
 	}
 	static String Year1 = "Select course code from database where recommended year = year1";
 	static String Year2 = "Select course code from database where recommended year = year2";
 	static String Year3 = "Select course code from database where recommended year = year3";
 	static int Credneed = 90 - Credone;
 	static boolean Defer;
+	static String Year1Suggest;
+	static String Year2Suggest;
+	static String Year3Suggest;
 }
 
 class Cpeg_Advancedpath extends UserInfor{
@@ -146,7 +158,18 @@ class Cpeg_Advancedpath extends UserInfor{
 		Scanner input3 = new Scanner(System.in);
 		System.out.println("As CPEG student, choose COMP or ELEC approach?");
 		approach= input3.nextLine();
+		
+		Year1Suggest= "SELECT Course from Year1 where course name != 'CC'";
+		Year1Suggest = "SELECT Course from Year1Suggest where course name != 'Elective'";
+		
+		Year2Suggest= "SELECT Course from Year2 where course name != 'CC'";
+		Year2Suggest = "SELECT Course from Year2Suggest where course name != 'Elective'";
+		
+		Year3Suggest= "SELECT Course from Year3 where course name != 'CC'";
+		Year3Suggest = "SELECT Course from Year3Suggest where course name != 'Elective'";
+		
 	}
+	
 	
 	public static void printout(){
 		if (Defer == true)
@@ -154,11 +177,11 @@ class Cpeg_Advancedpath extends UserInfor{
 		else System.out.println("Congraduation! you can grad on time");
 		
 		System.out.println("Suggest Year1 study:");
-		System.out.println(Year1);
+		System.out.println(Year1Suggest);
 		System.out.println("Suggest Year2 study:");
-		System.out.println(Year2);
+		System.out.println(Year2Suggest);
 		System.out.println("Suggest Year1 study:");
-		System.out.println(Year3);
+		System.out.println(Year3Suggest);
 	}
 	static String approach;
 	static String Year1 = "Select course code from database where recommended year = year1";
@@ -166,4 +189,7 @@ class Cpeg_Advancedpath extends UserInfor{
 	static String Year3 = "Select course code from database where recommended year = year3";
 	static int Credneed = 90 - Credone;
 	static boolean Defer;
+	static String Year1Suggest;
+	static String Year2Suggest;
+	static String Year3Suggest;
 }
