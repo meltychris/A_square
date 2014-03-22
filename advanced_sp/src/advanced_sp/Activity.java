@@ -120,13 +120,13 @@ class Comp_Advancedpath extends UserInfor{
 			}
 		
 		Year1Suggest= "SELECT Course from Year1 where course name != 'CC'";
-		Year1Suggest = "SELECT Course from Year1Suggest where course name != 'Elective'";
+		Year1Suggest = Year1Suggest + "SELECT Course from Year1Suggest where course name != 'Elective'";
 		// checkbox
 		Year2Suggest= "SELECT Course from Year2 where course name != 'CC'";
-		Year2Suggest = "SELECT Course from Year2Suggest where course name != 'Elective'";
+		Year2Suggest = Year2Suggest + "SELECT Course from Year2Suggest where course name != 'Elective'";
 		//checkbox
 		Year3Suggest= "SELECT Course from Year3 where course name != 'CC'";
-		Year3Suggest = "SELECT Course from Year3Suggest where course name != 'Elective'";
+		Year3Suggest = Year3Suggest + "SELECT Course from Year3Suggest where course name != 'Elective'";
 		//checkbox
 		
 		if (Pure.equals("N") == true&& Year == 1 )
