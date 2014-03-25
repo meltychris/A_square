@@ -7,9 +7,18 @@
     tools:context="com.example.study_path.Study_Path" >
 
 
-	<RadioGroup 
+
+     <LinearLayout
+        android:id="@+id/buttonLayout1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        android:dividerPadding="@dimen/activity_vertical_margin"
+        android:orientation="horizontal" >
+        
+         	<RadioGroup 
 	    android:id="@+id/RadioGroup1"
-	    android:layout_width="fill_parent"
+	    android:layout_width="wrap_content"
 	    android:layout_height="wrap_content"
 	    android:orientation="horizontal">
 	    <RadioButton
@@ -28,7 +37,21 @@
             android:layout_weight="1"
             android:onClick="onClick"
             android:text="CPEG" />
-    </RadioGroup>
+        
+
+
+    	</RadioGroup>
+              <Button
+            android:id="@+id/button4"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:background="@drawable/blue2_button"
+            android:onClick="onClick"
+            android:text="Advanced"
+            android:textColor="#FFFFFF"
+    	        android:scaleType="fitXY" />
+ 	</LinearLayout>
+ 	
 
     <LinearLayout
         android:id="@+id/linearLayout2"
@@ -88,6 +111,7 @@
       android:layout_height="3dp"
       android:layout_alignParentBottom="true"
       android:background="#1188FF" />
+
     <View
       android:id="@+id/View2"
 	  android:layout_width="fill_parent"

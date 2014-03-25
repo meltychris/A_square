@@ -1,7 +1,11 @@
 package com.example.study_path;
 
+import com.example.asquare.MainActivity;
 import com.example.asquare.R;
+
 import android.app.Activity;
+import android.app.AliasActivity;
+import android.content.Intent;
 import android.database.Cursor;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
@@ -27,6 +31,8 @@ public class Study_Path extends Activity {
 	    button1 = (Button)findViewById(R.id.button1);
 	    button2 = (Button)findViewById(R.id.button2);
 	    button3 = (Button)findViewById(R.id.button3);
+	    button4 = (Button)findViewById(R.id.button3);
+	    
 	    
 	    listView1 = (ListView) findViewById(R.id.listView1);
        	
@@ -225,6 +231,16 @@ public class Study_Path extends Activity {
         		}
         });
         
+        button4.setOnClickListener(new Button.OnClickListener(){ 
+            @Override
+            public void onClick(View v) {
+                // TODO Auto-generated method stub
+            	Intent intent = new Intent();
+                intent.setClass(Study_Path.this, Advanced_Activity.class);
+                startActivity(intent);      
+        		}
+        });
+        
         listView1.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 			@Override
 			public void onItemClick(AdapterView<?> arg0, View arg1, int arg2, long arg3) { 
@@ -270,6 +286,7 @@ public class Study_Path extends Activity {
     private Button button1;
     private Button button2;
     private Button button3;
+    private Button button4;
     private ListView listView1;
     private View view1;
     private View view2;
