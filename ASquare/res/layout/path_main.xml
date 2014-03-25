@@ -13,7 +13,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="#FFFFFF"
-        android:dividerPadding="@dimen/activity_vertical_margin"
         android:orientation="horizontal" >
         
          	<RadioGroup 
@@ -42,7 +41,7 @@
 
     	</RadioGroup>
               <Button
-            android:id="@+id/button4"
+            android:id="@+id/button111"
             android:layout_width="wrap_content"
             android:layout_height="30dp"
             android:background="@drawable/blue2_button"
@@ -58,7 +57,6 @@
         android:layout_width="match_parent"
         android:layout_height="34dp"
         android:background="#FFFFFF"
-        android:dividerPadding="@dimen/activity_vertical_margin"
         android:orientation="horizontal" >
 
         <Button
@@ -101,7 +99,6 @@
         android:layout_width="match_parent"
          android:id="@+id/linearLayout3"
         android:layout_height="wrap_content"
-        android:dividerPadding="@dimen/activity_vertical_margin"
         android:orientation="horizontal" >
 
   <View
