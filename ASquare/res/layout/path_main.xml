@@ -37,8 +37,6 @@
             android:onClick="onClick"
             android:text="CPEG" />
         
-
-
     	</RadioGroup>
               <Button
             android:id="@+id/button111"

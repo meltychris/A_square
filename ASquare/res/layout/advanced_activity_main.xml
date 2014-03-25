@@ -1,8 +1,390 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.study_path.Advanced_Activity"
-    tools:ignore="MergeRootFrame" />
+    android:orientation="vertical"
+    tools:context="com.example.study_path.Advanced_Activity" >
+ 
+     <LinearLayout
+        android:id="@+id/Question"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        android:orientation="vertical" >
+        
+    
+         
+    <LinearLayout
+        android:id="@+id/Question1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        android:orientation="horizontal" >
 
+	     <TextView
+	         android:id="@+id/textView1"
+	         android:layout_width="wrap_content"
+	         android:layout_height="wrap_content"
+	         android:text="Major: "
+	         android:textSize="20sp" />
+
+<RadioGroup 
+	    android:id="@+id/RadioGroup1"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:orientation="horizontal">
+	    <RadioButton
+            android:id="@+id/radioButton1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="onClick"
+            android:checked="true"
+            android:text="COMP" />
+
+        <RadioButton
+            android:id="@+id/radioButton2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="onClick"
+            android:text="CPEG" />
+        </RadioGroup>
+         
+     </LinearLayout> 
+     
+    <LinearLayout
+        android:id="@+id/Question2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        android:orientation="horizontal" >
+	     
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pass Pure Maths: "
+            android:textSize="20sp" />
+        
+         <CheckBox
+         android:id="@+id/checkBox1"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+		/>
+         </LinearLayout> 
+         
+ <LinearLayout
+        android:id="@+id/Question3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        android:orientation="horizontal" >
+	     
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Year: "
+            android:textSize="20sp" />
+        
+        <RadioGroup 
+	    android:id="@+id/RadioGroup2"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:orientation="horizontal">
+	    <RadioButton
+            android:id="@+id/year1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="onClick"
+            android:checked="true"
+            android:text="1" />
+
+        <RadioButton
+            android:id="@+id/year2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="onClick"
+            android:text="2" />
+        
+                <RadioButton
+            android:id="@+id/year3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="onClick"
+            android:text="3" />
+        </RadioGroup>
+         </LinearLayout>
+         
+      </LinearLayout>
+      
+      <LinearLayout
+        android:id="@+id/Question4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        android:orientation="horizontal" >
+	     
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Semester: "
+            android:textSize="20sp" />
+        
+ <RadioGroup 
+	    android:id="@+id/RadioGroup3"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/fall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="onClick"
+            android:checked="true"
+            android:text="fall" />
+        
+                <RadioButton
+            android:id="@+id/spring"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="onClick"
+            android:text="spring" />
+        </RadioGroup>
+         </LinearLayout> 
+         
+            
+      <LinearLayout
+        android:id="@+id/Question5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        android:orientation="horizontal" >
+	     
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Studied Credit: "
+            android:textSize="20sp" />
+        
+         <EditText
+          android:id="@+id/editText1"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:ems="10" >
+
+          <requestFocus />
+      </EditText>
+        
+
+         </LinearLayout>
+         
+       <LinearLayout
+        android:id="@+id/Question6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        android:orientation="vertical" >
+	     
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Studied Common Core: "
+            android:textSize="20sp" />
+        
+       <LinearLayout
+        android:id="@+id/checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        android:orientation="horizontal" >
+              <CheckBox
+          android:id="@+id/SA"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="SA" />
+              
+              <CheckBox
+          android:id="@+id/S_T"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="S and T" />
+              
+              <CheckBox
+          android:id="@+id/A_H"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="A and H" />
+              
+              <CheckBox
+          android:id="@+id/Free"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="Free" />
+           
+           </LinearLayout>
+
+         </LinearLayout>
+         
+              <LinearLayout
+        android:id="@+id/elective"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        android:orientation="vertical" >
+	     
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Studied Elctive: "
+            android:textSize="20sp" />
+        
+       <LinearLayout
+        android:id="@+id/checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        android:orientation="horizontal" >
+              <CheckBox
+          android:id="@+id/SBM"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="SBM" />
+              
+              <CheckBox
+          android:id="@+id/ENGG"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="ENGG" />
+              
+              <CheckBox
+          android:id="@+id/FreeE"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="Free" />
+           
+           </LinearLayout>
+
+         </LinearLayout>
+         
+          <LinearLayout
+        android:id="@+id/COMP3x"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        android:orientation="horizontal" >
+	     
+              
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="COMP Elective: "
+            android:textSize="20sp" />
+        
+        <RadioGroup 
+	    android:id="@+id/RadioGroup4"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:orientation="horizontal">
+        
+         <RadioButton
+            android:id="@+id/compx1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="onClick"
+            android:checked="true"
+            android:text="1" />
+        
+                <RadioButton
+            android:id="@+id/compx2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="onClick"
+            android:text="2" />
+        
+                <RadioButton
+            android:id="@+id/compx3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="onClick"
+            android:text="3" />
+        
+                  <RadioButton
+            android:id="@+id/compx4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="onClick"
+            android:text="4" />
+        
+        <RadioButton
+            android:id="@+id/compx5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="onClick"
+            android:text="5" />
+        </RadioGroup>
+      
+         </LinearLayout>
+         
+           <LinearLayout
+        android:id="@+id/CEM"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        android:orientation="horizontal" >
+	     
+              
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="COMP/ELEC/MATH: "
+            android:textSize="20sp" />
+        
+        <RadioGroup 
+	    android:id="@+id/RadioGroup5"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:orientation="horizontal">
+        
+         <RadioButton
+            android:id="@+id/CEMx1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="onClick"
+            android:checked="true"
+            android:text="1" />
+        
+                <RadioButton
+            android:id="@+id/CEMx2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="onClick"
+            android:text="2" />
+                
+      </RadioGroup>
+      
+         </LinearLayout>
+
+     
+    
+</LinearLayout>
