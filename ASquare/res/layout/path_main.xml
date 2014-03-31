@@ -6,7 +6,6 @@
     android:orientation="vertical"
     tools:context="com.example.study_path.Study_Path" >
 
-
      <LinearLayout
         android:id="@+id/buttonLayout1"
         android:layout_width="wrap_content"
@@ -15,28 +14,28 @@
         android:orientation="horizontal" >
         
          	<RadioGroup 
-	    android:id="@+id/RadioGroup1"
-	    android:layout_width="wrap_content"
-	    android:layout_height="wrap_content"
-	    android:orientation="horizontal">
-	    <RadioButton
-            android:id="@+id/radioButton1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:onClick="onClick"
-            android:checked="true"
-            android:text="COMP" />
+			    android:id="@+id/RadioGroup1"
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:orientation="horizontal">
+			    <RadioButton
+		            android:id="@+id/radioButton1"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_weight="1"
+		            android:onClick="onClick"
+		            android:checked="true"
+		            android:text="COMP" />
 
-        <RadioButton
-            android:id="@+id/radioButton2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:onClick="onClick"
-            android:text="CPEG" />
+			        <RadioButton
+			            android:id="@+id/radioButton2"
+			            android:layout_width="wrap_content"
+			            android:layout_height="wrap_content"
+			            android:layout_weight="1"
+			            android:onClick="onClick"
+			            android:text="CPEG" />
         
-    	</RadioGroup>
+    		</RadioGroup>
               <Button
             android:id="@+id/button111"
             android:layout_width="wrap_content"
