@@ -7,7 +7,6 @@
     tools:context="com.example.study_path.Study_Path" >
 
 
-
      <LinearLayout
         android:id="@+id/buttonLayout1"
         android:layout_width="wrap_content"
