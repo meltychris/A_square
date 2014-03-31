@@ -1,4 +1,4 @@
-//useless
+//useless - may deleted later
 package com.example.study_path;
 
 import android.app.Activity;
