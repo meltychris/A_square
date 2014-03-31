@@ -36,15 +36,15 @@
 			            android:text="CPEG" />
         
     		</RadioGroup>
-              <Button
-            android:id="@+id/button111"
-            android:layout_width="wrap_content"
-            android:layout_height="30dp"
-            android:background="@drawable/blue2_button"
-            android:onClick="onClick"
-            android:text="Advanced"
-            android:textColor="#FFFFFF"
-    	        android:scaleType="fitXY" />
+            <Button
+	            android:id="@+id/button111"
+	            android:layout_width="wrap_content"
+	            android:layout_height="30dp"
+	            android:background="@drawable/blue2_button"
+	            android:onClick="onClick"
+	            android:text="Advanced"
+	            android:textColor="#FFFFFF"
+	    	    android:scaleType="fitXY" />
  	</LinearLayout>
  	
 
@@ -97,35 +97,35 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal" >
 
-  <View
-      android:id="@+id/View1"
-      android:layout_width="fill_parent"
-      android:layout_weight="1"
-      android:layout_height="3dp"
-      android:layout_alignParentBottom="true"
-      android:background="#1188FF" />
+	  	<View
+	      android:id="@+id/View1"
+	      android:layout_width="fill_parent"
+	      android:layout_weight="1"
+	      android:layout_height="3dp"
+	      android:layout_alignParentBottom="true"
+	      android:background="#1188FF" />
 
-    <View
-      android:id="@+id/View2"
-	  android:layout_width="fill_parent"
-      android:layout_weight="1"
-	  android:layout_height="3dp"
-      android:layout_alignParentBottom="true"
-      android:background="#1188FF" />
+	    <View
+	      android:id="@+id/View2"
+		  android:layout_width="fill_parent"
+	      android:layout_weight="1"
+		  android:layout_height="3dp"
+	      android:layout_alignParentBottom="true"
+	      android:background="#1188FF" />
       <View
-      android:id="@+id/View3"
-      android:layout_width="fill_parent"
-      android:layout_weight="1"
-      android:layout_height="3dp"
-      android:layout_alignParentBottom="true"
-      android:background="#1188FF" />
-        </LinearLayout>
+	      android:id="@+id/View3"
+	      android:layout_width="fill_parent"
+	      android:layout_weight="1"
+	      android:layout_height="3dp"
+	      android:layout_alignParentBottom="true"
+	      android:background="#1188FF" />
+	 </LinearLayout>
         
-              <View
-      android:layout_width="match_parent"
-      android:layout_height="1dp"
-      android:layout_alignParentBottom="true"
-      android:background="#111111" />
+     <View
+	      android:layout_width="match_parent"
+	      android:layout_height="1dp"
+	      android:layout_alignParentBottom="true"
+	      android:background="#111111" />
   
 
     <LinearLayout
