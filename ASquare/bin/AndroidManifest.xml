@@ -35,7 +35,7 @@
         </activity>
         <activity android:name="com.example.study_path.data" >
         </activity>
-        <activity android:name="Advanced_Activity"></activity>
+        <activity android:name="com.example.study_path.Advanced_Activity" android:label="Advanced Path"></activity>
     </application>
 
 </manifest>

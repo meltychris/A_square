@@ -4,21 +4,16 @@ import com.example.asquare.R;
 
 import android.app.Activity;
 import android.os.Bundle;
-import android.widget.ArrayAdapter;
-import android.widget.Spinner;
 
 public class Advanced_Activity extends Activity {
 
-	
-
+	@Override
 	public void onCreate(Bundle savedInstanceState) {
 	    super.onCreate(savedInstanceState);
-		/** Called when the activity is first created. */
+	    setContentView(R.layout.adv_path_main);    
 	
 	}
 	
-
-		
 }
 /*	@Override
 	public void onCreate(Bundle savedInstanceState) {

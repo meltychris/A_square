@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,12 +8,12 @@
  
      <LinearLayout
         android:id="@+id/Question"
-        android:layout_width="wrap_content"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:background="#FFFFFF"
         android:orientation="vertical" >
         
-    
+   
          
     <LinearLayout
         android:id="@+id/Question1"
@@ -124,7 +125,7 @@
       
       <LinearLayout
         android:id="@+id/Question4"
-        android:layout_width="wrap_content"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:background="#FFFFFF"
         android:orientation="horizontal" >
@@ -164,7 +165,7 @@
             
       <LinearLayout
         android:id="@+id/Question5"
-        android:layout_width="wrap_content"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:background="#FFFFFF"
         android:orientation="horizontal" >
@@ -190,7 +191,7 @@
          
        <LinearLayout
         android:id="@+id/Question6"
-        android:layout_width="wrap_content"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:background="#FFFFFF"
         android:orientation="vertical" >
@@ -238,7 +239,7 @@
          
               <LinearLayout
         android:id="@+id/elective"
-        android:layout_width="wrap_content"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:background="#FFFFFF"
         android:orientation="vertical" >
@@ -280,7 +281,7 @@
          
           <LinearLayout
         android:id="@+id/COMP3x"
-        android:layout_width="wrap_content"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:background="#FFFFFF"
         android:orientation="horizontal" >
@@ -345,14 +346,14 @@
          
            <LinearLayout
         android:id="@+id/CEM"
-        android:layout_width="wrap_content"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:background="#FFFFFF"
         android:orientation="horizontal" >
 	     
               
         <TextView
-            android:id="@+id/textView8"
+            android:id="@+id/textView9"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="COMP/ELEC/MATH: "
@@ -387,4 +388,5 @@
 
      
     
+
 </LinearLayout>

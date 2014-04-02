@@ -1,5 +1,6 @@
 package com.example.study_path;
 
+import com.example.asquare.GPA_Calculator;
 import com.example.asquare.MainActivity;
 import com.example.asquare.R;
 
@@ -31,7 +32,7 @@ public class Study_Path extends Activity {
 	    button1 = (Button)findViewById(R.id.button1);
 	    button2 = (Button)findViewById(R.id.button2);
 	    button3 = (Button)findViewById(R.id.button3);
-	    button4 = (Button)findViewById(R.id.button3);
+	    button111 = (Button)findViewById(R.id.button111);
 	    
 	    
 	    listView1 = (ListView) findViewById(R.id.listView1);
@@ -231,7 +232,7 @@ public class Study_Path extends Activity {
         		}
         });
         
-        button4.setOnClickListener(new Button.OnClickListener(){ 
+        button111.setOnClickListener(new Button.OnClickListener(){ 
             @Override
             public void onClick(View v) {
                 // TODO Auto-generated method stub
@@ -286,7 +287,7 @@ public class Study_Path extends Activity {
     private Button button1;
     private Button button2;
     private Button button3;
-    private Button button4;
+    private Button button111;
     private ListView listView1;
     private View view1;
     private View view2;
