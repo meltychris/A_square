@@ -1,10 +1,17 @@
 package com.example.asquare;
 
+import com.example.study_path.TestAdapter;
+import com.example.study_path.Utility;
+
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.AlertDialog.Builder;
+import android.database.Cursor;
 import android.os.Bundle;
+import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -23,9 +30,14 @@ public class Advanced_Activity2 extends Activity {
 	    	Major1 = params.getBoolean ("Major1");
 	    	Major2 = params.getBoolean ("Major2");
 	    	Pure = params.getBoolean ("Pure");
+	    	
 	    	Year1 = params.getBoolean ("Year1");
 	    	Year2 = params.getBoolean ("Year2");
 	    	Year3 = params.getBoolean ("Year3");
+	    	if (Year1) Year = 1;
+	    	else if  (Year2) Year = 2;
+	    	else Year = 3;
+	    	
 	    	Sem1 = params.getBoolean ("Sem1");
 	    	Sem2 = params.getBoolean ("Sem2");
 	    	Credit = params.getString ("Credit");
@@ -44,8 +56,13 @@ public class Advanced_Activity2 extends Activity {
 	    	CEMx1 = params.getBoolean ("CEMx1");
 	    	CEMx2 = params.getBoolean ("CEMx2");
 	    	Fail = params.getString ("Fail");
-
+	    	
 	    	textView1 = (TextView)findViewById(R.id.textView1);
+	    	textView2 = (TextView)findViewById(R.id.textView2);
+	    	listView1 = (ListView)findViewById(R.id.listView1);
+
+
+
 	        textView1.setText( Boolean.toString(Major1) 
 	        		+" & " + Boolean.toString(Major2)+" & " + Boolean.toString(Pure)+" & " +
 	        		Boolean.toString(Year1)+" & " + Boolean.toString(Year2)+" & " + Boolean.toString(Year3)+" & "
@@ -61,160 +78,48 @@ public class Advanced_Activity2 extends Activity {
 	    }
 	    
 
-
-/*	@Override
-	public void onCreate(Bundle savedInstanceState) {
-	    super.onCreate(savedInstanceState);
-	
-	    // TODO Auto-generated method stub
-	    public class Activity {
-	    	public static void main(String[] args) {
-	    		int option = Choice.Chooseoption();
-	    		if (option == 1)
-	    		{
-	    			//recommend path
-	    		}
-	    		else if (option == 2)
-	    		{
-	    			UserInfor.studentinput();
-
-
-	    			if(UserInfor.Major.equals("COMP"))
+	    		if (Sem1)
 	    			{
-	    				Comp_Advancedpath.suggestion();
-	    				Comp_Advancedpath.printout();
-	    			}
-	    			else if (UserInfor.Major.equals("CPEG"))
-	    			{
-	    				Cpeg_Advancedpath.suggestion();
-	    				Cpeg_Advancedpath.printout();
-	    			}
-
-
-	    		}
-	    		else
-	    			System.out.println("Thx and bye");
-	    	}
-	    }
-
-
-
-
-	    class Choice{
-	    	public static int Chooseoption() {
-	    		Scanner input = new Scanner(System.in);
-	    		int option = 0;
-
-
-	    			System.out.println("# # Choose one of the options below # #");
-	    			System.out.println("Option 1 - Watch Recommend study path");
-	    			System.out.println("Option 2 - Design Advanced Study path");
-	    			System.out.println("Option 0 - Quit App");
-	    			System.out.println("**************************");
-
-
-	    			System.out.print("Enter your choice here:");
-	    			option = Integer.parseInt(input.nextLine());
-
-
-	    	return option;
-	    }
-
-
-	    }
-
-
-	    class UserInfor{
-	    	public static void studentinput() {
-	    		Scanner input = new Scanner(System.in);
-	    				System.out.print("My Major:");
-	    				Major=input.nextLine();
-
-
-
-
-	    				System.out.print("Studied AL Pure(Y/N):");
-	    				Pure=input.nextLine();
-
-
-
-
-	    				System.out.print("Study year:");
-	    				Year=Integer.parseInt(input.nextLine());
-
-
-
-
-	    				System.out.print("Semester:(Fall/Spring):");
-	    				Sem=input.nextLine();
-
-
-
-
-	    				System.out.print("Credits Studied:");
-	    				Credone=Integer.parseInt(input.nextLine());
-
-
-
-
-	    				System.out.print("Common Core Studied:(HUMA/SCIS/SOSC)"); // checkbox huma, science, sosc 
-	    				CC=input.nextLine();
-
-
-
-
-	    				System.out.print("Elective Studied:"); // checkbox COMP, ELEC, ENGG
-	    				Elective=input.nextLine();
-
-
-
-
-	    				System.out.print("Recommend path's course failed/skipped:"); // checkbox of recommended path
-	    				Fail=input.nextLine();
-
-
-
-
-	    				System.out.println(Major + "*"+ Pure +"*"+Year+ "*" + Credone+"*"+ CC+"*"+Elective+"*"+Fail);
-	    }	
-
-
-
-
-	    	static public String Major;
-	    	static public String Pure;
-	    	static public int Year;
-	    	static public String Sem;
-	    	static public int Credone;
-	    	static public String CC;
-	    	static public String Elective;
-	    	static public String Fail;
-	    }
-
-
-
-
-	    class Comp_Advancedpath extends UserInfor{
-	    	public static void suggestion(){	
-
-
-	    		if (Sem.equals("fall"))
-	    			{
-	    				if((Credneed/(2*(3-Year)+1))>=21)
-	    				Defer = true;
-	    				else Defer = false;
+	    				if((Credneed/(2*(3-Year)+1))>=21) textView1.setText("You need to DEFER");
+	    				else textView1.setText("You need not DEFER");
 	    				SemtoGrad= 2*(3-Year)+1;
 	    			}
 	    		else 
 	    			{
-	    			if( Year==3 && Credneed!=0 || (Credneed/(2*(3-Year)))>=21)
-	    				Defer = true;
-	    				else Defer = false;
-	    			SemtoGrad= 2*(3-Year);
+		    			if( Year==3 && Credneed!=0 || (Credneed/(2*(3-Year)))>=21) textView1.setText("You need to DEFER");
+	    				else textView1.setText("You need not DEFER");
+		    			SemtoGrad= 2*(3-Year);
 	    			}
+	    		
+	    		
+	    		String condition = "";
+	    		if (S_T) condition += (" AND Course.Code != \"S_T\"");
+	    		if (A_H) condition += (" AND Course.Code != \"A_H\"");
+	    		if (Free) condition += (" AND Course.Code != \"FREE\"");
+	    		if (SA) condition += (" AND Course.Code != \"SA\"");
+	    		if (CEMx1) condition += (" AND Course._id != 8");
+	    		if (CEMx2) condition += (" AND Course.Code != \"CEM\"");
+	    		if (compx1) condition += (" AND Course._id != 17");
+	    		if (compx2) condition += (" AND Course._id != 18 AND Course._id != 17");
+	    		if (compx3) condition += (" AND Course._id != 18 AND Course._id != 17 AND Course._id != 19");
+	    		if (compx4) condition += (" AND Course._id != 18 AND Course._id != 17 AND Course._id != 19 AND Course._id != 20");
+	    		if (compx5) condition += (" AND Course.Code != \"COMP\"");
+	    		if (FreeE || !Pure) condition += (" AND Course.Code != \"FREEE\"");
+	    		if (ENGG) condition += (" AND Course.Code != \"ENGG\"");
+	    		if (SBM) condition += (" AND Course.Code != \"SBM\"");
 
 
-	    		Year1Suggest= "SELECT Course from Year1 where course name != 'CC'";
+
+	    		
+	    		
+	    		
+	    		
+	    		if (Sem1)
+	    			listView1.setAdapter(get("SELECT Course.Code, Name FROM COMP, Course WHERE Course.Code = COMP.Code AND Course.Code != \"CC\" AND (Year=" + Year + " OR Year=4) AND Sem = \"Spring\""));
+	    		else
+	    			listView1.setAdapter(get("SELECT Course.Code, Name FROM COMP, Course WHERE Course.Code = COMP.Code AND Course.Code != \"CC\" AND (Year=" + (Year+1) + " OR Year=4) AND Sem = \"Fall\""));
+	    		//SELECT Course.Code, Name, Sem from Course, major WHERE Course.Code = major.Code AND Year=year ORDER BY Sem
+	    		Year1Suggest= "SELECT Course.Code from Year1 where course name != 'CC'";
 	    		Year1Suggest = Year1Suggest + "SELECT Course from Year1Suggest where course name != 'Elective'";
 	    		// checkbox
 	    		Year2Suggest= "SELECT Course from Year2 where course name != 'CC'";
@@ -244,15 +149,15 @@ public class Advanced_Activity2 extends Activity {
 	    		}
 
 
-
-
-	    	}
 	    	public static void printout(){
 	    		if (Defer == true)
 	    			 System.out.println("Sorry you need to defer");
 	    		else System.out.println("Congraduation! you can grad on time");
 
 
+	    		textView2.setText("Study at least " + Credneed/SemtoGrad + " credit from the following list:");
+	    		
+	   
 	    		if (Year==1&&Sem.equals("Spring")==false)
 	    		{	
 	    			System.out.println("In Year 1 Spring, please choose "+(Credneed/SemtoGrad)+" Credits from Advanced path of Year 1 below:");
@@ -396,11 +301,8 @@ public class Advanced_Activity2 extends Activity {
 	    	static String Year1Suggest;
 	    	static String Year2Suggest;
 	    	static String Year3Suggest;
-	    }
-
-*/
 	    
-	    
+  
 	    
 	    
 	    
@@ -408,7 +310,43 @@ public class Advanced_Activity2 extends Activity {
 	    
 	    
 	}
-	TextView textView1 ;
+	    
+	    public ArrayAdapter<String> get(String input) {
+		    // TODO Auto-generated method stub
+			TestAdapter mDbHelper = new TestAdapter(this);         
+	    	mDbHelper.createDatabase();       
+	    	mDbHelper.open(); 
+	    	 
+	    	ArrayAdapter<String> adapter;
+			adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1);
+	    	//Utility.ShowMessageBox(this, "hi");
+			
+	       // String sql ="SELECT Course.Code, Name, Sem from Course, " + major + " WHERE Course.Code = " + major +".Code AND Year=" + year +" ORDER BY Sem"; 
+			String sql = input;
+			Cursor testdata = mDbHelper.getTestData(sql); 
+	    	String code = Utility.GetColumnValue(testdata, "Code");
+	    	String name = Utility.GetColumnValue(testdata, "Name");
+	    	String sem = Utility.GetColumnValue(testdata, "Sem");
+	    	adapter.add(code + " (" + sem + ")" + "\n"+ name);
+	    	while (testdata.moveToNext()){
+	    		 
+	        	code = Utility.GetColumnValue(testdata, "Code");
+	        	name = Utility.GetColumnValue(testdata, "Name");
+	        	sem = Utility.GetColumnValue(testdata, "Sem");
+	        	adapter.add(code + " (" + sem + ")" + "\n"+ name);
+	    	}
+	    	
+	    	//Utility.ShowMessageBox(this, result);
+	    	mDbHelper.close();
+					
+			return adapter;
+		}
+	
+	TextView textView1;
+	TextView textView2;
+	ListView listView1;
+
+	
 	Boolean Major1;
 	Boolean Major2;
 	Boolean Pure;
@@ -433,4 +371,10 @@ public class Advanced_Activity2 extends Activity {
 	Boolean CEMx1;
 	Boolean CEMx2;
 	String Fail;
+	
+	final int Credneed = 90 - Integer.parseInt(Credit); 
+	int Year;
+	int SemtoGrad;
+	
+	
 }

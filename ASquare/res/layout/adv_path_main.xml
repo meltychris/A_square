@@ -195,10 +195,11 @@
             android:textSize="20sp" />
         
          <EditText
-          android:id="@+id/editText1"
-          android:layout_width="match_parent"
-          android:layout_height="wrap_content"
-          android:ems="10" >
+             android:id="@+id/editText1"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:ems="10"
+             android:lines="1" >
 
           <requestFocus />
       </EditText>
@@ -430,7 +431,8 @@
              android:id="@+id/Fail"
              android:layout_width="match_parent"
              android:layout_height="wrap_content"
-             android:ems="10" >
+             android:ems="10"
+             android:lines="1" >
 
           <requestFocus />
       </EditText>
