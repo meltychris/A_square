@@ -196,10 +196,11 @@
         
          <EditText
              android:id="@+id/editText1"
-             android:layout_width="match_parent"
+             android:layout_width="wrap_content"
              android:layout_height="wrap_content"
              android:ems="10"
-             android:lines="1" >
+             android:singleLine="true"
+>
 
           <requestFocus />
       </EditText>
@@ -328,13 +329,20 @@
 	    android:layout_height="wrap_content"
 	    android:orientation="horizontal">
         
+        <RadioButton
+            android:id="@+id/compx0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:checked="true"
+            android:text="0"
+             />
+        
          <RadioButton
             android:id="@+id/compx1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            
-            android:checked="true"
             android:text="1" />
         
                 <RadioButton
@@ -393,12 +401,18 @@
 	    android:orientation="horizontal">
         
          <RadioButton
+            android:id="@+id/CEMx0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:checked="true"
+            android:text="0" />
+         
+         <RadioButton
             android:id="@+id/CEMx1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            
-            android:checked="true"
             android:text="1" />
         
                 <RadioButton
@@ -406,7 +420,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            
             android:text="2" />
                 
       </RadioGroup>
@@ -429,10 +442,12 @@
         
          <EditText
              android:id="@+id/Fail"
-             android:layout_width="match_parent"
              android:layout_height="wrap_content"
-             android:ems="10"
-             android:lines="1" >
+			 android:layout_width="wrap_content"
+			 android:ems="10"
+             android:hint="COMP1000,COMP2000,COMP3000"
+             android:singleLine="true"
+ >
 
           <requestFocus />
       </EditText>
