@@ -14,7 +14,7 @@
         android:orientation="vertical" >
         
     <LinearLayout
-        android:id="@+id/Question1"
+        android:id="@+id/Question0"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="#FFFFFF"
@@ -25,27 +25,13 @@
 	         android:layout_width="wrap_content"
 	         android:layout_height="wrap_content"
 	         android:text="Personal information: "
-	         android:textSize="30sp" />
+	         android:textColor="#FF0000"
+	         android:textSize="20sp" />
          
      </LinearLayout> 
          
         
-    <LinearLayout
-        android:id="@+id/Question1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="#FFFFFF"
-        android:orientation="horizontal" >
-
-	     <TextView
-	         android:id="@+id/textView99"
-	         android:layout_width="wrap_content"
-	         android:layout_height="wrap_content"
-	         android:text="            "
-	         android:textSize="20sp" />
-         
-     </LinearLayout> 
-    
+  
     <LinearLayout
         android:id="@+id/Question1"
         android:layout_width="wrap_content"
@@ -70,7 +56,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:onClick="onClick"
+            
             android:checked="true"
             android:text="COMP" />
 
@@ -79,7 +65,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:onClick="onClick"
+            
             android:text="CPEG" />
         </RadioGroup>
          
@@ -130,7 +116,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:onClick="onClick"
+            
             android:checked="true"
             android:text="1" />
 
@@ -139,7 +125,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:onClick="onClick"
+            
             android:text="2" />
         
                 <RadioButton
@@ -147,7 +133,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:onClick="onClick"
+            
             android:text="3" />
         </RadioGroup>
          </LinearLayout>
@@ -179,7 +165,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:onClick="onClick"
+            
             android:checked="true"
             android:text="fall" />
         
@@ -188,7 +174,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:onClick="onClick"
+            
             android:text="spring" />
         </RadioGroup>
      </LinearLayout> 
@@ -346,7 +332,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:onClick="onClick"
+            
             android:checked="true"
             android:text="1" />
         
@@ -355,7 +341,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:onClick="onClick"
+            
             android:text="2" />
         
                 <RadioButton
@@ -363,7 +349,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:onClick="onClick"
+            
             android:text="3" />
         
                   <RadioButton
@@ -371,7 +357,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:onClick="onClick"
+            
             android:text="4" />
         
         <RadioButton
@@ -379,7 +365,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:onClick="onClick"
+            
             android:text="5" />
         </RadioGroup>
          
@@ -410,7 +396,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:onClick="onClick"
+            
             android:checked="true"
             android:text="1" />
         
@@ -419,7 +405,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:onClick="onClick"
+            
             android:text="2" />
                 
       </RadioGroup>
@@ -441,16 +427,31 @@
             android:textSize="20sp" />
         
          <EditText
-          android:id="@+id/editText99"
-          android:layout_width="match_parent"
-          android:layout_height="wrap_content"
-          android:ems="10" >
+             android:id="@+id/Fail"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:ems="10" >
 
           <requestFocus />
       </EditText>
         
 
          </LinearLayout>
-    
+
+     
+          <LinearLayout
+        android:id="@+id/Buttonlayer"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        android:orientation="horizontal" >
+     
+     <Button
+         android:id="@+id/submit"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:text="Submit" />
+     </LinearLayout>
+     
 
 </LinearLayout>
