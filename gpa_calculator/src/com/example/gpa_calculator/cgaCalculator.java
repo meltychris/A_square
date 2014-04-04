@@ -5,8 +5,6 @@ package com.example.gpa_calculator;
 //import android.view.Menu;
 
 import java.io.*;
-import java.util.ArrayList;
-import java.util.Scanner;
 
 public class cgaCalculator {
 
