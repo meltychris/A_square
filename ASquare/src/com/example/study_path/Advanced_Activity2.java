@@ -1,5 +1,8 @@
 package com.example.study_path;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import com.example.asquare.R;
 import com.example.asquare.R.id;
 import com.example.asquare.R.layout;
@@ -63,8 +66,18 @@ public class Advanced_Activity2 extends Activity {
 	    	CEMx1 = params.getBoolean ("CEMx1");
 	    	CEMx2 = params.getBoolean ("CEMx2");
 	    	Fail = params.getString ("Fail");
-	    	
 	    	Credneed = 90 - Integer.parseInt(Credit);
+	    	
+	    	String[] Course = params.getStringArray("Course"); 
+	    	boolean[] Checked = params.getBooleanArray ("Checked");
+            
+	    	for (int i = 0; i< Course.length; i++){					//catagorize
+	    		if (Checked[i])
+	    			studied.add(Course[i]);
+	    		else
+	    			notstudied.add(Course[i]);
+	    		
+	    	}
 
 
 	        /*textView1.setText( Boolean.toString(Major1) 
@@ -355,6 +368,41 @@ public class Advanced_Activity2 extends Activity {
 					
 			return adapter;
 		}
+	    
+	    private Boolean checker(List<String> precourse, List<String>  studied){
+	    	Boolean result = true;
+	    	
+	    		for (String i : precourse)
+	    			if (!studied.contains(i))			//check whether studied course contains precourse
+	    				result = false;
+
+	    	return result;
+	    }
+	    
+	    public Boolean check_pre(String Code, List<String> studied) {			//check for pre-req
+		    // TODO Auto-generated method stub
+			TestAdapter mDbHelper = new TestAdapter(this);         
+	    	mDbHelper.createDatabase();       
+	    	mDbHelper.open(); 
+	    	
+	    	List<String> precourse = new ArrayList<String>();
+	    	 
+			
+	        String sql ="SELECT Precourse FROM Prerequisite WHERE Code='" + Code + "'"; 
+	    	Cursor testdata = mDbHelper.getTestData(sql); 
+	    	String code = Utility.GetColumnValue(testdata, "Code");
+	    	precourse.add(code);
+	    	
+	    	while (testdata.moveToNext()){
+	    		 
+	        	code = Utility.GetColumnValue(testdata, "Code");
+	        	precourse.add(code);
+	    	}
+	    	
+	    	mDbHelper.close();
+					
+			return 	checker(precourse, studied);
+		}
 	
 	    
       
@@ -389,6 +437,8 @@ public class Advanced_Activity2 extends Activity {
 	Boolean CEMx1;
 	Boolean CEMx2;
 	String Fail;
+	List<String> studied;
+	List<String> notstudied;
 	
 	int Credneed; 
 	int Year;
