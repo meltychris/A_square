@@ -83,7 +83,8 @@ public class Advanced_Activity extends Activity {
          	intent.putExtra ("Fail", Fail.getText().toString());
          	
          	
-             intent.setClass(Advanced_Activity.this, Advanced_Activity2.class);
+             //intent.setClass(Advanced_Activity.this, Advanced_Activity2.class);
+            intent.setClass(Advanced_Activity.this, MainActivity1.class);
 
              startActivity(intent);      
      		}

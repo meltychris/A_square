@@ -1,29 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="horizontal" >
-<TextView
-    android:id="@+id/label"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:text="@+id/label"
-    android:layout_toRightOf="@+id/check"
-    android:textSize="20sp" >
-</TextView>
+    android:layout_height="50dp"
+    android:background="@android:color/white" >
 
-<CheckBox
-    android:id="@+id/check"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_alignParentLeft="true"
-    android:layout_marginLeft="4dip"
-    android:layout_marginRight="10dip"
-    android:focusable="false"
+    <TextView
+        android:id="@+id/label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_margin="5dp"
+        android:layout_toLeftOf="@+id/check"
+        android:text="title"
+        android:textSize="30dp"
+        android:textStyle="bold" >
+    </TextView>
 
-    android:focusableInTouchMode="false" >
-</CheckBox>
+    <CheckBox
+        android:id="@+id/check"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="10dip"
+        android:focusable="false"
+        android:focusableInTouchMode="false" >
+    </CheckBox>
 
-
- 
-</LinearLayout>
+</RelativeLayout>

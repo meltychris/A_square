@@ -32,11 +32,7 @@ public class MainActivity1 extends Activity{
 
     public void onCreate(Bundle icicle) {
         super.onCreate(icicle);
-        setContentView(R.layout.choose);
-        Intent intent = new Intent();
-     	
-     
-     	
+        setContentView(R.layout.choose);     	
         
         listView = (ListView) findViewById(R.id.my_list);
 
@@ -47,19 +43,44 @@ public class MainActivity1 extends Activity{
 
             @Override
             public void onClick(View view) {
-
-
+            	 Bundle params = getIntent().getExtras();
+         	    if (params!= null) {
+         	    	Major1 = params.getBoolean ("Major1");
+         	    	Major2 = params.getBoolean ("Major2");
+         	    	Pure = params.getBoolean ("Pure");
+         	    	
+         	    	Year1 = params.getBoolean ("Year1");
+         	    	Year2 = params.getBoolean ("Year2");
+         	    	Year3 = params.getBoolean ("Year3");         	    	
+         	    	Sem1 = params.getBoolean ("Sem1");
+         	    	Sem2 = params.getBoolean ("Sem2");
+         	    	Credit = params.getString ("Credit");
+         	    	SA = params.getBoolean ("SA");
+         	    	S_T = params.getBoolean ("S_T");
+         	    	A_H = params.getBoolean ("A_H");
+         	    	Free = params.getBoolean ("Free");
+         	    	SBM = params.getBoolean ("SBM");
+         	    	ENGG = params.getBoolean ("ENGG");
+         	    	FreeE = params.getBoolean ("FreeE");
+         	    	compx1 = params.getBoolean ("compx1");
+         	    	compx2 = params.getBoolean ("compx2");
+         	    	compx3 = params.getBoolean ("compx3");
+         	    	compx4 = params.getBoolean ("compx4");
+         	    	compx5 = params.getBoolean ("compx5");
+         	    	CEMx1 = params.getBoolean ("CEMx1");
+         	    	CEMx2 = params.getBoolean ("CEMx2");
+         	    	Fail = params.getString ("Fail");
+         	    }
                 //count = listView.getAdapter().getCount();
             	Intent intent = new Intent();
             	String [] temp = new String [50];
             	Boolean [] check = new Boolean [50];
-            	int Year;
 
             	
             	intent.putExtra ("Major1", Major1);
              	intent.putExtra ("Major2", Major2);
              	intent.putExtra ("Pure", Pure);
-             	intent.putExtra ("Year1", Year);
+             	intent.putExtra ("Year1", Year1);
              	intent.putExtra ("Year2", Year2);
              	intent.putExtra ("Year3", Year3);
              	intent.putExtra ("Sem1", Sem1);
@@ -95,10 +116,11 @@ public class MainActivity1 extends Activity{
                 	i++;
                  	
                 }
-                intent.
                 intent.putExtra ("Course", temp);
-                intent.putExtra ("Course", check);
+                intent.putExtra ("Checked", check);
                 intent.setClass(MainActivity1.this, Advanced_Activity2.class);
+                startActivity(intent);
+                
 
 
             }
@@ -143,7 +165,7 @@ public class MainActivity1 extends Activity{
 	String Fail;
    
     
-    }
+    
 
     private List<Model> getModel() {			//get all course need to study
      
