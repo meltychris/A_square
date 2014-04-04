@@ -4,7 +4,6 @@ import java.io.*;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-
 public class Student {
 
 	public static final int MAX_STUDY_YEAR = 5;
@@ -29,7 +28,7 @@ public class Student {
 	int[][] year_sem_credit_counter = new int[MAX_STUDY_YEAR][MAX_SEMESTER];
 
 	public String SemIntToWords(int all) {
-		switch (a) {
+		switch (all) {
 		case 0:
 			return "Fall";
 			// break;
@@ -45,34 +44,46 @@ public class Student {
 		}
 	}
 
-	public double GradeToNum(String a) {
+	public double GradeToNum(String gradeString) {
 		// grade table from A+ to D
-
-		if (a.equals("A+")) {
+		switch (gradeString) {
+		case "A+":
 			return 4.3;
-		} else if (a.equals("A")) {
-			return 4;
-		} else if (a.equals("A-")) {
+		case "A":
+			return 4.0;
+		case "A-":
 			return 3.7;
-		} else if (a.equals("B+")) {
+		case "B+":
 			return 3.3;
-		} else if (a.equals("B")) {
-			return 3;
-		} else if (a.equals("B-")) {
+		case "B":
+			return 3.0;
+		case "B-":
 			return 2.7;
-		} else if (a.equals("C+")) {
+		case "C+":
 			return 2.3;
-		} else if (a.equals("C")) {
-			return 2;
-		} else if (a.equals("C-")) {
+		case "C":
+			return 2.0;
+		case "C-":
 			return 1.7;
-		} else if (a.equals("D")) {
-			return 1;
-		} else // grade other than A-D, eg. F,PP
-		{
-			return 0.0;
-		}
 
+			// Grades other than A-D, e.g.: F, PP, P
+		default:
+			return 0.0;
+
+		}
+		/*
+		 * if (gradeString.equals("A+")) { return 4.3; } else if
+		 * (gradeString.equals("A")) { return 4.0; } else if
+		 * (gradeString.equals("A-")) { return 3.7; } else if
+		 * (gradeString.equals("B+")) { return 3.3; } else if
+		 * (gradeString.equals("B")) { return 3.0; } else if
+		 * (gradeString.equals("B-")) { return 2.7; } else if
+		 * (gradeString.equals("C+")) { return 2.3; } else if
+		 * (gradeString.equals("C")) { return 2.0; } else if
+		 * (gradeString.equals("C-")) { return 1.7; } else if
+		 * (gradeString.equals("D")) { return 1.0; } else // grade other than
+		 * A-D, eg. F, PP, P { return 0.0; }
+		 */
 	}
 
 	public void studentinput() throws IOException {
