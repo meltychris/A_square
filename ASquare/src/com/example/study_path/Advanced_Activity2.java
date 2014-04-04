@@ -7,11 +7,14 @@ import com.example.asquare.R;
 import com.example.asquare.R.id;
 import com.example.asquare.R.layout;
 
+
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.AlertDialog.Builder;
 import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -69,10 +72,17 @@ public class Advanced_Activity2 extends Activity {
 	    	Credneed = 90 - Integer.parseInt(Credit);
 	    	
 	    	String[] Course = params.getStringArray("Course"); 
-	    	boolean[] Checked = params.getBooleanArray ("Checked");
+	    	String[] Checked = params.getStringArray ("Checked");
             
+            /*Toast.makeText(view.getContext(),
+                    [1].toString(),
+                    Toast.LENGTH_SHORT).show();*/
+	    	
+	    	studied = new ArrayList<String>();
+	    	notstudied = new ArrayList<String>();
+
 	    	for (int i = 0; i< Course.length; i++){					//catagorize
-	    		if (Checked[i])
+	    		if (Checked[i].equals("true"))
 	    			studied.add(Course[i]);
 	    		else
 	    			notstudied.add(Course[i]);
@@ -101,8 +111,10 @@ public class Advanced_Activity2 extends Activity {
 	    	 * 					else:
 	    	 * 						dun put it
 	    	 */
-	    	
-	    	
+	    	ResetTable("Studied");
+	    	ResetTable("NotStudied");
+
+	    	SaveRecord(this.findViewById(android.R.id.content));		//insert data to database
 	    	
 	    	
 	    	
@@ -483,8 +495,52 @@ public class Advanced_Activity2 extends Activity {
 					
 			return 	course;
 		}
-	
 	    
+	    public void SaveRecord(View v)
+	    {
+	    	TestAdapter mDbHelper = new TestAdapter(this);         
+	    	mDbHelper.createDatabase();       
+	    	mDbHelper.open(); 
+	    	
+	    	for (String temp : studied)
+		    	if(mDbHelper.SaveData(temp, "Studied"))
+		    	{
+		    		//Utility.ShowMessageBox(this,"Data saved. :" + temp);
+		    	}
+		    	else
+		    	{
+		    		Utility.ShowMessageBox(this,"OOPS try again!");
+		    	}
+	    	for (String temp : notstudied)
+		    	if(mDbHelper.SaveData(temp, "NotStudied"))
+		    	{
+		    		//Utility.ShowMessageBox(this,"Data saved. :" + temp);
+		    	}
+		    	else
+		    	{
+		    		Utility.ShowMessageBox(this,"OOPS try again!");
+		    	}
+	    }
+	
+	    public void ResetTable(String name) 
+	 	{
+	 		try
+	 		{
+				TestAdapter mDbHelper = new TestAdapter(this);         
+		    	mDbHelper.createDatabase();       
+		    	mDbHelper.open(); 
+		    	
+	 			mDbHelper.del(name);
+	    		Utility.ShowMessageBox(this,"Deleted " + name);
+
+	 			
+	 			mDbHelper.close();
+	 		}
+	 		catch(Exception ex)
+	 		{
+	 			Log.d("fail", ex.toString());
+	 		}
+	 	}
       
         
         

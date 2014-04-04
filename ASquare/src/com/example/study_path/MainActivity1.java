@@ -73,7 +73,7 @@ public class MainActivity1 extends Activity{
                 //count = listView.getAdapter().getCount();
             	Intent intent = new Intent();
             	List<String> temp = new ArrayList<String>();
-            	List<Boolean> check = new ArrayList<Boolean>();
+            	List<String> check = new ArrayList<String>();
 
             	
             	intent.putExtra ("Major1", Major1);
@@ -107,17 +107,20 @@ public class MainActivity1 extends Activity{
             	
                 for (Model a: list) {
                     // here i am not able to get the records as getting on onItemClick of the listview
-                	/*Toast.makeText(view.getContext(),
-                			a.getName() + "\n" + a.isSelected(),
-                            Toast.LENGTH_SHORT).show();*/
+                
                 	temp.add(a.getName());
-                	check.add(a.isSelected());                 	
+                	if (a.isSelected())
+                		check.add("true");
+                	else
+                		check.add("false");
                 }
                 
                 String[] temp1 = new String[temp.size()];
                 temp.toArray(temp1);
                 String[] check1 = new String[check.size()];
                 check.toArray(check1);
+                
+
                 
                 intent.putExtra ("Course", temp1);
                 intent.putExtra ("Checked", check1);

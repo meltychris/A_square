@@ -79,27 +79,32 @@ public class TestAdapter
      
      
 
- 	public boolean SaveEmployee(String name, String email) 
+ 	public boolean SaveData(String Code, String Type) 
  	{
  		try
  		{
  			ContentValues cv = new ContentValues();
- 			cv.put("Course", name);
- 			cv.put("Number", email);
+ 			cv.put("Code", Code);
+ 			//cv.put("Number", email);
  			
- 			mDb.insert("Employees", null, cv);
+ 			mDb.insert(Type, null, cv);
 
- 			Log.d("SaveEmployee", "informationsaved");
+ 			Log.d("Saved", "informationsaved");
  			return true;
  			
  		}
  		catch(Exception ex)
  		{
- 			Log.d("SaveEmployee", ex.toString());
+ 			Log.d("Saved", ex.toString());
  			return false;
  		}
  	}
      
+    public void del(String name)  
+    { 
+    	mDb.delete(name, null, null);
+
+    } 
 
 } 
 
