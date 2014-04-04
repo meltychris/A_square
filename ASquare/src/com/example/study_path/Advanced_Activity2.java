@@ -1,8 +1,8 @@
-package com.example.asquare;
+package com.example.study_path;
 
-import com.example.study_path.Study_Path;
-import com.example.study_path.TestAdapter;
-import com.example.study_path.Utility;
+import com.example.asquare.R;
+import com.example.asquare.R.id;
+import com.example.asquare.R.layout;
 
 import android.app.Activity;
 import android.app.AlertDialog;

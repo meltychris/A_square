@@ -1,6 +1,6 @@
 package com.example.study_path;
 
-import com.example.asquare.Advanced_Activity2;
+
 import com.example.asquare.R;
 
 import android.app.Activity;
@@ -19,6 +19,8 @@ public class Advanced_Activity extends Activity {
 	    super.onCreate(savedInstanceState);
 	    setContentView(R.layout.adv_path_main);    
 	    button1 = (Button)findViewById(R.id.submit);
+	    button2 = (Button)findViewById(R.id.button1);
+
 
 	 button1.setOnClickListener(new Button.OnClickListener(){ 
          @Override
@@ -86,11 +88,24 @@ public class Advanced_Activity extends Activity {
              startActivity(intent);      
      		}
      });
+	 
+	   button2.setOnClickListener(new Button.OnClickListener(){ 
+           @Override
+           public void onClick(View v) {
+               // TODO Auto-generated method stub
+            	Intent intent = new Intent();
+
+               intent.setClass(Advanced_Activity.this, Main.class);
+
+               startActivity(intent);     
+           }
+           
+       });
 	}
 	
 	
 	
-	 private Button button1;
+	 private Button button1; private Button button2;
 
 
 
