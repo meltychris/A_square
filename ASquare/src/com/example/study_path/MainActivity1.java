@@ -39,7 +39,6 @@ public class MainActivity1 extends Activity{
         btn = (Button) findViewById(R.id.submit);
 
         btn.setOnClickListener(new View.OnClickListener() {
-            int count = 0;
 
             @Override
             public void onClick(View view) {

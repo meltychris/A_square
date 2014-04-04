@@ -80,6 +80,35 @@ public class Advanced_Activity2 extends Activity {
 	    	}
 
 
+	    	/*
+	    	 * Bonus: helper : converter for course code(a better name show to user)
+	    	 * Sem1 true : give result of fall sem!!
+	    	 * 
+	    	 * Instruction:
+	    	 * 		for (year 1 fall to next sem):
+	    	 * 			for (course 1 to course n of SEM):
+	    	 * 				if (a course should have studied but not studied):
+	    	 * 					if (prerequisite ok(pre_check) && next sem open(check_next)):
+	    	 * 						put to List<String> required
+	    	 * 					else:
+	    	 * 						dun put it
+	    	 * 
+	    	 * 		for (next next sem to year 3 spring):
+	    	 * 			for (course 1 to course n of SEM):
+	    	 * 				if (the course not yet studied):
+	    	 * 					if (prerequisite ok && next sem open):
+	    	 * 						put to List<String> suggested
+	    	 * 					else:
+	    	 * 						dun put it
+	    	 */
+	    	
+	    	
+	    	
+	    	
+	    	
+	    	
+	    	
+	    	
 	        /*textView1.setText( Boolean.toString(Major1) 
 	        		+" & " + Boolean.toString(Major2)+" & " + Boolean.toString(Pure)+" & " +
 	        		Boolean.toString(Year1)+" & " + Boolean.toString(Year2)+" & " + Boolean.toString(Year3)+" & "
@@ -395,13 +424,64 @@ public class Advanced_Activity2 extends Activity {
 	    	
 	    	while (testdata.moveToNext()){
 	    		 
-	        	code = Utility.GetColumnValue(testdata, "Code");
+	        	code = Utility.GetColumnValue(testdata, "Precourse");
 	        	precourse.add(code);
 	    	}
 	    	
 	    	mDbHelper.close();
 					
 			return 	checker(precourse, studied);
+		}
+	
+	    
+	    public Boolean check_next(String Code, String sem) {			//check for next_sem
+		    // TODO Auto-generated method stub
+			TestAdapter mDbHelper = new TestAdapter(this);         
+	    	mDbHelper.createDatabase();       
+	    	mDbHelper.open(); 
+	    		    	 
+			
+	        String sql ="SELECT Fall, Spring FROM Course WHERE Code='" + Code + "'"; 
+	    	Cursor testdata = mDbHelper.getTestData(sql); 
+	    	String fall = Utility.GetColumnValue(testdata, "Fall");
+	    	String spring = Utility.GetColumnValue(testdata, "Spring");
+	    	
+	    	mDbHelper.close();
+	    	
+	    	Boolean result = false;
+	    	Boolean condition = (Sem1?true:false);			//if you are in sem1, output true.
+	    	if (fall.equals("TRUE") && condition)			//fall sem open && checking for fall sem
+	    		result = true;
+	    	
+	    	if (spring.equals("TRUE") && !condition)			//spring sem open && checking for spring sem
+	    		result = true;
+					
+			return 	result;
+		}
+	    
+	    public List<String> check_by_year(String Year) {			//check what course study each year
+		    // TODO Auto-generated method stub
+			TestAdapter mDbHelper = new TestAdapter(this);         
+	    	mDbHelper.createDatabase();       
+	    	mDbHelper.open(); 
+	    	
+	    	List<String> course = new ArrayList<String>();
+	    	 
+			
+	        String sql ="SELECT Code FROM COMP WHERE Year='" + Year + "'"; 
+	    	Cursor testdata = mDbHelper.getTestData(sql); 
+	    	String code = Utility.GetColumnValue(testdata, "Code");
+	    	course.add(code);
+	    	
+	    	while (testdata.moveToNext()){
+	    		 
+	        	code = Utility.GetColumnValue(testdata, "Code");
+	        	course.add(code);
+	    	}
+	    	
+	    	mDbHelper.close();
+					
+			return 	course;
 		}
 	
 	    
