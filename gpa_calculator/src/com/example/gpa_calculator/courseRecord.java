@@ -1,4 +1,4 @@
-package com.example.gpa_calculator;
+// package com.example.gpa_calculator;
 
 /*
 import java.util.ArrayList;
