@@ -95,7 +95,7 @@ public class Advanced_Activity extends Activity {
                // TODO Auto-generated method stub
             	Intent intent = new Intent();
 
-               intent.setClass(Advanced_Activity.this, Main.class);
+               intent.setClass(Advanced_Activity.this, MainActivity1.class);
 
                startActivity(intent);     
            }
