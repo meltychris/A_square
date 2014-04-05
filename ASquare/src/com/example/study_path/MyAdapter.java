@@ -21,7 +21,7 @@ public class MyAdapter extends ArrayAdapter<Model> {
     boolean checkItem_flag = false;
 
     public MyAdapter(Activity context, List<Model> list) {
-        super(context, R.layout.row, list);
+        super(context, R.layout.adv_path_choose_row, list);
         this.context = context;
         this.list = list;
     }
@@ -38,7 +38,7 @@ public class MyAdapter extends ArrayAdapter<Model> {
         ViewHolder viewHolder = null;
         if (convertView == null) {
             LayoutInflater inflator = context.getLayoutInflater();
-            convertView = inflator.inflate(R.layout.row, null);
+            convertView = inflator.inflate(R.layout.adv_path_choose_row, null);
             viewHolder = new ViewHolder();
             viewHolder.text = (TextView) convertView.findViewById(R.id.label);
             viewHolder.checkbox = (CheckBox) convertView

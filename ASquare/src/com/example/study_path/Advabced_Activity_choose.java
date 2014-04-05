@@ -22,7 +22,7 @@ import android.widget.RadioButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class MainActivity1 extends Activity{
+public class Advabced_Activity_choose extends Activity{
 
     ListView listView;
     ArrayAdapter<Model> adapter;
@@ -32,44 +32,46 @@ public class MainActivity1 extends Activity{
 
     public void onCreate(Bundle icicle) {
         super.onCreate(icicle);
-        setContentView(R.layout.choose);     	
+        setContentView(R.layout.adv_path_choose);     	
+        
+        Bundle params = getIntent().getExtras();
+ 	    if (params!= null) {
+ 	    	Major1 = params.getBoolean ("Major1");
+ 	    	Major2 = params.getBoolean ("Major2");
+ 	    	Pure = params.getBoolean ("Pure");
+
+ 	    	Year1 = params.getBoolean ("Year1");
+ 	    	Year2 = params.getBoolean ("Year2");
+ 	    	Year3 = params.getBoolean ("Year3");         	    	
+ 	    	Sem1 = params.getBoolean ("Sem1");
+ 	    	Sem2 = params.getBoolean ("Sem2");
+ 	    	Credit = params.getString ("Credit");
+ 	    	SA = params.getBoolean ("SA");
+ 	    	S_T = params.getBoolean ("S_T");
+ 	    	A_H = params.getBoolean ("A_H");
+ 	    	Free = params.getBoolean ("Free");
+ 	    	SBM = params.getBoolean ("SBM");
+ 	    	ENGG = params.getBoolean ("ENGG");
+ 	    	FreeE = params.getBoolean ("FreeE");
+ 	    	compx1 = params.getBoolean ("compx1");
+ 	    	compx2 = params.getBoolean ("compx2");
+ 	    	compx3 = params.getBoolean ("compx3");
+ 	    	compx4 = params.getBoolean ("compx4");
+ 	    	compx5 = params.getBoolean ("compx5");
+ 	    	CEMx1 = params.getBoolean ("CEMx1");
+ 	    	CEMx2 = params.getBoolean ("CEMx2");
+ 	    }
         
         listView = (ListView) findViewById(R.id.my_list);
-
         btn = (Button) findViewById(R.id.submit);
 
+        
+        
         btn.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View view) {
-            	 Bundle params = getIntent().getExtras();
-         	    if (params!= null) {
-         	    	Major1 = params.getBoolean ("Major1");
-         	    	Major2 = params.getBoolean ("Major2");
-         	    	Pure = params.getBoolean ("Pure");
-
-         	    	Year1 = params.getBoolean ("Year1");
-         	    	Year2 = params.getBoolean ("Year2");
-         	    	Year3 = params.getBoolean ("Year3");         	    	
-         	    	Sem1 = params.getBoolean ("Sem1");
-         	    	Sem2 = params.getBoolean ("Sem2");
-         	    	Credit = params.getString ("Credit");
-         	    	SA = params.getBoolean ("SA");
-         	    	S_T = params.getBoolean ("S_T");
-         	    	A_H = params.getBoolean ("A_H");
-         	    	Free = params.getBoolean ("Free");
-         	    	SBM = params.getBoolean ("SBM");
-         	    	ENGG = params.getBoolean ("ENGG");
-         	    	FreeE = params.getBoolean ("FreeE");
-         	    	compx1 = params.getBoolean ("compx1");
-         	    	compx2 = params.getBoolean ("compx2");
-         	    	compx3 = params.getBoolean ("compx3");
-         	    	compx4 = params.getBoolean ("compx4");
-         	    	compx5 = params.getBoolean ("compx5");
-         	    	CEMx1 = params.getBoolean ("CEMx1");
-         	    	CEMx2 = params.getBoolean ("CEMx2");
-         	    	Fail = params.getString ("Fail");
-         	    }
+            	
                 //count = listView.getAdapter().getCount();
             	Intent intent = new Intent();
             	List<String> temp = new ArrayList<String>();
@@ -99,7 +101,6 @@ public class MainActivity1 extends Activity{
              	intent.putExtra ("compx5", compx5);
              	intent.putExtra ("CEMx1", CEMx1);
              	intent.putExtra ("CEMx2", CEMx2);
-             	intent.putExtra ("Fail", Fail);
             	
             	
             	
@@ -124,7 +125,7 @@ public class MainActivity1 extends Activity{
                 
                 intent.putExtra ("Course", temp1);
                 intent.putExtra ("Checked", check1);
-                intent.setClass(MainActivity1.this, Advanced_Activity2.class);
+                intent.setClass(Advabced_Activity_choose.this, Advanced_Activity2.class);
                 startActivity(intent);
                 
 
@@ -168,27 +169,47 @@ public class MainActivity1 extends Activity{
 	Boolean compx5;
 	Boolean CEMx1;
 	Boolean CEMx2;
-	String Fail;
    
     
     
 
     private List<Model> getModel() {			//get all course need to study
      
-        TestAdapter mDbHelper = new TestAdapter(this);         
+        DataBaseTestAdapter mDbHelper = new DataBaseTestAdapter(this);         
 	    	mDbHelper.createDatabase();       
 	    	mDbHelper.open(); 
 	    	 
  	    	pure = (Pure?"T":"F");
 
-	        String sql ="SELECT Code FROM COMP WHERE (Pure='All' OR Pure='" + pure + "')"; 
+ 	    	String sql ="SELECT Code FROM COMP WHERE (Pure='All' OR Pure='" + pure + "') ORDER BY Year,Code"; 
 	    	Cursor testdata = mDbHelper.getTestData(sql); 
-	    	String code = Utility.GetColumnValue(testdata, "Code");
+	    	String code = DataBaseUtility.GetColumnValue(testdata, "Code");
 	    	list.add(new Model(code));
 	    	while (testdata.moveToNext()){
 	    		 
-	        	code = Utility.GetColumnValue(testdata, "Code");
-	        	list.add(new Model(code));
+	        	code = DataBaseUtility.GetColumnValue(testdata, "Code");
+	        	Model temp = new Model(code);
+	        	
+	        	if ((code.equals("CC1") && SA) ||			//name conversion
+	        			(code.equals("CC2") && S_T) ||
+	        			(code.equals("CC3") && A_H) ||
+	        			(code.equals("CC4") && Free) ||
+	        			(code.equals("SBM") && SBM) ||
+	        			(code.equals("ENGG") && ENGG) ||
+	        			(code.equals("FreeElective") && FreeE) ||
+	        			(code.equals("COMPElective1") && compx1) ||
+	        			((code.equals("COMPElective1")|| code.equals("COMPElective2")) && compx2) ||
+	        			((code.equals("COMPElective1")|| code.equals("COMPElective2") || code.equals("COMPElective3")) && compx3) ||
+	        			((code.equals("COMPElective1")|| code.equals("COMPElective2") || code.equals("COMPElective3") || code.equals("COMPElective4")) && compx4) ||
+	        			((code.equals("COMPElective1")|| code.equals("COMPElective2") || code.equals("COMPElective3") || code.equals("COMPElective4") || code.equals("COMPElective5")) && compx5) ||
+	        			(code.equals("COMP/ELEC/MATH1") && CEMx1) ||
+	        			((code.equals("COMP/ELEC/MATH1") || code.equals("COMP/ELEC/MATH2")) && CEMx2) 
+	        							){
+	        		
+	        		temp.setSelected(true);
+	        	}
+	        
+	        	list.add(temp);
     	}
     	
     	mDbHelper.close();

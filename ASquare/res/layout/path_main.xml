@@ -34,6 +34,14 @@
 			            android:layout_weight="1"
 			            android:onClick="onClick"
 			            android:text="CPEG" />
+
+			        <CheckBox
+			            android:id="@+id/checkBox1"
+			            android:layout_width="wrap_content"
+			            android:layout_height="wrap_content"
+			            android:layout_weight="1"
+			            android:text="Pure"
+			            android:textColor="#FF0000" />
         
     		</RadioGroup>
             <Button

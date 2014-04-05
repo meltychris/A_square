@@ -1,11 +1,8 @@
 package com.example.study_path;
 
-import com.example.asquare.GPA_Calculator;
-import com.example.asquare.MainActivity;
 import com.example.asquare.R;
 
 import android.app.Activity;
-import android.app.AliasActivity;
 import android.content.Intent;
 import android.database.Cursor;
 import android.graphics.drawable.Drawable;
@@ -14,8 +11,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
-import android.widget.EditText;
-import android.widget.ImageButton;
+import android.widget.CheckBox;
 import android.widget.ListView;
 import android.widget.RadioButton;
 import android.widget.Toast;
@@ -34,6 +30,7 @@ public class Study_Path extends Activity {
 	    button3 = (Button)findViewById(R.id.button3);
 	    button111 = (Button)findViewById(R.id.button111);
 	    
+	    checkbox1 = (CheckBox)findViewById(R.id.checkBox1);
 	    
 	    listView1 = (ListView) findViewById(R.id.listView1);
        	
@@ -50,6 +47,7 @@ public class Study_Path extends Activity {
     	
     	major = "COMP";		//initial
     	year = "1";			//initial
+    	pure = "T";			//initialize to NOT studied Pure
 
 
         radioButton1.setOnClickListener(new RadioButton.OnClickListener(){ 
@@ -89,7 +87,7 @@ public class Study_Path extends Activity {
 				// TODO Auto-generated method stub
 				major = "COMP";
             	
-            	listView1.setAdapter(get(major, year));
+            	listView1.setAdapter(get(major, year, pure));
 
             	view1.setVisibility(View.INVISIBLE);
             	view2.setVisibility(View.INVISIBLE);
@@ -142,7 +140,7 @@ public class Study_Path extends Activity {
 				// TODO Auto-generated method stub
 				major = "CPEG";
 
-            	listView1.setAdapter(get(major, year));
+            	listView1.setAdapter(get(major, year, pure));
 
             	view1.setVisibility(View.INVISIBLE);
             	view2.setVisibility(View.INVISIBLE);
@@ -158,12 +156,23 @@ public class Study_Path extends Activity {
 			}
         });
         
+        
+        checkbox1.setOnClickListener(new Button.OnClickListener(){ 
+            @Override
+            public void onClick(View v) {
+                // TODO Auto-generated method stub
+            	pure = (pure.equals("T")?"F":"T"); 
+            	listView1.setAdapter(get(major, year, pure));
+            	
+        		}
+        });
+        
         button1.setOnClickListener(new Button.OnClickListener(){ 
             @Override
             public void onClick(View v) {
                 // TODO Auto-generated method stub
             	year = "1";
-            	listView1.setAdapter(get(major, year));
+            	listView1.setAdapter(get(major, year, pure));
             	
             	view1.setVisibility(View.VISIBLE);
             	view2.setVisibility(View.INVISIBLE);
@@ -188,7 +197,7 @@ public class Study_Path extends Activity {
             public void onClick(View v) {
                 // TODO Auto-generated method stub
             	year = "2";
-            	listView1.setAdapter(get(major, year));
+            	listView1.setAdapter(get(major, year, pure));
             	
             	
             	view1.setVisibility(View.INVISIBLE);
@@ -213,7 +222,7 @@ public class Study_Path extends Activity {
             public void onClick(View v) {
                 // TODO Auto-generated method stub
             	year = "3";
-            	listView1.setAdapter(get(major, year));
+            	listView1.setAdapter(get(major, year, pure));
             	
             	view1.setVisibility(View.INVISIBLE);
             	view2.setVisibility(View.INVISIBLE);
@@ -255,9 +264,9 @@ public class Study_Path extends Activity {
 	}
 	
 	
-	public ArrayAdapter<String> get(String major, String year) {
+	public ArrayAdapter<String> get(String major, String year, String Pure) {
 	    // TODO Auto-generated method stub
-		TestAdapter mDbHelper = new TestAdapter(this);         
+		DataBaseTestAdapter mDbHelper = new DataBaseTestAdapter(this);         
     	mDbHelper.createDatabase();       
     	mDbHelper.open(); 
     	 
@@ -265,17 +274,17 @@ public class Study_Path extends Activity {
 		adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1);
     	//Utility.ShowMessageBox(this, "hi");
 		
-        String sql ="SELECT Course.Code, Name, Sem from Course, " + major + " WHERE Course.Code = " + major +".Code AND Year=" + year +" ORDER BY Sem"; 
+        String sql ="SELECT Course.Code, Name, Sem from Course, " + major + " WHERE Course.Code = " + major +".Code AND Year=" + year +" AND Pure != '" + Pure + "' ORDER BY Sem"; 
     	Cursor testdata = mDbHelper.getTestData(sql); 
-    	String code = Utility.GetColumnValue(testdata, "Code");
-    	String name = Utility.GetColumnValue(testdata, "Name");
-    	String sem = Utility.GetColumnValue(testdata, "Sem");
+    	String code = DataBaseUtility.GetColumnValue(testdata, "Code");
+    	String name = DataBaseUtility.GetColumnValue(testdata, "Name");
+    	String sem = DataBaseUtility.GetColumnValue(testdata, "Sem");
     	adapter.add(code + " (" + sem + ")" + "\n"+ name);
     	while (testdata.moveToNext()){
     		 
-        	code = Utility.GetColumnValue(testdata, "Code");
-        	name = Utility.GetColumnValue(testdata, "Name");
-        	sem = Utility.GetColumnValue(testdata, "Sem");
+        	code = DataBaseUtility.GetColumnValue(testdata, "Code");
+        	name = DataBaseUtility.GetColumnValue(testdata, "Name");
+        	sem = DataBaseUtility.GetColumnValue(testdata, "Sem");
         	adapter.add(code + " (" + sem + ")" + "\n"+ name);
     	}
     	
@@ -284,6 +293,7 @@ public class Study_Path extends Activity {
 				
 		return adapter;
 	}
+	
     private Button button1;
     private Button button2;
     private Button button3;
@@ -296,6 +306,6 @@ public class Study_Path extends Activity {
     private RadioButton radioButton2;
     private String major;
     private String year;
-
-
+    private String pure;
+    private CheckBox checkbox1;
 }

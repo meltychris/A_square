@@ -7,7 +7,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class Utility {
+public class DataBaseUtility {
 
  	public static String GetColumnValue(Cursor cur, String ColumnName) {
 		try {

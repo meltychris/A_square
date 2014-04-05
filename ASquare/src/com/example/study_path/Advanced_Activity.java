@@ -18,8 +18,7 @@ public class Advanced_Activity extends Activity {
 	public void onCreate(Bundle savedInstanceState) {
 	    super.onCreate(savedInstanceState);
 	    setContentView(R.layout.adv_path_main);    
-	    button1 = (Button)findViewById(R.id.submit);
-	    button2 = (Button)findViewById(R.id.button1);
+	    button1 = (Button)findViewById(R.id.button1);
 
 
 	 button1.setOnClickListener(new Button.OnClickListener(){ 
@@ -49,7 +48,6 @@ public class Advanced_Activity extends Activity {
      	    RadioButton compx5 = (RadioButton)findViewById(R.id.compx5);
      	    RadioButton CEMx1 = (RadioButton)findViewById(R.id.CEMx1);
      	    RadioButton CEMx2 = (RadioButton)findViewById(R.id.CEMx2);
-     	    EditText Fail = (EditText)findViewById(R.id.Fail);
      	  
 
      	    
@@ -80,33 +78,21 @@ public class Advanced_Activity extends Activity {
          	intent.putExtra ("compx5", compx5.isChecked());
          	intent.putExtra ("CEMx1", CEMx1.isChecked());
          	intent.putExtra ("CEMx2", CEMx2.isChecked());
-         	intent.putExtra ("Fail", Fail.getText().toString());
          	
          	
              //intent.setClass(Advanced_Activity.this, Advanced_Activity2.class);
-            intent.setClass(Advanced_Activity.this, MainActivity1.class);
+            intent.setClass(Advanced_Activity.this, Advabced_Activity_choose.class);
 
              startActivity(intent);      
      		}
      });
 	 
-	   button2.setOnClickListener(new Button.OnClickListener(){ 
-           @Override
-           public void onClick(View v) {
-               // TODO Auto-generated method stub
-            	Intent intent = new Intent();
-
-               intent.setClass(Advanced_Activity.this, MainActivity1.class);
-
-               startActivity(intent);     
-           }
-           
-       });
+	  
 	}
 	
 	
 	
-	 private Button button1; private Button button2;
+	 private Button button1; 
 
 
 

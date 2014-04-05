@@ -31,13 +31,13 @@
         <activity
             android:name="com.example.study_path.Study_Path"
             android:label="Study Path"
-            android:windowSoftInputMode="adjustPan" >
+            android:windowSoftInputMode="adjustPan" android:screenOrientation="portrait">
         </activity>
         <activity android:name="com.example.study_path.data" >
         </activity>
-        <activity android:name="com.example.study_path.Advanced_Activity" android:label="Advanced Path"></activity>
+        <activity android:name="com.example.study_path.Advanced_Activity" android:label="Advanced Path" android:screenOrientation="portrait"></activity>
         <activity android:name="com.example.study_path.Advanced_Activity2" android:label="Advanced Path" android:screenOrientation="portrait"></activity>
-        <activity android:name="com.example.study_path.MainActivity1"></activity>
+        <activity android:name="com.example.study_path.Advabced_Activity_choose" android:label="Advanced Path" android:screenOrientation="portrait"></activity>
     </application>
 
 </manifest>

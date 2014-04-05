@@ -9,7 +9,7 @@ import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase; 
 import android.util.Log; 
  
-public class TestAdapter  
+public class DataBaseTestAdapter  
 { 
     protected static final String TAG = "DataAdapter"; 
  
@@ -17,13 +17,13 @@ public class TestAdapter
     private SQLiteDatabase mDb; 
     private DataBaseHelper mDbHelper; 
  
-    public TestAdapter(Context context)  
+    public DataBaseTestAdapter(Context context)  
     { 
         this.mContext = context; 
         mDbHelper = new DataBaseHelper(mContext); 
     } 
  
-    public TestAdapter createDatabase() throws SQLException  
+    public DataBaseTestAdapter createDatabase() throws SQLException  
     { 
         try  
         { 
@@ -37,7 +37,7 @@ public class TestAdapter
         return this; 
     } 
  
-    public TestAdapter open() throws SQLException  
+    public DataBaseTestAdapter open() throws SQLException  
     { 
         try  
         { 
