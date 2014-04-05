@@ -378,8 +378,7 @@ public class Student {
 		{
 			
 			//diffCGA*total sem credit <= course1 grade*course1 credit
-			//diffCGA*total sem credit / course1 credit = course1 grade <<
-			
+			//diffCGA*total sem credit / course1 credit = course1 grade <<		
 			if (courseRecord[currentYear][currentSem][counter][1] == null)
 			{
 				//none at all or no further record, stop advice
@@ -477,7 +476,7 @@ public class Student {
 		
 		System.out.println("Delete CourseRecord func starts");
 		
-		//Array!!! drawback, if del record in middle....dual with here!!!!!!!!!!!!
+		//Array!!! drawback, if del record in middle....deal with them here!!!!!!!!!!!!
 		//String->>>null
 		
 		courseRecord[year][sem][course_to_del][0] = null;
@@ -680,32 +679,20 @@ public class Student {
 	}
 	
 	
-	//not finished
+
 	//parameter  year,semester
 	public void calTGA(int year, int sem) throws IOException {
 		
 		//as calculation will give out decimal point number
 		double sum_of_grade_point = 0;
-		//double total_no_of_credit;
-		
-		//System.out.println("year = " + year);
-		//System.out.println("sem = " + sem);		
-		//System.out.println("year_sem_course_counter[year][sem] = " + year_sem_course_counter[year][sem]);
-		//System.out.println("courseRecord[year][sem][i][0]) = " + (courseRecord[year][sem][0][0]));
-		//System.out.println("Integer.parseInt(courseRecord[year][sem][i][1]) = " + Integer.parseInt(courseRecord[year][sem][0][1]));
-		//System.out.println("GradeToNum(courseRecord[year][sem][i][2]) = " + GradeToNum(courseRecord[year][sem][0][2]));
-		
+
 		int i = 0;
 		while ( i  < year_sem_course_counter[year][sem] ){
 			sum_of_grade_point = sum_of_grade_point + GradeToNum(courseRecord[year][sem][i][2])*Integer.parseInt(courseRecord[year][sem][i][1]);
-			//System.out.println("sum_of_grade_point  1 = " + sum_of_grade_point);
+
 			i++;
-			//System.out.println("i = " + i);
+
 		}
-		
-		//System.out.println("sum_of_grade_point  2 = " + sum_of_grade_point);
-		
-		//System.out.println("year_sem_credit_counter[year][sem]" + year_sem_credit_counter[year][sem]);
 		
 		if (year_sem_credit_counter[year][sem] == 0)
 		{
@@ -716,11 +703,6 @@ public class Student {
 			TGA[year][sem] = sum_of_grade_point/year_sem_credit_counter[year][sem];
 		}
 		
-		
-		//System.out.println("TGA[year][sem] " + TGA[year][sem]);
-
-				
-
 	}
 	
 	public void calCGA() throws IOException {
@@ -732,62 +714,21 @@ public class Student {
 		int year = 0;
 		
 		
-		//System.out.println("CGA 0 = " + CGA);
-		
-		//sum_of_grade_point + sum_of_all_credit_taken
+
 		while (year < MAX_STUDY_YEAR)
 		{
 			int sem = 0;
 			while (sem < MAX_SEMESTER)
-			{
-				//System.out.println("CGA 1 = " + CGA);
-				//System.out.println("sum_of_grade_point 3 = " + sum_of_grade_point);
-				
-				//System.out.println("TGA[year][sem] = " + TGA[year][sem]);
-				//System.out.println("year_sem_credit_counter[year][sem] = " + year_sem_credit_counter[year][sem]);
-				
+			{				
 				sum_of_grade_point = sum_of_grade_point +  TGA[year][sem]*year_sem_credit_counter[year][sem];
 				
 				sum_of_all_credit_taken = sum_of_all_credit_taken +  year_sem_credit_counter[year][sem];
 				
 				sem++;
 				
-				//System.out.println("year = " + year);
-				//System.out.println("sem = " + sem);
-				//System.out.println("sum_of_grade_point 4 = " + sum_of_grade_point);
-				
 			}
 			year++;
 		}
-		
-/*		//sum_of_All_credit
-		
-		System.out.println("Inside sum_of_All_credit loop");
-		
-		int sum_of_all_credit_taken = 0;
-		
-		System.out.println("sum_of_all_credit_taken 1 = " + sum_of_all_credit_taken);
-		System.out.println("year_sem_credit_counter[year][sem] 1 = " + year_sem_credit_counter[year][sem]);
-		
-		
-		while (year < MAX_STUDY_YEAR)
-		{
-			while (sem < MAX_SEMESTER)
-			{
-				System.out.println("year_sem_credit_counter[year][sem] 2 = " + year_sem_credit_counter[year][sem]);
-	
-				sum_of_all_credit_taken = sum_of_all_credit_taken +  year_sem_credit_counter[year][sem];
-				sem++;
-				
-				System.out.println("year = " + year);
-				System.out.println("sem = " + sem);
-				System.out.println("sum_of_all_credit_taken 2 = " + sum_of_all_credit_taken);
-				System.out.println("sum_of_all_credit_taken 1 = " + sum_of_all_credit_taken);
-				System.out.println("------------------");
-			}
-			year++;
-		}
-		*/
 		
 		//avoid division by zero NaN
 		if (sum_of_all_credit_taken == 0)
@@ -876,16 +817,13 @@ public class Student {
 					
 					sum_of_all_credit_taken = sum_of_all_credit_taken +  (0.5*year_sem_credit_counter[year][sem]);
 
-					
-					//System.out.println("GGA 1 = " + GGA);
+
 				}
 				else {
 					sum_of_grade_point = sum_of_grade_point +  TGA[year][sem]*year_sem_credit_counter[year][sem];
 					
 					sum_of_all_credit_taken = sum_of_all_credit_taken +  year_sem_credit_counter[year][sem];
 
-				
-					//System.out.println("GGA 2 = " + GGA);
 				}
 				
 				sem++;
@@ -916,28 +854,18 @@ public class Student {
 	//public static void printGPA(year, semester?) throws IOException {
 	public void printTGA() throws IOException {
 		
-		//calTGA(year,sem);
 		for (int year = 0 ; year < MAX_STUDY_YEAR ; year++)
 		{
 			for (int sem = 0 ; sem < MAX_SEMESTER ; sem++)
 			{
-				//System.out.println("year=" + year);
-				//		System.out.println("sem=" + sem);
-				//System.out.println("TGA[0][0]= " + TGA[0][0]);
-				//System.out.println("TGA[0][1]= " + TGA[0][1]);
-				//System.out.println("TGA[0][2]= " + TGA[0][2]);
-				
 				calTGA(year,sem);
 			}
 			
 
 		}
 		
-		
-		
 		Scanner input = new Scanner(System.in);
-		
-		
+
 		String Answer0 = "Y";
 		
 		while (Answer0.equals("Y"))
