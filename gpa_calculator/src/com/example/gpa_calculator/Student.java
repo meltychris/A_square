@@ -229,6 +229,7 @@ public class Student {
 
 	public void insertCourseRecord(int year, int sem, String courseName, String credit, String grade, String courseCode)throws IOException {
 		
+		
 		//as year sem are array index
 		if (year >= MAX_STUDY_YEAR)
 		{
