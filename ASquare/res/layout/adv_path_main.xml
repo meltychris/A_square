@@ -200,7 +200,7 @@
              android:layout_height="wrap_content"
              android:ems="10"
              android:singleLine="true"
->
+             android:text="18" >
 
           <requestFocus />
       </EditText>

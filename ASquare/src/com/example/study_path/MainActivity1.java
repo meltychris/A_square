@@ -47,7 +47,7 @@ public class MainActivity1 extends Activity{
          	    	Major1 = params.getBoolean ("Major1");
          	    	Major2 = params.getBoolean ("Major2");
          	    	Pure = params.getBoolean ("Pure");
-         	    	
+
          	    	Year1 = params.getBoolean ("Year1");
          	    	Year2 = params.getBoolean ("Year2");
          	    	Year3 = params.getBoolean ("Year3");         	    	
@@ -179,8 +179,9 @@ public class MainActivity1 extends Activity{
 	    	mDbHelper.createDatabase();       
 	    	mDbHelper.open(); 
 	    	 
-			
-	        String sql ="SELECT Code FROM COMP"; 
+ 	    	pure = (Pure?"T":"F");
+
+	        String sql ="SELECT Code FROM COMP WHERE (Pure='All' OR Pure='" + pure + "')"; 
 	    	Cursor testdata = mDbHelper.getTestData(sql); 
 	    	String code = Utility.GetColumnValue(testdata, "Code");
 	    	list.add(new Model(code));
@@ -195,5 +196,6 @@ public class MainActivity1 extends Activity{
         return list;
     }
 
+    String pure;
 }
 
