@@ -22,7 +22,7 @@ import android.widget.RadioButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class Advabced_Activity_choose extends Activity{
+public class Advanced_Activity_choose extends Activity{
 
     ListView listView;
     ArrayAdapter<Model> adapter;
@@ -125,7 +125,7 @@ public class Advabced_Activity_choose extends Activity{
                 
                 intent.putExtra ("Course", temp1);
                 intent.putExtra ("Checked", check1);
-                intent.setClass(Advabced_Activity_choose.this, Advanced_Activity2.class);
+                intent.setClass(Advanced_Activity_choose.this, Advanced_Activity2.class);
                 startActivity(intent);
                 
 

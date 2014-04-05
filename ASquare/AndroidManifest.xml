@@ -37,7 +37,7 @@
         </activity>
         <activity android:name="com.example.study_path.Advanced_Activity" android:label="Advanced Path" android:screenOrientation="portrait"></activity>
         <activity android:name="com.example.study_path.Advanced_Activity2" android:label="Advanced Path" android:screenOrientation="portrait"></activity>
-        <activity android:name="com.example.study_path.Advabced_Activity_choose" android:label="Advanced Path" android:screenOrientation="portrait"></activity>
+        <activity android:name="com.example.study_path.Advanced_Activity_choose" android:label="Advanced Path" android:screenOrientation="portrait"></activity>
     </application>
 
 </manifest>

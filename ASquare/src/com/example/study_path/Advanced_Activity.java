@@ -81,7 +81,7 @@ public class Advanced_Activity extends Activity {
          	
          	
              //intent.setClass(Advanced_Activity.this, Advanced_Activity2.class);
-            intent.setClass(Advanced_Activity.this, Advabced_Activity_choose.class);
+            intent.setClass(Advanced_Activity.this, Advanced_Activity_choose.class);
 
              startActivity(intent);      
      		}
