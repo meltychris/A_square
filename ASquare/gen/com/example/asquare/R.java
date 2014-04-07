@@ -60,12 +60,14 @@ public final class R {
         public static final int S_T=0x7f070030;
         public static final int View1=0x7f07004d;
         public static final int View2=0x7f07004e;
-        public static final int View3=0x7f070054;
+        public static final int View3=0x7f070058;
+        public static final int btnStartTime=0x7f070053;
+        public static final int btnStopTime=0x7f070054;
         public static final int button1=0x7f07004a;
-        public static final int button111=0x7f070052;
+        public static final int button111=0x7f070056;
         public static final int button2=0x7f07004b;
-        public static final int button3=0x7f070053;
-        public static final int buttonLayout1=0x7f070051;
+        public static final int button3=0x7f070057;
+        public static final int buttonLayout1=0x7f070055;
         public static final int check=0x7f070013;
         public static final int checkBox1=0x7f07001d;
         public static final int checkbox=0x7f07002e;
@@ -76,6 +78,7 @@ public final class R {
         public static final int compx4=0x7f070040;
         public static final int compx5=0x7f070041;
         public static final int editText1=0x7f07002b;
+        public static final int edtTimerValue=0x7f070052;
         public static final int elective=0x7f070033;
         public static final int fall=0x7f070027;
         public static final int imageButton1=0x7f070002;
@@ -100,6 +103,7 @@ public final class R {
         public static final int my_list=0x7f070011;
         public static final int radioButton1=0x7f070019;
         public static final int radioButton2=0x7f07001a;
+        public static final int reset=0x7f070051;
         public static final int spring=0x7f070028;
         public static final int submit=0x7f07000f;
         public static final int textView1=0x7f070010;
@@ -122,8 +126,9 @@ public final class R {
         public static final int adv_path_choose_row=0x7f030002;
         public static final int adv_path_main=0x7f030003;
         public static final int adv_path_main2=0x7f030004;
-        public static final int gpa_main=0x7f030005;
-        public static final int path_main=0x7f030006;
+        public static final int exam_main=0x7f030005;
+        public static final int gpa_main=0x7f030006;
+        public static final int path_main=0x7f030007;
     }
     public static final class string {
         public static final int action_settings=0x7f050001;
