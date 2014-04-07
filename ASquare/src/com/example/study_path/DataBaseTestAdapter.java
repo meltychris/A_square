@@ -88,7 +88,7 @@ public class DataBaseTestAdapter
  			//cv.put("Number", email);
  			
  			mDb.insert(Type, null, cv);
-
+ 			
  			Log.d("Saved", "informationsaved");
  			return true;
  			
@@ -103,6 +103,12 @@ public class DataBaseTestAdapter
     public void del(String name)  
     { 
     	mDb.delete(name, null, null);
+
+    } 
+    
+    public void alter(String Value, String Type)  
+    { 
+    	mDb.execSQL("UPDATE Preference SET Value='" + Value +"' WHERE Type='" + Type +"'");
 
     } 
 
