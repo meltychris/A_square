@@ -31,6 +31,7 @@ public final class R {
     }
     public static final class id {
         public static final int A_H=0x7f080031;
+        public static final int Add=0x7f080053;
         public static final int Buttonlayer=0x7f080049;
         public static final int CEM=0x7f080042;
         public static final int CEMx0=0x7f080045;
@@ -38,6 +39,7 @@ public final class R {
         public static final int CEMx2=0x7f080047;
         public static final int COMP3x=0x7f080038;
         public static final int COMP3xx=0x7f08003a;
+        public static final int Delete=0x7f080054;
         public static final int ENGG=0x7f080036;
         public static final int Free=0x7f080032;
         public static final int FreeE=0x7f080037;
@@ -61,8 +63,6 @@ public final class R {
         public static final int View1=0x7f08004d;
         public static final int View2=0x7f08004e;
         public static final int View3=0x7f080058;
-        public static final int btnStartTime=0x7f080053;
-        public static final int btnStopTime=0x7f080054;
         public static final int button1=0x7f08004a;
         public static final int button111=0x7f080056;
         public static final int button2=0x7f08004b;
