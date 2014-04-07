@@ -34,7 +34,7 @@ public class Exam_countdown extends Activity {
  	        	
  	        	
  	    		
- 	    		listView1.setAdapter(adapter);
+ 	    //		listView1.setAdapter(adapter);
  	    		}
  	    });
 	}
