@@ -1,6 +1,7 @@
 package com.example.asquare;
 //don't change the MainActivity and the layout of main !!
 
+import com.example.exam_count_down.Exam_countdown;
 import com.example.study_path.Study_Path;
 
 import android.os.Bundle;
@@ -45,7 +46,7 @@ public class MainActivity extends Activity {
             public void onClick(View v) {
                 // TODO Auto-generated method stub
             	Intent intent = new Intent();
-                intent.setClass(MainActivity.this, MainActivity.class);
+                intent.setClass(MainActivity.this, Exam_countdown.class);
                 startActivity(intent);
                
         }});
