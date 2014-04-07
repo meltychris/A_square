@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+<RelativeLayout 
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:background="@android:color/white" >
+
+    <Button
+        android:id="@+id/reset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:singleLine="false"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:text="Reset" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_margin="5dp"
+        android:text="Exam Count Down:"
+        android:textSize="20sp" />
+   
+</RelativeLayout>
+
+<LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="10dp" >
+
+
+        <EditText
+            android:id="@+id/edtTimerValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10"
+            android:hint="Course Code"
+            android:inputType="phone" />
+
+        <EditText
+            android:id="@+id/edtTimerValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10"
+            android:hint="Exam Date"
+            android:inputType="phone" />
+      </LinearLayout>
+            
+<LinearLayout
+   		android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="10dp" >
+
+        <Button
+            android:id="@+id/btnStartTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_weight="2"
+            android:text="Add" />
+
+
+        <Button
+            android:id="@+id/btnStopTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_weight="2"
+            android:text="Reset"/>
+
+
+    </LinearLayout>
+         
+  <LinearLayout
+        android:layout_width="match_parent"
+         android:id="@+id/linearLayout4"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+	  	<View
+	      android:id="@+id/View1"
+	      android:layout_width="fill_parent"
+	      android:layout_weight="1"
+	      android:layout_height="3dp"
+	      android:layout_alignParentBottom="true"
+	      android:background="#1188FF" />
+
+	    <View
+	      android:id="@+id/View2"
+		  android:layout_width="fill_parent"
+	      android:layout_weight="1"
+		  android:layout_height="3dp"
+	      android:layout_alignParentBottom="true"
+	      android:background="#1188FF" />
+
+	 </LinearLayout>
+        
+     <View
+	      android:layout_width="match_parent"
+	      android:layout_height="1dp"
+	      android:layout_alignParentBottom="true"
+	      android:background="#111111" />
+    
+      <LinearLayout
+        android:id="@+id/linearLayout5"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <ListView
+            android:id="@+id/listView1"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:drawSelectorOnTop="false" >
+        </ListView>
+
+    </LinearLayout>
+
+    
+
+
+</LinearLayout>
