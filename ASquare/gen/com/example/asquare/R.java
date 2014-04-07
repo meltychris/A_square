@@ -35,6 +35,7 @@ public final class R {
         public static final int path=0x7f020006;
         public static final int pic=0x7f020007;
         public static final int psycho=0x7f020008;
+        public static final int whitepic=0x7f020009;
     }
     public static final class id {
         public static final int A_H=0x7f080031;
