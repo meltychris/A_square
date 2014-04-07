@@ -60,12 +60,14 @@ public final class R {
         public static final int S_T=0x7f080030;
         public static final int View1=0x7f08004d;
         public static final int View2=0x7f08004e;
-        public static final int View3=0x7f080054;
+        public static final int View3=0x7f080058;
+        public static final int btnStartTime=0x7f080053;
+        public static final int btnStopTime=0x7f080054;
         public static final int button1=0x7f08004a;
-        public static final int button111=0x7f080052;
+        public static final int button111=0x7f080056;
         public static final int button2=0x7f08004b;
-        public static final int button3=0x7f080053;
-        public static final int buttonLayout1=0x7f080051;
+        public static final int button3=0x7f080057;
+        public static final int buttonLayout1=0x7f080055;
         public static final int check=0x7f080013;
         public static final int checkBox1=0x7f08001d;
         public static final int checkbox=0x7f08002e;
@@ -76,6 +78,7 @@ public final class R {
         public static final int compx4=0x7f080040;
         public static final int compx5=0x7f080041;
         public static final int editText1=0x7f08002b;
+        public static final int edtTimerValue=0x7f080052;
         public static final int elective=0x7f080033;
         public static final int fall=0x7f080027;
         public static final int imageButton1=0x7f080002;
@@ -97,10 +100,11 @@ public final class R {
         public static final int linearLayout4=0x7f08004c;
         public static final int linearLayout5=0x7f08004f;
         public static final int listView1=0x7f080050;
-        public static final int menu_delete=0x7f080055;
+        public static final int menu_delete=0x7f080059;
         public static final int my_list=0x7f080011;
         public static final int radioButton1=0x7f080019;
         public static final int radioButton2=0x7f08001a;
+        public static final int reset=0x7f080051;
         public static final int spring=0x7f080028;
         public static final int submit=0x7f08000f;
         public static final int textView1=0x7f080010;
@@ -123,8 +127,9 @@ public final class R {
         public static final int adv_path_choose_row=0x7f030002;
         public static final int adv_path_main=0x7f030003;
         public static final int adv_path_main2=0x7f030004;
-        public static final int gpa_main=0x7f030005;
-        public static final int path_main=0x7f030006;
+        public static final int exam_main=0x7f030005;
+        public static final int gpa_main=0x7f030006;
+        public static final int path_main=0x7f030007;
     }
     public static final class menu {
         public static final int menu=0x7f070000;
