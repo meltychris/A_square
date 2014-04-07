@@ -26,7 +26,7 @@ public class MyBroadcastReceiver extends BroadcastReceiver {
 		// Vibrate the mobile phone
 		Vibrator vibrator = (Vibrator) context
 				.getSystemService(Context.VIBRATOR_SERVICE);
-		vibrator.vibrate(2000);
+		vibrator.vibrate(100);
 		
 		
 		NotificationManager noMgr = (NotificationManager) context.getSystemService(Context.NOTIFICATION_SERVICE);
