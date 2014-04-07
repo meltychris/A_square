@@ -3,12 +3,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/whitepic"
     android:orientation="vertical" >
 <RelativeLayout 
     android:layout_width="match_parent"
     android:layout_height="50dp"
     android:background="@android:color/white" >
 
+    
+    
     <Button
         android:id="@+id/reset"
         android:layout_width="wrap_content"

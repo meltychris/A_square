@@ -80,7 +80,13 @@ public class Exam_countdown extends Activity {
  	        	for (String i : data)
  	        		adapter.add(i);
  	        	
+<<<<<<< HEAD
  	    		listView1.setAdapter(adapter);
+=======
+ 	        	
+ 	    		
+ 	    //		listView1.setAdapter(adapter);
+>>>>>>> refs/remotes/origin/master
  	    		}
  	    });
 		 

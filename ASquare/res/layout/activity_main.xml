@@ -1,4 +1,5 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@drawable/pic"
 android:layout_width="match_parent"
 android:layout_height="match_parent"
 android:orientation="vertical">
@@ -20,7 +21,7 @@ android:orientation="vertical">
 	            android:id="@+id/imageButton1"
 	            android:layout_width="fill_parent"
 	            android:layout_height="fill_parent"
-	            android:background="@drawable/ic_launcher"
+	            android:background="@drawable/gpa_calculator"
 	            android:scaleType="fitCenter" />
             
 		</LinearLayout>
@@ -34,7 +35,7 @@ android:orientation="vertical">
     	        android:id="@+id/imageButton2"
     	        android:layout_width="fill_parent"
     	        android:layout_height="fill_parent"
-    	        android:background="@drawable/ic_launcher"
+    	        android:background="@drawable/path"
     	        android:scaleType="fitXY" />
             
 		</LinearLayout>
@@ -56,7 +57,7 @@ android:orientation="vertical">
 		            android:id="@+id/imageButton3"
 		            android:layout_width="fill_parent"
 		            android:layout_height="fill_parent"
-		            android:background="@drawable/ic_launcher"
+		            android:background="@drawable/exam_cd"
 		            android:scaleType="fitXY" />
 	            
 			</LinearLayout>
@@ -70,7 +71,7 @@ android:orientation="vertical">
 	    	        android:id="@+id/imageButton4"
 	    	        android:layout_width="fill_parent"
 	    	        android:layout_height="fill_parent"
-	    	        android:background="@drawable/ic_launcher"
+	    	        android:background="@drawable/advisor"
 	    	        android:scaleType="fitXY" />
 	            
 			</LinearLayout>
@@ -92,7 +93,7 @@ android:orientation="vertical">
 		        android:id="@+id/imageButton5"
 		        android:layout_width="fill_parent"
 		        android:layout_height="fill_parent"
-		        android:background="@drawable/ic_launcher"
+		        android:background="@drawable/chatrm"
 		        android:scaleType="fitXY" />
 	            
 		</LinearLayout>
@@ -106,7 +107,7 @@ android:orientation="vertical">
 	    	    android:id="@+id/imageButton6"
 	    	    android:layout_width="fill_parent"
 	    	    android:layout_height="fill_parent"
-	    	    android:background="@drawable/ic_launcher"
+	    	    android:background="@drawable/psycho"
 	    	    android:scaleType="fitXY" />
 	            
 		</LinearLayout>

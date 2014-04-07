@@ -26,12 +26,22 @@ public final class R {
         public static final int activity_vertical_margin=0x7f040001;
     }
     public static final class drawable {
-        public static final int blue2_button=0x7f020000;
-        public static final int ic_launcher=0x7f020001;
+        public static final int advisor=0x7f020000;
+        public static final int blue2_button=0x7f020001;
+        public static final int chatrm=0x7f020002;
+        public static final int exam_cd=0x7f020003;
+        public static final int gpa_calculator=0x7f020004;
+        public static final int ic_launcher=0x7f020005;
+        public static final int path=0x7f020006;
+        public static final int pic=0x7f020007;
+        public static final int psycho=0x7f020008;
+        public static final int whitepic=0x7f020009;
     }
     public static final class id {
         public static final int A_H=0x7f080031;
         public static final int Add=0x7f080054;
+        public static final int Button01=0x7f080056;
+        public static final int Button02=0x7f080057;
         public static final int Buttonlayer=0x7f080049;
         public static final int CEM=0x7f080042;
         public static final int CEMx0=0x7f080045;
@@ -54,6 +64,14 @@ public final class R {
         public static final int Question5=0x7f080029;
         public static final int Question6=0x7f08002c;
         public static final int Question99=0x7f080048;
+        public static final int RadioButton01=0x7f080066;
+        public static final int RadioButton02=0x7f080065;
+        public static final int RadioButton03=0x7f080067;
+        public static final int RadioButton04=0x7f080061;
+        public static final int RadioButton05=0x7f080068;
+        public static final int RadioButton06=0x7f080064;
+        public static final int RadioButton07=0x7f080062;
+        public static final int RadioButton08=0x7f080063;
         public static final int RadioGroup1=0x7f080018;
         public static final int RadioGroup2=0x7f080020;
         public static final int RadioGroup3=0x7f080026;
@@ -62,14 +80,19 @@ public final class R {
         public static final int SA=0x7f08002f;
         public static final int SBM=0x7f080035;
         public static final int S_T=0x7f080030;
+        public static final int TextView01=0x7f08005f;
+        public static final int TextView02=0x7f080060;
         public static final int View1=0x7f08004d;
         public static final int View2=0x7f08004e;
-        public static final int View3=0x7f080059;
+        public static final int View3=0x7f08005e;
         public static final int button1=0x7f08004a;
-        public static final int button111=0x7f080057;
+        public static final int button111=0x7f08005d;
         public static final int button2=0x7f08004b;
         public static final int button3=0x7f080058;
-        public static final int buttonLayout1=0x7f080056;
+        public static final int button4=0x7f080059;
+        public static final int button5=0x7f08005a;
+        public static final int button6=0x7f08005b;
+        public static final int buttonLayout1=0x7f08005c;
         public static final int check=0x7f080013;
         public static final int checkBox1=0x7f08001d;
         public static final int checkbox=0x7f08002e;
@@ -82,6 +105,7 @@ public final class R {
         public static final int editText1=0x7f08002b;
         public static final int elective=0x7f080033;
         public static final int fall=0x7f080027;
+        public static final int gridLayout1=0x7f080069;
         public static final int imageButton1=0x7f080002;
         public static final int imageButton2=0x7f080004;
         public static final int imageButton3=0x7f080007;
@@ -101,7 +125,7 @@ public final class R {
         public static final int linearLayout4=0x7f08004c;
         public static final int linearLayout5=0x7f08004f;
         public static final int listView1=0x7f080050;
-        public static final int menu_delete=0x7f08005a;
+        public static final int menu_delete=0x7f08006a;
         public static final int my_list=0x7f080011;
         public static final int radioButton1=0x7f080019;
         public static final int radioButton2=0x7f08001a;
@@ -131,6 +155,8 @@ public final class R {
         public static final int exam_main=0x7f030005;
         public static final int gpa_main=0x7f030006;
         public static final int path_main=0x7f030007;
+        public static final int personalinfo1=0x7f030008;
+        public static final int personalinfo2=0x7f030009;
     }
     public static final class menu {
         public static final int menu=0x7f070000;
