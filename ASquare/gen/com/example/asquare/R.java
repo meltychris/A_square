@@ -28,9 +28,12 @@ public final class R {
     public static final class drawable {
         public static final int blue2_button=0x7f020000;
         public static final int ic_launcher=0x7f020001;
+        public static final int pic=0x7f020002;
     }
     public static final class id {
         public static final int A_H=0x7f070031;
+        public static final int Button01=0x7f070055;
+        public static final int Button02=0x7f070056;
         public static final int Buttonlayer=0x7f070049;
         public static final int CEM=0x7f070042;
         public static final int CEMx0=0x7f070045;
@@ -50,6 +53,14 @@ public final class R {
         public static final int Question5=0x7f070029;
         public static final int Question6=0x7f07002c;
         public static final int Question99=0x7f070048;
+        public static final int RadioButton01=0x7f070065;
+        public static final int RadioButton02=0x7f070064;
+        public static final int RadioButton03=0x7f070066;
+        public static final int RadioButton04=0x7f070060;
+        public static final int RadioButton05=0x7f070067;
+        public static final int RadioButton06=0x7f070063;
+        public static final int RadioButton07=0x7f070061;
+        public static final int RadioButton08=0x7f070062;
         public static final int RadioGroup1=0x7f070018;
         public static final int RadioGroup2=0x7f070020;
         public static final int RadioGroup3=0x7f070026;
@@ -58,16 +69,21 @@ public final class R {
         public static final int SA=0x7f07002f;
         public static final int SBM=0x7f070035;
         public static final int S_T=0x7f070030;
+        public static final int TextView01=0x7f07005e;
+        public static final int TextView02=0x7f07005f;
         public static final int View1=0x7f07004d;
         public static final int View2=0x7f07004e;
-        public static final int View3=0x7f070058;
+        public static final int View3=0x7f07005d;
         public static final int btnStartTime=0x7f070053;
         public static final int btnStopTime=0x7f070054;
         public static final int button1=0x7f07004a;
-        public static final int button111=0x7f070056;
+        public static final int button111=0x7f07005c;
         public static final int button2=0x7f07004b;
         public static final int button3=0x7f070057;
-        public static final int buttonLayout1=0x7f070055;
+        public static final int button4=0x7f070058;
+        public static final int button5=0x7f070059;
+        public static final int button6=0x7f07005a;
+        public static final int buttonLayout1=0x7f07005b;
         public static final int check=0x7f070013;
         public static final int checkBox1=0x7f07001d;
         public static final int checkbox=0x7f07002e;
@@ -81,6 +97,7 @@ public final class R {
         public static final int edtTimerValue=0x7f070052;
         public static final int elective=0x7f070033;
         public static final int fall=0x7f070027;
+        public static final int gridLayout1=0x7f070068;
         public static final int imageButton1=0x7f070002;
         public static final int imageButton2=0x7f070004;
         public static final int imageButton3=0x7f070007;
@@ -129,6 +146,8 @@ public final class R {
         public static final int exam_main=0x7f030005;
         public static final int gpa_main=0x7f030006;
         public static final int path_main=0x7f030007;
+        public static final int personalinfo1=0x7f030008;
+        public static final int personalinfo2=0x7f030009;
     }
     public static final class string {
         public static final int action_settings=0x7f050001;

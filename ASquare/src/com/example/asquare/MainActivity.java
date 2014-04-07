@@ -23,7 +23,7 @@ public class MainActivity extends Activity {
             public void onClick(View v) {
                 // TODO Auto-generated method stub
             	Intent intent = new Intent();
-                intent.setClass(MainActivity.this, GPA_Calculator.class);
+                intent.setClass(MainActivity.this, com.example.gpa_calculator.MainActivity.class);
                 startActivity(intent);
                
         }});
@@ -45,7 +45,7 @@ public class MainActivity extends Activity {
             public void onClick(View v) {
                 // TODO Auto-generated method stub
             	Intent intent = new Intent();
-                intent.setClass(MainActivity.this, MainActivity.class);
+                intent.setClass(MainActivity.this, Exam_countdown.class);
                 startActivity(intent);
                
         }});
