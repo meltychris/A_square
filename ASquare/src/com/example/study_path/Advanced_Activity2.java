@@ -11,10 +11,13 @@ import com.example.asquare.R.layout;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.AlertDialog.Builder;
+import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -26,12 +29,45 @@ import android.widget.Toast;
 
 public class Advanced_Activity2 extends Activity {
 
+	public boolean onCreateOptionsMenu(Menu menu)
+	{
+	   getMenuInflater().inflate(R.menu.menu, menu);
+	   return true;
+	}
+	
+	/*public boolean onOptionsItemSelected(MenuItem item) {
+	    // Handle presses on the action bar items
+	    switch (item.getItemId()) {
+	        case R.id.menu_delete:
+		    	ResetTable("Studied");
+		    	ResetTable("NotStudied");
+		    	
+		    	DataBaseTestAdapter mDbHelper = new DataBaseTestAdapter(this);         
+		    	mDbHelper.createDatabase();       
+		    	mDbHelper.open(); 
+		    	mDbHelper.alter("0", "advanced");  
+		    	mDbHelper.close();
+		    	
+	         	Intent intent = new Intent();
+	            intent.setClass(this, Advanced_Activity.class);
+	            startActivity(intent);  
+
+		    	 return true;
+	        default:
+	            return super.onOptionsItemSelected(item);
+	    }
+	}*/
+	
+	
 	/** Called when the activity is first created. */
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 	  	// TODO Auto-generated method stub  
 		super.onCreate(savedInstanceState);
-        setContentView(R.layout.adv_path_main2);   
+        setContentView(R.layout.adv_path_main2);  
+        
+    	ResetTable("Studied");
+    	ResetTable("NotStudied");
         
 	    button1 = (Button)findViewById(R.id.button1);
 	    button2 = (Button)findViewById(R.id.button2);
@@ -121,8 +157,7 @@ public class Advanced_Activity2 extends Activity {
 	    	 * 					else:
 	    	 * 						dun put it
 	    	 */
-	    	ResetTable("Studied");
-	    	ResetTable("NotStudied");
+
 
 	    	SaveRecord(this.findViewById(android.R.id.content));		//insert data to database
 	    	

@@ -1,4 +1,4 @@
-package com.example.study_path;
+package com.example.exam_count_down;
 
 import java.io.IOException; 
 
@@ -79,15 +79,15 @@ public class DataBaseTestAdapter
      
      
 
- 	public boolean SaveData(String Code, String Type) 
+ 	public boolean SaveData(String Code, String Date) 
  	{
  		try
  		{
  			ContentValues cv = new ContentValues();
- 			cv.put("Code", Code);
+ 			cv.put("Date", Date);
  			//cv.put("Number", email);
  			
- 			mDb.insert(Type, null, cv);
+ 			mDb.insert(Code, null, cv);
  			
  			Log.d("Saved", "informationsaved");
  			return true;
@@ -100,15 +100,15 @@ public class DataBaseTestAdapter
  		}
  	}
      
-    public void del(String name)  
+    public void delele_table()  
     { 
-    	mDb.delete(name, null, null);
+    	mDb.delete("Exam", null, null);
 
     } 
     
-    public void alter(String Value, String Type)  
+    public void delete_one(String Course)  
     { 
-    	mDb.execSQL("UPDATE Preference SET Value='" + Value +"' WHERE Type='" + Type +"'");
+    	mDb.execSQL("DELETE FROM Exam WHERE Code='" + Course +"'");
 
     } 
 

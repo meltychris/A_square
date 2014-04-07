@@ -245,9 +245,27 @@ public class Study_Path extends Activity {
             @Override
             public void onClick(View v) {
                 // TODO Auto-generated method stub
-            	Intent intent = new Intent();
-                intent.setClass(Study_Path.this, Advanced_Activity.class);
-                startActivity(intent);      
+            	/*if (get().equals("1")){			//have history
+                   	Intent intent = new Intent();
+                    intent.setClass(Study_Path.this, Advanced_Activity2.class);
+                    startActivity(intent);   
+            	}
+            	else{
+    		    	DataBaseTestAdapter mDbHelper = new DataBaseTestAdapter(Study_Path.this);         
+    		    	mDbHelper.createDatabase();       
+    		    	mDbHelper.open(); 
+    		    	mDbHelper.alter("1", "advanced");  
+    		    	mDbHelper.close();*/
+            		
+            		Intent intent = new Intent();
+                    intent.setClass(Study_Path.this, Advanced_Activity.class);
+                    startActivity(intent);
+            	//}
+            	
+            	
+
+		    	
+            	
         		}
         });
         
@@ -293,6 +311,22 @@ public class Study_Path extends Activity {
 				
 		return adapter;
 	}
+	
+	
+	  public String get() {
+		    // TODO Auto-generated method stub
+			DataBaseTestAdapter mDbHelper = new DataBaseTestAdapter(this);         
+	    	mDbHelper.createDatabase();       
+	    	mDbHelper.open(); 
+	    	 
+	    	String sql ="SELECT Credit from Preference WHERE Type='advanced'"; 
+			Cursor testdata = mDbHelper.getTestData(sql); 
+	    	String advanced = DataBaseUtility.GetColumnValue(testdata, "advanced");
+	    
+	    	mDbHelper.close();
+					
+			return advanced;
+		}
 	
     private Button button1;
     private Button button2;
