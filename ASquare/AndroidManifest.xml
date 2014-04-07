@@ -44,6 +44,9 @@
                 
                 <receiver android:name="com.example.exam_count_down.MyBroadcastReceiver" >
         </receiver>
+                <activity android:name="com.example.gpa_calculator.GPAactivity2"></activity>
+                <activity android:name="com.example.gpa_calculator.GPAactivity3"></activity>
+                <activity android:name="com.example.gpa_calculator.MainActivity"></activity>
     </application>
 
 </manifest>

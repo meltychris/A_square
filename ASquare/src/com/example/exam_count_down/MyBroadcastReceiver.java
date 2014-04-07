@@ -19,9 +19,10 @@ public class MyBroadcastReceiver extends BroadcastReceiver {
 	    Bundle params = aintent.getExtras();
 		String Course = params.getString("Course"); 
 		int Num = params.getInt("Num"); 
-
+		 
 		
-		Toast.makeText(context, "It's time to have exam", Toast.LENGTH_LONG).show();
+		Toast.makeText(context, "It's time to have exam", Toast.LENGTH_SHORT).show();
+		
 		// Vibrate the mobile phone
 		Vibrator vibrator = (Vibrator) context
 				.getSystemService(Context.VIBRATOR_SERVICE);
@@ -38,7 +39,6 @@ public class MyBroadcastReceiver extends BroadcastReceiver {
 			notification.number = 1;
 			
 		noMgr.notify(Num , notification);
-
 
 
 

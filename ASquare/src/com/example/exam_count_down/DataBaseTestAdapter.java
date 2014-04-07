@@ -107,7 +107,9 @@ public class DataBaseTestAdapter
      
     public void delele_table()  
     { 
-    	mDb.delete("Exam", null, null);
+    	//mDb.delete("Exam", null, null);
+    	mDb.execSQL("DELETE FROM Exam");
+
 
     } 
     

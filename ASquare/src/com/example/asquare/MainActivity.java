@@ -6,7 +6,10 @@ import com.example.study_path.Study_Path;
 
 import android.os.Bundle;
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.View;
 import android.widget.ImageButton;
@@ -85,6 +88,39 @@ public class MainActivity extends Activity {
         }});
 		
 	}
+	
+	public boolean onKeyDown(int keyCode, KeyEvent event)
+	{
+		if (keyCode == KeyEvent.KEYCODE_BACK )
+		{
+			AlertDialog isExit = new AlertDialog.Builder(this).create();
+			isExit.setTitle("A Square");
+			isExit.setMessage("Really want to leave?");
+			isExit.setButton("No", listener);
+			isExit.setButton2("I'll be back!", listener);
+			isExit.show();
+
+		}
+		
+		return false;
+		
+	}
+	DialogInterface.OnClickListener listener = new DialogInterface.OnClickListener()
+	{
+		public void onClick(DialogInterface dialog, int which)
+		{
+			switch (which)
+			{
+			case AlertDialog.BUTTON_POSITIVE:
+				break;
+			case AlertDialog.BUTTON_NEGATIVE:
+				finish();
+				break;
+			default:
+				break;
+			}
+		}
+	};	
 	
 	private ImageButton button1;
 	private ImageButton button2;

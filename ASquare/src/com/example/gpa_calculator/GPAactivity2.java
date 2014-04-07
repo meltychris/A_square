@@ -15,12 +15,12 @@ import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
 
-public class MainActivity extends Activity {
+public class GPAactivity2 extends Activity {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.personalinfo1);
+		setContentView(R.layout.personalinfo2);
 		
 		button1 = (Button)findViewById(R.id.button1);
 		
@@ -31,7 +31,7 @@ public class MainActivity extends Activity {
 	            	
 	                //count = listView.getAdapter().getCount();
 	            	Intent intent = new Intent();
-	            	intent.setClass(MainActivity.this, GPAactivity2.class);
+	            	intent.setClass(GPAactivity2.this, GPAactivity3.class);
 	                startActivity(intent);
 	                
 

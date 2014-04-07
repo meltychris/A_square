@@ -2,16 +2,20 @@ package com.example.exam_count_down;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 import com.example.asquare.R;
 
 import android.app.Activity;
 import android.app.AlarmManager;
+import android.app.AlertDialog;
 import android.app.PendingIntent;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
+import android.view.KeyEvent;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -50,23 +54,27 @@ public class Exam_countdown extends Activity {
       		adapter.add(i);
       	
   		listView1.setAdapter(adapter);
-
+  		Random testing = new Random(100);
 
 		//notification bar
-        int j = 1;
-        for (String i : data){
-			Intent intent = new Intent(this,MyBroadcastReceiver.class);
-	        intent.putExtra ("Course", i);
-	        intent.putExtra ("Num", j);
-
-	
-			PendingIntent pendingIntent = PendingIntent.getBroadcast(
-					this.getApplicationContext(), 234324243+j, intent, 0);
-			AlarmManager alarmManager = (AlarmManager) getSystemService(ALARM_SERVICE);
-			alarmManager.set(AlarmManager.RTC_WAKEUP, System.currentTimeMillis()+ (1 * 1000), pendingIntent);
-			j++;
+        int j = testing.nextInt();
+        if (!data.isEmpty()){
+	        for (int i = 0; i< data.size(); i++){
+				Intent intent = new Intent(this,MyBroadcastReceiver.class);
+		        intent.putExtra ("Course", data.get(i));
+		        intent.putExtra ("Num", j);
+		
+				PendingIntent pendingIntent = PendingIntent.getBroadcast(
+						this.getApplicationContext(), 234324243+i, intent, PendingIntent.FLAG_UPDATE_CURRENT);
+				AlarmManager alarmManager = (AlarmManager) getSystemService(ALARM_SERVICE);
+				alarmManager.set(AlarmManager.RTC_WAKEUP, System.currentTimeMillis()+ (1 * 1000), pendingIntent);
+				j++;
+				
+				
+	        }
         }
 		 
+        
 		 button1.setOnClickListener(new Button.OnClickListener(){ 
  	        @Override
  	        public void onClick(View v) {
@@ -112,9 +120,9 @@ public class Exam_countdown extends Activity {
 	 	        	ArrayAdapter<String> adapter;
 	 	        	adapter = new ArrayAdapter<String>(Exam_countdown.this, android.R.layout.simple_list_item_1);   
 	 	        	List<String> data = new ArrayList<String>();
-	 	        	data = get_list();									//get from database
-	 	        	for (String i : data)
-	 	        		adapter.add(i);
+	 	        	//data = get_list();									//get from database
+	 	        	//for (String i : data)
+	 	        	//	adapter.add(i);
 	 	        	
 	 	    		listView1.setAdapter(adapter);
 	 	    		}
@@ -164,16 +172,25 @@ public class Exam_countdown extends Activity {
 		
     	List<String> list;
      	list = new ArrayList<String>();
-    	list.add(Code + "\t\t\t\t\t" + Date);
-    	while (testdata.moveToNext()){
-    		 
-    		Code = DataBaseUtility.GetColumnValue(testdata, "Code");
-    		Date = DataBaseUtility.GetColumnValue(testdata, "Date");
-        	list.add(Code + "\t\t\t\t\t" + Date);
-    	}
+
+		if (!Code.equals("")){
+	    	list.add(Code + "\t\t\t\t\t" + Date);
+	    	while (testdata.moveToNext()){
+	    		 
+	    		Code = DataBaseUtility.GetColumnValue(testdata, "Code");
+	    		Date = DataBaseUtility.GetColumnValue(testdata, "Date");
+	        	list.add(Code + "\t\t\t\t\t" + Date);
+	    	}
+		}
 		
+		mDbHelper.close();
     	return list;		
 	}
+	
+
+	
+
+
 	    		
 	private Button button1;
 	private Button button2;
