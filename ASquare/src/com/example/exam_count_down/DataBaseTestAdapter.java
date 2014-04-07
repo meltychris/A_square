@@ -83,15 +83,20 @@ public class DataBaseTestAdapter
  	{
  		try
  		{
- 			ContentValues cv = new ContentValues();
+            mDbHelper.openDataBase(); 
+            mDbHelper.close(); 
+            mDb = mDbHelper.getWritableDatabase(); 
+            
+            ContentValues cv = new ContentValues();
+ 			cv.put("Code", Code);
  			cv.put("Date", Date);
  			//cv.put("Number", email);
  			
- 			mDb.insert(Code, null, cv);
- 			
+ 			mDb.insert("Exam", null, cv);
+ 			mDb.close();
+
  			Log.d("Saved", "informationsaved");
  			return true;
- 			
  		}
  		catch(Exception ex)
  		{

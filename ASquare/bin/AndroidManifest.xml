@@ -8,6 +8,8 @@
         android:minSdkVersion="10"
         android:targetSdkVersion="19" />
 
+        <uses-permission android:name="android.permission.VIBRATE" />
+    
     <application
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
@@ -39,6 +41,9 @@
         <activity android:name="com.example.study_path.Advanced_Activity2" android:label="Advanced Path" android:screenOrientation="portrait"></activity>
         <activity android:name="com.example.study_path.Advanced_Activity_choose" android:label="Advanced Path" android:screenOrientation="portrait"></activity>
         <activity android:screenOrientation="portrait" android:label="Exam Count Down" android:name="com.example.exam_count_down.Exam_countdown"></activity>
+                
+                <receiver android:name="com.example.exam_count_down.MyBroadcastReceiver" >
+        </receiver>
     </application>
 
 </manifest>

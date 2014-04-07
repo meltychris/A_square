@@ -106,7 +106,7 @@ public class DataBaseTestAdapter
 
     } 
     
-    public void alter(String Value, String Type)  
+    public void update(String Value, String Type)  
     { 
     	mDb.execSQL("UPDATE Preference SET Value='" + Value +"' WHERE Type='" + Type +"'");
 

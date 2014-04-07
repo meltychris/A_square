@@ -41,7 +41,7 @@
 
 
         <EditText
-            android:id="@+id/edtTimerValue"
+            android:id="@+id/Code"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -49,12 +49,12 @@
             android:hint="COMP3111" />
 
         <EditText
-            android:id="@+id/edtTimerValue"
+            android:id="@+id/Date"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:ems="10"
-            android:hint="31/1/2014" />
+            android:hint="2014/01/31" />
       </LinearLayout>
             
 <LinearLayout

@@ -31,7 +31,7 @@ public final class R {
     }
     public static final class id {
         public static final int A_H=0x7f080031;
-        public static final int Add=0x7f080053;
+        public static final int Add=0x7f080054;
         public static final int Buttonlayer=0x7f080049;
         public static final int CEM=0x7f080042;
         public static final int CEMx0=0x7f080045;
@@ -39,7 +39,9 @@ public final class R {
         public static final int CEMx2=0x7f080047;
         public static final int COMP3x=0x7f080038;
         public static final int COMP3xx=0x7f08003a;
-        public static final int Delete=0x7f080054;
+        public static final int Code=0x7f080052;
+        public static final int Date=0x7f080053;
+        public static final int Delete=0x7f080055;
         public static final int ENGG=0x7f080036;
         public static final int Free=0x7f080032;
         public static final int FreeE=0x7f080037;
@@ -62,12 +64,12 @@ public final class R {
         public static final int S_T=0x7f080030;
         public static final int View1=0x7f08004d;
         public static final int View2=0x7f08004e;
-        public static final int View3=0x7f080058;
+        public static final int View3=0x7f080059;
         public static final int button1=0x7f08004a;
-        public static final int button111=0x7f080056;
+        public static final int button111=0x7f080057;
         public static final int button2=0x7f08004b;
-        public static final int button3=0x7f080057;
-        public static final int buttonLayout1=0x7f080055;
+        public static final int button3=0x7f080058;
+        public static final int buttonLayout1=0x7f080056;
         public static final int check=0x7f080013;
         public static final int checkBox1=0x7f08001d;
         public static final int checkbox=0x7f08002e;
@@ -78,7 +80,6 @@ public final class R {
         public static final int compx4=0x7f080040;
         public static final int compx5=0x7f080041;
         public static final int editText1=0x7f08002b;
-        public static final int edtTimerValue=0x7f080052;
         public static final int elective=0x7f080033;
         public static final int fall=0x7f080027;
         public static final int imageButton1=0x7f080002;
@@ -100,7 +101,7 @@ public final class R {
         public static final int linearLayout4=0x7f08004c;
         public static final int linearLayout5=0x7f08004f;
         public static final int listView1=0x7f080050;
-        public static final int menu_delete=0x7f080059;
+        public static final int menu_delete=0x7f08005a;
         public static final int my_list=0x7f080011;
         public static final int radioButton1=0x7f080019;
         public static final int radioButton2=0x7f08001a;
