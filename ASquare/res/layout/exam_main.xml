@@ -46,8 +46,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:ems="10"
-            android:hint="Course Code"
-            android:inputType="phone" />
+            android:hint="Course Code" />
 
         <EditText
             android:id="@+id/edtTimerValue"
@@ -55,8 +54,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:ems="10"
-            android:hint="Exam Date"
-            android:inputType="phone" />
+            android:hint="Exam Date" />
       </LinearLayout>
             
 <LinearLayout
