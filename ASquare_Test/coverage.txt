@@ -1,0 +1,13 @@
+SET JAVA_HOME=C:\Program Files\Java\jdk1.8.0
+SET ANDROID_HOME=C:\Users\stsk\Desktop\adt-bundle-windows-x86-20131030\sdk
+SET ANT_HOME=C:\Users\stsk\Desktop\adt-bundle-windows-x86-20131030\apache-ant-1.9.3
+SET PATH=%PATH%;%JAVA_HOME%\bin;%ANT_HOME%\bin;%ANDROID_HOME%\tools; 
+
+CD C:\Users\stsk\git\A_square\
+
+android update project -p ASquare
+
+android update test-project -m ../ASquare -p ASquare_Test
+
+CD ASquare_Test
+ant clean emma debug install test
