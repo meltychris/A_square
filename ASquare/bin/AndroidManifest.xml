@@ -9,9 +9,6 @@
         android:targetSdkVersion="19" />
 
         <uses-permission android:name="android.permission.VIBRATE" />
-        <instrumentation
-        android:name="android.test.InstrumentationTestRunner"
-        android:targetPackage="com.example.asquare" />
     <application
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
