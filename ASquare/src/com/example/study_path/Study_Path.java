@@ -284,7 +284,7 @@ public class Study_Path extends Activity {
 	
 	public ArrayAdapter<String> get(String major, String year, String Pure) {
 	    // TODO Auto-generated method stub
-		DataBaseTestAdapter mDbHelper = new DataBaseTestAdapter(this);         
+		DataBaseTestAdapter1 mDbHelper = new DataBaseTestAdapter1(this);         
     	mDbHelper.createDatabase();       
     	mDbHelper.open(); 
     	 
@@ -294,15 +294,15 @@ public class Study_Path extends Activity {
 		
         String sql ="SELECT Course.Code, Name, Sem from Course, " + major + " WHERE Course.Code = " + major +".Code AND Year=" + year +" AND Pure != '" + Pure + "' ORDER BY Sem"; 
     	Cursor testdata = mDbHelper.getTestData(sql); 
-    	String code = DataBaseUtility.GetColumnValue(testdata, "Code");
-    	String name = DataBaseUtility.GetColumnValue(testdata, "Name");
-    	String sem = DataBaseUtility.GetColumnValue(testdata, "Sem");
+    	String code = DataBaseUtility1.GetColumnValue(testdata, "Code");
+    	String name = DataBaseUtility1.GetColumnValue(testdata, "Name");
+    	String sem = DataBaseUtility1.GetColumnValue(testdata, "Sem");
     	adapter.add(code + " (" + sem + ")" + "\n"+ name);
     	while (testdata.moveToNext()){
     		 
-        	code = DataBaseUtility.GetColumnValue(testdata, "Code");
-        	name = DataBaseUtility.GetColumnValue(testdata, "Name");
-        	sem = DataBaseUtility.GetColumnValue(testdata, "Sem");
+        	code = DataBaseUtility1.GetColumnValue(testdata, "Code");
+        	name = DataBaseUtility1.GetColumnValue(testdata, "Name");
+        	sem = DataBaseUtility1.GetColumnValue(testdata, "Sem");
         	adapter.add(code + " (" + sem + ")" + "\n"+ name);
     	}
     	
@@ -315,13 +315,13 @@ public class Study_Path extends Activity {
 	
 	  public String get() {
 		    // TODO Auto-generated method stub
-			DataBaseTestAdapter mDbHelper = new DataBaseTestAdapter(this);         
+			DataBaseTestAdapter1 mDbHelper = new DataBaseTestAdapter1(this);         
 	    	mDbHelper.createDatabase();       
 	    	mDbHelper.open(); 
 	    	 
 	    	String sql ="SELECT Credit from Preference WHERE Type='advanced'"; 
 			Cursor testdata = mDbHelper.getTestData(sql); 
-	    	String advanced = DataBaseUtility.GetColumnValue(testdata, "advanced");
+	    	String advanced = DataBaseUtility1.GetColumnValue(testdata, "advanced");
 	    
 	    	mDbHelper.close();
 					

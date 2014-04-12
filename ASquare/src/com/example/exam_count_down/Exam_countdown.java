@@ -5,23 +5,17 @@ import java.util.List;
 import java.util.Random;
 
 import com.example.asquare.R;
-
 import android.app.Activity;
 import android.app.AlarmManager;
-import android.app.AlertDialog;
 import android.app.PendingIntent;
-import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
-import android.view.KeyEvent;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
-import android.widget.Toast;
 
 
 
@@ -132,7 +126,7 @@ public class Exam_countdown extends Activity {
 	
 	public void add_item(String Code, String Date) {
 	    // TODO Auto-generated method stub
-		DataBaseTestAdapter mDbHelper = new DataBaseTestAdapter(this);         
+		DataBaseTestAdapter2 mDbHelper = new DataBaseTestAdapter2(this);         
     	mDbHelper.createDatabase();       
     	mDbHelper.open(); 
     	
@@ -142,7 +136,7 @@ public class Exam_countdown extends Activity {
 	
 	public void delete_item(String Code) {
 	    // TODO Auto-generated method stub
-		DataBaseTestAdapter mDbHelper = new DataBaseTestAdapter(this);         
+		DataBaseTestAdapter2 mDbHelper = new DataBaseTestAdapter2(this);         
     	mDbHelper.createDatabase();       
     	mDbHelper.open(); 
     	
@@ -152,7 +146,7 @@ public class Exam_countdown extends Activity {
 	
 	public void delete_table() {
 	    // TODO Auto-generated method stub
-		DataBaseTestAdapter mDbHelper = new DataBaseTestAdapter(this);         
+		DataBaseTestAdapter2 mDbHelper = new DataBaseTestAdapter2(this);         
     	mDbHelper.createDatabase();       
     	mDbHelper.open(); 
     	
@@ -161,14 +155,14 @@ public class Exam_countdown extends Activity {
 	}
 	
 	public List<String> get_list(){
-		DataBaseTestAdapter mDbHelper = new DataBaseTestAdapter(this);         
+		DataBaseTestAdapter2 mDbHelper = new DataBaseTestAdapter2(this);         
     	mDbHelper.createDatabase();       
     	mDbHelper.open(); 
     	
 		String sql ="SELECT Code, Date FROM Exam ORDER BY Date"; 
 		Cursor testdata = mDbHelper.getTestData(sql); 
-		String Code = DataBaseUtility.GetColumnValue(testdata, "Code");
-		String Date = DataBaseUtility.GetColumnValue(testdata, "Date");
+		String Code = DataBaseUtility2.GetColumnValue(testdata, "Code");
+		String Date = DataBaseUtility2.GetColumnValue(testdata, "Date");
 		
     	List<String> list;
      	list = new ArrayList<String>();
@@ -177,8 +171,8 @@ public class Exam_countdown extends Activity {
 	    	list.add(Code + "\t\t\t\t\t" + Date);
 	    	while (testdata.moveToNext()){
 	    		 
-	    		Code = DataBaseUtility.GetColumnValue(testdata, "Code");
-	    		Date = DataBaseUtility.GetColumnValue(testdata, "Date");
+	    		Code = DataBaseUtility2.GetColumnValue(testdata, "Code");
+	    		Date = DataBaseUtility2.GetColumnValue(testdata, "Date");
 	        	list.add(Code + "\t\t\t\t\t" + Date);
 	    	}
 		}

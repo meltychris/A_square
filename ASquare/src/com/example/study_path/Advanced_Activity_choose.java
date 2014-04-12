@@ -175,7 +175,7 @@ public class Advanced_Activity_choose extends Activity{
 
     private List<Model> getModel() {			//get all course need to study
      
-        DataBaseTestAdapter mDbHelper = new DataBaseTestAdapter(this);         
+        DataBaseTestAdapter1 mDbHelper = new DataBaseTestAdapter1(this);         
 	    	mDbHelper.createDatabase();       
 	    	mDbHelper.open(); 
 	    	 
@@ -183,11 +183,11 @@ public class Advanced_Activity_choose extends Activity{
 
  	    	String sql ="SELECT Code FROM COMP WHERE (Pure='All' OR Pure='" + pure + "') ORDER BY Year,Code"; 
 	    	Cursor testdata = mDbHelper.getTestData(sql); 
-	    	String code = DataBaseUtility.GetColumnValue(testdata, "Code");
+	    	String code = DataBaseUtility1.GetColumnValue(testdata, "Code");
 	    	list.add(new Model(code));
 	    	while (testdata.moveToNext()){
 	    		 
-	        	code = DataBaseUtility.GetColumnValue(testdata, "Code");
+	        	code = DataBaseUtility1.GetColumnValue(testdata, "Code");
 	        	Model temp = new Model(code);
 	        	
 	        	if ((code.equals("CC1") && SA) ||			//name conversion

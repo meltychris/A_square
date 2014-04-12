@@ -1,4 +1,4 @@
-package com.example.exam_count_down;
+package com.example.study_path;
 
 import java.io.IOException; 
 
@@ -9,21 +9,21 @@ import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase; 
 import android.util.Log; 
  
-public class DataBaseTestAdapter  
+public class DataBaseTestAdapter1  
 { 
     protected static final String TAG = "DataAdapter"; 
  
     private final Context mContext; 
     private SQLiteDatabase mDb; 
-    private DataBaseHelper mDbHelper; 
+    private DataBaseHelper1 mDbHelper; 
  
-    public DataBaseTestAdapter(Context context)  
+    public DataBaseTestAdapter1(Context context)  
     { 
         this.mContext = context; 
-        mDbHelper = new DataBaseHelper(mContext); 
+        mDbHelper = new DataBaseHelper1(mContext); 
     } 
  
-    public DataBaseTestAdapter createDatabase() throws SQLException  
+    public DataBaseTestAdapter1 createDatabase() throws SQLException  
     { 
         try  
         { 
@@ -37,7 +37,7 @@ public class DataBaseTestAdapter
         return this; 
     } 
  
-    public DataBaseTestAdapter open() throws SQLException  
+    public DataBaseTestAdapter1 open() throws SQLException  
     { 
         try  
         { 
@@ -79,24 +79,19 @@ public class DataBaseTestAdapter
      
      
 
- 	public boolean SaveData(String Code, String Date) 
+ 	public boolean SaveData(String Code, String Type) 
  	{
  		try
  		{
-            mDbHelper.openDataBase(); 
-            mDbHelper.close(); 
-            mDb = mDbHelper.getWritableDatabase(); 
-            
-            ContentValues cv = new ContentValues();
+ 			ContentValues cv = new ContentValues();
  			cv.put("Code", Code);
- 			cv.put("Date", Date);
  			//cv.put("Number", email);
  			
- 			mDb.insert("Exam", null, cv);
- 			mDb.close();
-
+ 			mDb.insert(Type, null, cv);
+ 			
  			Log.d("Saved", "informationsaved");
  			return true;
+ 			
  		}
  		catch(Exception ex)
  		{
@@ -105,17 +100,15 @@ public class DataBaseTestAdapter
  		}
  	}
      
-    public void delele_table()  
+    public void del(String name)  
     { 
-    	//mDb.delete("Exam", null, null);
-    	mDb.execSQL("DELETE FROM Exam");
-
+    	mDb.delete(name, null, null);
 
     } 
     
-    public void delete_one(String Course)  
+    public void update(String Value, String Type)  
     { 
-    	mDb.execSQL("DELETE FROM Exam WHERE Code='" + Course +"'");
+    	mDb.execSQL("UPDATE Preference SET Value='" + Value +"' WHERE Type='" + Type +"'");
 
     } 
 

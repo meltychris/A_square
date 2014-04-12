@@ -252,7 +252,7 @@ public class Advanced_Activity2 extends Activity {
 	    
 	    public void SaveRecord(View v)
 	    {
-	    	DataBaseTestAdapter mDbHelper = new DataBaseTestAdapter(this);         
+	    	DataBaseTestAdapter1 mDbHelper = new DataBaseTestAdapter1(this);         
 	    	mDbHelper.createDatabase();       
 	    	mDbHelper.open(); 
 	    	
@@ -263,7 +263,7 @@ public class Advanced_Activity2 extends Activity {
 		    	}
 		    	else
 		    	{
-		    		DataBaseUtility.ShowMessageBox(this,"OOPS try again!");
+		    		DataBaseUtility1.ShowMessageBox(this,"OOPS try again!");
 		    	}
 	    	for (String temp : notstudied)
 		    	if(mDbHelper.SaveData(temp, "NotStudied"))
@@ -272,7 +272,7 @@ public class Advanced_Activity2 extends Activity {
 		    	}
 		    	else
 		    	{
-		    		DataBaseUtility.ShowMessageBox(this,"OOPS try again!");
+		    		DataBaseUtility1.ShowMessageBox(this,"OOPS try again!");
 		    	}
 	    }
 	
@@ -280,7 +280,7 @@ public class Advanced_Activity2 extends Activity {
 	 	{
 	 		try
 	 		{
-				DataBaseTestAdapter mDbHelper = new DataBaseTestAdapter(this);         
+				DataBaseTestAdapter1 mDbHelper = new DataBaseTestAdapter1(this);         
 		    	mDbHelper.createDatabase();       
 		    	mDbHelper.open(); 
 		    	
@@ -298,7 +298,7 @@ public class Advanced_Activity2 extends Activity {
 	    
     	public List<String> find_reqcourse(int year, String Sem) {
 	    	    // TODO Auto-generated method stub
-	    		DataBaseTestAdapter mDbHelper = new DataBaseTestAdapter(this);         
+	    		DataBaseTestAdapter1 mDbHelper = new DataBaseTestAdapter1(this);         
 	        	mDbHelper.createDatabase();       
 	        	mDbHelper.open(); 
 	        	 
@@ -313,33 +313,33 @@ public class Advanced_Activity2 extends Activity {
 	    			for (int yearloop = 1; yearloop < year; yearloop++){
 		    			sql ="SELECT Course.Code from Course, COMP WHERE Course.Code = COMP.Code AND (Pure='All' OR Pure='" + pure + "') AND Year='" + Integer.toString(yearloop) + "' AND Sem='Fall' AND FALL='TRUE' AND COMP.Code NOT IN (SELECT Code FROM Studied)"; 
 		    			testdata = mDbHelper.getTestData(sql); 
-		    			code = DataBaseUtility.GetColumnValue(testdata, "Code");
+		    			code = DataBaseUtility1.GetColumnValue(testdata, "Code");
 			    		if (!code.equals(""))								//meaning no result
 			    			reqcourse.add(code);
 			    		while (testdata.moveToNext()){ 
-			    			code = DataBaseUtility.GetColumnValue(testdata, "Code");
+			    			code = DataBaseUtility1.GetColumnValue(testdata, "Code");
 			    			reqcourse.add(code);
 			    			}
 		    			
 		    			
 		    			sql ="SELECT Course.Code from Course, COMP WHERE Course.Code = COMP.Code AND (Pure='All' OR Pure='" + pure + "') AND  Year='" + Integer.toString(yearloop) + "' AND Sem='Spring' AND FALL='TRUE' AND COMP.Code NOT IN (SELECT Code FROM Studied)"; 
 		    			testdata = mDbHelper.getTestData(sql); 
-		    			code = DataBaseUtility.GetColumnValue(testdata, "Code");
+		    			code = DataBaseUtility1.GetColumnValue(testdata, "Code");
 			    		if (!code.equals(""))								//meaning no result
 			    			reqcourse.add(code);
 			    		while (testdata.moveToNext()){ 
-			    			code = DataBaseUtility.GetColumnValue(testdata, "Code");
+			    			code = DataBaseUtility1.GetColumnValue(testdata, "Code");
 			    			reqcourse.add(code);
 			   			}
 		    		}
 		    		
 	    			sql ="SELECT Course.Code from Course, COMP WHERE Course.Code = COMP.Code AND (Pure='All' OR Pure='" + pure + "') AND  Year='" + year + "' AND Sem='Fall'  AND FALL='TRUE' AND Course.Code NOT IN (SELECT Code FROM Studied)"; 
 	    			testdata = mDbHelper.getTestData(sql); 
-	    			code = DataBaseUtility.GetColumnValue(testdata, "Code");
+	    			code = DataBaseUtility1.GetColumnValue(testdata, "Code");
 		    		if (!code.equals(""))								//meaning no result
 		    			reqcourse.add(code);
 	    			while (testdata.moveToNext()){ 
-	    				code = DataBaseUtility.GetColumnValue(testdata, "Code");
+	    				code = DataBaseUtility1.GetColumnValue(testdata, "Code");
 	    				reqcourse.add(code);
 		    		
 	    			}
@@ -354,21 +354,21 @@ public class Advanced_Activity2 extends Activity {
 	    			for (int yearloop = 1; yearloop <= year ; yearloop++){
 		    			sql ="SELECT Course.Code from Course, COMP WHERE Course.Code = COMP.Code AND (Pure='All' OR Pure='" + pure + "') AND  Year='" + Integer.toString(yearloop) + "' AND Sem='Fall' AND SPRING='TRUE' AND COMP.Code NOT IN (SELECT Code FROM Studied)"; 
 		    			testdata = mDbHelper.getTestData(sql); 
-	    				code = DataBaseUtility.GetColumnValue(testdata, "Code");
+	    				code = DataBaseUtility1.GetColumnValue(testdata, "Code");
 			    		if (!code.equals(""))								//meaning no result
 			    			reqcourse.add(code);
 			    		while (testdata.moveToNext()){ 
-			    			code = DataBaseUtility.GetColumnValue(testdata, "Code");
+			    			code = DataBaseUtility1.GetColumnValue(testdata, "Code");
 			    			reqcourse.add(code);
 			    		}
 		    			
 		    			sql ="SELECT Course.Code from Course, COMP WHERE Course.Code = COMP.Code AND (Pure='All' OR Pure='" + pure + "') AND  Year='" + Integer.toString(yearloop) + "' AND Sem='Spring' AND SPRING='TRUE' AND COMP.Code NOT IN (SELECT Code FROM Studied)"; 
 		    			testdata = mDbHelper.getTestData(sql); 
-		    			code = DataBaseUtility.GetColumnValue(testdata, "Code");
+		    			code = DataBaseUtility1.GetColumnValue(testdata, "Code");
 		    			if (!code.equals(""))
 		    				reqcourse.add(code);
 			    		while (testdata.moveToNext()){ 
-			    			code = DataBaseUtility.GetColumnValue(testdata, "Code");
+			    			code = DataBaseUtility1.GetColumnValue(testdata, "Code");
 			    			reqcourse.add(code);
 			    		}
 		    		}
@@ -381,7 +381,7 @@ public class Advanced_Activity2 extends Activity {
 	    		for (String i : reqcourse){
 	    			String sql ="SELECT Prerequisite.Code from Prerequisite, NotStudied WHERE Prerequisite.Precourse = NotStudied.Code AND Prerequisite.Code='" + i +"'"; 
 	    			Cursor testdata = mDbHelper.getTestData(sql); 
-	    			String code = DataBaseUtility.GetColumnValue(testdata, "Code");
+	    			String code = DataBaseUtility1.GetColumnValue(testdata, "Code");
 	    			if (code.equals(""))		//insert to result if at least one precourse remains
 	    				 result.add(i);
 	    		}
@@ -400,7 +400,7 @@ public class Advanced_Activity2 extends Activity {
     	
     	public List<String> find_addcourse(int year, String Sem) {
     	    // TODO Auto-generated method stub
-    		DataBaseTestAdapter mDbHelper = new DataBaseTestAdapter(this);         
+    		DataBaseTestAdapter1 mDbHelper = new DataBaseTestAdapter1(this);         
         	mDbHelper.createDatabase();       
         	mDbHelper.open(); 
         	 
@@ -415,11 +415,11 @@ public class Advanced_Activity2 extends Activity {
 	    		
     			sql ="SELECT Course.Code from Course, COMP WHERE Course.Code = COMP.Code AND (Pure='All' OR Pure='" + pure + "') AND  Year='" + year + "' AND Sem='Spring'  AND FALL='TRUE' AND Course.Code NOT IN (SELECT Code FROM Studied)"; 
     			testdata = mDbHelper.getTestData(sql); 
-    			code = DataBaseUtility.GetColumnValue(testdata, "Code");
+    			code = DataBaseUtility1.GetColumnValue(testdata, "Code");
 	    		if (!code.equals(""))								//meaning no result
 	    			addcourse.add(code);
     			while (testdata.moveToNext()){ 
-    				code = DataBaseUtility.GetColumnValue(testdata, "Code");
+    				code = DataBaseUtility1.GetColumnValue(testdata, "Code");
     				addcourse.add(code);
 	    		
     			}
@@ -427,22 +427,22 @@ public class Advanced_Activity2 extends Activity {
     			for (int yearloop = year+1; yearloop <= 3; yearloop++){
 	    			sql ="SELECT Course.Code from Course, COMP WHERE Course.Code = COMP.Code AND (Pure='All' OR Pure='" + pure + "') AND Year='" + Integer.toString(yearloop) + "' AND Sem='Fall' AND FALL='TRUE' AND COMP.Code NOT IN (SELECT Code FROM Studied)"; 
 	    			testdata = mDbHelper.getTestData(sql); 
-	    			code = DataBaseUtility.GetColumnValue(testdata, "Code");
+	    			code = DataBaseUtility1.GetColumnValue(testdata, "Code");
 		    		if (!code.equals(""))								//meaning no result
 		    			addcourse.add(code);
 		    		while (testdata.moveToNext()){ 
-		    			code = DataBaseUtility.GetColumnValue(testdata, "Code");
+		    			code = DataBaseUtility1.GetColumnValue(testdata, "Code");
 		    			addcourse.add(code);
 		    			}
 	    			
 	    			
 	    			sql ="SELECT Course.Code from Course, COMP WHERE Course.Code = COMP.Code AND (Pure='All' OR Pure='" + pure + "') AND  Year='" + Integer.toString(yearloop) + "' AND Sem='Spring' AND FALL='TRUE' AND COMP.Code NOT IN (SELECT Code FROM Studied)"; 
 	    			testdata = mDbHelper.getTestData(sql); 
-	    			code = DataBaseUtility.GetColumnValue(testdata, "Code");
+	    			code = DataBaseUtility1.GetColumnValue(testdata, "Code");
 		    		if (!code.equals(""))								//meaning no result
 		    			addcourse.add(code);
 		    		while (testdata.moveToNext()){ 
-		    			code = DataBaseUtility.GetColumnValue(testdata, "Code");
+		    			code = DataBaseUtility1.GetColumnValue(testdata, "Code");
 		    			addcourse.add(code);
 		   			}
 	    		}
@@ -458,21 +458,21 @@ public class Advanced_Activity2 extends Activity {
     			for (int yearloop = year+1; yearloop <= 3 ; yearloop++){
 	    			sql ="SELECT Course.Code from Course, COMP WHERE Course.Code = COMP.Code AND (Pure='All' OR Pure='" + pure + "') AND  Year='" + Integer.toString(yearloop) + "' AND Sem='Fall' AND SPRING='TRUE' AND COMP.Code NOT IN (SELECT Code FROM Studied)"; 
 	    			testdata = mDbHelper.getTestData(sql); 
-    				code = DataBaseUtility.GetColumnValue(testdata, "Code");
+    				code = DataBaseUtility1.GetColumnValue(testdata, "Code");
 		    		if (!code.equals(""))								//meaning no result
 		    			addcourse.add(code);
 		    		while (testdata.moveToNext()){ 
-		    			code = DataBaseUtility.GetColumnValue(testdata, "Code");
+		    			code = DataBaseUtility1.GetColumnValue(testdata, "Code");
 		    			addcourse.add(code);
 		    		}
 	    			
 	    			sql ="SELECT Course.Code from Course, COMP WHERE Course.Code = COMP.Code AND (Pure='All' OR Pure='" + pure + "') AND  Year='" + Integer.toString(yearloop) + "' AND Sem='Spring' AND SPRING='TRUE' AND COMP.Code NOT IN (SELECT Code FROM Studied)"; 
 	    			testdata = mDbHelper.getTestData(sql); 
-	    			code = DataBaseUtility.GetColumnValue(testdata, "Code");
+	    			code = DataBaseUtility1.GetColumnValue(testdata, "Code");
 	    			if (!code.equals(""))
 	    				addcourse.add(code);
 		    		while (testdata.moveToNext()){ 
-		    			code = DataBaseUtility.GetColumnValue(testdata, "Code");
+		    			code = DataBaseUtility1.GetColumnValue(testdata, "Code");
 		    			addcourse.add(code);
 		    		}
 	    		}
@@ -485,7 +485,7 @@ public class Advanced_Activity2 extends Activity {
     		for (String i : addcourse){
     			String sql ="SELECT Prerequisite.Code from Prerequisite, NotStudied WHERE Prerequisite.Precourse = NotStudied.Code AND Prerequisite.Code='" + i +"'"; 
     			Cursor testdata = mDbHelper.getTestData(sql); 
-    			String code = DataBaseUtility.GetColumnValue(testdata, "Code");
+    			String code = DataBaseUtility1.GetColumnValue(testdata, "Code");
     			if (code.equals(""))		//insert to result if at least one precourse remains
     				 result.add(i);
     		}
@@ -499,13 +499,13 @@ public class Advanced_Activity2 extends Activity {
     	//return Credit of course
         public String getCredit(String Code) {
 		    // TODO Auto-generated method stub
-			DataBaseTestAdapter mDbHelper = new DataBaseTestAdapter(this);         
+			DataBaseTestAdapter1 mDbHelper = new DataBaseTestAdapter1(this);         
 	    	mDbHelper.createDatabase();       
 	    	mDbHelper.open(); 
 	    	 
 	    	String sql ="SELECT Credit from Course WHERE Code='" + Code + "'"; 
 			Cursor testdata = mDbHelper.getTestData(sql); 
-	    	String Credit = DataBaseUtility.GetColumnValue(testdata, "Credit");
+	    	String Credit = DataBaseUtility1.GetColumnValue(testdata, "Credit");
 	    
 	    	mDbHelper.close();
 					
@@ -515,13 +515,13 @@ public class Advanced_Activity2 extends Activity {
     	//return Name of course
         public String getName(String Code) {
 		    // TODO Auto-generated method stub
-			DataBaseTestAdapter mDbHelper = new DataBaseTestAdapter(this);         
+			DataBaseTestAdapter1 mDbHelper = new DataBaseTestAdapter1(this);         
 	    	mDbHelper.createDatabase();       
 	    	mDbHelper.open(); 
 	    	 
 	    	String sql ="SELECT Name from Course WHERE Code='" + Code + "'"; 
 			Cursor testdata = mDbHelper.getTestData(sql); 
-	    	String Name = DataBaseUtility.GetColumnValue(testdata, "Name");
+	    	String Name = DataBaseUtility1.GetColumnValue(testdata, "Name");
 	    
 	    	mDbHelper.close();
 					

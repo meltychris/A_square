@@ -12,7 +12,7 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper; 
 import android.util.Log; 
  
-public class DataBaseHelper extends SQLiteOpenHelper 
+public class DataBaseHelper1 extends SQLiteOpenHelper 
 { 
 private static String TAG = "DataBaseHelper"; // Tag just for the LogCat window 
 //destination path (location) of our database on device 
@@ -21,7 +21,7 @@ private static String DB_NAME ="MyDatabase";// Database name
 private SQLiteDatabase mDataBase;  
 private final Context mContext; 
  
-public DataBaseHelper(Context context)  
+public DataBaseHelper1(Context context)  
 { 
     super(context, DB_NAME, null, 1);// 1? its Database Version 
     DB_PATH = "/data/data/" + context.getPackageName() + "/databases/"; 
