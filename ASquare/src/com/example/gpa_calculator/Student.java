@@ -1,4 +1,4 @@
-package com.example.gpa_calculator;
+/*package com.example.gpa_calculator;
 
 import java.io.*;
 import java.util.ArrayList;
@@ -359,7 +359,7 @@ public class Student {
 		}
 		
 		System.out.println("Now referring to advising function");
-/*		
+		
 		System.out.println("Choice 1: Advices for rasing grade of courses to achieve the target CGA? (Support 1 course grade raising for each time)");
 		System.out.println("Choice 2: Advices for rasing min. grade point of the semester to achieve the target CGA?");
 		System.out.print("Choice: ");
@@ -377,7 +377,7 @@ public class Student {
 			System.out.println("Invaild input");
 			return;
 		}
-*/
+
 		
 		adviceMinGradePoint(diffCGA,currentYear,currentSem);
 		
@@ -385,7 +385,7 @@ public class Student {
 	}
 
 	
-/*	
+	
 	//only workable when there is 1 course only in that sem!!!!!!!!!
 	//ONLY condition 1 from diff_performance_advice() will come to here
 	//Clicking the above button will show the improvement needed to reach the target CGA,
@@ -426,7 +426,7 @@ public class Student {
 		}
 	
 	}
-*/
+
 	
 	//ONLY condition 1 from diff_performance_advice() will come to here
 	//Clicking the above button will show the improvement needed to reach the target CGA,
@@ -625,7 +625,7 @@ public class Student {
 		updateAll();
 		
 	}
-	*/
+	
 	
 	
 	
@@ -1051,4 +1051,4 @@ public class Student {
 	
 	
 	
-}
+}*/

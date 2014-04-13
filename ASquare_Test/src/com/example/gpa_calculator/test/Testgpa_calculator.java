@@ -1,4 +1,4 @@
-package com.example.gpa_calculator.test;
+/*package com.example.gpa_calculator.test;
 
 import com.example.gpa_calculator.Student;
 import com.example.study_path.Study_Path;
@@ -204,7 +204,7 @@ public class Testgpa_calculator extends ActivityInstrumentationTestCase2<Student
 		assertFalse(RadioButton08.isChecked());
 		
 
-/*
+
 		 //CHECK THE RESULT
 		  //assertEquals("COMP",major);
 		  if (mActivity.getYear().equals("1"))
@@ -214,7 +214,7 @@ public class Testgpa_calculator extends ActivityInstrumentationTestCase2<Student
     	  else
 			  assertTrue(view3.isShown());
 		}
-*/		
+		
 	} 
 		
 
@@ -253,7 +253,7 @@ public class Testgpa_calculator extends ActivityInstrumentationTestCase2<Student
 		assertFalse(RadioButton08.isChecked());
 		
 
-/*
+
 		 //CHECK THE RESULT
 		  //assertEquals("COMP",major);
 		  if (mActivity.getYear().equals("1"))
@@ -263,7 +263,7 @@ public class Testgpa_calculator extends ActivityInstrumentationTestCase2<Student
   	  else
 			  assertTrue(view3.isShown());
 		}
-*/		
+		
 	}
 	
 	@SmallTest 
@@ -300,7 +300,7 @@ public class Testgpa_calculator extends ActivityInstrumentationTestCase2<Student
 		assertFalse(RadioButton08.isChecked());
 		
 
-/*
+
 		 //CHECK THE RESULT
 		  //assertEquals("COMP",major);
 		  if (mActivity.getYear().equals("1"))
@@ -310,7 +310,7 @@ public class Testgpa_calculator extends ActivityInstrumentationTestCase2<Student
 	  else
 			  assertTrue(view3.isShown());
 		}
-*/		
+		
 	}
 	
 	@SmallTest 
@@ -347,7 +347,7 @@ public class Testgpa_calculator extends ActivityInstrumentationTestCase2<Student
 		assertFalse(RadioButton08.isChecked());
 		
 
-/*
+
 		 //CHECK THE RESULT
 		  //assertEquals("COMP",major);
 		  if (mActivity.getYear().equals("1"))
@@ -357,7 +357,7 @@ public class Testgpa_calculator extends ActivityInstrumentationTestCase2<Student
 	  else
 			  assertTrue(view3.isShown());
 		}
-*/		
+		
 	}
 	
 	@SmallTest 
@@ -394,7 +394,7 @@ public class Testgpa_calculator extends ActivityInstrumentationTestCase2<Student
 		assertTrue(RadioButton08.isChecked());
 		
 
-/*
+
 		 //CHECK THE RESULT
 		  //assertEquals("COMP",major);
 		  if (mActivity.getYear().equals("1"))
@@ -404,7 +404,7 @@ public class Testgpa_calculator extends ActivityInstrumentationTestCase2<Student
 	  else
 			  assertTrue(view3.isShown());
 		}
-*/	
+	
 	}
 	
 	@SmallTest 
@@ -442,7 +442,7 @@ public class Testgpa_calculator extends ActivityInstrumentationTestCase2<Student
 		assertFalse(RadioButton05.isChecked());
 		
 
-/*
+
 		 //CHECK THE RESULT
 		  //assertEquals("COMP",major);
 		  if (mActivity.getYear().equals("1"))
@@ -452,7 +452,7 @@ public class Testgpa_calculator extends ActivityInstrumentationTestCase2<Student
 	  else
 			  assertTrue(view3.isShown());
 		}
-*/	
+	
 	}
 	
 	@SmallTest 
@@ -490,7 +490,7 @@ public class Testgpa_calculator extends ActivityInstrumentationTestCase2<Student
 		assertFalse(RadioButton05.isChecked());
 		
 
-/*
+
 		 //CHECK THE RESULT
 		  //assertEquals("COMP",major);
 		  if (mActivity.getYear().equals("1"))
@@ -500,7 +500,7 @@ public class Testgpa_calculator extends ActivityInstrumentationTestCase2<Student
 	  else
 			  assertTrue(view3.isShown());
 		}
-*/	
+	
 	}
 	
 	@SmallTest 
@@ -538,7 +538,7 @@ public class Testgpa_calculator extends ActivityInstrumentationTestCase2<Student
 		assertFalse(RadioButton05.isChecked());
 		
 
-/*
+
 		 //CHECK THE RESULT
 		  //assertEquals("COMP",major);
 		  if (mActivity.getYear().equals("1"))
@@ -548,7 +548,7 @@ public class Testgpa_calculator extends ActivityInstrumentationTestCase2<Student
 	  else
 			  assertTrue(view3.isShown());
 		}
-*/	
+	
 	}
 	
 	@SmallTest 
@@ -586,7 +586,7 @@ public class Testgpa_calculator extends ActivityInstrumentationTestCase2<Student
 		assertTrue(RadioButton05.isChecked());
 		
 
-/*
+
 		 //CHECK THE RESULT
 		  //assertEquals("COMP",major);
 		  if (mActivity.getYear().equals("1"))
@@ -596,7 +596,7 @@ public class Testgpa_calculator extends ActivityInstrumentationTestCase2<Student
 	  else
 			  assertTrue(view3.isShown());
 		}
-*/	
+
 	}
 	
 	
@@ -606,7 +606,7 @@ public class Testgpa_calculator extends ActivityInstrumentationTestCase2<Student
 	
 	
 	
-/*	
+	
 	@SmallTest 
 	 public void testbutton1() { 
 		int expectedCount = listView1.getAdapter().getCount() + 1;
@@ -748,5 +748,6 @@ public class Testgpa_calculator extends ActivityInstrumentationTestCase2<Student
 		  assertEquals("2014/01/01",Date.getText());
 
 	 }
-*/
+
 }
+*/

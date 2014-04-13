@@ -1,4 +1,4 @@
-package com.example.gpa_calculator;
+/*package com.example.gpa_calculator;
 
 //import android.os.Bundle;
 //import android.app.Activity;
@@ -75,7 +75,7 @@ public class cgaCalculator {
 		
 		//debug code
 		
-		/*
+		
 		user.insertCourseRecordEnquiry();
 		
 		System.out.println(user.courseRecord[0][0][0][0]);
@@ -100,7 +100,7 @@ public class cgaCalculator {
 		System.out.println(user.TGA[0][0]);
 		System.out.println(user.CGA);
 		System.out.println(user.GGA);
-		*/
+		
 		
 		//user.TGA[0][0] = 1;
 		//user.CGA= 1;
@@ -156,3 +156,4 @@ public class cgaCalculator {
 
 	}
 }
+*/
