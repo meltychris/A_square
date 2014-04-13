@@ -85,57 +85,63 @@ public class Testgpa_calculator extends ActivityInstrumentationTestCase2<Student
 	
 	@SmallTest 
 	 public void testbutton1() {
-		
+		//Next
+		//check whether go next page
+		//2 page layout used the same button button1
 	}
 	
 	@SmallTest 
 	 public void testeditText1() {
+		//Name:
 		
 	}
 	
 	@SmallTest 
 	 public void testradioButton1() {
-		
+		//current Year 1
 	}
 	
 	@SmallTest 
 	 public void testRadioButton04() {
+		//current Year 2
 		
 	}
 	
 	@SmallTest 
 	 public void testRadioButton06() {
+		//current Year 3
 		
 	}
 	
 	@SmallTest 
 	 public void testRadioButton07() {
+		//current Year 4
 		
 	}
 	
 	@SmallTest 
 	 public void testRadioButton08() {
-		
+		//current Year 5
 	}
 	
 	@SmallTest 
 	 public void testRadioButton02() {
-		
+		//Fall
 	}
 	
 	@SmallTest 
 	 public void testRadioButton01() {
-		
+		//Winter
 	}
 	
 	@SmallTest 
 	 public void testRadioButton03() {
-		
+		//Spring
 	}
 	
 	@SmallTest 
 	 public void testRadioButton05() {
-		
+		//Summer
 	}
 	
 	
