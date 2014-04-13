@@ -133,6 +133,8 @@ public class Testgpa_calculator extends ActivityInstrumentationTestCase2<Student
 	 public void testeditText1() {
 		//Name:
 		
+		
+		
 	}
 	
 	@SmallTest 
@@ -187,44 +189,381 @@ public class Testgpa_calculator extends ActivityInstrumentationTestCase2<Student
 	@SmallTest 
 	 public void testRadioButton04() {
 		//current Year 2
+		//copy from Study_Path_Test.java
 		
+		
+		  ActivityMonitor activityMonitor = getInstrumentation().addMonitor(Student.class.getName(), null, false);
+
+		//for (int tempyear=1; tempyear <=3 ; tempyear++){
+		//mActivity.setYear(Integer.toString(tempyear));
+		 //INTERACTIONS
+		  mActivity.runOnUiThread(new Runnable() {
+			    @Override
+			    public void run() {
+			      // click button and open next activity.
+			    	//radioButton2.setChecked(true);
+			    	//assertTrue(radioButton2.isChecked());
+			    	//radioGroup.check(R.id.radioButton1);
+			    	RadioButton04.performClick();
+			    	//System.out.println(radioButton1.performClick());
+
+			    	//radioButton2.performClick();
+			    }
+
+
+			  });	
+		getInstrumentation().waitForMonitorWithTimeout(activityMonitor, 5000);
+		assertFalse(radioButton1.isChecked());
+		assertTrue(RadioButton04.isChecked());
+		assertFalse(RadioButton06.isChecked());
+		assertFalse(RadioButton07.isChecked());
+		assertFalse(RadioButton08.isChecked());
+		
+
+/*
+		 //CHECK THE RESULT
+		  //assertEquals("COMP",major);
+		  if (mActivity.getYear().equals("1"))
+			  assertTrue(view1.isShown());
+		  else if (mActivity.getYear().equals("2"))
+			  assertTrue(view2.isShown());
+  	  else
+			  assertTrue(view3.isShown());
+		}
+*/		
 	}
 	
 	@SmallTest 
 	 public void testRadioButton06() {
 		//current Year 3
+		//copy from Study_Path_Test.java
 		
+		
+		  ActivityMonitor activityMonitor = getInstrumentation().addMonitor(Student.class.getName(), null, false);
+
+		//for (int tempyear=1; tempyear <=3 ; tempyear++){
+		//mActivity.setYear(Integer.toString(tempyear));
+		 //INTERACTIONS
+		  mActivity.runOnUiThread(new Runnable() {
+			    @Override
+			    public void run() {
+			      // click button and open next activity.
+			    	//radioButton2.setChecked(true);
+			    	//assertTrue(radioButton2.isChecked());
+			    	//radioGroup.check(R.id.radioButton1);
+			    	RadioButton06.performClick();
+			    	//System.out.println(radioButton1.performClick());
+
+			    	//radioButton2.performClick();
+			    }
+
+
+			  });	
+		getInstrumentation().waitForMonitorWithTimeout(activityMonitor, 5000);
+		assertFalse(radioButton1.isChecked());
+		assertFalse(RadioButton04.isChecked());
+		assertTrue(RadioButton06.isChecked());
+		assertFalse(RadioButton07.isChecked());
+		assertFalse(RadioButton08.isChecked());
+		
+
+/*
+		 //CHECK THE RESULT
+		  //assertEquals("COMP",major);
+		  if (mActivity.getYear().equals("1"))
+			  assertTrue(view1.isShown());
+		  else if (mActivity.getYear().equals("2"))
+			  assertTrue(view2.isShown());
+	  else
+			  assertTrue(view3.isShown());
+		}
+*/		
 	}
 	
 	@SmallTest 
 	 public void testRadioButton07() {
-		//current Year 4
+		//current Year 4		
+		//copy from Study_Path_Test.java
 		
+		
+		  ActivityMonitor activityMonitor = getInstrumentation().addMonitor(Student.class.getName(), null, false);
+
+		//for (int tempyear=1; tempyear <=3 ; tempyear++){
+		//mActivity.setYear(Integer.toString(tempyear));
+		 //INTERACTIONS
+		  mActivity.runOnUiThread(new Runnable() {
+			    @Override
+			    public void run() {
+			      // click button and open next activity.
+			    	//radioButton2.setChecked(true);
+			    	//assertTrue(radioButton2.isChecked());
+			    	//radioGroup.check(R.id.radioButton1);
+			    	RadioButton07.performClick();
+			    	//System.out.println(radioButton1.performClick());
+
+			    	//radioButton2.performClick();
+			    }
+
+
+			  });	
+		getInstrumentation().waitForMonitorWithTimeout(activityMonitor, 5000);
+		assertFalse(radioButton1.isChecked());
+		assertFalse(RadioButton04.isChecked());
+		assertFalse(RadioButton06.isChecked());
+		assertTrue(RadioButton07.isChecked());
+		assertFalse(RadioButton08.isChecked());
+		
+
+/*
+		 //CHECK THE RESULT
+		  //assertEquals("COMP",major);
+		  if (mActivity.getYear().equals("1"))
+			  assertTrue(view1.isShown());
+		  else if (mActivity.getYear().equals("2"))
+			  assertTrue(view2.isShown());
+	  else
+			  assertTrue(view3.isShown());
+		}
+*/		
 	}
 	
 	@SmallTest 
 	 public void testRadioButton08() {
-		//current Year 5
+		//current Year 5	
+		//copy from Study_Path_Test.java
+		
+		
+		  ActivityMonitor activityMonitor = getInstrumentation().addMonitor(Student.class.getName(), null, false);
+
+		//for (int tempyear=1; tempyear <=3 ; tempyear++){
+		//mActivity.setYear(Integer.toString(tempyear));
+		 //INTERACTIONS
+		  mActivity.runOnUiThread(new Runnable() {
+			    @Override
+			    public void run() {
+			      // click button and open next activity.
+			    	//radioButton2.setChecked(true);
+			    	//assertTrue(radioButton2.isChecked());
+			    	//radioGroup.check(R.id.radioButton1);
+			    	RadioButton08.performClick();
+			    	//System.out.println(radioButton1.performClick());
+
+			    	//radioButton2.performClick();
+			    }
+
+
+			  });	
+		getInstrumentation().waitForMonitorWithTimeout(activityMonitor, 5000);
+		assertFalse(radioButton1.isChecked());
+		assertFalse(RadioButton04.isChecked());
+		assertFalse(RadioButton06.isChecked());
+		assertFalse(RadioButton07.isChecked());
+		assertTrue(RadioButton08.isChecked());
+		
+
+/*
+		 //CHECK THE RESULT
+		  //assertEquals("COMP",major);
+		  if (mActivity.getYear().equals("1"))
+			  assertTrue(view1.isShown());
+		  else if (mActivity.getYear().equals("2"))
+			  assertTrue(view2.isShown());
+	  else
+			  assertTrue(view3.isShown());
+		}
+*/	
 	}
 	
 	@SmallTest 
 	 public void testRadioButton02() {
 		//Fall
+		
+		//copy from Study_Path_Test.java
+		
+		
+		  ActivityMonitor activityMonitor = getInstrumentation().addMonitor(Student.class.getName(), null, false);
+
+		//for (int tempyear=1; tempyear <=3 ; tempyear++){
+		//mActivity.setYear(Integer.toString(tempyear));
+		 //INTERACTIONS
+		  mActivity.runOnUiThread(new Runnable() {
+			    @Override
+			    public void run() {
+			      // click button and open next activity.
+			    	//radioButton2.setChecked(true);
+			    	//assertTrue(radioButton2.isChecked());
+			    	//radioGroup.check(R.id.radioButton1);
+			    	RadioButton02.performClick();
+			    	//System.out.println(radioButton1.performClick());
+
+			    	//radioButton2.performClick();
+			    }
+
+
+			  });	
+		getInstrumentation().waitForMonitorWithTimeout(activityMonitor, 5000);
+		
+		assertTrue(RadioButton02.isChecked());
+		assertFalse(RadioButton01.isChecked());
+		assertFalse(RadioButton03.isChecked());
+		assertFalse(RadioButton05.isChecked());
+		
+
+/*
+		 //CHECK THE RESULT
+		  //assertEquals("COMP",major);
+		  if (mActivity.getYear().equals("1"))
+			  assertTrue(view1.isShown());
+		  else if (mActivity.getYear().equals("2"))
+			  assertTrue(view2.isShown());
+	  else
+			  assertTrue(view3.isShown());
+		}
+*/	
 	}
 	
 	@SmallTest 
 	 public void testRadioButton01() {
 		//Winter
+		
+		//copy from Study_Path_Test.java
+		
+		
+		  ActivityMonitor activityMonitor = getInstrumentation().addMonitor(Student.class.getName(), null, false);
+
+		//for (int tempyear=1; tempyear <=3 ; tempyear++){
+		//mActivity.setYear(Integer.toString(tempyear));
+		 //INTERACTIONS
+		  mActivity.runOnUiThread(new Runnable() {
+			    @Override
+			    public void run() {
+			      // click button and open next activity.
+			    	//radioButton2.setChecked(true);
+			    	//assertTrue(radioButton2.isChecked());
+			    	//radioGroup.check(R.id.radioButton1);
+			    	RadioButton01.performClick();
+			    	//System.out.println(radioButton1.performClick());
+
+			    	//radioButton2.performClick();
+			    }
+
+
+			  });	
+		getInstrumentation().waitForMonitorWithTimeout(activityMonitor, 5000);
+		
+		assertFalse(RadioButton02.isChecked());
+		assertTrue(RadioButton01.isChecked());
+		assertFalse(RadioButton03.isChecked());
+		assertFalse(RadioButton05.isChecked());
+		
+
+/*
+		 //CHECK THE RESULT
+		  //assertEquals("COMP",major);
+		  if (mActivity.getYear().equals("1"))
+			  assertTrue(view1.isShown());
+		  else if (mActivity.getYear().equals("2"))
+			  assertTrue(view2.isShown());
+	  else
+			  assertTrue(view3.isShown());
+		}
+*/	
 	}
 	
 	@SmallTest 
 	 public void testRadioButton03() {
 		//Spring
+		
+		//copy from Study_Path_Test.java
+		
+		
+		  ActivityMonitor activityMonitor = getInstrumentation().addMonitor(Student.class.getName(), null, false);
+
+		//for (int tempyear=1; tempyear <=3 ; tempyear++){
+		//mActivity.setYear(Integer.toString(tempyear));
+		 //INTERACTIONS
+		  mActivity.runOnUiThread(new Runnable() {
+			    @Override
+			    public void run() {
+			      // click button and open next activity.
+			    	//radioButton2.setChecked(true);
+			    	//assertTrue(radioButton2.isChecked());
+			    	//radioGroup.check(R.id.radioButton1);
+			    	RadioButton03.performClick();
+			    	//System.out.println(radioButton1.performClick());
+
+			    	//radioButton2.performClick();
+			    }
+
+
+			  });	
+		getInstrumentation().waitForMonitorWithTimeout(activityMonitor, 5000);
+		
+		assertFalse(RadioButton02.isChecked());
+		assertFalse(RadioButton01.isChecked());
+		assertTrue(RadioButton03.isChecked());
+		assertFalse(RadioButton05.isChecked());
+		
+
+/*
+		 //CHECK THE RESULT
+		  //assertEquals("COMP",major);
+		  if (mActivity.getYear().equals("1"))
+			  assertTrue(view1.isShown());
+		  else if (mActivity.getYear().equals("2"))
+			  assertTrue(view2.isShown());
+	  else
+			  assertTrue(view3.isShown());
+		}
+*/	
 	}
 	
 	@SmallTest 
 	 public void testRadioButton05() {
 		//Summer
+		
+		//copy from Study_Path_Test.java
+		
+		
+		  ActivityMonitor activityMonitor = getInstrumentation().addMonitor(Student.class.getName(), null, false);
+
+		//for (int tempyear=1; tempyear <=3 ; tempyear++){
+		//mActivity.setYear(Integer.toString(tempyear));
+		 //INTERACTIONS
+		  mActivity.runOnUiThread(new Runnable() {
+			    @Override
+			    public void run() {
+			      // click button and open next activity.
+			    	//radioButton2.setChecked(true);
+			    	//assertTrue(radioButton2.isChecked());
+			    	//radioGroup.check(R.id.radioButton1);
+			    	RadioButton05.performClick();
+			    	//System.out.println(radioButton1.performClick());
+
+			    	//radioButton2.performClick();
+			    }
+
+
+			  });	
+		getInstrumentation().waitForMonitorWithTimeout(activityMonitor, 5000);
+		
+		assertFalse(RadioButton02.isChecked());
+		assertFalse(RadioButton01.isChecked());
+		assertFalse(RadioButton03.isChecked());
+		assertTrue(RadioButton05.isChecked());
+		
+
+/*
+		 //CHECK THE RESULT
+		  //assertEquals("COMP",major);
+		  if (mActivity.getYear().equals("1"))
+			  assertTrue(view1.isShown());
+		  else if (mActivity.getYear().equals("2"))
+			  assertTrue(view2.isShown());
+	  else
+			  assertTrue(view3.isShown());
+		}
+*/	
 	}
 	
 	
