@@ -89,9 +89,12 @@ public class Testgpa_calculator extends ActivityInstrumentationTestCase2<Student
 		//check whether go next page
 		//2 page layout used the same button button1
 		
-		int expectedCount = listView1.getAdapter().getCount() + 1;
+		
+		
+		
+		//int expectedCount = listView1.getAdapter().getCount() + 1;
+		String expectedNameString = "Chan Tai Man";
 
-		//-----------Beginning of Done by Brian--------
 		  mActivity.runOnUiThread(new Runnable() {
 			    @Override
 			    public void run() {
@@ -103,14 +106,16 @@ public class Testgpa_calculator extends ActivityInstrumentationTestCase2<Student
 			      button1.performClick();
 			    }
 			  });
-		  //-----------End of Done by Brian--------
 		  
 		  ActivityMonitor activityMonitor = getInstrumentation().addMonitor(Student.class.getName(), null, false);
 		  getInstrumentation().waitForMonitorWithTimeout(activityMonitor, 5000);
-		int actualCount = editText1.getAdapter().getCount();
 		  
+		
+		//int actualCount = editText1.getAdapter().getCount();
+		String actualtNameString = editText1.getText().toString();
+		
 		 //CHECK THE RESULT 
-	    assertEquals(expectedCount, actualCount);
+	    assertEquals("testbutton1() fails", expectedNameString, actualtNameString);
 	}
 	
 	@SmallTest 
