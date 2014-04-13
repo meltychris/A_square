@@ -71,6 +71,8 @@ public class Testexam_count_down extends ActivityInstrumentationTestCase2<Exam_c
 			      button1.performClick();
 			    }
 			  });	
+		  ActivityMonitor activityMonitor = getInstrumentation().addMonitor(Exam_countdown.class.getName(), null, false);
+		  getInstrumentation().waitForMonitorWithTimeout(activityMonitor, 5000);
 		int actualCount = listView1.getAdapter().getCount();
 		  
 		 //CHECK THE RESULT 
@@ -89,6 +91,8 @@ public class Testexam_count_down extends ActivityInstrumentationTestCase2<Exam_c
 		    	button1.performClick();
 		    	}
 		  	});	
+		  ActivityMonitor activityMonitor = getInstrumentation().addMonitor(Exam_countdown.class.getName(), null, false);
+		  getInstrumentation().waitForMonitorWithTimeout(activityMonitor, 5000);
 		int expectedCount = listView1.getAdapter().getCount() - 1;
 
 		 //INTERACTIONS 
@@ -100,7 +104,7 @@ public class Testexam_count_down extends ActivityInstrumentationTestCase2<Exam_c
 			      button2.performClick();
 			    }
 			  });	
-		  
+		  getInstrumentation().waitForMonitorWithTimeout(activityMonitor, 5000);
 		  int actualCount = listView1.getAdapter().getCount();
 	  
 		 //CHECK THE RESULT 
@@ -121,6 +125,8 @@ public class Testexam_count_down extends ActivityInstrumentationTestCase2<Exam_c
 			      button3.performClick();
 			    }
 			  });	
+		  ActivityMonitor activityMonitor = getInstrumentation().addMonitor(Exam_countdown.class.getName(), null, false);
+		  getInstrumentation().waitForMonitorWithTimeout(activityMonitor, 5000);
 		int expectedCount = 0;
 		int actualCount = listView1.getAdapter().getCount();
 	  
@@ -141,6 +147,8 @@ public class Testexam_count_down extends ActivityInstrumentationTestCase2<Exam_c
 		      button1.performClick();
 		    }
 		  });	
+		  ActivityMonitor activityMonitor = getInstrumentation().addMonitor(Exam_countdown.class.getName(), null, false);
+		  getInstrumentation().waitForMonitorWithTimeout(activityMonitor, 5000);
 		  String expectedinput = "COMP3111\t2014/02/30";
 		  String actualinput = listView1.getChildAt(0).toString();	  
 		 //CHECK THE RESULT 
@@ -154,12 +162,18 @@ public class Testexam_count_down extends ActivityInstrumentationTestCase2<Exam_c
 
 		 //INTERACTIONS
 		  mActivity.runOnUiThread(new Runnable() {
+
 			    @Override
 			    public void run() {
 			      // click button and open next activity.
 			      Code.setText("COMP3111");
+			      button1.performClick();
 			    }
 			  });	
+		  
+		  ActivityMonitor activityMonitor = getInstrumentation().addMonitor(Exam_countdown.class.getName(), null, false);
+		  getInstrumentation().waitForMonitorWithTimeout(activityMonitor, 5000);
+
 		  
 		 //CHECK THE RESULT
 		  assertEquals("COMP3111",Code.getText());
@@ -177,9 +191,12 @@ public class Testexam_count_down extends ActivityInstrumentationTestCase2<Exam_c
 			    public void run() {
 			      // click button and open next activity.
 			      Date.setText("2014/01/01");
+			      button1.performClick();
 			    }
 			  });	
-		  assertEquals("2014/01/01",Code.getText());
+		  ActivityMonitor activityMonitor = getInstrumentation().addMonitor(Exam_countdown.class.getName(), null, false);
+		  getInstrumentation().waitForMonitorWithTimeout(activityMonitor, 5000);
+		  assertEquals("2014/01/01",Date.getText());
 
 	 }
 }
