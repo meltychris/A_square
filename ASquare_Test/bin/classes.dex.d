@@ -12,3 +12,5 @@ C:\Users\stsk\git\A_square\ASquare_Test\bin\classes\com\example\asquare\test\R$a
 C:\Users\stsk\git\A_square\ASquare_Test\bin\classes\com\example\asquare\test\R$drawable.class \
 C:\Users\stsk\git\A_square\ASquare_Test\bin\classes\com\example\asquare\test\R$string.class \
 C:\Users\stsk\git\A_square\ASquare_Test\bin\classes\com\example\asquare\test\R.class \
+C:\Users\stsk\git\A_square\ASquare_Test\bin\classes\com\example\study_path\test\Study_Path_Test$1.class \
+C:\Users\stsk\git\A_square\ASquare_Test\bin\classes\com\example\study_path\test\Study_Path_Test.class \
