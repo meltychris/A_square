@@ -88,6 +88,29 @@ public class Testgpa_calculator extends ActivityInstrumentationTestCase2<Student
 		//Next
 		//check whether go next page
 		//2 page layout used the same button button1
+		
+		int expectedCount = listView1.getAdapter().getCount() + 1;
+
+		//-----------Beginning of Done by Brian--------
+		  mActivity.runOnUiThread(new Runnable() {
+			    @Override
+			    public void run() {
+			      // click button and open next activity.
+			    	
+			      editText1.setText("Chan Tai Man");
+			      //Code.setText("COMP3111");
+			      //Date.setText("2014/02/30");
+			      button1.performClick();
+			    }
+			  });
+		  //-----------End of Done by Brian--------
+		  
+		  ActivityMonitor activityMonitor = getInstrumentation().addMonitor(Student.class.getName(), null, false);
+		  getInstrumentation().waitForMonitorWithTimeout(activityMonitor, 5000);
+		int actualCount = editText1.getAdapter().getCount();
+		  
+		 //CHECK THE RESULT 
+	    assertEquals(expectedCount, actualCount);
 	}
 	
 	@SmallTest 
@@ -99,6 +122,8 @@ public class Testgpa_calculator extends ActivityInstrumentationTestCase2<Student
 	@SmallTest 
 	 public void testradioButton1() {
 		//current Year 1
+		
+		
 	}
 	
 	@SmallTest 
