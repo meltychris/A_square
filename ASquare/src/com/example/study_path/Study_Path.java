@@ -50,7 +50,7 @@ public class Study_Path extends Activity {
     	pure = "T";			//initialize to NOT studied Pure
 
 
-        radioButton1.setOnClickListener(new RadioButton.OnClickListener(){ 
+        radioButton1.setOnClickListener(new Button.OnClickListener(){ 
           /*   public void onRadioButtonClicked(View v) {
                 // TODO Auto-generated method stub
             	
@@ -104,7 +104,7 @@ public class Study_Path extends Activity {
 			}
         });
         
-        radioButton2.setOnClickListener(new RadioButton.OnClickListener(){ 
+        radioButton2.setOnClickListener(new Button.OnClickListener(){ 
            // public void onRadioButtonClicked(View v) {
                 // TODO Auto-generated method stub
             /*	
