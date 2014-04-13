@@ -3,6 +3,7 @@ package com.example.gpa_calculator.test;
 
 import android.test.ActivityInstrumentationTestCase2;
 import android.test.suitebuilder.annotation.SmallTest;
+
 import com.example.gpa_calculator.MainActivity;
 
 
@@ -36,5 +37,21 @@ public class MainActivity_Test extends ActivityInstrumentationTestCase2<MainActi
 	 public void testView() { // checks if the activity is created 
 		assertNotNull(getActivity()); 
 	 } 
+
+	
+	
+	@SmallTest
+	 public void testSetUp() throws Exception {
+		setUp();
+		assertNotNull(mActivity);
+	 }
+
+	@SmallTest
+	 public void testTearDown() throws Exception {
+		tearDown();
+		assertNull(mActivity);
+		 
+	 }
+	 
 
 }
