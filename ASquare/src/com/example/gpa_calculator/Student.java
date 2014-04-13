@@ -345,7 +345,7 @@ public class Student {
 		//cast to +ve
 		diffCGA = (-1)*diffCGA;
 		
-		System.out.println("Do you want advices for rasing grade of courses to achieve the target CGA? Y/N ");
+		System.out.println("Do you want advices for rasing minimum grade point of this semester to achieve the target CGA? Y/N ");
 		String ans = input.nextLine();
 		if (ans.equals("N"))
 		{
@@ -355,7 +355,7 @@ public class Student {
 		
 		
 		System.out.println("Now referring to advising function");
-		advice(diffCGA,currentYear,currentSem);
+		adviceMinGradePoint(diffCGA,currentYear,currentSem);
 		
 
 		System.out.println("End of function of comparing target CGA with actual performance and giving advices");
@@ -363,10 +363,12 @@ public class Student {
 
 	
 	
+	/*	
+	//only workable when there is 1 course only in that sem!!!!!!!!!
 	//ONLY condition 1 from diff_performance_advice() will come to here
 	//Clicking the above button will show the improvement needed to reach the target CGA,
 	//e.g.: "You need a term grade average (TGA) of A or above to get a CGA A-"
-	public void advice(double diffCGA, int currentYear, int currentSem) {
+	public void adviceOneGrade(double diffCGA, int currentYear, int currentSem) {
 		
 		
 		//grade to raise for specific no. of credit course
@@ -393,17 +395,36 @@ public class Student {
 			String strGrade = NumToGrade(targetCourseGrade);
 			
 			//DO NOT print the statement if the current!!!!!!! course 1 is already A+, 4.3
-			if (Double.parseDouble(courseRecord[currentYear][currentSem][counter][2]) < 4.3)
+			if (GradeToNum(courseRecord[currentYear][currentSem][counter][2]) < 4.3)
 			{
 				System.out.println("In order to achieve the target CGA,");
-				System.out.println("You need to obtain grade" + strGrade + " or above from " + courseRecord[currentYear][currentSem][counter][0] + ". Now grade of this course is " + courseRecord[currentYear][currentSem][counter][2]);
+				System.out.println("You need to obtain grade " + strGrade + " or above from Course " + courseRecord[currentYear][currentSem][counter][0] + ". Now grade of this course is " + courseRecord[currentYear][currentSem][counter][2]);
 			}
 			
-
+		}
+	
+	}
+*/
+	
+	//ONLY condition 1 from diff_performance_advice() will come to here
+	//Clicking the above button will show the improvement needed to reach the target CGA,
+	//e.g.: "You need a term grade average (TGA) of A or above to get a CGA A-"
+	public void adviceMinGradePoint(double diffCGA, int currentYear, int currentSem) {
+		
+		//grade point to raise
+		
+		if (year_sem_credit_counter[currentYear][currentSem] == 0)
+		{
+			System.out.println("You don't have any course record in Year" + (currentYear+1) + " " + SemIntToWords(currentSem) + " Semester!");
+			return;
 		}
 		
+		double minTargetGradePoint = diffCGA*year_sem_credit_counter[currentYear][currentSem];
 		
+		System.out.println("In order to achieve the target CGA,");
+		System.out.println("You need to raise Minimum Grade Point " + minTargetGradePoint + " or above in Year" + (currentYear+1) + " " + SemIntToWords(currentSem) + " Semester!");
 	}
+
 
 	
 	public void delCourseRecordEnquiry()throws IOException {
