@@ -1,4 +1,4 @@
-/*package com.example.asquare.test;
+package com.example.asquare.test;
 
 import com.example.asquare.MainActivity;
 import com.example.asquare.R;
@@ -217,4 +217,3 @@ public class MainActivity_Test extends ActivityInstrumentationTestCase2<MainActi
 	    getInstrumentation().waitForIdleSync();
 	}
 }
-*/

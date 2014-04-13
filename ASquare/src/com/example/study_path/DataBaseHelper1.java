@@ -99,10 +99,10 @@ public void createDataBase() throws IOException
 	}
 
 	@Override
-	public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
+	public void onUpgrade(SQLiteDatabase arg0, int arg1, int arg2) {
 		// TODO Auto-generated method stub
 		
-	} 
+	}
  
 } 
 

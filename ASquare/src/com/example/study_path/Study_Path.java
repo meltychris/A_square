@@ -45,9 +45,9 @@ public class Study_Path extends Activity {
     	radioButton1 = (RadioButton) findViewById(R.id.radioButton1);
     	radioButton2 = (RadioButton) findViewById(R.id.radioButton2);
     	
-    	major = "COMP";		//initial
+    	setMajor("COMP");		//initial
     	setYear("1");			//initial
-    	pure = "T";			//initialize to NOT studied Pure
+    	setPure("T");			//initialize to NOT studied Pure
 
 
         radioButton1.setOnClickListener(new Button.OnClickListener(){ 
@@ -85,9 +85,9 @@ public class Study_Path extends Activity {
 			@Override
 			public void onClick(View arg0) {
 				// TODO Auto-generated method stub
-				major = "COMP";
+				setMajor("COMP");
             	
-            	listView1.setAdapter(get(major, getYear(), pure));
+            	listView1.setAdapter(get(getMajor(), getYear(), getPure()));
 
             	view1.setVisibility(View.INVISIBLE);
             	view2.setVisibility(View.INVISIBLE);
@@ -138,9 +138,9 @@ public class Study_Path extends Activity {
 			@Override
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
-				major = "CPEG";
+				setMajor("CPEG");
 
-            	listView1.setAdapter(get(major, getYear(), pure));
+            	listView1.setAdapter(get(getMajor(), getYear(), getPure()));
 
             	view1.setVisibility(View.INVISIBLE);
             	view2.setVisibility(View.INVISIBLE);
@@ -161,10 +161,10 @@ public class Study_Path extends Activity {
             @Override
             public void onClick(View v) {
                 // TODO Auto-generated method stub
-            	pure = (pure.equals("T")?"F":"T"); 
-            	listView1.setAdapter(get(major, getYear(), pure));
+            	setPure((getPure().equals("T")?"F":"T")); 
+            	listView1.setAdapter(get(getMajor(), getYear(), getPure()));
             	
-        		}
+        	}
         });
         
         button1.setOnClickListener(new Button.OnClickListener(){ 
@@ -172,7 +172,7 @@ public class Study_Path extends Activity {
             public void onClick(View v) {
                 // TODO Auto-generated method stub
             	setYear("1");
-            	listView1.setAdapter(get(major, getYear(), pure));
+            	listView1.setAdapter(get(getMajor(), getYear(), getPure()));
             	
             	view1.setVisibility(View.VISIBLE);
             	view2.setVisibility(View.INVISIBLE);
@@ -197,7 +197,7 @@ public class Study_Path extends Activity {
             public void onClick(View v) {
                 // TODO Auto-generated method stub
             	setYear("2");
-            	listView1.setAdapter(get(major, getYear(), pure));
+            	listView1.setAdapter(get(getMajor(), getYear(), getPure()));
             	
             	
             	view1.setVisibility(View.INVISIBLE);
@@ -222,7 +222,7 @@ public class Study_Path extends Activity {
             public void onClick(View v) {
                 // TODO Auto-generated method stub
             	setYear("3");
-            	listView1.setAdapter(get(major, getYear(), pure));
+            	listView1.setAdapter(get(getMajor(), getYear(), getPure()));
             	
             	view1.setVisibility(View.INVISIBLE);
             	view2.setVisibility(View.INVISIBLE);
@@ -274,9 +274,8 @@ public class Study_Path extends Activity {
 			public void onItemClick(AdapterView<?> arg0, View arg1, int arg2, long arg3) { 
 				// TODO Auto-generated method stub
 				ListView listView = (ListView) arg0;
-				Toast.makeText(
-				Study_Path.this, listView.getItemAtPosition(arg2).toString(), Toast.LENGTH_SHORT).show();
-
+				Toast.makeText(Study_Path.this, listView.getItemAtPosition(arg2).toString(), Toast.LENGTH_SHORT).show();
+				setToastshown(true);
 			}
 		});
 	}
@@ -313,7 +312,7 @@ public class Study_Path extends Activity {
 	}
 	
 	
-	  public String get() {
+	  /*public String get() {
 		    // TODO Auto-generated method stub
 			DataBaseTestAdapter1 mDbHelper = new DataBaseTestAdapter1(this);         
 	    	mDbHelper.createDatabase();       
@@ -326,7 +325,7 @@ public class Study_Path extends Activity {
 	    	mDbHelper.close();
 					
 			return advanced;
-		}
+		}*/
 	
     public String getYear() {
 		return year;
@@ -335,6 +334,51 @@ public class Study_Path extends Activity {
 
 	public void setYear(String year) {
 		this.year = year;
+	}
+
+	/**
+	 * @return the major
+	 */
+	public String getMajor() {
+		return major;
+	}
+
+
+	/**
+	 * @param major the major to set
+	 */
+	public void setMajor(String major) {
+		this.major = major;
+	}
+
+	/**
+	 * @return the pure
+	 */
+	public String getPure() {
+		return pure;
+	}
+
+
+	/**
+	 * @param pure the pure to set
+	 */
+	public void setPure(String pure) {
+		this.pure = pure;
+	}
+
+	/**
+	 * @return the toastshown
+	 */
+	public Boolean getToastshown() {
+		return toastshown;
+	}
+
+
+	/**
+	 * @param toastshown the toastshown to set
+	 */
+	public void setToastshown(Boolean toastshown) {
+		this.toastshown = toastshown;
 	}
 
 	private Button button1;
@@ -351,4 +395,5 @@ public class Study_Path extends Activity {
     private String year;
     private String pure;
     private CheckBox checkbox1;
+    private Boolean toastshown = false;
 }
