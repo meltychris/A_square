@@ -28,9 +28,8 @@ public class Testexam_count_down extends ActivityInstrumentationTestCase2<Exam_c
 	EditText Code;
 	EditText Date;
 	
-	@SuppressWarnings("deprecation")
 	public Testexam_count_down() {
-	super("com.example.exam_count_down",Exam_countdown.class);
+		super(Exam_countdown.class);
 	}
 	
 	protected void setUp() throws Exception {
