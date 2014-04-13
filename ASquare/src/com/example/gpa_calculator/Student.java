@@ -19,11 +19,16 @@ public class Student {
 		double[][] TGA = new double[MAX_STUDY_YEAR][MAX_SEMESTER];
 		
 
-		
+		//before 13/4 [4]
 		//courseRecord[year][sem][course][name/credit/grade/course code without space]
 		//why course code at last, as forgotten to add in the initial stage
+		
+		//after 13/4 [3]
+		//courseRecord[year][sem][course][course code without space/credit/grade]
+		//course name deleted as required large no. of database or user input
+		
 		//no need to initialize, all null
-		String[][][][] courseRecord = new String[MAX_STUDY_YEAR][MAX_SEMESTER][MAX_SEM_COURSES][4];
+		String[][][][] courseRecord = new String[MAX_STUDY_YEAR][MAX_SEMESTER][MAX_SEM_COURSES][3];
 		
 
 		//no need to initialize, all 0
@@ -189,7 +194,7 @@ public class Student {
 				while (Answer1.equals("Y"))
 				{
 						
-					System.out.print("Which Semester is the course taken in year " + year + "  Fall (Type 1) / Winter (Type 2) / Spring (Type 3) / Summer (Type 4) : ");
+					System.out.print("Which Semester is the course taken in year " + (year+1) + "  Fall (Type 1) / Winter (Type 2) / Spring (Type 3) / Summer (Type 4) : ");
 					sem=Integer.parseInt(input.nextLine()) - 1;
 					
 					String Answer2 = "Y";
@@ -199,8 +204,8 @@ public class Student {
 						System.out.print("Course Code (without space): ");
 						String courseCode=input.nextLine();
 				
-						System.out.print("Course Name: ");
-						String courseName=input.nextLine();
+						//System.out.print("Course Name: ");
+						//String courseName=input.nextLine();
 
 						System.out.print("Credits Studied: ");
 						String credit=input.nextLine();
@@ -209,7 +214,7 @@ public class Student {
 						String grade=input.nextLine();
 						
 						//!!
-						insertCourseRecord(year,sem,courseName, credit, grade, courseCode);
+						insertCourseRecord(year,sem,courseCode, credit, grade);
 						
 						System.out.print("Still have other course information to input for Year" + (year+1) + " Sem" + (sem+1) + "? Y/N: ");
 						Answer2=input.nextLine();
@@ -227,7 +232,7 @@ public class Student {
 
 	}
 
-	public void insertCourseRecord(int year, int sem, String courseName, String credit, String grade, String courseCode)throws IOException {
+	public void insertCourseRecord(int year, int sem, String courseCode, String credit, String grade)throws IOException {
 		
 		
 		//as year sem are array index
@@ -258,10 +263,10 @@ public class Student {
 		{		
 			if (courseRecord[year][sem][course][0] == null)
 			{
-				courseRecord[year][sem][course][0] = courseName;
+				courseRecord[year][sem][course][0] = courseCode;
 				courseRecord[year][sem][course][1] = credit;
 				courseRecord[year][sem][course][2] = grade;
-				courseRecord[year][sem][course][3] = courseCode;
+				//courseRecord[year][sem][course][3] = 
 				
 				inserted = true;
 				
@@ -293,15 +298,15 @@ public class Student {
 		
 		Scanner input = new Scanner(System.in);
 		
-		System.out.println("What is your current year? (Type 1-5)");
+		System.out.print("What is your current year? (Type 1-5): ");
 		int currentYear=Integer.parseInt(input.nextLine()) - 1;
 		
 		
-		System.out.println("What is your current semester of year" + currentYear + "? (Fall (Type 1) / Winter (Type 2) / Spring (Type 3) / Summer (Type 4)");
+		System.out.print("What is your current semester of year" + (currentYear+1) + "? (Fall (Type 1) / Winter (Type 2) / Spring (Type 3) / Summer (Type 4): ");
 		int currentSem=Integer.parseInt(input.nextLine()) - 1;
 		
 		//need to use exception to check input?
-		System.out.println("What is your target CGA (Type 0.0 - 4.3)");
+		System.out.print("What is your target CGA (Type 0.0 - 4.3): ");
 		double targetCGA=Double.parseDouble(input.nextLine());
 		
 		//ensure all data in the TGA array,CGA and GGA in the latest version
@@ -345,7 +350,7 @@ public class Student {
 		//cast to +ve
 		diffCGA = (-1)*diffCGA;
 		
-		System.out.println("Do you want advices for rasing minimum grade point of this semester to achieve the target CGA? Y/N ");
+		System.out.print("Do you want advices for rasing grade of courses of the semester to achieve the target CGA? Y/N ");
 		String ans = input.nextLine();
 		if (ans.equals("N"))
 		{
@@ -353,17 +358,34 @@ public class Student {
 			return;
 		}
 		
-		
 		System.out.println("Now referring to advising function");
+/*		
+		System.out.println("Choice 1: Advices for rasing grade of courses to achieve the target CGA? (Support 1 course grade raising for each time)");
+		System.out.println("Choice 2: Advices for rasing min. grade point of the semester to achieve the target CGA?");
+		System.out.print("Choice: ");
+		String ans2 = input.nextLine();
+		if (ans2.equals("1"))
+		{
+			adviceOneGrade(diffCGA,currentYear,currentSem);
+		}
+		else if (ans2.equals("2"))
+		{
+			adviceGradePoint(diffCGA,currentYear,currentSem);
+		}
+		else
+		{
+			System.out.println("Invaild input");
+			return;
+		}
+*/
+		
 		adviceMinGradePoint(diffCGA,currentYear,currentSem);
 		
-
 		System.out.println("End of function of comparing target CGA with actual performance and giving advices");
 	}
 
 	
-	
-	/*	
+/*	
 	//only workable when there is 1 course only in that sem!!!!!!!!!
 	//ONLY condition 1 from diff_performance_advice() will come to here
 	//Clicking the above button will show the improvement needed to reach the target CGA,
@@ -411,6 +433,7 @@ public class Student {
 	//e.g.: "You need a term grade average (TGA) of A or above to get a CGA A-"
 	public void adviceMinGradePoint(double diffCGA, int currentYear, int currentSem) {
 		
+		
 		//grade point to raise
 		
 		if (year_sem_credit_counter[currentYear][currentSem] == 0)
@@ -418,14 +441,17 @@ public class Student {
 			System.out.println("You don't have any course record in Year" + (currentYear+1) + " " + SemIntToWords(currentSem) + " Semester!");
 			return;
 		}
-		
+
+	
 		double minTargetGradePoint = diffCGA*year_sem_credit_counter[currentYear][currentSem];
-		
+
 		System.out.println("In order to achieve the target CGA,");
 		System.out.println("You need to raise Minimum Grade Point " + minTargetGradePoint + " or above in Year" + (currentYear+1) + " " + SemIntToWords(currentSem) + " Semester!");
 	}
 
-
+		
+		
+	
 	
 	public void delCourseRecordEnquiry()throws IOException {
 		
@@ -503,7 +529,7 @@ public class Student {
 		courseRecord[year][sem][course_to_del][0] = null;
 		courseRecord[year][sem][course_to_del][1] = null;
 		courseRecord[year][sem][course_to_del][2] = null;
-		courseRecord[year][sem][course_to_del][3] = null;
+		//courseRecord[year][sem][course_to_del][3] = null;
 		
 	
 		//PACK UP CourseRecord, no null record between some non-null record
@@ -522,13 +548,13 @@ public class Student {
 				courseRecord[year][sem][counter][0] = courseRecord[year][sem][counter+1][0];
 				courseRecord[year][sem][counter][1] = courseRecord[year][sem][counter+1][1];
 				courseRecord[year][sem][counter][2] = courseRecord[year][sem][counter+1][2];
-				courseRecord[year][sem][counter][3] = courseRecord[year][sem][counter+1][3];
+				//courseRecord[year][sem][counter][3] = courseRecord[year][sem][counter+1][3];
 			
 				//del duplicated old record
 				courseRecord[year][sem][counter+1][0] = null;
 				courseRecord[year][sem][counter+1][1] = null;
 				courseRecord[year][sem][counter+1][2] = null;
-				courseRecord[year][sem][counter+1][3] = null;
+				//courseRecord[year][sem][counter+1][3] = null;
 			}
 		}
 		
@@ -554,7 +580,7 @@ public class Student {
 					courseRecord[year][sem][course][0] = null;
 					courseRecord[year][sem][course][1] = null;
 					courseRecord[year][sem][course][2] = null;
-					courseRecord[year][sem][course][3] = null;
+					//courseRecord[year][sem][course][3] = null;
 				}
 			}
 		}
@@ -991,26 +1017,28 @@ public class Student {
 		
 		//print List of course records of specific year and sem
 		
-		System.out.println("------------------------------");
+		System.out.println("-----------------------------------------------------------------------------------");
 		
-		System.out.print("List of courses taken in Year" + (year+1) + " " + SemIntToWords(sem) + " Semester :");
+		System.out.println("List of courses taken in Year" + (year+1) + " " + SemIntToWords(sem) + " Semester :");
 		
-		System.out.print("------------------------------");
+		System.out.println("-----------------------------------------------------------------------------------");
 		
 		for (int course = 0 ; course < MAX_SEM_COURSES; course++)
 		{
 			//avoid printing null things
 			if (courseRecord[year][sem][course][0] == null)
 			{
-				System.out.println("------------------------------End of printing Courses------------------------------");
+				System.out.println("----------------End of printing Courses of Year " + (year+1) + " " + SemIntToWords(sem) + " Semester " + "-----------------");
+				System.out.println("");
 				break;
 			}
 			
-			System.out.println((course+1) + " " + 
-								"Course Code: " + courseRecord[year][sem][course][3] + ", " +
-								"Course Name: " + courseRecord[year][sem][course][0] + ", " +
+			System.out.println((course+1) + ". " + 
+								"Course Code: " + courseRecord[year][sem][course][0] + ", " +
 								"Credit: " + courseRecord[year][sem][course][1] + ", " +
 								"Grade: " + courseRecord[year][sem][course][2]);
+			
+								//"Course Name: " + courseRecord[year][sem][course][0] + ", " +
 		}
 		
 
