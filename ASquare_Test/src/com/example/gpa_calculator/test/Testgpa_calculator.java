@@ -130,10 +130,42 @@ public class Testgpa_calculator extends ActivityInstrumentationTestCase2<Student
 	}
 	
 	@SmallTest 
-	 public void testeditText1() {
+	 public void testEditText1() {
 		//Name:
+		//copied from above testbutton1(), exactly same, just try to avoid empty
 		
 		
+		//int expectedCount = listView1.getAdapter().getCount() + 1;
+		String expectedNameString = "Chan Tai Man";
+
+		  mActivity.runOnUiThread(new Runnable() {
+			    @Override
+			    public void run() {
+			      // click button and open next activity.
+			    	
+			      editText1.setText("Chan Tai Man");
+			      //Code.setText("COMP3111");
+			      //Date.setText("2014/02/30");
+			      button1.performClick();
+			    }
+			  });
+		  
+		  ActivityMonitor activityMonitor = getInstrumentation().addMonitor(Student.class.getName(), null, false);
+		  getInstrumentation().waitForMonitorWithTimeout(activityMonitor, 5000);
+		  
+		//int actualCount = editText1.getAdapter().getCount();
+		String actualtNameString = editText1.getText().toString();
+		
+		//http://stackoverflow.com/questions/2220547/why-doesnt-system-out-println-work-in-android
+		//Log.e(LOG_TAG, "expectedNameString = " + expectedNameString);
+		//Log.e(LOG_TAG, "actualtNameString = " + actualtNameString);
+		 
+		
+		 //CHECK THE RESULT 
+	    assertEquals("testbutton1() fails", expectedNameString, actualtNameString);
+	    //assertTrue("testbutton1() fails", expectedNameString.equals(actualtNameString));
+		
+	    //assertTrue(true);
 		
 	}
 	
