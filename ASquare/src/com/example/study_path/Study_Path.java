@@ -46,7 +46,7 @@ public class Study_Path extends Activity {
     	radioButton2 = (RadioButton) findViewById(R.id.radioButton2);
     	
     	major = "COMP";		//initial
-    	year = "1";			//initial
+    	setYear("1");			//initial
     	pure = "T";			//initialize to NOT studied Pure
 
 
@@ -87,15 +87,15 @@ public class Study_Path extends Activity {
 				// TODO Auto-generated method stub
 				major = "COMP";
             	
-            	listView1.setAdapter(get(major, year, pure));
+            	listView1.setAdapter(get(major, getYear(), pure));
 
             	view1.setVisibility(View.INVISIBLE);
             	view2.setVisibility(View.INVISIBLE);
             	view3.setVisibility(View.INVISIBLE);
             	
-            	if (year.equals("1"))
+            	if (getYear().equals("1"))
                 	view1.setVisibility(View.VISIBLE);
-            	else if (year.equals("2"))
+            	else if (getYear().equals("2"))
                 	view2.setVisibility(View.VISIBLE);
             	else
                 	view3.setVisibility(View.VISIBLE);
@@ -140,15 +140,15 @@ public class Study_Path extends Activity {
 				// TODO Auto-generated method stub
 				major = "CPEG";
 
-            	listView1.setAdapter(get(major, year, pure));
+            	listView1.setAdapter(get(major, getYear(), pure));
 
             	view1.setVisibility(View.INVISIBLE);
             	view2.setVisibility(View.INVISIBLE);
             	view3.setVisibility(View.INVISIBLE);
             	
-            	if (year.equals("1"))
+            	if (getYear().equals("1"))
                 	view1.setVisibility(View.VISIBLE);
-            	else if (year.equals("2"))
+            	else if (getYear().equals("2"))
                 	view2.setVisibility(View.VISIBLE);
             	else
                 	view3.setVisibility(View.VISIBLE);
@@ -162,7 +162,7 @@ public class Study_Path extends Activity {
             public void onClick(View v) {
                 // TODO Auto-generated method stub
             	pure = (pure.equals("T")?"F":"T"); 
-            	listView1.setAdapter(get(major, year, pure));
+            	listView1.setAdapter(get(major, getYear(), pure));
             	
         		}
         });
@@ -171,8 +171,8 @@ public class Study_Path extends Activity {
             @Override
             public void onClick(View v) {
                 // TODO Auto-generated method stub
-            	year = "1";
-            	listView1.setAdapter(get(major, year, pure));
+            	setYear("1");
+            	listView1.setAdapter(get(major, getYear(), pure));
             	
             	view1.setVisibility(View.VISIBLE);
             	view2.setVisibility(View.INVISIBLE);
@@ -196,8 +196,8 @@ public class Study_Path extends Activity {
             @Override
             public void onClick(View v) {
                 // TODO Auto-generated method stub
-            	year = "2";
-            	listView1.setAdapter(get(major, year, pure));
+            	setYear("2");
+            	listView1.setAdapter(get(major, getYear(), pure));
             	
             	
             	view1.setVisibility(View.INVISIBLE);
@@ -221,8 +221,8 @@ public class Study_Path extends Activity {
             @Override
             public void onClick(View v) {
                 // TODO Auto-generated method stub
-            	year = "3";
-            	listView1.setAdapter(get(major, year, pure));
+            	setYear("3");
+            	listView1.setAdapter(get(major, getYear(), pure));
             	
             	view1.setVisibility(View.INVISIBLE);
             	view2.setVisibility(View.INVISIBLE);
@@ -328,7 +328,16 @@ public class Study_Path extends Activity {
 			return advanced;
 		}
 	
-    private Button button1;
+    public String getYear() {
+		return year;
+	}
+
+
+	public void setYear(String year) {
+		this.year = year;
+	}
+
+	private Button button1;
     private Button button2;
     private Button button3;
     private Button button111;
