@@ -1,6 +1,7 @@
 package com.example.gpa_calculator.test;
 
 import com.example.gpa_calculator.Student;
+import com.example.study_path.Study_Path;
 import com.example.asquare.MainActivity;
 import com.example.asquare.R;
 
@@ -11,6 +12,7 @@ import android.content.DialogInterface;
 import android.test.ActivityInstrumentationTestCase2;
 import android.test.TouchUtils;
 import android.test.suitebuilder.annotation.SmallTest;
+import android.util.Log;
 import android.view.KeyEvent;
 import android.widget.Button;
 import android.widget.EditText;
@@ -20,7 +22,11 @@ import android.widget.RadioButton;
 
 public class Testgpa_calculator extends ActivityInstrumentationTestCase2<Student> {
 
+	
 	private Student mActivity;
+	private static final String LOG_TAG = "Brian";
+	//http://stackoverflow.com/questions/2220547/why-doesnt-system-out-println-work-in-android
+	
 	Button button1;//Next
 	//Button button2;
 	//Button button3;
@@ -110,12 +116,17 @@ public class Testgpa_calculator extends ActivityInstrumentationTestCase2<Student
 		  ActivityMonitor activityMonitor = getInstrumentation().addMonitor(Student.class.getName(), null, false);
 		  getInstrumentation().waitForMonitorWithTimeout(activityMonitor, 5000);
 		  
-		
 		//int actualCount = editText1.getAdapter().getCount();
 		String actualtNameString = editText1.getText().toString();
 		
+		//http://stackoverflow.com/questions/2220547/why-doesnt-system-out-println-work-in-android
+		//Log.e(LOG_TAG, "expectedNameString = " + expectedNameString);
+		//Log.e(LOG_TAG, "actualtNameString = " + actualtNameString);
+		 
+		
 		 //CHECK THE RESULT 
 	    assertEquals("testbutton1() fails", expectedNameString, actualtNameString);
+	    //assertTrue("testbutton1() fails", expectedNameString.equals(actualtNameString));
 	}
 	
 	@SmallTest 
@@ -127,9 +138,51 @@ public class Testgpa_calculator extends ActivityInstrumentationTestCase2<Student
 	@SmallTest 
 	 public void testradioButton1() {
 		//current Year 1
+		//copy from Study_Path_Test.java
 		
 		
-	}
+		  ActivityMonitor activityMonitor = getInstrumentation().addMonitor(Student.class.getName(), null, false);
+
+		//for (int tempyear=1; tempyear <=3 ; tempyear++){
+		//mActivity.setYear(Integer.toString(tempyear));
+		 //INTERACTIONS
+		  mActivity.runOnUiThread(new Runnable() {
+			    @Override
+			    public void run() {
+			      // click button and open next activity.
+			    	//radioButton2.setChecked(true);
+			    	//assertTrue(radioButton2.isChecked());
+			    	//radioGroup.check(R.id.radioButton1);
+			    	radioButton1.performClick();
+			    	//System.out.println(radioButton1.performClick());
+
+			    	//radioButton2.performClick();
+			    }
+
+
+			  });	
+		getInstrumentation().waitForMonitorWithTimeout(activityMonitor, 5000);
+		assertTrue(radioButton1.isChecked());
+		assertFalse(RadioButton04.isChecked());
+		assertFalse(RadioButton06.isChecked());
+		assertFalse(RadioButton07.isChecked());
+		assertFalse(RadioButton08.isChecked());
+		
+
+/*
+		 //CHECK THE RESULT
+		  //assertEquals("COMP",major);
+		  if (mActivity.getYear().equals("1"))
+			  assertTrue(view1.isShown());
+		  else if (mActivity.getYear().equals("2"))
+			  assertTrue(view2.isShown());
+    	  else
+			  assertTrue(view3.isShown());
+		}
+*/		
+	} 
+		
+
 	
 	@SmallTest 
 	 public void testRadioButton04() {
@@ -181,7 +234,7 @@ public class Testgpa_calculator extends ActivityInstrumentationTestCase2<Student
 	
 	
 	
-	
+/*	
 	@SmallTest 
 	 public void testbutton1() { 
 		int expectedCount = listView1.getAdapter().getCount() + 1;
@@ -323,4 +376,5 @@ public class Testgpa_calculator extends ActivityInstrumentationTestCase2<Student
 		  assertEquals("2014/01/01",Date.getText());
 
 	 }
+*/
 }
