@@ -89,17 +89,21 @@ public class MainActivity extends Activity {
 		
 	}
 	
+	public AlertDialog Dialoghelper(){
+		AlertDialog isExit = new AlertDialog.Builder(this).create();
+		isExit.setTitle("A Square");
+		isExit.setMessage("Really want to leave?");
+		isExit.setButton("No", listener);
+		isExit.setButton2("I'll be back!", listener);
+		return isExit;
+	}
+	
 	public boolean onKeyDown(int keyCode, KeyEvent event)
 	{
 		if (keyCode == KeyEvent.KEYCODE_BACK )
 		{
-			AlertDialog isExit = new AlertDialog.Builder(this).create();
-			isExit.setTitle("A Square");
-			isExit.setMessage("Really want to leave?");
-			isExit.setButton("No", listener);
-			isExit.setButton2("I'll be back!", listener);
+			isExit = Dialoghelper();
 			isExit.show();
-
 		}
 		
 		return false;
@@ -112,9 +116,9 @@ public class MainActivity extends Activity {
 			switch (which)
 			{
 			case AlertDialog.BUTTON_POSITIVE:
+				finish();
 				break;
 			case AlertDialog.BUTTON_NEGATIVE:
-				finish();
 				break;
 			default:
 				break;
@@ -122,11 +126,13 @@ public class MainActivity extends Activity {
 		}
 	};	
 	
+
+	
 	private ImageButton button1;
 	private ImageButton button2;
 	private ImageButton button3;
 	private ImageButton button4;
 	private ImageButton button5;
 	private ImageButton button6;
-
+	public AlertDialog isExit;
 }

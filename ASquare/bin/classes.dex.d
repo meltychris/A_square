@@ -1,7 +1,5 @@
 C:\Users\stsk\git\A_square\ASquare\bin\classes.dex : \
 C:\Users\stsk\git\A_square\ASquare\bin\classes\com\example\asquare\BuildConfig.class \
-C:\Users\stsk\git\A_square\ASquare\bin\classes\com\example\asquare\Exam_countdown.class \
-C:\Users\stsk\git\A_square\ASquare\bin\classes\com\example\asquare\GPA_Calculator.class \
 C:\Users\stsk\git\A_square\ASquare\bin\classes\com\example\asquare\MainActivity$1.class \
 C:\Users\stsk\git\A_square\ASquare\bin\classes\com\example\asquare\MainActivity$2.class \
 C:\Users\stsk\git\A_square\ASquare\bin\classes\com\example\asquare\MainActivity$3.class \

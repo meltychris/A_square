@@ -1,23 +1,23 @@
-[EMMA v2.0.5312 report, generated Sun Apr 13 04:32:43 CST 2014]
+[EMMA v2.0.5312 report, generated Sun Apr 13 18:05:06 CST 2014]
 -------------------------------------------------------------------------------
 OVERALL COVERAGE SUMMARY:
 
 [class, %]	[method, %]	[block, %]	[line, %]	[name]
-16%  (8/49)!	5%   (9/181)!	2%   (136/6762)!	1%   (18/1314)!	all classes
+55%  (26/47)!	28%  (50/178)!	12%  (790/6650)!	12%  (162.2/1300)!	all classes
 
 OVERALL STATS SUMMARY:
 
 total packages:	4
-total classes:	49
-total methods:	181
-total executable files:	22
-total executable lines:	1314
+total classes:	47
+total methods:	178
+total executable files:	20
+total executable lines:	1300
 
 COVERAGE BREAKDOWN BY PACKAGE:
 
 [class, %]	[method, %]	[block, %]	[line, %]	[name]
-0%   (0/8)!	0%   (0/37)!	0%   (0/809)!	0%   (0/193)!	com.example.exam_count_down
-0%   (0/7)!	0%   (0/36)!	0%   (0/2130)!	0%   (0/422)!	com.example.gpa_calculator
-0%   (0/24)!	0%   (0/87)!	0%   (0/3543)!	0%   (0/637)!	com.example.study_path
-80%  (8/10)!	43%  (9/21)!	49%  (136/280)!	29%  (18/62)!	com.example.asquare
+29%  (2/7)!	8%   (3/36)!	1%   (29/2028)!	1%   (6/413)!	com.example.gpa_calculator
+38%  (9/24)!	13%  (11/87)!	6%   (201/3543)!	5%   (29.1/637)!	com.example.study_path
+88%  (7/8)!	49%  (18/37)!	36%  (290/809)!	36%  (70.1/193)!	com.example.exam_count_down
+100% (8/8)	100% (18/18)	100% (270/270)	100% (57/57)	com.example.asquare
 -------------------------------------------------------------------------------

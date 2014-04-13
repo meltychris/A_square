@@ -1,6 +1,3 @@
-# view AndroidManifest.xml #generated:27
--keep class com.example.asquare.GPA_Calculator { <init>(...); }
-
 # view AndroidManifest.xml #generated:17
 -keep class com.example.asquare.MainActivity { <init>(...); }
 
@@ -16,7 +13,7 @@
 # view AndroidManifest.xml #generated:47
 -keep class com.example.gpa_calculator.GPAactivity3 { <init>(...); }
 
-# view AndroidManifest.xml #generated:48
+# view AndroidManifest.xml #generated:27
 -keep class com.example.gpa_calculator.MainActivity { <init>(...); }
 
 # view AndroidManifest.xml #generated:39
