@@ -4,8 +4,10 @@ package com.example.study_path.test;
 import java.io.IOException;
 
 import com.example.asquare.R;
+import com.example.exam_count_down.DataBaseUtility2;
 import com.example.study_path.Advanced_Activity;
 import com.example.study_path.DataBaseHelper1;
+import com.example.study_path.DataBaseUtility1;
 import com.example.study_path.Study_Path;
 
 import android.app.Instrumentation.ActivityMonitor;
@@ -288,6 +290,12 @@ public class Study_Path_Test extends ActivityInstrumentationTestCase2<Study_Path
 		 //CHECK THE RESULT 
 		 
 	 }
+	
+	@SmallTest
+	public void testother(){
+	      DataBaseUtility1.ShowMessageBox(mActivity, "AA");
+
+	}
 		 
 }
 
