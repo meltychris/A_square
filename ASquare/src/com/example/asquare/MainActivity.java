@@ -90,8 +90,8 @@ public class MainActivity extends Activity {
 		AlertDialog isExit = new AlertDialog.Builder(this).create();
 		isExit.setTitle("A Square");
 		isExit.setMessage("Really want to leave?");
-		isExit.setButton("No", listener);
-		isExit.setButton2("I'll be back!", listener);
+		isExit.setButton("I'll be back!", listener);
+		isExit.setButton2("No", listener);
 		return isExit;
 	}
 	

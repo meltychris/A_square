@@ -1,9 +1,9 @@
 #Last build type
-#Tue, 15 Apr 2014 01:41:14 +0800
+#Tue, 15 Apr 2014 01:41:10 +0800
 
 build.last.target=debug
 
-build.last.is.instrumented=false
+build.last.is.instrumented=true
 
 build.last.is.packaging.debug=true
 

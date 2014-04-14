@@ -160,7 +160,7 @@ public class Exam_countdown extends Activity {
 	}
 	
 	public List<String> get_list(){
-		DataBaseTestAdapter2 mDbHelper = new DataBaseTestAdapter2(this);         
+		DataBaseTestAdapter2 mDbHelper = new DataBaseTestAdapter2(Exam_countdown.this);         
     	mDbHelper.createDatabase();       
     	mDbHelper.open(); 
     	

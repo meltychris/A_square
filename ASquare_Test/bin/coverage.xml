@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><!-- EMMA v2.0.5312 report, generated Tue Apr 15 00:44:42 CST 2014 -->
+<?xml version="1.0" encoding="UTF-8"?><!-- EMMA v2.0.5312 report, generated Tue Apr 15 01:43:44 CST 2014 -->
 
 <report>
   <stats>
@@ -6,50 +6,21 @@
     <classes value="45"/>
     <methods value="155"/>
     <srcfiles value="18"/>
-    <srclines value="920"/>
+    <srclines value="914"/>
   </stats>
   <data>
     <all name="all classes">
       <coverage type="class, %" value="100% (45/45)"/>
-      <coverage type="method, %" value="94%  (146/155)"/>
-      <coverage type="block, %" value="91%  (4299/4720)"/>
-      <coverage type="line, %" value="89%  (822.5/920)"/>
+      <coverage type="method, %" value="96%  (149/155)"/>
+      <coverage type="block, %" value="93%  (4379/4690)"/>
+      <coverage type="line, %" value="92%  (843.8/914)"/>
 
       <package name="com.example.exam_count_down">
         <coverage type="class, %" value="100% (8/8)"/>
-        <coverage type="method, %" value="86%  (32/37)"/>
-        <coverage type="block, %" value="80%  (658/823)"/>
-        <coverage type="line, %" value="79%  (155.7/196)"/>
+        <coverage type="method, %" value="89%  (33/37)"/>
+        <coverage type="block, %" value="85%  (701/823)"/>
+        <coverage type="line, %" value="84%  (163.9/196)"/>
 
-        <srcfile name="DataBaseUtility2.java">
-          <coverage type="class, %" value="100% (1/1)"/>
-          <coverage type="method, %" value="33%  (1/3)"/>
-          <coverage type="block, %" value="36%  (9/25)"/>
-          <coverage type="line, %" value="38%  (3/8)"/>
-
-          <class name="DataBaseUtility2">
-            <coverage type="class, %" value="100% (1/1)"/>
-            <coverage type="method, %" value="33%  (1/3)"/>
-            <coverage type="block, %" value="36%  (9/25)"/>
-            <coverage type="line, %" value="38%  (3/8)"/>
-
-            <method name="DataBaseUtility2 (): void">
-              <coverage type="method, %" value="0%   (0/1)"/>
-              <coverage type="block, %" value="0%   (0/3)"/>
-              <coverage type="line, %" value="0%   (0/1)"/>
-            </method>
-            <method name="ShowMessageBox (Context, String): void">
-              <coverage type="method, %" value="0%   (0/1)"/>
-              <coverage type="block, %" value="0%   (0/13)"/>
-              <coverage type="line, %" value="0%   (0/4)"/>
-            </method>
-            <method name="GetColumnValue (Cursor, String): String">
-              <coverage type="method, %" value="100% (1/1)"/>
-              <coverage type="block, %" value="100% (9/9)"/>
-              <coverage type="line, %" value="100% (3/3)"/>
-            </method>
-          </class>
-        </srcfile>
         <srcfile name="DataBaseHelper2.java">
           <coverage type="class, %" value="100% (1/1)"/>
           <coverage type="method, %" value="67%  (6/9)"/>
@@ -163,40 +134,47 @@
             </method>
           </class>
         </srcfile>
+        <srcfile name="DataBaseUtility2.java">
+          <coverage type="class, %" value="100% (1/1)"/>
+          <coverage type="method, %" value="67%  (2/3)"/>
+          <coverage type="block, %" value="88%  (22/25)"/>
+          <coverage type="line, %" value="88%  (7/8)"/>
+
+          <class name="DataBaseUtility2">
+            <coverage type="class, %" value="100% (1/1)"/>
+            <coverage type="method, %" value="67%  (2/3)"/>
+            <coverage type="block, %" value="88%  (22/25)"/>
+            <coverage type="line, %" value="88%  (7/8)"/>
+
+            <method name="DataBaseUtility2 (): void">
+              <coverage type="method, %" value="0%   (0/1)"/>
+              <coverage type="block, %" value="0%   (0/3)"/>
+              <coverage type="line, %" value="0%   (0/1)"/>
+            </method>
+            <method name="GetColumnValue (Cursor, String): String">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (9/9)"/>
+              <coverage type="line, %" value="100% (3/3)"/>
+            </method>
+            <method name="ShowMessageBox (Context, String): void">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (13/13)"/>
+              <coverage type="line, %" value="100% (4/4)"/>
+            </method>
+          </class>
+        </srcfile>
         <srcfile name="Exam_countdown.java">
           <coverage type="class, %" value="100% (4/4)"/>
           <coverage type="method, %" value="100% (15/15)"/>
-          <coverage type="block, %" value="93%  (407/437)"/>
-          <coverage type="line, %" value="95%  (84.8/89)"/>
+          <coverage type="block, %" value="100% (437/437)"/>
+          <coverage type="line, %" value="100% (89/89)"/>
 
-          <class name="Exam_countdown$2">
-            <coverage type="class, %" value="100% (1/1)"/>
-            <coverage type="method, %" value="100% (2/2)"/>
-            <coverage type="block, %" value="84%  (41/49)"/>
-            <coverage type="line, %" value="86%  (7.8/9)"/>
-
-            <method name="onClick (View): void">
-              <coverage type="method, %" value="100% (1/1)"/>
-              <coverage type="block, %" value="81%  (35/43)"/>
-              <coverage type="line, %" value="85%  (6.8/8)"/>
-            </method>
-            <method name="Exam_countdown$2 (Exam_countdown): void">
-              <coverage type="method, %" value="100% (1/1)"/>
-              <coverage type="block, %" value="100% (6/6)"/>
-              <coverage type="line, %" value="100% (1/1)"/>
-            </method>
-          </class>
           <class name="Exam_countdown">
             <coverage type="class, %" value="100% (1/1)"/>
             <coverage type="method, %" value="100% (9/9)"/>
-            <coverage type="block, %" value="93%  (286/308)"/>
-            <coverage type="line, %" value="96%  (65/68)"/>
+            <coverage type="block, %" value="100% (308/308)"/>
+            <coverage type="line, %" value="100% (68/68)"/>
 
-            <method name="get_list (): List">
-              <coverage type="method, %" value="100% (1/1)"/>
-              <coverage type="block, %" value="71%  (53/75)"/>
-              <coverage type="line, %" value="81%  (13/16)"/>
-            </method>
             <method name="Exam_countdown (): void">
               <coverage type="method, %" value="100% (1/1)"/>
               <coverage type="block, %" value="100% (9/9)"/>
@@ -232,6 +210,11 @@
               <coverage type="block, %" value="100% (16/16)"/>
               <coverage type="line, %" value="100% (6/6)"/>
             </method>
+            <method name="get_list (): List">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (75/75)"/>
+              <coverage type="line, %" value="100% (16/16)"/>
+            </method>
             <method name="onCreate (Bundle): void">
               <coverage type="method, %" value="100% (1/1)"/>
               <coverage type="block, %" value="100% (163/163)"/>
@@ -252,6 +235,23 @@
             <method name="onClick (View): void">
               <coverage type="method, %" value="100% (1/1)"/>
               <coverage type="block, %" value="100% (48/48)"/>
+              <coverage type="line, %" value="100% (8/8)"/>
+            </method>
+          </class>
+          <class name="Exam_countdown$2">
+            <coverage type="class, %" value="100% (1/1)"/>
+            <coverage type="method, %" value="100% (2/2)"/>
+            <coverage type="block, %" value="100% (49/49)"/>
+            <coverage type="line, %" value="100% (9/9)"/>
+
+            <method name="Exam_countdown$2 (Exam_countdown): void">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (6/6)"/>
+              <coverage type="line, %" value="100% (1/1)"/>
+            </method>
+            <method name="onClick (View): void">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (43/43)"/>
               <coverage type="line, %" value="100% (8/8)"/>
             </method>
           </class>
@@ -300,39 +300,10 @@
       </package>
       <package name="com.example.study_path">
         <coverage type="class, %" value="100% (24/24)"/>
-        <coverage type="method, %" value="96%  (86/90)"/>
-        <coverage type="block, %" value="93%  (3285/3541)"/>
-        <coverage type="line, %" value="91%  (588.8/646)"/>
+        <coverage type="method, %" value="98%  (88/90)"/>
+        <coverage type="block, %" value="95%  (3352/3541)"/>
+        <coverage type="line, %" value="94%  (607.8/646)"/>
 
-        <srcfile name="DataBaseUtility1.java">
-          <coverage type="class, %" value="100% (1/1)"/>
-          <coverage type="method, %" value="33%  (1/3)"/>
-          <coverage type="block, %" value="36%  (9/25)"/>
-          <coverage type="line, %" value="38%  (3/8)"/>
-
-          <class name="DataBaseUtility1">
-            <coverage type="class, %" value="100% (1/1)"/>
-            <coverage type="method, %" value="33%  (1/3)"/>
-            <coverage type="block, %" value="36%  (9/25)"/>
-            <coverage type="line, %" value="38%  (3/8)"/>
-
-            <method name="DataBaseUtility1 (): void">
-              <coverage type="method, %" value="0%   (0/1)"/>
-              <coverage type="block, %" value="0%   (0/3)"/>
-              <coverage type="line, %" value="0%   (0/1)"/>
-            </method>
-            <method name="ShowMessageBox (Context, String): void">
-              <coverage type="method, %" value="0%   (0/1)"/>
-              <coverage type="block, %" value="0%   (0/13)"/>
-              <coverage type="line, %" value="0%   (0/4)"/>
-            </method>
-            <method name="GetColumnValue (Cursor, String): String">
-              <coverage type="method, %" value="100% (1/1)"/>
-              <coverage type="block, %" value="100% (9/9)"/>
-              <coverage type="line, %" value="100% (3/3)"/>
-            </method>
-          </class>
-        </srcfile>
         <srcfile name="DataBaseTestAdapter1.java">
           <coverage type="class, %" value="100% (1/1)"/>
           <coverage type="method, %" value="88%  (7/8)"/>
@@ -387,62 +358,32 @@
             </method>
           </class>
         </srcfile>
-        <srcfile name="DataBaseHelper1.java">
+        <srcfile name="DataBaseUtility1.java">
           <coverage type="class, %" value="100% (1/1)"/>
-          <coverage type="method, %" value="89%  (8/9)"/>
-          <coverage type="block, %" value="57%  (82/143)"/>
-          <coverage type="line, %" value="55%  (20.9/38)"/>
+          <coverage type="method, %" value="67%  (2/3)"/>
+          <coverage type="block, %" value="88%  (22/25)"/>
+          <coverage type="line, %" value="88%  (7/8)"/>
 
-          <class name="DataBaseHelper1">
+          <class name="DataBaseUtility1">
             <coverage type="class, %" value="100% (1/1)"/>
-            <coverage type="method, %" value="89%  (8/9)"/>
-            <coverage type="block, %" value="57%  (82/143)"/>
-            <coverage type="line, %" value="55%  (20.9/38)"/>
+            <coverage type="method, %" value="67%  (2/3)"/>
+            <coverage type="block, %" value="88%  (22/25)"/>
+            <coverage type="line, %" value="88%  (7/8)"/>
 
-            <method name="copyDataBase (): void">
+            <method name="DataBaseUtility1 (): void">
               <coverage type="method, %" value="0%   (0/1)"/>
-              <coverage type="block, %" value="0%   (0/42)"/>
-              <coverage type="line, %" value="0%   (0/10)"/>
+              <coverage type="block, %" value="0%   (0/3)"/>
+              <coverage type="line, %" value="0%   (0/1)"/>
             </method>
-            <method name="createDataBase (): void">
-              <coverage type="method, %" value="100% (1/1)"/>
-              <coverage type="block, %" value="25%  (6/24)"/>
-              <coverage type="line, %" value="30%  (3/10)"/>
-            </method>
-            <method name="openDataBase (): boolean">
-              <coverage type="method, %" value="100% (1/1)"/>
-              <coverage type="block, %" value="95%  (21/22)"/>
-              <coverage type="line, %" value="98%  (3/3)"/>
-            </method>
-            <method name="&lt;static initializer&gt;">
-              <coverage type="method, %" value="100% (1/1)"/>
-              <coverage type="block, %" value="100% (7/7)"/>
-              <coverage type="line, %" value="100% (3/3)"/>
-            </method>
-            <method name="DataBaseHelper1 (Context): void">
-              <coverage type="method, %" value="100% (1/1)"/>
-              <coverage type="block, %" value="100% (22/22)"/>
-              <coverage type="line, %" value="100% (4/4)"/>
-            </method>
-            <method name="checkDataBase (): boolean">
-              <coverage type="method, %" value="100% (1/1)"/>
-              <coverage type="block, %" value="100% (15/15)"/>
-              <coverage type="line, %" value="100% (2/2)"/>
-            </method>
-            <method name="close (): void">
+            <method name="GetColumnValue (Cursor, String): String">
               <coverage type="method, %" value="100% (1/1)"/>
               <coverage type="block, %" value="100% (9/9)"/>
+              <coverage type="line, %" value="100% (3/3)"/>
+            </method>
+            <method name="ShowMessageBox (Context, String): void">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (13/13)"/>
               <coverage type="line, %" value="100% (4/4)"/>
-            </method>
-            <method name="onCreate (SQLiteDatabase): void">
-              <coverage type="method, %" value="100% (1/1)"/>
-              <coverage type="block, %" value="100% (1/1)"/>
-              <coverage type="line, %" value="100% (1/1)"/>
-            </method>
-            <method name="onUpgrade (SQLiteDatabase, int, int): void">
-              <coverage type="method, %" value="100% (1/1)"/>
-              <coverage type="block, %" value="100% (1/1)"/>
-              <coverage type="line, %" value="100% (1/1)"/>
             </method>
           </class>
         </srcfile>
@@ -573,6 +514,65 @@
               <coverage type="method, %" value="100% (1/1)"/>
               <coverage type="block, %" value="100% (18/18)"/>
               <coverage type="line, %" value="100% (4/4)"/>
+            </method>
+          </class>
+        </srcfile>
+        <srcfile name="DataBaseHelper1.java">
+          <coverage type="class, %" value="100% (1/1)"/>
+          <coverage type="method, %" value="100% (9/9)"/>
+          <coverage type="block, %" value="95%  (136/143)"/>
+          <coverage type="line, %" value="95%  (36/38)"/>
+
+          <class name="DataBaseHelper1">
+            <coverage type="class, %" value="100% (1/1)"/>
+            <coverage type="method, %" value="100% (9/9)"/>
+            <coverage type="block, %" value="95%  (136/143)"/>
+            <coverage type="line, %" value="95%  (36/38)"/>
+
+            <method name="createDataBase (): void">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="75%  (18/24)"/>
+              <coverage type="line, %" value="80%  (8/10)"/>
+            </method>
+            <method name="openDataBase (): boolean">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="95%  (21/22)"/>
+              <coverage type="line, %" value="98%  (3/3)"/>
+            </method>
+            <method name="&lt;static initializer&gt;">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (7/7)"/>
+              <coverage type="line, %" value="100% (3/3)"/>
+            </method>
+            <method name="DataBaseHelper1 (Context): void">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (22/22)"/>
+              <coverage type="line, %" value="100% (4/4)"/>
+            </method>
+            <method name="checkDataBase (): boolean">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (15/15)"/>
+              <coverage type="line, %" value="100% (2/2)"/>
+            </method>
+            <method name="close (): void">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (9/9)"/>
+              <coverage type="line, %" value="100% (4/4)"/>
+            </method>
+            <method name="copyDataBase (): void">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (42/42)"/>
+              <coverage type="line, %" value="100% (10/10)"/>
+            </method>
+            <method name="onCreate (SQLiteDatabase): void">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (1/1)"/>
+              <coverage type="line, %" value="100% (1/1)"/>
+            </method>
+            <method name="onUpgrade (SQLiteDatabase, int, int): void">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (1/1)"/>
+              <coverage type="line, %" value="100% (1/1)"/>
             </method>
           </class>
         </srcfile>
@@ -989,14 +989,14 @@
       <package name="com.example.asquare">
         <coverage type="class, %" value="100% (8/8)"/>
         <coverage type="method, %" value="100% (18/18)"/>
-        <coverage type="block, %" value="100% (258/258)"/>
-        <coverage type="line, %" value="100% (54/54)"/>
+        <coverage type="block, %" value="100% (228/228)"/>
+        <coverage type="line, %" value="100% (48/48)"/>
 
         <srcfile name="MainActivity.java">
           <coverage type="class, %" value="100% (8/8)"/>
           <coverage type="method, %" value="100% (18/18)"/>
-          <coverage type="block, %" value="100% (258/258)"/>
-          <coverage type="line, %" value="100% (54/54)"/>
+          <coverage type="block, %" value="100% (228/228)"/>
+          <coverage type="line, %" value="100% (48/48)"/>
 
           <class name="MainActivity">
             <coverage type="class, %" value="100% (1/1)"/>
@@ -1079,8 +1079,8 @@
           <class name="MainActivity$4">
             <coverage type="class, %" value="100% (1/1)"/>
             <coverage type="method, %" value="100% (2/2)"/>
-            <coverage type="block, %" value="100% (17/17)"/>
-            <coverage type="line, %" value="100% (4/4)"/>
+            <coverage type="block, %" value="100% (7/7)"/>
+            <coverage type="line, %" value="100% (2/2)"/>
 
             <method name="MainActivity$4 (MainActivity): void">
               <coverage type="method, %" value="100% (1/1)"/>
@@ -1089,15 +1089,15 @@
             </method>
             <method name="onClick (View): void">
               <coverage type="method, %" value="100% (1/1)"/>
-              <coverage type="block, %" value="100% (11/11)"/>
-              <coverage type="line, %" value="100% (3/3)"/>
+              <coverage type="block, %" value="100% (1/1)"/>
+              <coverage type="line, %" value="100% (1/1)"/>
             </method>
           </class>
           <class name="MainActivity$5">
             <coverage type="class, %" value="100% (1/1)"/>
             <coverage type="method, %" value="100% (2/2)"/>
-            <coverage type="block, %" value="100% (17/17)"/>
-            <coverage type="line, %" value="100% (4/4)"/>
+            <coverage type="block, %" value="100% (7/7)"/>
+            <coverage type="line, %" value="100% (2/2)"/>
 
             <method name="MainActivity$5 (MainActivity): void">
               <coverage type="method, %" value="100% (1/1)"/>
@@ -1106,15 +1106,15 @@
             </method>
             <method name="onClick (View): void">
               <coverage type="method, %" value="100% (1/1)"/>
-              <coverage type="block, %" value="100% (11/11)"/>
-              <coverage type="line, %" value="100% (3/3)"/>
+              <coverage type="block, %" value="100% (1/1)"/>
+              <coverage type="line, %" value="100% (1/1)"/>
             </method>
           </class>
           <class name="MainActivity$6">
             <coverage type="class, %" value="100% (1/1)"/>
             <coverage type="method, %" value="100% (2/2)"/>
-            <coverage type="block, %" value="100% (17/17)"/>
-            <coverage type="line, %" value="100% (4/4)"/>
+            <coverage type="block, %" value="100% (7/7)"/>
+            <coverage type="line, %" value="100% (2/2)"/>
 
             <method name="MainActivity$6 (MainActivity): void">
               <coverage type="method, %" value="100% (1/1)"/>
@@ -1123,8 +1123,8 @@
             </method>
             <method name="onClick (View): void">
               <coverage type="method, %" value="100% (1/1)"/>
-              <coverage type="block, %" value="100% (11/11)"/>
-              <coverage type="line, %" value="100% (3/3)"/>
+              <coverage type="block, %" value="100% (1/1)"/>
+              <coverage type="line, %" value="100% (1/1)"/>
             </method>
           </class>
           <class name="MainActivity$7">

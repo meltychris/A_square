@@ -1,0 +1,38 @@
+# view AndroidManifest.xml #generated:17
+-keep class com.example.asquare.MainActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:42
+-keep class com.example.exam_count_down.Exam_countdown { <init>(...); }
+
+# view AndroidManifest.xml #generated:44
+-keep class com.example.exam_count_down.MyBroadcastReceiver { <init>(...); }
+
+# view AndroidManifest.xml #generated:46
+-keep class com.example.gpa_calculator.GPAactivity2 { <init>(...); }
+
+# view AndroidManifest.xml #generated:47
+-keep class com.example.gpa_calculator.GPAactivity3 { <init>(...); }
+
+# view AndroidManifest.xml #generated:27
+-keep class com.example.gpa_calculator.MainActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:39
+-keep class com.example.study_path.Advanced_Activity { <init>(...); }
+
+# view AndroidManifest.xml #generated:40
+-keep class com.example.study_path.Advanced_Activity2 { <init>(...); }
+
+# view AndroidManifest.xml #generated:41
+-keep class com.example.study_path.Advanced_Activity_choose { <init>(...); }
+
+# view AndroidManifest.xml #generated:32
+-keep class com.example.study_path.Study_Path { <init>(...); }
+
+# view AndroidManifest.xml #generated:37
+-keep class com.example.study_path.data { <init>(...); }
+
+# onClick res/layout/path_main.xml #generated:22
+# onClick res/layout/path_main.xml #generated:31
+# onClick res/layout/path_main.xml #generated:48
+-keepclassmembers class * { *** onClick(...); }
+
