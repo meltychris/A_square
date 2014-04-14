@@ -25,7 +25,7 @@ public class Advanced_Activity extends Activity {
          @Override
          public void onClick(View v) {
              // TODO Auto-generated method stub
-     	    RadioButton Major1 = (RadioButton)findViewById(R.id.radioButton1);
+     	    RadioButton Major1 = (RadioButton)findViewById(R.id.radioButton10);
      	    RadioButton Major2 = (RadioButton)findViewById(R.id.radioButton2);
      	    CheckBox Pure = (CheckBox)findViewById(R.id.checkBox1);
      	    RadioButton Year1 = (RadioButton)findViewById(R.id.year1);

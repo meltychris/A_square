@@ -51,7 +51,7 @@ public class Advanced_Activity_Test extends ActivityInstrumentationTestCase2<Adv
 		mActivity = getActivity();  
 
 	    button1 = (Button)mActivity.findViewById(R.id.button1);
-	    Major1 = (RadioButton)mActivity.findViewById(R.id.radioButton1);
+	    Major1 = (RadioButton)mActivity.findViewById(R.id.radioButton10);
  	   Major2 = (RadioButton)mActivity.findViewById(R.id.radioButton2);
  	    Pure = (CheckBox)mActivity.findViewById(R.id.checkBox1);
  	     Year1 = (RadioButton)mActivity.findViewById(R.id.year1);
