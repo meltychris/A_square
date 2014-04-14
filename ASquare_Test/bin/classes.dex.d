@@ -20,6 +20,10 @@ C:\Users\skszeto\git\A_square\ASquare_Test\bin\classes\com\example\exam_count_do
 C:\Users\skszeto\git\A_square\ASquare_Test\bin\classes\com\example\exam_count_down\test\Testexam_count_down$6.class \
 C:\Users\skszeto\git\A_square\ASquare_Test\bin\classes\com\example\exam_count_down\test\Testexam_count_down$7.class \
 C:\Users\skszeto\git\A_square\ASquare_Test\bin\classes\com\example\exam_count_down\test\Testexam_count_down.class \
+C:\Users\skszeto\git\A_square\ASquare_Test\bin\classes\com\example\gpa_calculator\test\GPAactivity2_Test$1.class \
+C:\Users\skszeto\git\A_square\ASquare_Test\bin\classes\com\example\gpa_calculator\test\GPAactivity2_Test.class \
+C:\Users\skszeto\git\A_square\ASquare_Test\bin\classes\com\example\gpa_calculator\test\GPAactivity3_Test.class \
+C:\Users\skszeto\git\A_square\ASquare_Test\bin\classes\com\example\gpa_calculator\test\MainActivity_Test$1.class \
 C:\Users\skszeto\git\A_square\ASquare_Test\bin\classes\com\example\gpa_calculator\test\MainActivity_Test.class \
 C:\Users\skszeto\git\A_square\ASquare_Test\bin\classes\com\example\study_path\test\Advanced_Activity21_Test$1.class \
 C:\Users\skszeto\git\A_square\ASquare_Test\bin\classes\com\example\study_path\test\Advanced_Activity21_Test$2.class \
