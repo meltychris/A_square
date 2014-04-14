@@ -9,206 +9,6 @@ package com.example.asquare;
 
 public final class R {
     public static final class attr {
-        /** 
-        When set to alignMargins, causes alignment to take place between the outer
-        boundary of a view, as defined by its margins. When set to alignBounds,
-        causes alignment to take place between the edges of the view.
-        The default is alignMargins.
-        See {@link android.widget.GridLayout#setAlignmentMode(int)}.
-        
-         <p>Must be one of the following constant values.</p>
-<table>
-<colgroup align="left" />
-<colgroup align="left" />
-<colgroup align="left" />
-<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-<tr><td><code>alignBounds</code></td><td>0</td><td>
-            Align the bounds of the children.
-            See {@link android.widget.GridLayout#ALIGN_BOUNDS}.
-            </td></tr>
-<tr><td><code>alignMargins</code></td><td>1</td><td>
-            Align the margins of the children.
-            See {@link android.widget.GridLayout#ALIGN_MARGINS}.
-            </td></tr>
-</table>
-         */
-        public static final int alignmentMode=0x7f010004;
-        /**  The maximum number of columns to create when automatically positioning children. 
-         <p>Must be an integer value, such as "<code>100</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static final int columnCount=0x7f010002;
-        /** 
-        When set to true, forces column boundaries to appear in the same order
-        as column indices.
-        The default is true.
-        See {@link android.widget.GridLayout#setColumnOrderPreserved(boolean)}.
-        
-         <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static final int columnOrderPreserved=0x7f010006;
-        /** 
-        The column boundary delimiting the left of the group of cells
-        occupied by this view.
-        
-         <p>Must be an integer value, such as "<code>100</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static final int layout_column=0x7f010009;
-        /** 
-        The column span: the difference between the right and left
-        boundaries delimiting the group of cells occupied by this view.
-        The default is one.
-        See {@link android.widget.GridLayout.Spec}.
-        
-         <p>Must be an integer value, such as "<code>100</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static final int layout_columnSpan=0x7f01000a;
-        /** 
-        Gravity specifies how a component should be placed in its group of cells.
-        The default is LEFT | BASELINE.
-        See {@link android.widget.GridLayout.LayoutParams#setGravity(int)}.
-        
-         <p>Must be one or more (separated by '|') of the following constant values.</p>
-<table>
-<colgroup align="left" />
-<colgroup align="left" />
-<colgroup align="left" />
-<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-<tr><td><code>top</code></td><td>0x30</td><td> Push object to the top of its container, not changing its size. </td></tr>
-<tr><td><code>bottom</code></td><td>0x50</td><td> Push object to the bottom of its container, not changing its size. </td></tr>
-<tr><td><code>left</code></td><td>0x03</td><td> Push object to the left of its container, not changing its size. </td></tr>
-<tr><td><code>right</code></td><td>0x05</td><td> Push object to the right of its container, not changing its size. </td></tr>
-<tr><td><code>center_vertical</code></td><td>0x10</td><td> Place object in the vertical center of its container, not changing its size. </td></tr>
-<tr><td><code>fill_vertical</code></td><td>0x70</td><td> Grow the vertical size of the object if needed so it completely fills its container. </td></tr>
-<tr><td><code>center_horizontal</code></td><td>0x01</td><td> Place object in the horizontal center of its container, not changing its size. </td></tr>
-<tr><td><code>fill_horizontal</code></td><td>0x07</td><td> Grow the horizontal size of the object if needed so it completely fills its container. </td></tr>
-<tr><td><code>center</code></td><td>0x11</td><td> Place the object in the center of its container in both the vertical and horizontal axis, not changing its size. </td></tr>
-<tr><td><code>fill</code></td><td>0x77</td><td> Grow the horizontal and vertical size of the object if needed so it completely fills its container. </td></tr>
-<tr><td><code>clip_vertical</code></td><td>0x80</td><td>
-             Additional option that can be set to have the top and/or bottom edges of
-             the child clipped to its container's bounds.
-             The clip will be based on the vertical gravity: a top gravity will clip the bottom
-             edge, a bottom gravity will clip the top edge, and neither will clip both edges.
-            </td></tr>
-<tr><td><code>clip_horizontal</code></td><td>0x08</td><td>
-             Additional option that can be set to have the left and/or right edges of
-             the child clipped to its container's bounds.
-             The clip will be based on the horizontal gravity: a left gravity will clip the right
-             edge, a right gravity will clip the left edge, and neither will clip both edges.
-            </td></tr>
-<tr><td><code>start</code></td><td>0x00800003</td><td> Push object to the beginning of its container, not changing its size. </td></tr>
-<tr><td><code>end</code></td><td>0x00800005</td><td> Push object to the end of its container, not changing its size. </td></tr>
-</table>
-         */
-        public static final int layout_gravity=0x7f01000b;
-        /**  END MarginLayout layoutparams 
-
-        The row boundary delimiting the top of the group of cells
-        occupied by this view.
-        
-         <p>Must be an integer value, such as "<code>100</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static final int layout_row=0x7f010007;
-        /** 
-        The row span: the difference between the bottom and top
-        boundaries delimiting the group of cells occupied by this view.
-        The default is one.
-        See {@link android.widget.GridLayout.Spec}.
-        
-         <p>Must be an integer value, such as "<code>100</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static final int layout_rowSpan=0x7f010008;
-        /** 
-              support versions. All attributes not present in ViewGroup/View are
-              redefined in the support library namespace.
-        
-
-        The orientation property is not used during layout. It is only used to
-        allocate row and column parameters when they are not specified by its children's
-        layout parameters. GridLayout works like LinearLayout in this case;
-        putting all the components either in a single row or in a single column -
-        depending on the value of this flag. In the horizontal case, a columnCount
-        property may be additionally supplied to force new rows to be created when a
-        row is full. The rowCount attribute may be used similarly in the vertical case.
-        The default is horizontal.
-        
-         <p>Must be one of the following constant values.</p>
-<table>
-<colgroup align="left" />
-<colgroup align="left" />
-<colgroup align="left" />
-<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-<tr><td><code>horizontal</code></td><td>0</td><td> Defines an horizontal widget. </td></tr>
-<tr><td><code>vertical</code></td><td>1</td><td> Defines a vertical widget. </td></tr>
-</table>
-         */
-        public static final int orientation=0x7f010000;
-        /**  The maximum number of rows to create when automatically positioning children. 
-         <p>Must be an integer value, such as "<code>100</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static final int rowCount=0x7f010001;
-        /** 
-        When set to true, forces row boundaries to appear in the same order
-        as row indices.
-        The default is true.
-        See {@link android.widget.GridLayout#setRowOrderPreserved(boolean)}.
-        
-         <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static final int rowOrderPreserved=0x7f010005;
-        /** 
-        When set to true, tells GridLayout to use default margins when none are specified
-        in a view's layout parameters.
-        The default value is false.
-        See {@link android.widget.GridLayout#setUseDefaultMargins(boolean)}.
-        
-         <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static final int useDefaultMargins=0x7f010003;
     }
     public static final class dimen {
         /**  Default screen margins, per the Android Design guidelines. 
@@ -222,11 +22,8 @@ containing a value of this type.
          screen margins) for sw720dp devices (e.g. 10" tablets) in landscape here.
     
          */
-        public static final int activity_horizontal_margin=0x7f050001;
-        public static final int activity_vertical_margin=0x7f050002;
-        /**  The default gap between components in a layout. 
-         */
-        public static final int default_gap=0x7f050000;
+        public static final int activity_horizontal_margin=0x7f040000;
+        public static final int activity_vertical_margin=0x7f040001;
     }
     public static final class drawable {
         public static final int advisor=0x7f020000;
@@ -241,169 +38,151 @@ containing a value of this type.
         public static final int whitepic=0x7f020009;
     }
     public static final class id {
-        public static final int A_H=0x7f040043;
-        public static final int Add=0x7f040066;
-        public static final int Button01=0x7f040068;
-        public static final int Button02=0x7f040069;
-        public static final int ButtonGPAmain01=0x7f04007e;
-        public static final int ButtonGPAmain02=0x7f040080;
-        public static final int ButtonGPAmain03=0x7f040082;
-        public static final int ButtonGPAmain04=0x7f040084;
-        public static final int ButtonGPAmain05=0x7f040086;
-        public static final int ButtonGPAmain06=0x7f040088;
-        public static final int ButtonGPAmain07=0x7f04008a;
-        public static final int Buttonlayer=0x7f04005b;
-        public static final int CEM=0x7f040054;
-        public static final int CEMx0=0x7f040057;
-        public static final int CEMx1=0x7f040058;
-        public static final int CEMx2=0x7f040059;
-        public static final int COMP3x=0x7f04004a;
-        public static final int COMP3xx=0x7f04004c;
-        public static final int Code=0x7f040064;
-        public static final int Date=0x7f040065;
-        public static final int Delete=0x7f040067;
-        public static final int ENGG=0x7f040048;
-        public static final int Free=0x7f040044;
-        public static final int FreeE=0x7f040049;
-        public static final int LinearLayoutGPAInsert01=0x7f04006e;
-        public static final int LinearLayoutGPAInsert02=0x7f04006f;
-        public static final int LinearLayoutGPAmain01=0x7f04007b;
-        public static final int LinearLayoutGPAmain02=0x7f04007d;
-        public static final int LinearLayoutGPAmain03=0x7f04007f;
-        public static final int LinearLayoutGPAmain04=0x7f040081;
-        public static final int LinearLayoutGPAmain05=0x7f040083;
-        public static final int LinearLayoutGPAmain06=0x7f040085;
-        public static final int LinearLayoutGPAmain07=0x7f040087;
-        public static final int LinearLayoutGPAmain08=0x7f040089;
-        public static final int Question=0x7f040026;
-        public static final int Question0=0x7f040027;
-        public static final int Question1=0x7f040029;
-        public static final int Question2=0x7f04002d;
-        public static final int Question3=0x7f040030;
-        public static final int Question4=0x7f040036;
-        public static final int Question5=0x7f04003b;
-        public static final int Question6=0x7f04003e;
-        public static final int Question99=0x7f04005a;
-        public static final int RadioButton01=0x7f04009e;
-        public static final int RadioButton02=0x7f04009d;
-        public static final int RadioButton03=0x7f04009f;
-        public static final int RadioButton04=0x7f040099;
-        public static final int RadioButton05=0x7f0400a0;
-        public static final int RadioButton06=0x7f04009c;
-        public static final int RadioButton07=0x7f04009a;
-        public static final int RadioButton08=0x7f04009b;
-        public static final int RadioGroup1=0x7f04002a;
-        public static final int RadioGroup2=0x7f040032;
-        public static final int RadioGroup3=0x7f040038;
-        public static final int RadioGroup4=0x7f04004d;
-        public static final int RadioGroup5=0x7f040056;
-        public static final int SA=0x7f040041;
-        public static final int SBM=0x7f040047;
-        public static final int S_T=0x7f040042;
-        public static final int TextView01=0x7f040097;
-        public static final int TextView02=0x7f040098;
-        public static final int View1=0x7f04005f;
-        public static final int View2=0x7f040060;
-        public static final int View3=0x7f040096;
-        public static final int alignBounds=0x7f040002;
-        public static final int alignMargins=0x7f040003;
-        public static final int bottom=0x7f040005;
-        public static final int button1=0x7f04005c;
-        public static final int button111=0x7f040095;
-        public static final int button2=0x7f04005d;
-        public static final int button3=0x7f04006a;
-        public static final int button4=0x7f04006b;
-        public static final int button5=0x7f04006c;
-        public static final int button6=0x7f04006d;
-        public static final int buttonLayout1=0x7f040094;
-        public static final int center=0x7f04000c;
-        public static final int center_horizontal=0x7f04000a;
-        public static final int center_vertical=0x7f040008;
-        public static final int check=0x7f040025;
-        public static final int checkBox1=0x7f04002f;
-        public static final int checkBox2=0x7f04008c;
-        public static final int checkBox3=0x7f04008d;
-        public static final int checkBox4=0x7f04008e;
-        public static final int checkBox5=0x7f04008f;
-        public static final int checkBox6=0x7f040090;
-        public static final int checkBox7=0x7f040091;
-        public static final int checkBox8=0x7f040092;
-        public static final int checkBox9=0x7f040093;
-        public static final int checkbox=0x7f040040;
-        public static final int clip_horizontal=0x7f04000f;
-        public static final int clip_vertical=0x7f04000e;
-        public static final int compx0=0x7f04004e;
-        public static final int compx1=0x7f04004f;
-        public static final int compx2=0x7f040050;
-        public static final int compx3=0x7f040051;
-        public static final int compx4=0x7f040052;
-        public static final int compx5=0x7f040053;
-        public static final int editText1=0x7f04003d;
-        public static final int editText2=0x7f040079;
-        public static final int editText3=0x7f04007a;
-        public static final int elective=0x7f040045;
-        public static final int end=0x7f040011;
-        public static final int fall=0x7f040039;
-        public static final int fill=0x7f04000d;
-        public static final int fill_horizontal=0x7f04000b;
-        public static final int fill_vertical=0x7f040009;
-        public static final int gridLayout1=0x7f0400a1;
-        public static final int horizontal=0x7f040000;
-        public static final int imageButton1=0x7f040014;
-        public static final int imageButton2=0x7f040016;
-        public static final int imageButton3=0x7f040019;
-        public static final int imageButton4=0x7f04001b;
-        public static final int imageButton5=0x7f04001e;
-        public static final int imageButton6=0x7f040020;
-        public static final int label=0x7f040024;
-        public static final int left=0x7f040006;
-        public static final int linearLayout1=0x7f040012;
-        public static final int linearLayout11=0x7f040013;
-        public static final int linearLayout12=0x7f040015;
-        public static final int linearLayout2=0x7f040017;
-        public static final int linearLayout21=0x7f040018;
-        public static final int linearLayout22=0x7f04001a;
-        public static final int linearLayout3=0x7f04001c;
-        public static final int linearLayout31=0x7f04001d;
-        public static final int linearLayout32=0x7f04001f;
-        public static final int linearLayout4=0x7f04005e;
-        public static final int linearLayout5=0x7f040061;
-        public static final int listView1=0x7f040062;
-        public static final int menu_delete=0x7f0400a2;
-        public static final int my_list=0x7f040023;
-        public static final int radioButton1=0x7f04008b;
-        public static final int radioButton10=0x7f04002b;
-        public static final int radioButton2=0x7f04002c;
-        public static final int radioButton3=0x7f040071;
-        public static final int radioButton4=0x7f040072;
-        public static final int radioButton5=0x7f040073;
-        public static final int radioButton6=0x7f040075;
-        public static final int radioButton7=0x7f040076;
-        public static final int radioButton8=0x7f040077;
-        public static final int radioButton9=0x7f040078;
-        public static final int reset=0x7f040063;
-        public static final int right=0x7f040007;
-        public static final int spring=0x7f04003a;
-        public static final int start=0x7f040010;
-        public static final int submit=0x7f040021;
-        public static final int textView1=0x7f040074;
-        public static final int textView100=0x7f040028;
-        public static final int textView2=0x7f04002e;
-        public static final int textView3=0x7f040031;
-        public static final int textView4=0x7f040037;
-        public static final int textView5=0x7f04003c;
-        public static final int textView6=0x7f04003f;
-        public static final int textView7=0x7f040046;
-        public static final int textView8=0x7f04004b;
-        public static final int textView9=0x7f040055;
-        public static final int textViewGPAInsert01=0x7f040022;
-        public static final int textViewGPAInsert02=0x7f040070;
-        public static final int textViewGPAmain01=0x7f04007c;
-        public static final int top=0x7f040004;
-        public static final int vertical=0x7f040001;
-        public static final int year1=0x7f040033;
-        public static final int year2=0x7f040034;
-        public static final int year3=0x7f040035;
+        public static final int A_H=0x7f080031;
+        public static final int Add=0x7f080054;
+        public static final int Button01=0x7f080056;
+        public static final int Button02=0x7f080057;
+        public static final int ButtonGPAmain01=0x7f08006c;
+        public static final int ButtonGPAmain02=0x7f08006e;
+        public static final int ButtonGPAmain03=0x7f080070;
+        public static final int ButtonGPAmain04=0x7f080072;
+        public static final int ButtonGPAmain05=0x7f080074;
+        public static final int ButtonGPAmain06=0x7f080076;
+        public static final int ButtonGPAmain07=0x7f080078;
+        public static final int Buttonlayer=0x7f080049;
+        public static final int CEM=0x7f080042;
+        public static final int CEMx0=0x7f080045;
+        public static final int CEMx1=0x7f080046;
+        public static final int CEMx2=0x7f080047;
+        public static final int COMP3x=0x7f080038;
+        public static final int COMP3xx=0x7f08003a;
+        public static final int Code=0x7f080052;
+        public static final int Date=0x7f080053;
+        public static final int Delete=0x7f080055;
+        public static final int ENGG=0x7f080036;
+        public static final int Free=0x7f080032;
+        public static final int FreeE=0x7f080037;
+        public static final int LinearLayoutGPAInsert01=0x7f08005c;
+        public static final int LinearLayoutGPAInsert02=0x7f08005d;
+        public static final int LinearLayoutGPAmain01=0x7f080069;
+        public static final int LinearLayoutGPAmain02=0x7f08006b;
+        public static final int LinearLayoutGPAmain03=0x7f08006d;
+        public static final int LinearLayoutGPAmain04=0x7f08006f;
+        public static final int LinearLayoutGPAmain05=0x7f080071;
+        public static final int LinearLayoutGPAmain06=0x7f080073;
+        public static final int LinearLayoutGPAmain07=0x7f080075;
+        public static final int LinearLayoutGPAmain08=0x7f080077;
+        public static final int Question=0x7f080014;
+        public static final int Question0=0x7f080015;
+        public static final int Question1=0x7f080017;
+        public static final int Question2=0x7f08001b;
+        public static final int Question3=0x7f08001e;
+        public static final int Question4=0x7f080024;
+        public static final int Question5=0x7f080029;
+        public static final int Question6=0x7f08002c;
+        public static final int Question99=0x7f080048;
+        public static final int RadioButton01=0x7f08008c;
+        public static final int RadioButton02=0x7f08008b;
+        public static final int RadioButton03=0x7f08008d;
+        public static final int RadioButton04=0x7f080087;
+        public static final int RadioButton05=0x7f08008e;
+        public static final int RadioButton06=0x7f08008a;
+        public static final int RadioButton07=0x7f080088;
+        public static final int RadioButton08=0x7f080089;
+        public static final int RadioGroup1=0x7f080018;
+        public static final int RadioGroup2=0x7f080020;
+        public static final int RadioGroup3=0x7f080026;
+        public static final int RadioGroup4=0x7f08003b;
+        public static final int RadioGroup5=0x7f080044;
+        public static final int SA=0x7f08002f;
+        public static final int SBM=0x7f080035;
+        public static final int S_T=0x7f080030;
+        public static final int TextView01=0x7f080085;
+        public static final int TextView02=0x7f080086;
+        public static final int View1=0x7f08004d;
+        public static final int View2=0x7f08004e;
+        public static final int View3=0x7f080084;
+        public static final int button1=0x7f08004a;
+        public static final int button111=0x7f080083;
+        public static final int button2=0x7f08004b;
+        public static final int button3=0x7f080058;
+        public static final int button4=0x7f080059;
+        public static final int button5=0x7f08005a;
+        public static final int button6=0x7f08005b;
+        public static final int buttonLayout1=0x7f080082;
+        public static final int check=0x7f080013;
+        public static final int checkBox1=0x7f08001d;
+        public static final int checkBox2=0x7f08007a;
+        public static final int checkBox3=0x7f08007b;
+        public static final int checkBox4=0x7f08007c;
+        public static final int checkBox5=0x7f08007d;
+        public static final int checkBox6=0x7f08007e;
+        public static final int checkBox7=0x7f08007f;
+        public static final int checkBox8=0x7f080080;
+        public static final int checkBox9=0x7f080081;
+        public static final int checkbox=0x7f08002e;
+        public static final int compx0=0x7f08003c;
+        public static final int compx1=0x7f08003d;
+        public static final int compx2=0x7f08003e;
+        public static final int compx3=0x7f08003f;
+        public static final int compx4=0x7f080040;
+        public static final int compx5=0x7f080041;
+        public static final int editText1=0x7f08002b;
+        public static final int editText2=0x7f080067;
+        public static final int editText3=0x7f080068;
+        public static final int elective=0x7f080033;
+        public static final int fall=0x7f080027;
+        public static final int gridLayout1=0x7f08008f;
+        public static final int imageButton1=0x7f080002;
+        public static final int imageButton2=0x7f080004;
+        public static final int imageButton3=0x7f080007;
+        public static final int imageButton4=0x7f080009;
+        public static final int imageButton5=0x7f08000c;
+        public static final int imageButton6=0x7f08000e;
+        public static final int label=0x7f080012;
+        public static final int linearLayout1=0x7f080000;
+        public static final int linearLayout11=0x7f080001;
+        public static final int linearLayout12=0x7f080003;
+        public static final int linearLayout2=0x7f080005;
+        public static final int linearLayout21=0x7f080006;
+        public static final int linearLayout22=0x7f080008;
+        public static final int linearLayout3=0x7f08000a;
+        public static final int linearLayout31=0x7f08000b;
+        public static final int linearLayout32=0x7f08000d;
+        public static final int linearLayout4=0x7f08004c;
+        public static final int linearLayout5=0x7f08004f;
+        public static final int listView1=0x7f080050;
+        public static final int menu_delete=0x7f080090;
+        public static final int my_list=0x7f080011;
+        public static final int radioButton1=0x7f080079;
+        public static final int radioButton10=0x7f080019;
+        public static final int radioButton2=0x7f08001a;
+        public static final int radioButton3=0x7f08005f;
+        public static final int radioButton4=0x7f080060;
+        public static final int radioButton5=0x7f080061;
+        public static final int radioButton6=0x7f080063;
+        public static final int radioButton7=0x7f080064;
+        public static final int radioButton8=0x7f080065;
+        public static final int radioButton9=0x7f080066;
+        public static final int reset=0x7f080051;
+        public static final int spring=0x7f080028;
+        public static final int submit=0x7f08000f;
+        public static final int textView1=0x7f080062;
+        public static final int textView100=0x7f080016;
+        public static final int textView2=0x7f08001c;
+        public static final int textView3=0x7f08001f;
+        public static final int textView4=0x7f080025;
+        public static final int textView5=0x7f08002a;
+        public static final int textView6=0x7f08002d;
+        public static final int textView7=0x7f080034;
+        public static final int textView8=0x7f080039;
+        public static final int textView9=0x7f080043;
+        public static final int textViewGPAInsert01=0x7f080010;
+        public static final int textViewGPAInsert02=0x7f08005e;
+        public static final int textViewGPAmain01=0x7f08006a;
+        public static final int year1=0x7f080021;
+        public static final int year2=0x7f080022;
+        public static final int year3=0x7f080023;
     }
     public static final class layout {
         public static final int activity_main=0x7f030000;
@@ -414,21 +193,25 @@ containing a value of this type.
         public static final int exam_main=0x7f030005;
         public static final int gpa_main=0x7f030006;
         public static final int new_add_course_record=0x7f030007;
-        public static final int new_gpa_main=0x7f030008;
-        public static final int new_insert_course_record=0x7f030009;
-        public static final int new_print_course_record=0x7f03000a;
-        public static final int path_main=0x7f03000b;
-        public static final int personalinfo1=0x7f03000c;
-        public static final int personalinfo2=0x7f03000d;
+        public static final int new_advice1=0x7f030008;
+        public static final int new_advice2=0x7f030009;
+        public static final int new_gpa_main=0x7f03000a;
+        public static final int new_insert_course_record=0x7f03000b;
+        public static final int new_print_course_record=0x7f03000c;
+        public static final int new_print_course_record2=0x7f03000d;
+        public static final int new_print_course_record3=0x7f03000e;
+        public static final int path_main=0x7f03000f;
+        public static final int personalinfo1=0x7f030010;
+        public static final int personalinfo2=0x7f030011;
     }
     public static final class menu {
-        public static final int menu=0x7f080000;
+        public static final int menu=0x7f070000;
     }
     public static final class string {
-        public static final int action_settings=0x7f060001;
-        public static final int app_name=0x7f060000;
-        public static final int hello_world=0x7f060002;
-        public static final int title_activity_advanced_activity_main=0x7f060003;
+        public static final int action_settings=0x7f050001;
+        public static final int app_name=0x7f050000;
+        public static final int hello_world=0x7f050002;
+        public static final int title_activity_advanced_activity_main=0x7f050003;
     }
     public static final class style {
         /** 
@@ -441,464 +224,10 @@ containing a value of this type.
             backward-compatibility can go here.
         
          */
-        public static final int AppBaseTheme=0x7f070000;
+        public static final int AppBaseTheme=0x7f060000;
         /**  Application theme. 
  All customizations that are NOT specific to a particular API-level can go here. 
          */
-        public static final int AppTheme=0x7f070001;
+        public static final int AppTheme=0x7f060001;
     }
-    public static final class styleable {
-        /** Attributes that can be used with a GridLayout.
-           <p>Includes the following attributes:</p>
-           <table>
-           <colgroup align="left" />
-           <colgroup align="left" />
-           <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #GridLayout_alignmentMode com.example.asquare:alignmentMode}</code></td><td>
-        When set to alignMargins, causes alignment to take place between the outer
-        boundary of a view, as defined by its margins.</td></tr>
-           <tr><td><code>{@link #GridLayout_columnCount com.example.asquare:columnCount}</code></td><td> The maximum number of columns to create when automatically positioning children.</td></tr>
-           <tr><td><code>{@link #GridLayout_columnOrderPreserved com.example.asquare:columnOrderPreserved}</code></td><td>
-        When set to true, forces column boundaries to appear in the same order
-        as column indices.</td></tr>
-           <tr><td><code>{@link #GridLayout_orientation com.example.asquare:orientation}</code></td><td>
-              support versions.</td></tr>
-           <tr><td><code>{@link #GridLayout_rowCount com.example.asquare:rowCount}</code></td><td> The maximum number of rows to create when automatically positioning children.</td></tr>
-           <tr><td><code>{@link #GridLayout_rowOrderPreserved com.example.asquare:rowOrderPreserved}</code></td><td>
-        When set to true, forces row boundaries to appear in the same order
-        as row indices.</td></tr>
-           <tr><td><code>{@link #GridLayout_useDefaultMargins com.example.asquare:useDefaultMargins}</code></td><td>
-        When set to true, tells GridLayout to use default margins when none are specified
-        in a view's layout parameters.</td></tr>
-           </table>
-           @see #GridLayout_alignmentMode
-           @see #GridLayout_columnCount
-           @see #GridLayout_columnOrderPreserved
-           @see #GridLayout_orientation
-           @see #GridLayout_rowCount
-           @see #GridLayout_rowOrderPreserved
-           @see #GridLayout_useDefaultMargins
-         */
-        public static final int[] GridLayout = {
-            0x7f010000, 0x7f010001, 0x7f010002, 0x7f010003,
-            0x7f010004, 0x7f010005, 0x7f010006
-        };
-        /**
-          <p>
-          @attr description
-          
-        When set to alignMargins, causes alignment to take place between the outer
-        boundary of a view, as defined by its margins. When set to alignBounds,
-        causes alignment to take place between the edges of the view.
-        The default is alignMargins.
-        See {@link android.widget.GridLayout#setAlignmentMode(int)}.
-        
-
-
-          <p>Must be one of the following constant values.</p>
-<table>
-<colgroup align="left" />
-<colgroup align="left" />
-<colgroup align="left" />
-<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-<tr><td><code>alignBounds</code></td><td>0</td><td>
-            Align the bounds of the children.
-            See {@link android.widget.GridLayout#ALIGN_BOUNDS}.
-            </td></tr>
-<tr><td><code>alignMargins</code></td><td>1</td><td>
-            Align the margins of the children.
-            See {@link android.widget.GridLayout#ALIGN_MARGINS}.
-            </td></tr>
-</table>
-          <p>This is a private symbol.
-          @attr name com.example.asquare:alignmentMode
-        */
-        public static final int GridLayout_alignmentMode = 4;
-        /**
-          <p>
-          @attr description
-           The maximum number of columns to create when automatically positioning children. 
-
-
-          <p>Must be an integer value, such as "<code>100</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          <p>This is a private symbol.
-          @attr name com.example.asquare:columnCount
-        */
-        public static final int GridLayout_columnCount = 2;
-        /**
-          <p>
-          @attr description
-          
-        When set to true, forces column boundaries to appear in the same order
-        as column indices.
-        The default is true.
-        See {@link android.widget.GridLayout#setColumnOrderPreserved(boolean)}.
-        
-
-
-          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          <p>This is a private symbol.
-          @attr name com.example.asquare:columnOrderPreserved
-        */
-        public static final int GridLayout_columnOrderPreserved = 6;
-        /**
-          <p>
-          @attr description
-          
-              support versions. All attributes not present in ViewGroup/View are
-              redefined in the support library namespace.
-        
-
-        The orientation property is not used during layout. It is only used to
-        allocate row and column parameters when they are not specified by its children's
-        layout parameters. GridLayout works like LinearLayout in this case;
-        putting all the components either in a single row or in a single column -
-        depending on the value of this flag. In the horizontal case, a columnCount
-        property may be additionally supplied to force new rows to be created when a
-        row is full. The rowCount attribute may be used similarly in the vertical case.
-        The default is horizontal.
-        
-
-
-          <p>Must be one of the following constant values.</p>
-<table>
-<colgroup align="left" />
-<colgroup align="left" />
-<colgroup align="left" />
-<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-<tr><td><code>horizontal</code></td><td>0</td><td> Defines an horizontal widget. </td></tr>
-<tr><td><code>vertical</code></td><td>1</td><td> Defines a vertical widget. </td></tr>
-</table>
-          <p>This is a private symbol.
-          @attr name com.example.asquare:orientation
-        */
-        public static final int GridLayout_orientation = 0;
-        /**
-          <p>
-          @attr description
-           The maximum number of rows to create when automatically positioning children. 
-
-
-          <p>Must be an integer value, such as "<code>100</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          <p>This is a private symbol.
-          @attr name com.example.asquare:rowCount
-        */
-        public static final int GridLayout_rowCount = 1;
-        /**
-          <p>
-          @attr description
-          
-        When set to true, forces row boundaries to appear in the same order
-        as row indices.
-        The default is true.
-        See {@link android.widget.GridLayout#setRowOrderPreserved(boolean)}.
-        
-
-
-          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          <p>This is a private symbol.
-          @attr name com.example.asquare:rowOrderPreserved
-        */
-        public static final int GridLayout_rowOrderPreserved = 5;
-        /**
-          <p>
-          @attr description
-          
-        When set to true, tells GridLayout to use default margins when none are specified
-        in a view's layout parameters.
-        The default value is false.
-        See {@link android.widget.GridLayout#setUseDefaultMargins(boolean)}.
-        
-
-
-          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          <p>This is a private symbol.
-          @attr name com.example.asquare:useDefaultMargins
-        */
-        public static final int GridLayout_useDefaultMargins = 3;
-        /** Attributes that can be used with a GridLayout_Layout.
-           <p>Includes the following attributes:</p>
-           <table>
-           <colgroup align="left" />
-           <colgroup align="left" />
-           <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #GridLayout_Layout_android_layout_height android:layout_height}</code></td><td></td></tr>
-           <tr><td><code>{@link #GridLayout_Layout_android_layout_margin android:layout_margin}</code></td><td>
-              Specifies extra space on the left, top, right and bottom
-              sides of this view.</td></tr>
-           <tr><td><code>{@link #GridLayout_Layout_android_layout_marginBottom android:layout_marginBottom}</code></td><td>
-              Specifies extra space on the bottom side of this view.</td></tr>
-           <tr><td><code>{@link #GridLayout_Layout_android_layout_marginLeft android:layout_marginLeft}</code></td><td>
-              Specifies extra space on the left side of this view.</td></tr>
-           <tr><td><code>{@link #GridLayout_Layout_android_layout_marginRight android:layout_marginRight}</code></td><td>
-              Specifies extra space on the right side of this view.</td></tr>
-           <tr><td><code>{@link #GridLayout_Layout_android_layout_marginTop android:layout_marginTop}</code></td><td>
-              Specifies extra space on the top side of this view.</td></tr>
-           <tr><td><code>{@link #GridLayout_Layout_android_layout_width android:layout_width}</code></td><td>
-              support versions.</td></tr>
-           <tr><td><code>{@link #GridLayout_Layout_layout_column com.example.asquare:layout_column}</code></td><td>
-        The column boundary delimiting the left of the group of cells
-        occupied by this view.</td></tr>
-           <tr><td><code>{@link #GridLayout_Layout_layout_columnSpan com.example.asquare:layout_columnSpan}</code></td><td>
-        The column span: the difference between the right and left
-        boundaries delimiting the group of cells occupied by this view.</td></tr>
-           <tr><td><code>{@link #GridLayout_Layout_layout_gravity com.example.asquare:layout_gravity}</code></td><td>
-        Gravity specifies how a component should be placed in its group of cells.</td></tr>
-           <tr><td><code>{@link #GridLayout_Layout_layout_row com.example.asquare:layout_row}</code></td><td> END MarginLayout layoutparams 
-
-        The row boundary delimiting the top of the group of cells
-        occupied by this view.</td></tr>
-           <tr><td><code>{@link #GridLayout_Layout_layout_rowSpan com.example.asquare:layout_rowSpan}</code></td><td>
-        The row span: the difference between the bottom and top
-        boundaries delimiting the group of cells occupied by this view.</td></tr>
-           </table>
-           @see #GridLayout_Layout_android_layout_height
-           @see #GridLayout_Layout_android_layout_margin
-           @see #GridLayout_Layout_android_layout_marginBottom
-           @see #GridLayout_Layout_android_layout_marginLeft
-           @see #GridLayout_Layout_android_layout_marginRight
-           @see #GridLayout_Layout_android_layout_marginTop
-           @see #GridLayout_Layout_android_layout_width
-           @see #GridLayout_Layout_layout_column
-           @see #GridLayout_Layout_layout_columnSpan
-           @see #GridLayout_Layout_layout_gravity
-           @see #GridLayout_Layout_layout_row
-           @see #GridLayout_Layout_layout_rowSpan
-         */
-        public static final int[] GridLayout_Layout = {
-            0x010100f4, 0x010100f5, 0x010100f6, 0x010100f7,
-            0x010100f8, 0x010100f9, 0x010100fa, 0x7f010007,
-            0x7f010008, 0x7f010009, 0x7f01000a, 0x7f01000b
-        };
-        /**
-          <p>This symbol is the offset where the {@link android.R.attr#layout_height}
-          attribute's value can be found in the {@link #GridLayout_Layout} array.
-          @attr name android:layout_height
-        */
-        public static final int GridLayout_Layout_android_layout_height = 1;
-        /**
-          <p>
-          @attr description
-          
-              Specifies extra space on the left, top, right and bottom
-              sides of this view. This space is outside this view's bounds.
-        
-          <p>This corresponds to the global attribute
-          resource symbol {@link android.R.attr#layout_margin}.
-          @attr name android:layout_margin
-        */
-        public static final int GridLayout_Layout_android_layout_margin = 2;
-        /**
-          <p>
-          @attr description
-          
-              Specifies extra space on the bottom side of this view.
-              This space is outside this view's bounds.
-        
-          <p>This corresponds to the global attribute
-          resource symbol {@link android.R.attr#layout_marginBottom}.
-          @attr name android:layout_marginBottom
-        */
-        public static final int GridLayout_Layout_android_layout_marginBottom = 6;
-        /**
-          <p>
-          @attr description
-          
-              Specifies extra space on the left side of this view.
-              This space is outside this view's bounds.
-        
-          <p>This corresponds to the global attribute
-          resource symbol {@link android.R.attr#layout_marginLeft}.
-          @attr name android:layout_marginLeft
-        */
-        public static final int GridLayout_Layout_android_layout_marginLeft = 3;
-        /**
-          <p>
-          @attr description
-          
-              Specifies extra space on the right side of this view.
-              This space is outside this view's bounds.
-        
-          <p>This corresponds to the global attribute
-          resource symbol {@link android.R.attr#layout_marginRight}.
-          @attr name android:layout_marginRight
-        */
-        public static final int GridLayout_Layout_android_layout_marginRight = 5;
-        /**
-          <p>
-          @attr description
-          
-              Specifies extra space on the top side of this view.
-              This space is outside this view's bounds.
-        
-          <p>This corresponds to the global attribute
-          resource symbol {@link android.R.attr#layout_marginTop}.
-          @attr name android:layout_marginTop
-        */
-        public static final int GridLayout_Layout_android_layout_marginTop = 4;
-        /**
-          <p>
-          @attr description
-          
-              support versions. All attributes not present in MarginLayout are
-              redefined in the support library name space.
-        
- START MarginLayout layoutparams 
-          <p>This corresponds to the global attribute
-          resource symbol {@link android.R.attr#layout_width}.
-          @attr name android:layout_width
-        */
-        public static final int GridLayout_Layout_android_layout_width = 0;
-        /**
-          <p>
-          @attr description
-          
-        The column boundary delimiting the left of the group of cells
-        occupied by this view.
-        
-
-
-          <p>Must be an integer value, such as "<code>100</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          <p>This is a private symbol.
-          @attr name com.example.asquare:layout_column
-        */
-        public static final int GridLayout_Layout_layout_column = 9;
-        /**
-          <p>
-          @attr description
-          
-        The column span: the difference between the right and left
-        boundaries delimiting the group of cells occupied by this view.
-        The default is one.
-        See {@link android.widget.GridLayout.Spec}.
-        
-
-
-          <p>Must be an integer value, such as "<code>100</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          <p>This is a private symbol.
-          @attr name com.example.asquare:layout_columnSpan
-        */
-        public static final int GridLayout_Layout_layout_columnSpan = 10;
-        /**
-          <p>
-          @attr description
-          
-        Gravity specifies how a component should be placed in its group of cells.
-        The default is LEFT | BASELINE.
-        See {@link android.widget.GridLayout.LayoutParams#setGravity(int)}.
-        
-
-
-          <p>Must be one or more (separated by '|') of the following constant values.</p>
-<table>
-<colgroup align="left" />
-<colgroup align="left" />
-<colgroup align="left" />
-<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-<tr><td><code>top</code></td><td>0x30</td><td> Push object to the top of its container, not changing its size. </td></tr>
-<tr><td><code>bottom</code></td><td>0x50</td><td> Push object to the bottom of its container, not changing its size. </td></tr>
-<tr><td><code>left</code></td><td>0x03</td><td> Push object to the left of its container, not changing its size. </td></tr>
-<tr><td><code>right</code></td><td>0x05</td><td> Push object to the right of its container, not changing its size. </td></tr>
-<tr><td><code>center_vertical</code></td><td>0x10</td><td> Place object in the vertical center of its container, not changing its size. </td></tr>
-<tr><td><code>fill_vertical</code></td><td>0x70</td><td> Grow the vertical size of the object if needed so it completely fills its container. </td></tr>
-<tr><td><code>center_horizontal</code></td><td>0x01</td><td> Place object in the horizontal center of its container, not changing its size. </td></tr>
-<tr><td><code>fill_horizontal</code></td><td>0x07</td><td> Grow the horizontal size of the object if needed so it completely fills its container. </td></tr>
-<tr><td><code>center</code></td><td>0x11</td><td> Place the object in the center of its container in both the vertical and horizontal axis, not changing its size. </td></tr>
-<tr><td><code>fill</code></td><td>0x77</td><td> Grow the horizontal and vertical size of the object if needed so it completely fills its container. </td></tr>
-<tr><td><code>clip_vertical</code></td><td>0x80</td><td>
-             Additional option that can be set to have the top and/or bottom edges of
-             the child clipped to its container's bounds.
-             The clip will be based on the vertical gravity: a top gravity will clip the bottom
-             edge, a bottom gravity will clip the top edge, and neither will clip both edges.
-            </td></tr>
-<tr><td><code>clip_horizontal</code></td><td>0x08</td><td>
-             Additional option that can be set to have the left and/or right edges of
-             the child clipped to its container's bounds.
-             The clip will be based on the horizontal gravity: a left gravity will clip the right
-             edge, a right gravity will clip the left edge, and neither will clip both edges.
-            </td></tr>
-<tr><td><code>start</code></td><td>0x00800003</td><td> Push object to the beginning of its container, not changing its size. </td></tr>
-<tr><td><code>end</code></td><td>0x00800005</td><td> Push object to the end of its container, not changing its size. </td></tr>
-</table>
-          <p>This is a private symbol.
-          @attr name com.example.asquare:layout_gravity
-        */
-        public static final int GridLayout_Layout_layout_gravity = 11;
-        /**
-          <p>
-          @attr description
-           END MarginLayout layoutparams 
-
-        The row boundary delimiting the top of the group of cells
-        occupied by this view.
-        
-
-
-          <p>Must be an integer value, such as "<code>100</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          <p>This is a private symbol.
-          @attr name com.example.asquare:layout_row
-        */
-        public static final int GridLayout_Layout_layout_row = 7;
-        /**
-          <p>
-          @attr description
-          
-        The row span: the difference between the bottom and top
-        boundaries delimiting the group of cells occupied by this view.
-        The default is one.
-        See {@link android.widget.GridLayout.Spec}.
-        
-
-
-          <p>Must be an integer value, such as "<code>100</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          <p>This is a private symbol.
-          @attr name com.example.asquare:layout_rowSpan
-        */
-        public static final int GridLayout_Layout_layout_rowSpan = 8;
-    };
 }

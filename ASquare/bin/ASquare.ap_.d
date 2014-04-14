@@ -1,4 +1,4 @@
-C:\Users\skszeto\git\A_square\ASquare\gen\com\example\asquare\R.java \
+C:\Users\skszeto\git\A_square\ASquare\bin\ASquare.ap_ \
  : C:\Users\skszeto\git\A_square\ASquare\res\drawable-hdpi\blue2_button.png \
 C:\Users\skszeto\git\A_square\ASquare\res\drawable-mdpi\advisor.png \
 C:\Users\skszeto\git\A_square\ASquare\res\drawable-mdpi\chatrm.png \
@@ -36,4 +36,18 @@ C:\Users\skszeto\git\A_square\ASquare\res\values\styles.xml \
 C:\Users\skszeto\git\A_square\ASquare\res\values-sw600dp\dimens.xml \
 C:\Users\skszeto\git\A_square\ASquare\res\values-sw720dp-land\dimens.xml \
 C:\Users\skszeto\git\A_square\ASquare\res\values-w820dp\dimens.xml \
+C:\Users\skszeto\git\A_square\ASquare\bin\res\drawable-hdpi\blue2_button.png \
+C:\Users\skszeto\git\A_square\ASquare\bin\res\drawable-mdpi\advisor.png \
+C:\Users\skszeto\git\A_square\ASquare\bin\res\drawable-mdpi\chatrm.png \
+C:\Users\skszeto\git\A_square\ASquare\bin\res\drawable-mdpi\exam_cd.png \
+C:\Users\skszeto\git\A_square\ASquare\bin\res\drawable-mdpi\gpa_calculator.png \
+C:\Users\skszeto\git\A_square\ASquare\bin\res\drawable-mdpi\ic_launcher.png \
+C:\Users\skszeto\git\A_square\ASquare\bin\res\drawable-mdpi\path.png \
+C:\Users\skszeto\git\A_square\ASquare\bin\res\drawable-mdpi\pic.png \
+C:\Users\skszeto\git\A_square\ASquare\bin\res\drawable-mdpi\psycho.png \
+C:\Users\skszeto\git\A_square\ASquare\bin\res\drawable-mdpi\whitepic.png \
+C:\Users\skszeto\git\A_square\ASquare\bin\res\drawable-xhdpi\ic_launcher.png \
+C:\Users\skszeto\git\A_square\ASquare\bin\res\drawable-xxhdpi\ic_launcher.png \
+C:\Users\skszeto\git\A_square\ASquare\assets\examdatabase \
+C:\Users\skszeto\git\A_square\ASquare\assets\MyDatabase \
 C:\Users\skszeto\git\A_square\ASquare\bin\AndroidManifest.xml \
