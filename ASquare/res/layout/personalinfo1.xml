@@ -18,7 +18,7 @@
         android:text="Welcome to GPA Calculator!" />
 
     <TextView
-        android:id="@+id/textView1"
+        android:id="@+id/textViewGPAInsert01"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/textView3"
@@ -40,7 +40,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_alignRight="@+id/textView1"
+        android:layout_alignRight="@+id/textViewGPAInsert01"
         android:layout_marginRight="15dp"
         android:text="Reset" />
 
@@ -58,8 +58,8 @@
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/textView1"
-        android:layout_below="@+id/textView1"
+        android:layout_alignLeft="@+id/textViewGPAInsert01"
+        android:layout_below="@+id/textViewGPAInsert01"
         android:layout_marginTop="14dp"
         android:text="What is your Name?" />
 

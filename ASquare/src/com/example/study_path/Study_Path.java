@@ -42,7 +42,7 @@ public class Study_Path extends Activity {
     	view2.setVisibility(View.INVISIBLE);
     	view3.setVisibility(View.INVISIBLE);
     	
-    	radioButton1 = (RadioButton) findViewById(R.id.radioButton1);
+    	radioButton1 = (RadioButton) findViewById(R.id.radioButton10);
     	radioButton2 = (RadioButton) findViewById(R.id.radioButton2);
     	
     	setMajor("COMP");		//initial

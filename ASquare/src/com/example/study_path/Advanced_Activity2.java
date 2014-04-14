@@ -78,7 +78,7 @@ public class Advanced_Activity2 extends Activity {
     	view1.setVisibility(View.VISIBLE);
     	view2.setVisibility(View.INVISIBLE);
 	
-	    textView1 = (TextView)findViewById(R.id.textView1);
+	    textView1 = (TextView)findViewById(R.id.textViewGPAInsert01);
 	    textView2 = (TextView)findViewById(R.id.textView2);
 	    listView1 = (ListView)findViewById(R.id.listView1);
 	    Bundle params = getIntent().getExtras();

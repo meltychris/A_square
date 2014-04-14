@@ -18,7 +18,7 @@
         android:text="Welcome to GPA Calculator!" />
 
     <TextView
-        android:id="@+id/textView1"
+        android:id="@+id/textViewGPAInsert01"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/textView3"
@@ -29,8 +29,8 @@
         android:id="@+id/TextView01"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/textView1"
-        android:layout_below="@+id/textView1"
+        android:layout_alignLeft="@+id/textViewGPAInsert01"
+        android:layout_below="@+id/textViewGPAInsert01"
         android:layout_marginTop="19dp"
         android:text="What is your current year?" />
 
@@ -38,8 +38,8 @@
         android:id="@+id/TextView02"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/radioButton1"
-        android:layout_below="@+id/radioButton1"
+        android:layout_alignLeft="@+id/radioButton10"
+        android:layout_below="@+id/radioButton10"
         android:text="What is your current semester?" />
 
     <RadioButton
@@ -47,7 +47,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_above="@+id/TextView02"
-        android:layout_toRightOf="@+id/radioButton1"
+        android:layout_toRightOf="@+id/radioButton10"
         android:text="2" />
 
     <RadioButton
@@ -67,7 +67,7 @@
         android:text="5" />
 
     <RadioButton
-        android:id="@+id/radioButton1"
+        android:id="@+id/radioButton10"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/TextView01"

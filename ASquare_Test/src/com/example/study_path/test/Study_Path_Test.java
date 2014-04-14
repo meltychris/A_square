@@ -50,7 +50,7 @@ public class Study_Path_Test extends ActivityInstrumentationTestCase2<Study_Path
 		view1 = (View)mActivity.findViewById(R.id.View1);
 		view2 = (View)mActivity.findViewById(R.id.View2);
 		view3 = (View)mActivity.findViewById(R.id.View3);
-		radioButton1 = (RadioButton)mActivity.findViewById(R.id.radioButton1);
+		radioButton1 = (RadioButton)mActivity.findViewById(R.id.radioButton10);
 		radioButton2 = (RadioButton)mActivity.findViewById(R.id.radioButton2);
 	}
 	
