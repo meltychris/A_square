@@ -76,13 +76,13 @@ public class Advanced_Activity_choose_Test extends ActivityInstrumentationTestCa
      	intent.putExtra ("Sem2",false);
      	intent.putExtra ("Credit", "18");
      	intent.putExtra ("SA", false);
-     	intent.putExtra ("S_T", false);
+     	intent.putExtra ("S_T", true);
      	intent.putExtra ("A_H", false);
-     	intent.putExtra ("Free", false);
+     	intent.putExtra ("Free", true);
      	intent.putExtra ("SBM", false);
      	intent.putExtra ("ENGG", false);
      	intent.putExtra ("FreeE", false);
-     	intent.putExtra ("compx1", false);
+     	intent.putExtra ("compx1", true);
      	intent.putExtra ("compx2", false);
      	intent.putExtra ("compx3", false);
      	intent.putExtra ("compx4", false);

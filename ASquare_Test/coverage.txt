@@ -11,3 +11,19 @@ android update test-project -m ../ASquare -p ASquare_Test
 
 CD ASquare_Test
 ant clean emma debug install test
+
+
+
+SET JAVA_HOME=C:\Program Files\Java\jdk1.7.0_25
+SET ANDROID_HOME=L:\apps\comp4521\sdk
+SET ANT_HOME=C:\Users\skszeto\apache-ant-1.9.3
+SET PATH=%PATH%;%JAVA_HOME%\bin;%ANT_HOME%\bin;%ANDROID_HOME%\tools; 
+
+CD C:\Users\skszeto\git\A_square\
+
+android update project -p ASquare
+
+android update test-project -m ../ASquare -p ASquare_Test
+
+CD ASquare_Test
+ant clean emma debug install test

@@ -241,8 +241,8 @@ public class Advanced_Activity2 extends Activity {
 	    			public void onItemClick(AdapterView<?> arg0, View arg1, int arg2, long arg3) { 
 	    				// TODO Auto-generated method stub
 	    				ListView listView = (ListView) arg0;
-	    				Toast.makeText(
-	    				Advanced_Activity2.this, listView.getItemAtPosition(arg2).toString(), Toast.LENGTH_SHORT).show();
+	    				Toast.makeText(Advanced_Activity2.this, listView.getItemAtPosition(arg2).toString(), Toast.LENGTH_SHORT).show();
+	    				setToastshown(true);
 
 	    			}
 	    		});
@@ -528,6 +528,21 @@ public class Advanced_Activity2 extends Activity {
 			return Name;
 		}
         
+    	/**
+    	 * @return the toastshown
+    	 */
+    	public Boolean getToastshown() {
+    		return toastshown;
+    	}
+
+
+    	/**
+    	 * @param toastshown the toastshown to set
+    	 */
+    	public void setToastshown(Boolean toastshown) {
+    		this.toastshown = toastshown;
+    	}
+        
         
 	TextView textView1;
 	TextView textView2;
@@ -568,6 +583,8 @@ public class Advanced_Activity2 extends Activity {
 	int Year;
 	int SemtoGrad;
 	String pure;
+    Boolean toastshown = false;
+
 	
 	
 }
