@@ -61,7 +61,7 @@ public class MainActivity extends Activity {
                 // TODO Auto-generated method stub
             	Intent intent = new Intent();
                 intent.setClass(MainActivity.this, MainActivity.class);
-                startActivity(intent);
+                //startActivity(intent);
                
         }});
         
@@ -72,7 +72,7 @@ public class MainActivity extends Activity {
                 // TODO Auto-generated method stub
             	Intent intent = new Intent();
                 intent.setClass(MainActivity.this, MainActivity.class);
-                startActivity(intent);
+                //startActivity(intent);
                
         }});
         
@@ -83,7 +83,7 @@ public class MainActivity extends Activity {
                 // TODO Auto-generated method stub
             	Intent intent = new Intent();
                 intent.setClass(MainActivity.this, MainActivity.class);
-                startActivity(intent);
+                //startActivity(intent);
                
         }});
 		
