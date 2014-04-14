@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/whitepic"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Advanced_Activity2" >
+
+     <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+                android:background="#FFFFFF"
+         >
+
+    </LinearLayout>
+    
+      <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+                android:background="#FFFFFF"
+         >
+
+     <TextView
+         android:id="@+id/textView2"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:text=" Your Course Records"
+         android:textSize="20sp" />
+    
+    </LinearLayout>
+    
+       
+       
+     <LinearLayout
+        android:layout_width="match_parent"
+         android:id="@+id/linearLayout4"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+	  	<View
+	      android:id="@+id/View1"
+	      android:layout_width="fill_parent"
+	      android:layout_weight="1"
+	      android:layout_height="3dp"
+	      android:layout_alignParentBottom="true"
+	      android:background="#1188FF" />
+
+	    <View
+	      android:id="@+id/View2"
+		  android:layout_width="fill_parent"
+	      android:layout_weight="1"
+		  android:layout_height="3dp"
+	      android:layout_alignParentBottom="true"
+	      android:background="#1188FF" />
+
+	 </LinearLayout>
+        
+     <View
+	      android:layout_width="match_parent"
+	      android:layout_height="1dp"
+	      android:layout_alignParentBottom="true"
+	      android:background="#111111" />
+    
+      <LinearLayout
+        android:id="@+id/linearLayout5"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <ListView
+            android:id="@+id/listView1"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:drawSelectorOnTop="false" >
+        </ListView>
+
+    </LinearLayout>
+
+</LinearLayout>
