@@ -1,6 +1,8 @@
 package com.example.exam_count_down;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.List;
 import java.util.Random;
 
@@ -30,7 +32,7 @@ public class Exam_countdown extends Activity {
 		setContentView(R.layout.exam_main);
 		
 
-		
+
 		
 	    // TODO Auto-generated method stub
 		 button1 = (Button)findViewById(R.id.Add);
@@ -40,6 +42,9 @@ public class Exam_countdown extends Activity {
       	 Code = (EditText)findViewById(R.id.Code);
       	 Date = (EditText)findViewById(R.id.Date);
       	 
+      	Calendar rightNow = Calendar.getInstance();
+     	String CurrentTime = Dateformat.format(rightNow.getTime());
+     	
       	ArrayAdapter<String> adapter;
       	adapter = new ArrayAdapter<String>(Exam_countdown.this, android.R.layout.simple_list_item_1);   
       	List<String> data = new ArrayList<String>();
@@ -185,7 +190,7 @@ public class Exam_countdown extends Activity {
 	
 
 
-	    		
+	private SimpleDateFormat Dateformat = new SimpleDateFormat("yyyy/MM/dd (E)");    		
 	private Button button1;
 	private Button button2;
 	private Button button3;
