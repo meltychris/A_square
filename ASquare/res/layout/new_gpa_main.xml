@@ -59,7 +59,7 @@
             android:id="@+id/ButtonGPAmain03"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Next" />
+            android:text="Add Course Record" />
     </LinearLayout>
 
     <LinearLayout
