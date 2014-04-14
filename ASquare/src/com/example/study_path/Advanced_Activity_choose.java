@@ -120,8 +120,7 @@ public class Advanced_Activity_choose extends Activity{
                 String[] check1 = new String[check.size()];
                 check.toArray(check1);
                 
-
-                
+              
                 intent.putExtra ("Course", temp1);
                 intent.putExtra ("Checked", check1);
                 intent.setClass(Advanced_Activity_choose.this, Advanced_Activity2.class);

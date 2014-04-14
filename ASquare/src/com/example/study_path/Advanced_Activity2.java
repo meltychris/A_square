@@ -81,8 +81,8 @@ public class Advanced_Activity2 extends Activity {
 	    textView1 = (TextView)findViewById(R.id.textView1);
 	    textView2 = (TextView)findViewById(R.id.textView2);
 	    listView1 = (ListView)findViewById(R.id.listView1);
-
 	    Bundle params = getIntent().getExtras();
+
 	    if (params!= null) {
 	    	Major1 = params.getBoolean ("Major1");
 	    	Major2 = params.getBoolean ("Major2");
@@ -133,7 +133,7 @@ public class Advanced_Activity2 extends Activity {
 	    		
 	    	}
 
-	    	
+
 	    	
 
 	    	/*
