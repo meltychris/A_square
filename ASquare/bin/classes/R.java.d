@@ -18,8 +18,14 @@ C:\Users\skszeto\git\A_square\ASquare\res\layout\adv_path_main.xml \
 C:\Users\skszeto\git\A_square\ASquare\res\layout\adv_path_main2.xml \
 C:\Users\skszeto\git\A_square\ASquare\res\layout\exam_main.xml \
 C:\Users\skszeto\git\A_square\ASquare\res\layout\gpa_main.xml \
+C:\Users\skszeto\git\A_square\ASquare\res\layout\new_add_course_record.xml \
+C:\Users\skszeto\git\A_square\ASquare\res\layout\new_advice1.xml \
+C:\Users\skszeto\git\A_square\ASquare\res\layout\new_advice2.xml \
 C:\Users\skszeto\git\A_square\ASquare\res\layout\new_gpa_main.xml \
 C:\Users\skszeto\git\A_square\ASquare\res\layout\new_insert_course_record.xml \
+C:\Users\skszeto\git\A_square\ASquare\res\layout\new_print_course_record.xml \
+C:\Users\skszeto\git\A_square\ASquare\res\layout\new_print_course_record2.xml \
+C:\Users\skszeto\git\A_square\ASquare\res\layout\new_print_course_record3.xml \
 C:\Users\skszeto\git\A_square\ASquare\res\layout\path_main.xml \
 C:\Users\skszeto\git\A_square\ASquare\res\layout\personalinfo1.xml \
 C:\Users\skszeto\git\A_square\ASquare\res\layout\personalinfo2.xml \

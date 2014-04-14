@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><!-- EMMA v2.0.5312 report, generated Mon Apr 14 20:52:42 CST 2014 -->
+<?xml version="1.0" encoding="UTF-8"?><!-- EMMA v2.0.5312 report, generated Mon Apr 14 21:54:48 CST 2014 -->
 
 <report>
   <stats>
@@ -10,17 +10,41 @@
   </stats>
   <data>
     <all name="all classes">
-      <coverage type="class, %" value="100% (45/45)"/>
-      <coverage type="method, %" value="93%  (144/155)"/>
-      <coverage type="block, %" value="91%  (4301/4718)"/>
-      <coverage type="line, %" value="89%  (802.4/899)"/>
+      <coverage type="class, %" value="98%  (44/45)"/>
+      <coverage type="method, %" value="92%  (142/155)"/>
+      <coverage type="block, %" value="88%  (4170/4718)"/>
+      <coverage type="line, %" value="87%  (778.3/899)"/>
 
       <package name="com.example.exam_count_down">
-        <coverage type="class, %" value="100% (8/8)"/>
-        <coverage type="method, %" value="86%  (32/37)"/>
-        <coverage type="block, %" value="82%  (666/809)"/>
-        <coverage type="line, %" value="80%  (149.7/187)"/>
+        <coverage type="class, %" value="88%  (7/8)"/>
+        <coverage type="method, %" value="81%  (30/37)"/>
+        <coverage type="block, %" value="66%  (535/809)"/>
+        <coverage type="line, %" value="67%  (125.6/187)"/>
 
+        <srcfile name="MyBroadcastReceiver.java">
+          <coverage type="class, %" value="0%   (0/1)"/>
+          <coverage type="method, %" value="0%   (0/2)"/>
+          <coverage type="block, %" value="0%   (0/52)"/>
+          <coverage type="line, %" value="0%   (0/12)"/>
+
+          <class name="MyBroadcastReceiver">
+            <coverage type="class, %" value="0%   (0/1)"/>
+            <coverage type="method, %" value="0%   (0/2)"/>
+            <coverage type="block, %" value="0%   (0/52)"/>
+            <coverage type="line, %" value="0%   (0/12)"/>
+
+            <method name="MyBroadcastReceiver (): void">
+              <coverage type="method, %" value="0%   (0/1)"/>
+              <coverage type="block, %" value="0%   (0/3)"/>
+              <coverage type="line, %" value="0%   (0/1)"/>
+            </method>
+            <method name="onReceive (Context, Intent): void">
+              <coverage type="method, %" value="0%   (0/1)"/>
+              <coverage type="block, %" value="0%   (0/49)"/>
+              <coverage type="line, %" value="0%   (0/11)"/>
+            </method>
+          </class>
+        </srcfile>
         <srcfile name="DataBaseUtility2.java">
           <coverage type="class, %" value="100% (1/1)"/>
           <coverage type="method, %" value="33%  (1/3)"/>
@@ -166,32 +190,25 @@
         <srcfile name="Exam_countdown.java">
           <coverage type="class, %" value="100% (4/4)"/>
           <coverage type="method, %" value="100% (15/15)"/>
-          <coverage type="block, %" value="98%  (415/423)"/>
-          <coverage type="line, %" value="99%  (83.8/85)"/>
+          <coverage type="block, %" value="79%  (336/423)"/>
+          <coverage type="line, %" value="84%  (71.7/85)"/>
 
-          <class name="Exam_countdown$2">
-            <coverage type="class, %" value="100% (1/1)"/>
-            <coverage type="method, %" value="100% (2/2)"/>
-            <coverage type="block, %" value="84%  (41/49)"/>
-            <coverage type="line, %" value="86%  (7.8/9)"/>
-
-            <method name="onClick (View): void">
-              <coverage type="method, %" value="100% (1/1)"/>
-              <coverage type="block, %" value="81%  (35/43)"/>
-              <coverage type="line, %" value="85%  (6.8/8)"/>
-            </method>
-            <method name="Exam_countdown$2 (Exam_countdown): void">
-              <coverage type="method, %" value="100% (1/1)"/>
-              <coverage type="block, %" value="100% (6/6)"/>
-              <coverage type="line, %" value="100% (1/1)"/>
-            </method>
-          </class>
           <class name="Exam_countdown">
             <coverage type="class, %" value="100% (1/1)"/>
             <coverage type="method, %" value="100% (9/9)"/>
-            <coverage type="block, %" value="100% (294/294)"/>
-            <coverage type="line, %" value="100% (64/64)"/>
+            <coverage type="block, %" value="73%  (215/294)"/>
+            <coverage type="line, %" value="81%  (51.9/64)"/>
 
+            <method name="onCreate (Bundle): void">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="63%  (98/155)"/>
+              <coverage type="line, %" value="69%  (19.9/29)"/>
+            </method>
+            <method name="get_list (): List">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="71%  (53/75)"/>
+              <coverage type="line, %" value="81%  (13/16)"/>
+            </method>
             <method name="Exam_countdown (): void">
               <coverage type="method, %" value="100% (1/1)"/>
               <coverage type="block, %" value="100% (3/3)"/>
@@ -227,15 +244,22 @@
               <coverage type="block, %" value="100% (16/16)"/>
               <coverage type="line, %" value="100% (6/6)"/>
             </method>
-            <method name="get_list (): List">
+          </class>
+          <class name="Exam_countdown$2">
+            <coverage type="class, %" value="100% (1/1)"/>
+            <coverage type="method, %" value="100% (2/2)"/>
+            <coverage type="block, %" value="84%  (41/49)"/>
+            <coverage type="line, %" value="86%  (7.8/9)"/>
+
+            <method name="onClick (View): void">
               <coverage type="method, %" value="100% (1/1)"/>
-              <coverage type="block, %" value="100% (75/75)"/>
-              <coverage type="line, %" value="100% (16/16)"/>
+              <coverage type="block, %" value="81%  (35/43)"/>
+              <coverage type="line, %" value="85%  (6.8/8)"/>
             </method>
-            <method name="onCreate (Bundle): void">
+            <method name="Exam_countdown$2 (Exam_countdown): void">
               <coverage type="method, %" value="100% (1/1)"/>
-              <coverage type="block, %" value="100% (155/155)"/>
-              <coverage type="line, %" value="100% (29/29)"/>
+              <coverage type="block, %" value="100% (6/6)"/>
+              <coverage type="line, %" value="100% (1/1)"/>
             </method>
           </class>
           <class name="Exam_countdown$1">
@@ -270,30 +294,6 @@
               <coverage type="method, %" value="100% (1/1)"/>
               <coverage type="block, %" value="100% (20/20)"/>
               <coverage type="line, %" value="100% (5/5)"/>
-            </method>
-          </class>
-        </srcfile>
-        <srcfile name="MyBroadcastReceiver.java">
-          <coverage type="class, %" value="100% (1/1)"/>
-          <coverage type="method, %" value="100% (2/2)"/>
-          <coverage type="block, %" value="100% (52/52)"/>
-          <coverage type="line, %" value="100% (12/12)"/>
-
-          <class name="MyBroadcastReceiver">
-            <coverage type="class, %" value="100% (1/1)"/>
-            <coverage type="method, %" value="100% (2/2)"/>
-            <coverage type="block, %" value="100% (52/52)"/>
-            <coverage type="line, %" value="100% (12/12)"/>
-
-            <method name="MyBroadcastReceiver (): void">
-              <coverage type="method, %" value="100% (1/1)"/>
-              <coverage type="block, %" value="100% (3/3)"/>
-              <coverage type="line, %" value="100% (1/1)"/>
-            </method>
-            <method name="onReceive (Context, Intent): void">
-              <coverage type="method, %" value="100% (1/1)"/>
-              <coverage type="block, %" value="100% (49/49)"/>
-              <coverage type="line, %" value="100% (11/11)"/>
             </method>
           </class>
         </srcfile>
