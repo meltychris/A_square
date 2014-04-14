@@ -27,8 +27,7 @@ public class Advanced_Activity_choose extends Activity{
     ListView listView;
     ArrayAdapter<Model> adapter;
     List<Model> list = new ArrayList<Model>();
-
-       private Button btn;
+    Button btn;
 
     public void onCreate(Bundle icicle) {
         super.onCreate(icicle);

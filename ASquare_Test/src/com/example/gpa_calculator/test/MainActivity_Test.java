@@ -38,20 +38,4 @@ public class MainActivity_Test extends ActivityInstrumentationTestCase2<MainActi
 		assertNotNull(getActivity()); 
 	 } 
 
-	
-	
-	@SmallTest
-	 public void testSetUp() throws Exception {
-		setUp();
-		assertNotNull(mActivity);
-	 }
-
-	@SmallTest
-	 public void testTearDown() throws Exception {
-		tearDown();
-		assertNull(mActivity);
-		 
-	 }
-	 
-
 }
