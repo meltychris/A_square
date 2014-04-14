@@ -59,10 +59,9 @@ public class Testexam_count_down extends ActivityInstrumentationTestCase2<Exam_c
 
 	
 	@SmallTest 
-	 public void testbutton1() { 
-		int expectedCount = listView1.getAdapter().getCount() + 1;
-
-		  mActivity.runOnUiThread(new Runnable() {
+		 public void testlistView1() { 
+			//Still doing
+			mActivity.runOnUiThread(new Runnable() {
 			    @Override
 			    public void run() {
 			      // click button and open next activity.
@@ -71,10 +70,34 @@ public class Testexam_count_down extends ActivityInstrumentationTestCase2<Exam_c
 			      button1.performClick();
 			    }
 			  });	
+			  ActivityMonitor activityMonitor = getInstrumentation().addMonitor(Exam_countdown.class.getName(), null, false);
+			  getInstrumentation().waitForMonitorWithTimeout(activityMonitor, 5000);
+			  String expectedinput = "COMP3111\t\t\t\t\t2014/02/30";
+			  String actualinput = listView1.getAdapter().getItem(0).toString();
+	;	 
+			 //CHECK THE RESULT 
+		      assertEquals(expectedinput, actualinput);
+	
+		 }
+
+	@SmallTest 
+	 public void testbutton1() { 
+		 		int expectedCount = listView1.getAdapter().getCount() + 1;
+
+		  mActivity.runOnUiThread(new Runnable() {
+			    @Override
+			    public void run() {
+			      // click button and open next activity.
+			      Code.setText("COMP3111");
+			      Date.setText("2014/02/30");
+
+			      button1.performClick();
+			    }
+			  });	
 		  ActivityMonitor activityMonitor = getInstrumentation().addMonitor(Exam_countdown.class.getName(), null, false);
 		  getInstrumentation().waitForMonitorWithTimeout(activityMonitor, 5000);
 		int actualCount = listView1.getAdapter().getCount();
-		  
+ 
 		 //CHECK THE RESULT 
 	    assertEquals(expectedCount, actualCount);
 
@@ -86,7 +109,7 @@ public class Testexam_count_down extends ActivityInstrumentationTestCase2<Exam_c
 		    @Override
 		    	public void run() {
 		      // click button and open next activity.
-		    	Code.setText("COMP3111");
+		    	Code.setText("AAAAAAAAAAAAA");
 		    	Date.setText("2014/02/30");
 		    	button1.performClick();
 		    	}
@@ -100,7 +123,7 @@ public class Testexam_count_down extends ActivityInstrumentationTestCase2<Exam_c
 			    @Override
 			    public void run() {
 			      // click button and open next activity.
-			      Code.setText("COMP3111");
+			      Code.setText("AAAAAAAAAAAAA");
 			      button2.performClick();
 			    }
 			  });	
@@ -135,27 +158,6 @@ public class Testexam_count_down extends ActivityInstrumentationTestCase2<Exam_c
 
 	 }
 	
-	@SmallTest 
-	 public void testlistView1() { 
-		//Still doing
-		mActivity.runOnUiThread(new Runnable() {
-		    @Override
-		    public void run() {
-		      // click button and open next activity.
-		      Code.setText("COMP3111");
-		      Date.setText("2014/02/30");
-		      button1.performClick();
-		    }
-		  });	
-		  ActivityMonitor activityMonitor = getInstrumentation().addMonitor(Exam_countdown.class.getName(), null, false);
-		  getInstrumentation().waitForMonitorWithTimeout(activityMonitor, 5000);
-		  String expectedinput = "COMP3111\t2014/02/30";
-		  String actualinput = listView1.getChildAt(0).toString();	  
-		 //CHECK THE RESULT 
-	      assertEquals(expectedinput, actualinput);
-
-	 }
-	
 	@SmallTest  
 	 public void testCode() { 
 
@@ -175,7 +177,7 @@ public class Testexam_count_down extends ActivityInstrumentationTestCase2<Exam_c
 
 		  
 		 //CHECK THE RESULT
-		  assertEquals("COMP3111",Code.getText());
+		  assertEquals("COMP3111",Code.getText().toString());
 
 
 	 }
@@ -195,7 +197,7 @@ public class Testexam_count_down extends ActivityInstrumentationTestCase2<Exam_c
 			  });	
 		  ActivityMonitor activityMonitor = getInstrumentation().addMonitor(Exam_countdown.class.getName(), null, false);
 		  getInstrumentation().waitForMonitorWithTimeout(activityMonitor, 5000);
-		  assertEquals("",Date.getText());
+		  assertEquals("2014/01/01",Date.getText().toString());
 
 	 }
 }
