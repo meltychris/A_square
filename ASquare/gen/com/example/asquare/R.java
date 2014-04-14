@@ -321,11 +321,11 @@ containing a value of this type.
         public static final int center_vertical=0x7f040008;
         public static final int check=0x7f040025;
         public static final int checkBox1=0x7f04002f;
-        public static final int checkBox2=0x7f04008b;
-        public static final int checkBox3=0x7f04008c;
-        public static final int checkBox4=0x7f04008d;
-        public static final int checkBox5=0x7f04008e;
-        public static final int checkBox6=0x7f04008f;
+        public static final int checkBox2=0x7f04008c;
+        public static final int checkBox3=0x7f04008d;
+        public static final int checkBox4=0x7f04008e;
+        public static final int checkBox5=0x7f04008f;
+        public static final int checkBox6=0x7f040090;
         public static final int checkBox7=0x7f040091;
         public static final int checkBox8=0x7f040092;
         public static final int checkBox9=0x7f040093;
@@ -371,7 +371,7 @@ containing a value of this type.
         public static final int listView1=0x7f040062;
         public static final int menu_delete=0x7f0400a2;
         public static final int my_list=0x7f040023;
-        public static final int radioButton1=0x7f040090;
+        public static final int radioButton1=0x7f04008b;
         public static final int radioButton10=0x7f04002b;
         public static final int radioButton2=0x7f04002c;
         public static final int radioButton3=0x7f040071;
@@ -415,10 +415,11 @@ containing a value of this type.
         public static final int gpa_main=0x7f030006;
         public static final int new_add_course_record=0x7f030007;
         public static final int new_gpa_main=0x7f030008;
-        public static final int new_print_course_record=0x7f030009;
-        public static final int path_main=0x7f03000a;
-        public static final int personalinfo1=0x7f03000b;
-        public static final int personalinfo2=0x7f03000c;
+        public static final int new_insert_course_record=0x7f030009;
+        public static final int new_print_course_record=0x7f03000a;
+        public static final int path_main=0x7f03000b;
+        public static final int personalinfo1=0x7f03000c;
+        public static final int personalinfo2=0x7f03000d;
     }
     public static final class menu {
         public static final int menu=0x7f080000;
