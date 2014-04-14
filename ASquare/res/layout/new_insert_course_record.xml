@@ -16,7 +16,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text=" Insert Your Course Record"
-            android:textSize="15" />
+            android:textSize="15sp" />
     </LinearLayout>
 
     <LinearLayout
@@ -30,7 +30,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text=" Year"
-            android:textSize="18" />
+            android:textSize="18sp" />
 
         <RadioButton
             android:id="@+id/radioButton1"

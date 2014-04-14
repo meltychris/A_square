@@ -8,26 +8,25 @@ import android.widget.Button;
 
 import com.example.asquare.R;
 import com.example.gpa_calculator.GPAactivity2;
-import com.example.gpa_calculator.MainActivity;
+import com.example.gpa_calculator.GPAactivity3;
 
 
 //1.Change the things inside <XXXX>
-public class MainActivity_Test extends ActivityInstrumentationTestCase2<MainActivity> {
+public class GPAactivity3_Test extends ActivityInstrumentationTestCase2<GPAactivity3> {
 
 	//2.Change MainActivity
-	private MainActivity mActivity;
+	private GPAactivity3 mActivity;
 
 	//3.Change MainActivity
-	public MainActivity_Test() {
-		super(MainActivity.class);
+	public GPAactivity3_Test() {
+		super(GPAactivity3.class);
 	}
 	
 	@Override
 	protected void setUp() throws Exception {
 		super.setUp();
 		mActivity = getActivity();  
-		button1 = (Button)mActivity.findViewById(R.id.button1);
-
+		
 	}
 	
 	@Override 
@@ -42,25 +41,6 @@ public class MainActivity_Test extends ActivityInstrumentationTestCase2<MainActi
 	 public void testView() { // checks if the activity is created 
 		assertNotNull(getActivity()); 
 	 } 
+	
 
-	@SmallTest
-	 public void testbutton1() { 
-		  ActivityMonitor activityMonitor = getInstrumentation().addMonitor(GPAactivity2.class.getName(), null, false);
-
-		 //INTERACTIONS 
-		  mActivity.runOnUiThread(new Runnable() {
-			    @Override
-			    public void run() {
-			      // click button and open next activity.
-			      button1.performClick();
-			    }
-			  });	
-		  
-		 //CHECK THE RESULT
-		  GPAactivity2 nextActivity = (GPAactivity2) getInstrumentation().waitForMonitorWithTimeout(activityMonitor, 10000);
-		  assertNotNull(nextActivity);
-		  nextActivity.finish();
-
-	 }
-	Button button1;
 }
