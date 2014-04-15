@@ -28,6 +28,7 @@ public class Advanced_Activity_choose extends Activity{
     ArrayAdapter<Model> adapter;
     List<Model> list = new ArrayList<Model>();
     Button btn;
+    String major;
 
     public void onCreate(Bundle icicle) {
         super.onCreate(icicle);
@@ -37,8 +38,10 @@ public class Advanced_Activity_choose extends Activity{
  	    if (params!= null) {
  	    	Major1 = params.getBoolean ("Major1");
  	    	Major2 = params.getBoolean ("Major2");
- 	    	Pure = params.getBoolean ("Pure");
-
+			if (Major1) major = "COMP";
+	    	else major = "CPEG";
+ 	    	
+			Pure = params.getBoolean ("Pure");
  	    	Year1 = params.getBoolean ("Year1");
  	    	Year2 = params.getBoolean ("Year2");
  	    	Year3 = params.getBoolean ("Year3");         	    	
@@ -179,7 +182,7 @@ public class Advanced_Activity_choose extends Activity{
 	    	 
  	    	pure = (Pure?"T":"F");
 
- 	    	String sql ="SELECT Code FROM COMP WHERE (Pure='All' OR Pure='" + pure + "') ORDER BY Year,Code"; 
+ 	    	String sql ="SELECT Code FROM "+major+" WHERE (Pure='All' OR Pure='" + pure + "') ORDER BY Year,Code"; 
 	    	Cursor testdata = mDbHelper.getTestData(sql); 
 	    	String code = DataBaseUtility1.GetColumnValue(testdata, "Code");
 	    	list.add(new Model(code));

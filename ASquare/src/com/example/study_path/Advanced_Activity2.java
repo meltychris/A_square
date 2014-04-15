@@ -86,6 +86,9 @@ public class Advanced_Activity2 extends Activity {
 	    if (params!= null) {
 	    	Major1 = params.getBoolean ("Major1");
 	    	Major2 = params.getBoolean ("Major2");
+			if (Major1) major = "COMP";
+	    	else major = "CPEG";
+	    	
 	    	Pure = params.getBoolean ("Pure");
 	    	pure = (Pure?"T":"F");
 	    	
@@ -311,7 +314,7 @@ public class Advanced_Activity2 extends Activity {
 	    			Cursor testdata;
 	    			String code;
 	    			for (int yearloop = 1; yearloop < year; yearloop++){
-		    			sql ="SELECT Course.Code from Course, COMP WHERE Course.Code = COMP.Code AND (Pure='All' OR Pure='" + pure + "') AND Year='" + Integer.toString(yearloop) + "' AND Sem='Fall' AND FALL='TRUE' AND COMP.Code NOT IN (SELECT Code FROM Studied)"; 
+		    			sql ="SELECT Course.Code from Course, " + major + " WHERE Course.Code = " + major + ".Code AND (Pure='All' OR Pure='" + pure + "') AND Year='" + Integer.toString(yearloop) + "' AND Sem='Fall' AND FALL='TRUE' AND " + major +".Code NOT IN (SELECT Code FROM Studied)"; 
 		    			testdata = mDbHelper.getTestData(sql); 
 		    			code = DataBaseUtility1.GetColumnValue(testdata, "Code");
 			    		if (!code.equals(""))								//meaning no result
@@ -322,7 +325,7 @@ public class Advanced_Activity2 extends Activity {
 			    			}
 		    			
 		    			
-		    			sql ="SELECT Course.Code from Course, COMP WHERE Course.Code = COMP.Code AND (Pure='All' OR Pure='" + pure + "') AND  Year='" + Integer.toString(yearloop) + "' AND Sem='Spring' AND FALL='TRUE' AND COMP.Code NOT IN (SELECT Code FROM Studied)"; 
+		    			sql ="SELECT Course.Code from Course, "+major+" WHERE Course.Code = "+major+".Code AND (Pure='All' OR Pure='" + pure + "') AND  Year='" + Integer.toString(yearloop) + "' AND Sem='Spring' AND FALL='TRUE' AND "+major+".Code NOT IN (SELECT Code FROM Studied)"; 
 		    			testdata = mDbHelper.getTestData(sql); 
 		    			code = DataBaseUtility1.GetColumnValue(testdata, "Code");
 			    		if (!code.equals(""))								//meaning no result
@@ -333,7 +336,7 @@ public class Advanced_Activity2 extends Activity {
 			   			}
 		    		}
 		    		
-	    			sql ="SELECT Course.Code from Course, COMP WHERE Course.Code = COMP.Code AND (Pure='All' OR Pure='" + pure + "') AND  Year='" + year + "' AND Sem='Fall'  AND FALL='TRUE' AND Course.Code NOT IN (SELECT Code FROM Studied)"; 
+	    			sql ="SELECT Course.Code from Course, "+major+" WHERE Course.Code = "+major+".Code AND (Pure='All' OR Pure='" + pure + "') AND  Year='" + year + "' AND Sem='Fall'  AND FALL='TRUE' AND Course.Code NOT IN (SELECT Code FROM Studied)"; 
 	    			testdata = mDbHelper.getTestData(sql); 
 	    			code = DataBaseUtility1.GetColumnValue(testdata, "Code");
 		    		if (!code.equals(""))								//meaning no result
@@ -352,7 +355,7 @@ public class Advanced_Activity2 extends Activity {
 	    			Cursor testdata;
 	    			String code;
 	    			for (int yearloop = 1; yearloop <= year ; yearloop++){
-		    			sql ="SELECT Course.Code from Course, COMP WHERE Course.Code = COMP.Code AND (Pure='All' OR Pure='" + pure + "') AND  Year='" + Integer.toString(yearloop) + "' AND Sem='Fall' AND SPRING='TRUE' AND COMP.Code NOT IN (SELECT Code FROM Studied)"; 
+		    			sql ="SELECT Course.Code from Course, "+major+" WHERE Course.Code = "+major+".Code AND (Pure='All' OR Pure='" + pure + "') AND  Year='" + Integer.toString(yearloop) + "' AND Sem='Fall' AND SPRING='TRUE' AND "+major+".Code NOT IN (SELECT Code FROM Studied)"; 
 		    			testdata = mDbHelper.getTestData(sql); 
 	    				code = DataBaseUtility1.GetColumnValue(testdata, "Code");
 			    		if (!code.equals(""))								//meaning no result
@@ -362,7 +365,7 @@ public class Advanced_Activity2 extends Activity {
 			    			reqcourse.add(code);
 			    		}
 		    			
-		    			sql ="SELECT Course.Code from Course, COMP WHERE Course.Code = COMP.Code AND (Pure='All' OR Pure='" + pure + "') AND  Year='" + Integer.toString(yearloop) + "' AND Sem='Spring' AND SPRING='TRUE' AND COMP.Code NOT IN (SELECT Code FROM Studied)"; 
+		    			sql ="SELECT Course.Code from Course, "+major+" WHERE Course.Code = "+major+".Code AND (Pure='All' OR Pure='" + pure + "') AND  Year='" + Integer.toString(yearloop) + "' AND Sem='Spring' AND SPRING='TRUE' AND "+major+".Code NOT IN (SELECT Code FROM Studied)"; 
 		    			testdata = mDbHelper.getTestData(sql); 
 		    			code = DataBaseUtility1.GetColumnValue(testdata, "Code");
 		    			if (!code.equals(""))
@@ -413,7 +416,7 @@ public class Advanced_Activity2 extends Activity {
     			String code;
     			
 	    		
-    			sql ="SELECT Course.Code from Course, COMP WHERE Course.Code = COMP.Code AND (Pure='All' OR Pure='" + pure + "') AND  Year='" + year + "' AND Sem='Spring'  AND FALL='TRUE' AND Course.Code NOT IN (SELECT Code FROM Studied)"; 
+    			sql ="SELECT Course.Code from Course, "+major+" WHERE Course.Code = "+major+".Code AND (Pure='All' OR Pure='" + pure + "') AND  Year='" + year + "' AND Sem='Spring'  AND FALL='TRUE' AND Course.Code NOT IN (SELECT Code FROM Studied)"; 
     			testdata = mDbHelper.getTestData(sql); 
     			code = DataBaseUtility1.GetColumnValue(testdata, "Code");
 	    		if (!code.equals(""))								//meaning no result
@@ -425,7 +428,7 @@ public class Advanced_Activity2 extends Activity {
     			}
     			
     			for (int yearloop = year+1; yearloop <= 3; yearloop++){
-	    			sql ="SELECT Course.Code from Course, COMP WHERE Course.Code = COMP.Code AND (Pure='All' OR Pure='" + pure + "') AND Year='" + Integer.toString(yearloop) + "' AND Sem='Fall' AND FALL='TRUE' AND COMP.Code NOT IN (SELECT Code FROM Studied)"; 
+	    			sql ="SELECT Course.Code from Course, "+major+" WHERE Course.Code = "+major+".Code AND (Pure='All' OR Pure='" + pure + "') AND Year='" + Integer.toString(yearloop) + "' AND Sem='Fall' AND FALL='TRUE' AND "+major+".Code NOT IN (SELECT Code FROM Studied)"; 
 	    			testdata = mDbHelper.getTestData(sql); 
 	    			code = DataBaseUtility1.GetColumnValue(testdata, "Code");
 		    		if (!code.equals(""))								//meaning no result
@@ -436,7 +439,7 @@ public class Advanced_Activity2 extends Activity {
 		    			}
 	    			
 	    			
-	    			sql ="SELECT Course.Code from Course, COMP WHERE Course.Code = COMP.Code AND (Pure='All' OR Pure='" + pure + "') AND  Year='" + Integer.toString(yearloop) + "' AND Sem='Spring' AND FALL='TRUE' AND COMP.Code NOT IN (SELECT Code FROM Studied)"; 
+	    			sql ="SELECT Course.Code from Course, "+major+" WHERE Course.Code = "+major+".Code AND (Pure='All' OR Pure='" + pure + "') AND  Year='" + Integer.toString(yearloop) + "' AND Sem='Spring' AND FALL='TRUE' AND "+major+".Code NOT IN (SELECT Code FROM Studied)"; 
 	    			testdata = mDbHelper.getTestData(sql); 
 	    			code = DataBaseUtility1.GetColumnValue(testdata, "Code");
 		    		if (!code.equals(""))								//meaning no result
@@ -456,7 +459,7 @@ public class Advanced_Activity2 extends Activity {
     			Cursor testdata;
     			String code;
     			for (int yearloop = year+1; yearloop <= 3 ; yearloop++){
-	    			sql ="SELECT Course.Code from Course, COMP WHERE Course.Code = COMP.Code AND (Pure='All' OR Pure='" + pure + "') AND  Year='" + Integer.toString(yearloop) + "' AND Sem='Fall' AND SPRING='TRUE' AND COMP.Code NOT IN (SELECT Code FROM Studied)"; 
+	    			sql ="SELECT Course.Code from Course, "+major+" WHERE Course.Code = "+major+".Code AND (Pure='All' OR Pure='" + pure + "') AND  Year='" + Integer.toString(yearloop) + "' AND Sem='Fall' AND SPRING='TRUE' AND "+major+".Code NOT IN (SELECT Code FROM Studied)"; 
 	    			testdata = mDbHelper.getTestData(sql); 
     				code = DataBaseUtility1.GetColumnValue(testdata, "Code");
 		    		if (!code.equals(""))								//meaning no result
@@ -466,7 +469,7 @@ public class Advanced_Activity2 extends Activity {
 		    			addcourse.add(code);
 		    		}
 	    			
-	    			sql ="SELECT Course.Code from Course, COMP WHERE Course.Code = COMP.Code AND (Pure='All' OR Pure='" + pure + "') AND  Year='" + Integer.toString(yearloop) + "' AND Sem='Spring' AND SPRING='TRUE' AND COMP.Code NOT IN (SELECT Code FROM Studied)"; 
+	    			sql ="SELECT Course.Code from Course, "+major+" WHERE Course.Code = "+major+".Code AND (Pure='All' OR Pure='" + pure + "') AND  Year='" + Integer.toString(yearloop) + "' AND Sem='Spring' AND SPRING='TRUE' AND "+major+".Code NOT IN (SELECT Code FROM Studied)"; 
 	    			testdata = mDbHelper.getTestData(sql); 
 	    			code = DataBaseUtility1.GetColumnValue(testdata, "Code");
 	    			if (!code.equals(""))
@@ -582,6 +585,7 @@ public class Advanced_Activity2 extends Activity {
 	int Credneed; 
 	int Year;
 	int SemtoGrad;
+	String major;
 	String pure;
     Boolean toastshown = false;
 
