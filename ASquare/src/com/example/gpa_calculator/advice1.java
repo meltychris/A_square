@@ -1,5 +1,20 @@
 package com.example.gpa_calculator;
 
-public class advice1 {
+import com.example.asquare.R;
+
+
+import android.os.Bundle;
+import android.app.Activity;
+
+
+public class advice1 extends Activity {
+
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.gpa_advice1);
+		
+		
+	}
 
 }
