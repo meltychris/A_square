@@ -50,7 +50,7 @@ public class advice1 extends Activity {
 
      	    //NOT yet change below, ref Advanced_activity!!!!!!!!!!!!!!!!!!
      	    
-     	
+/*     	
          	Intent intent = new Intent();
          	
          	intent.putExtra ("Major1", Major1.isChecked());
@@ -83,7 +83,8 @@ public class advice1 extends Activity {
          	//not yet modify
             intent.setClass(Advanced_Activity.this, Advanced_Activity_choose.class);
 
-             startActivity(intent);      
+             startActivity(intent);  
+*/ 
      		}
      });
 	 
