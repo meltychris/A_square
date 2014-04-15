@@ -118,7 +118,8 @@ public class Exam_countdown extends Activity {
 	 	        	
 	 	        	ArrayAdapter<String> adapter;
 	 	        	adapter = new ArrayAdapter<String>(Exam_countdown.this, android.R.layout.simple_list_item_1);   
-	 	        	List<String> data = new ArrayList<String>();
+	 	        	adapter.clear();
+	 	        	//List<String> data = new ArrayList<String>();
 	 	        	//data = get_list();									//get from database
 	 	        	//for (String i : data)
 	 	        	//	adapter.add(i);

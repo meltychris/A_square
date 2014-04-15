@@ -155,7 +155,7 @@ public class Testexam_count_down extends ActivityInstrumentationTestCase2<Exam_c
 			    }
 			  });	
 		  ActivityMonitor activityMonitor = getInstrumentation().addMonitor(Exam_countdown.class.getName(), null, false);
-		  getInstrumentation().waitForMonitorWithTimeout(activityMonitor, 5000);
+		  getInstrumentation().waitForMonitorWithTimeout(activityMonitor, 10000);
 		int expectedCount = 0;
 		int actualCount = listView1.getAdapter().getCount();
 	  
