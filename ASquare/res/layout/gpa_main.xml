@@ -1,104 +1,58 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:background="@drawable/whitepic"  
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context=".MainActivity" >
-
-
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:text="What do you want to do?" />
-
+    android:orientation="vertical"
+    tools:context="com.example.study_path.Advanced_Activity" >
 
     <LinearLayout
-        android:id="@+id/linearLayout1"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_centerVertical="true"
-        android:layout_marginTop="56dp"
-        android:orientation="vertical" >
+        android:layout_weight="0.00" >
+
+        
+        <TextView
+            android:id="@+id/textViewGPAmain1"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:text="What do you want to do with GPA Calculator?" />
     </LinearLayout>
 
-
-    <Button
-        android:id="@+id/button1"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/textView3"
-        android:layout_below="@+id/textView3"
-        android:text="My Courses" />
+        android:layout_weight="0.00" >
 
+        <Button
+            android:id="@+id/ButtonGPAmain1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="View My Courses" />
+    </LinearLayout>
 
-    <Button
-        android:id="@+id/button2"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/button1"
-        android:layout_below="@+id/button1"
-        android:text="Acadmic Advices" />
+        android:layout_weight="0.00" >
 
+        <Button
+            android:id="@+id/ButtonGPAmain2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Academic Advices" />
+    </LinearLayout>
 
-    <Button
-        android:id="@+id/Button01"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/button2"
-        android:layout_below="@+id/button2"
-        android:text="My TGA" />
+        android:layout_weight="0.00" >
 
+        <Button
+            android:id="@+id/ButtonGPAmain3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Add Course Record" />
+    </LinearLayout>
 
-    <Button
-        android:id="@+id/Button02"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/Button01"
-        android:layout_toRightOf="@+id/linearLayout1"
-        android:text="My CGA" />
-
-
-    <Button
-        android:id="@+id/button3"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignRight="@+id/Button01"
-        android:layout_below="@+id/linearLayout1"
-        android:text="My GGA" />
-
-
-    <Button
-        android:id="@+id/button4"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignRight="@+id/button3"
-        android:layout_below="@+id/button3"
-        android:text="Add new Course" />
-
-
-    <Button
-        android:id="@+id/button5"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/button4"
-        android:layout_below="@+id/button4"
-        android:text="Delete Course" />
-
-
-    <Button
-        android:id="@+id/button6"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/button5"
-        android:layout_below="@+id/button5"
-        android:text="Setting" />
-
-
-</RelativeLayout>
+</LinearLayout>

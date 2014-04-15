@@ -7,26 +7,25 @@
     tools:context="com.example.study_path.Advanced_Activity" >
 
     <LinearLayout
-        android:id="@+id/LinearLayoutGPAInsert01"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" >
-
-        <TextView
-            android:id="@+id/textViewGPAInsert01"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text=" See Your Course Record"
-            android:textSize="18sp" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/LinearLayoutGPAInsert02"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="0.00" >
 
         <TextView
-            android:id="@+id/textViewGPAInsert02"
+            android:id="@+id/textViewGPAadd1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=" Add Your Course Record"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.00" >
+
+        <TextView
+            android:id="@+id/textViewGPAadd2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text=" Year:"
@@ -39,40 +38,34 @@
         android:orientation="horizontal">
 
         <RadioButton
-            android:id="@+id/checkBox1"
+            android:id="@+id/radioButtonGPAadd1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="1" />
 
         <RadioButton
-            android:id="@+id/checkBox2"
+            android:id="@+id/radioButtonGPAadd2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="2" />
 
         <RadioButton
-            android:id="@+id/checkBox3"
+            android:id="@+id/radioButtonGPAadd3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="3" />
 
         <RadioButton
-            android:id="@+id/checkBox4"
+            android:id="@+id/radioButtonGPAadd4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="4" />
 
         <RadioButton
-            android:id="@+id/checkBox5"
+            android:id="@+id/radioButtonGPAadd5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="5" />
-
-        <RadioButton
-            android:id="@+id/checkBox6"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="All Years" />
 
     </RadioGroup>
 
@@ -82,7 +75,7 @@
         android:layout_weight="0.00" >
 
         <TextView
-            android:id="@+id/textView1"
+            android:id="@+id/textViewGPAadd3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text=" Semester:"
@@ -92,38 +85,32 @@
 
     <RadioGroup
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="wrap_content" 
         android:orientation="horizontal">
 
         <RadioButton
-            android:id="@+id/radioButton6"
+            android:id="@+id/radioButtonGPAadd6"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="1" />
+            android:text="Fall" />
 
         <RadioButton
-            android:id="@+id/radioButton7"
+            android:id="@+id/radioButtonGPAadd7"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="2" />
+            android:text="Winter" />
 
         <RadioButton
-            android:id="@+id/radioButton8"
+            android:id="@+id/radioButtonGPAadd8"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="3" />
+            android:text="Spring" />
 
         <RadioButton
-            android:id="@+id/radioButton9"
+            android:id="@+id/radioButtonGPAadd9"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="4" />
-
-        <RadioButton
-            android:id="@+id/radioButton1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="All Semesters" />
+            android:text="Summer" />
 
     </RadioGroup>
 
@@ -132,79 +119,79 @@
         android:layout_height="wrap_content" >
 
         <TextView
-            android:id="@+id/textView2"
+            android:id="@+id/textViewGPAadd4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text=" Show:"
+            android:text=" Course Code:"
             android:textSize="18sp" />
 
     </LinearLayout>
 
-    <RadioGroup
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:layout_height="wrap_content" >
 
-        <RadioButton
-            android:id="@+id/checkBox7"
+        <EditText
+            android:id="@+id/editTextGPAadd1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="No. of Credits" />
+            android:layout_weight="1"
+            android:ems="10" >
 
-        <RadioButton
-            android:id="@+id/checkBox8"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Grade" />
+            <requestFocus />
+        </EditText>
 
-        <RadioButton
-            android:id="@+id/checkBox9"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Both" />
-
-    </RadioGroup>
-
-    <RadioGroup
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" 
-        android:orientation="horizontal">
-
-        <RadioButton
-            android:id="@+id/radioButton2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="TGA" />
-
-        <RadioButton
-            android:id="@+id/radioButton3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="CGA" />
-
-        <RadioButton
-            android:id="@+id/radioButton4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="GGA" />
-
-        <RadioButton
-            android:id="@+id/radioButton5"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="All" />
-
-    </RadioGroup>
+    </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content" >
 
-        <Button
-            android:id="@+id/button1"
-            android:layout_width="match_parent"
+        <TextView
+            android:id="@+id/textViewGPAadd5"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Show My Course Records" />
+            android:text=" No. of credits:"
+            android:textSize="18sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <EditText
+            android:id="@+id/editTextGPAadd2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/textViewGPAadd6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" Grade:"
+            android:textSize="18sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <EditText
+            android:id="@+id/editTextGPAadd3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10" />
 
     </LinearLayout>
 
@@ -213,28 +200,35 @@
         android:layout_height="wrap_content" >
 
         <Button
-            android:id="@+id/button2"
+            android:id="@+id/buttonGPAadd1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.21"
+            android:text="Add Next Course Record" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <Button
+            android:id="@+id/buttonGPAadd2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Finish Adding Course Record" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <Button
+            android:id="@+id/buttonGPAadd3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Reset" />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" >
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" >
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" >
 
     </LinearLayout>
 
