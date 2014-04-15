@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.study_path.Advanced_Activity" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.00" >
+
+        <TextView
+            android:id="@+id/textViewGPAadvice1_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=" Advise Your TGA"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.00" >
+
+        <TextView
+            android:id="@+id/textViewGPAadvice1_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" Year:"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/radioButtonGPAadvice1_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1" />
+
+        <RadioButton
+            android:id="@+id/radioButtonGPAadvice1_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2" />
+
+        <RadioButton
+            android:id="@+id/radioButtonGPAadvice1_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="3" />
+
+        <RadioButton
+            android:id="@+id/radioButtonGPAadvice1_4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="4" />
+
+        <RadioButton
+            android:id="@+id/radioButtonGPAadvice1_5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="5" />
+
+    </RadioGroup>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.00" >
+
+        <TextView
+            android:id="@+id/textViewGPAadvice1_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" Semester:"
+            android:textSize="18sp" />
+
+    </LinearLayout>
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" 
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/radioButtonGPAadvice1_6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Fall" />
+
+        <RadioButton
+            android:id="@+id/radioButtonGPAadvice1_7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Winter" />
+
+        <RadioButton
+            android:id="@+id/radioButtonGPAadvice1_8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Spring" />
+
+        <RadioButton
+            android:id="@+id/radioButtonGPAadvice1_9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Summer" />
+
+    </RadioGroup>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/textViewGPAadvice1_4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" Your Target TGA:"
+            android:textSize="18sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <EditText
+            android:id="@+id/editTextGPAadvice1_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10" >
+
+            <requestFocus />
+        </EditText>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <Button
+            android:id="@+id/buttonGPAadvice1_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Calculate Grade Point Required to Meet My Target TGA" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <Button
+            android:id="@+id/buttonGPAadvice1_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Reset" />
+
+    </LinearLayout>
+
+</LinearLayout>
