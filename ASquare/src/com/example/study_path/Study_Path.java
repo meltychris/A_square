@@ -4,6 +4,7 @@ import com.example.asquare.R;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.database.Cursor;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
@@ -256,10 +257,24 @@ public class Study_Path extends Activity {
     		    	mDbHelper.open(); 
     		    	mDbHelper.alter("1", "advanced");  
     		    	mDbHelper.close();*/
-            		
+            	
+             	SharedPreferences xadvanced = getSharedPreferences("advanced", 0);
+             	if (xadvanced.getBoolean("advanced", false)){
+                   	Intent intent = new Intent();
+                    intent.setClass(Study_Path.this, Advanced_Activity2.class);
+                    startActivity(intent);   
+                    finish();
+
+             	}
+             	else
+             	{	
             		Intent intent = new Intent();
                     intent.setClass(Study_Path.this, Advanced_Activity.class);
                     startActivity(intent);
+                    finish();
+
+                    
+             	}
             	//}
             	
             	
@@ -310,22 +325,6 @@ public class Study_Path extends Activity {
 				
 		return adapter;
 	}
-	
-	
-	  /*public String get() {
-		    // TODO Auto-generated method stub
-			DataBaseTestAdapter1 mDbHelper = new DataBaseTestAdapter1(this);         
-	    	mDbHelper.createDatabase();       
-	    	mDbHelper.open(); 
-	    	 
-	    	String sql ="SELECT Credit from Preference WHERE Type='advanced'"; 
-			Cursor testdata = mDbHelper.getTestData(sql); 
-	    	String advanced = DataBaseUtility1.GetColumnValue(testdata, "advanced");
-	    
-	    	mDbHelper.close();
-					
-			return advanced;
-		}*/
 	
     public String getYear() {
 		return year;
