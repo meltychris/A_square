@@ -8,6 +8,7 @@ import com.example.asquare.R;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.view.View;
@@ -28,6 +29,7 @@ public class Advanced_Activity_choose extends Activity{
     ArrayAdapter<Model> adapter;
     List<Model> list = new ArrayList<Model>();
     Button btn;
+    String major;
 
     public void onCreate(Bundle icicle) {
         super.onCreate(icicle);
@@ -37,8 +39,10 @@ public class Advanced_Activity_choose extends Activity{
  	    if (params!= null) {
  	    	Major1 = params.getBoolean ("Major1");
  	    	Major2 = params.getBoolean ("Major2");
- 	    	Pure = params.getBoolean ("Pure");
-
+			if (Major1) major = "COMP";
+	    	else major = "CPEG";
+ 	    	
+			Pure = params.getBoolean ("Pure");
  	    	Year1 = params.getBoolean ("Year1");
  	    	Year2 = params.getBoolean ("Year2");
  	    	Year3 = params.getBoolean ("Year3");         	    	
@@ -101,9 +105,29 @@ public class Advanced_Activity_choose extends Activity{
              	intent.putExtra ("CEMx1", CEMx1);
              	intent.putExtra ("CEMx2", CEMx2);
             	
-            	
-            	
-            	
+             	SharedPreferences xMajor1 = getSharedPreferences("Major1", 0);
+             	SharedPreferences xMajor2 = getSharedPreferences("Major2", 0);
+             	SharedPreferences xPure = getSharedPreferences("Pure", 0);
+             	SharedPreferences xYear1 = getSharedPreferences("Year1", 0);
+             	SharedPreferences xYear2 = getSharedPreferences("Year2", 0);
+             	SharedPreferences xYear3 = getSharedPreferences("Year3", 0);
+             	SharedPreferences xSem1 = getSharedPreferences("Sem1", 0);
+             	SharedPreferences xSem2 = getSharedPreferences("Sem2", 0);
+             	SharedPreferences xCredit = getSharedPreferences("Credit", 0);
+             	SharedPreferences xadvanced = getSharedPreferences("advanced", 0);
+             	
+             	xMajor1.edit().putBoolean("Major1", Major1).commit();
+             	xMajor2.edit().putBoolean("Major2", Major2).commit();
+             	xPure.edit().putBoolean("Pure", Pure).commit();
+             	xYear1.edit().putBoolean("Year1", Year1).commit();
+             	xYear2.edit().putBoolean("Year2", Year2).commit();
+             	xYear3.edit().putBoolean("Year3", Year3).commit();
+             	xSem1.edit().putBoolean("Sem1", Sem1).commit();
+             	xSem2.edit().putBoolean("Sem2", Sem2).commit();
+             	xCredit.edit().putString("Credit", Credit).commit();
+             	xadvanced.edit().putBoolean("advanced", true).commit();
+
+
             	
                 for (Model a: list) {
                     // here i am not able to get the records as getting on onItemClick of the listview
@@ -125,6 +149,7 @@ public class Advanced_Activity_choose extends Activity{
                 intent.putExtra ("Checked", check1);
                 intent.setClass(Advanced_Activity_choose.this, Advanced_Activity2.class);
                 startActivity(intent);
+                finish();
                 
 
 
@@ -179,7 +204,7 @@ public class Advanced_Activity_choose extends Activity{
 	    	 
  	    	pure = (Pure?"T":"F");
 
- 	    	String sql ="SELECT Code FROM COMP WHERE (Pure='All' OR Pure='" + pure + "') ORDER BY Year,Code"; 
+ 	    	String sql ="SELECT Code FROM "+major+" WHERE (Pure='All' OR Pure='" + pure + "') ORDER BY Year,Code"; 
 	    	Cursor testdata = mDbHelper.getTestData(sql); 
 	    	String code = DataBaseUtility1.GetColumnValue(testdata, "Code");
 	    	list.add(new Model(code));

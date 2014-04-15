@@ -53,36 +53,7 @@ public class MainActivity extends Activity {
                 startActivity(intent);
                
         }});
-        
-        button4 = (ImageButton)findViewById(R.id.imageButton4);
-        button4.setOnClickListener(new ImageButton.OnClickListener(){ 
-            @Override
-            public void onClick(View v) {
-                // TODO Auto-generated method stub
-
-                //startActivity(intent);
-               
-        }});
-        
-        button5 = (ImageButton)findViewById(R.id.imageButton5);
-        button5.setOnClickListener(new ImageButton.OnClickListener(){ 
-            @Override
-            public void onClick(View v) {
-                // TODO Auto-generated method stub
-
-                //startActivity(intent);
-               
-        }});
-        
-        button6 = (ImageButton)findViewById(R.id.imageButton6);
-        button6.setOnClickListener(new ImageButton.OnClickListener(){ 
-            @Override
-            public void onClick(View v) {
-                // TODO Auto-generated method stub
- 
-                //startActivity(intent);
-               
-        }});
+   
 		
 	}
 	

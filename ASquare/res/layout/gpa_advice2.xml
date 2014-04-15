@@ -7,48 +7,53 @@
     tools:context="com.example.study_path.Advanced_Activity" >
 
     <LinearLayout
-        android:id="@+id/LinearLayoutGPAInsert01"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" >
 
         <TextView
-            android:id="@+id/textViewGPAInsert01"
-            android:layout_width="match_parent"
+            android:id="@+id/textViewGPAadvice2_1"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text=" Insert Your Course Record"
-            android:textSize="15sp" />
+            android:text=" Advise Your TGA"
+            android:textSize="18sp" />
+
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/LinearLayoutGPAInsert02"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="0.00" >
+        android:layout_height="wrap_content" >
 
         <TextView
-            android:id="@+id/textView1"
+            android:id="@+id/textViewGPAadvice2_2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text=" Year"
+            android:text=" Required Grade Point to achieve Your TGA:"
             android:textSize="18sp" />
 
-        <RadioButton
-            android:id="@+id/radioButton1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="1" />
+    </LinearLayout>
 
-        <RadioButton
-            android:id="@+id/radioButton2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="2" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
 
-        <RadioButton
-            android:id="@+id/radioButton3"
+        <TextView
+            android:id="@+id/textViewGPAadvice2_3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="3" />
+            android:text=" Calculated Double Grade Point"
+            android:textSize="18sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <Button
+            android:id="@+id/buttonGPAadvice2_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Exit GPA Advice" />
 
     </LinearLayout>
 

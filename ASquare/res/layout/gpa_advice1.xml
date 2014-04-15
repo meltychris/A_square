@@ -7,12 +7,12 @@
     tools:context="com.example.study_path.Advanced_Activity" >
 
     <LinearLayout
-        android:id="@+id/LinearLayoutGPAInsert01"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" >
+        android:layout_height="wrap_content"
+        android:layout_weight="0.00" >
 
         <TextView
-            android:id="@+id/textViewGPAInsert01"
+            android:id="@+id/textViewGPAadvice1_1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text=" Advise Your TGA"
@@ -20,13 +20,12 @@
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/LinearLayoutGPAInsert02"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="0.00" >
 
         <TextView
-            android:id="@+id/textViewGPAInsert02"
+            android:id="@+id/textViewGPAadvice1_2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text=" Year:"
@@ -39,31 +38,31 @@
         android:orientation="horizontal">
 
         <RadioButton
-            android:id="@+id/radioButton10"
+            android:id="@+id/radioButtonGPAadvice1_1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="1" />
 
         <RadioButton
-            android:id="@+id/radioButton2"
+            android:id="@+id/radioButtonGPAadvice1_2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="2" />
 
         <RadioButton
-            android:id="@+id/radioButton3"
+            android:id="@+id/radioButtonGPAadvice1_3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="3" />
 
         <RadioButton
-            android:id="@+id/radioButton4"
+            android:id="@+id/radioButtonGPAadvice1_4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="4" />
 
         <RadioButton
-            android:id="@+id/radioButton5"
+            android:id="@+id/radioButtonGPAadvice1_5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="5" />
@@ -76,7 +75,7 @@
         android:layout_weight="0.00" >
 
         <TextView
-            android:id="@+id/textView1"
+            android:id="@+id/textViewGPAadvice1_3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text=" Semester:"
@@ -90,25 +89,25 @@
         android:orientation="horizontal">
 
         <RadioButton
-            android:id="@+id/radioButton6"
+            android:id="@+id/radioButtonGPAadvice1_6"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Fall" />
 
         <RadioButton
-            android:id="@+id/radioButton7"
+            android:id="@+id/radioButtonGPAadvice1_7"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Winter" />
 
         <RadioButton
-            android:id="@+id/radioButton8"
+            android:id="@+id/radioButtonGPAadvice1_8"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Spring" />
 
         <RadioButton
-            android:id="@+id/radioButton9"
+            android:id="@+id/radioButtonGPAadvice1_9"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Summer" />
@@ -120,7 +119,7 @@
         android:layout_height="wrap_content" >
 
         <TextView
-            android:id="@+id/textView2"
+            android:id="@+id/textViewGPAadvice1_4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text=" Your Target TGA:"
@@ -132,13 +131,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content" >
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent" >
-        </LinearLayout>
-
         <EditText
-            android:id="@+id/editText1"
+            android:id="@+id/editTextGPAadvice1_1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -153,13 +147,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content" >
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent" >
-        </LinearLayout>
-
         <Button
-            android:id="@+id/button1"
+            android:id="@+id/buttonGPAadvice1_1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Calculate Grade Point Required to Meet My Target TGA" />
@@ -171,7 +160,7 @@
         android:layout_height="wrap_content" >
 
         <Button
-            android:id="@+id/button2"
+            android:id="@+id/buttonGPAadvice1_2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Reset" />

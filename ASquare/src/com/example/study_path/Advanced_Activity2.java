@@ -12,6 +12,7 @@ import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.AlertDialog.Builder;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
@@ -29,35 +30,6 @@ import android.widget.Toast;
 
 public class Advanced_Activity2 extends Activity {
 
-	public boolean onCreateOptionsMenu(Menu menu)
-	{
-	   getMenuInflater().inflate(R.menu.menu, menu);
-	   return true;
-	}
-	
-	/*public boolean onOptionsItemSelected(MenuItem item) {
-	    // Handle presses on the action bar items
-	    switch (item.getItemId()) {
-	        case R.id.menu_delete:
-		    	ResetTable("Studied");
-		    	ResetTable("NotStudied");
-		    	
-		    	DataBaseTestAdapter mDbHelper = new DataBaseTestAdapter(this);         
-		    	mDbHelper.createDatabase();       
-		    	mDbHelper.open(); 
-		    	mDbHelper.alter("0", "advanced");  
-		    	mDbHelper.close();
-		    	
-	         	Intent intent = new Intent();
-	            intent.setClass(this, Advanced_Activity.class);
-	            startActivity(intent);  
-
-		    	 return true;
-	        default:
-	            return super.onOptionsItemSelected(item);
-	    }
-	}*/
-	
 	
 	/** Called when the activity is first created. */
 	@Override
@@ -83,91 +55,122 @@ public class Advanced_Activity2 extends Activity {
 	    listView1 = (ListView)findViewById(R.id.listView1);
 	    Bundle params = getIntent().getExtras();
 
-	    if (params!= null) {
-	    	Major1 = params.getBoolean ("Major1");
-	    	Major2 = params.getBoolean ("Major2");
-	    	Pure = params.getBoolean ("Pure");
-	    	pure = (Pure?"T":"F");
-	    	
-	    	Year1 = params.getBoolean ("Year1");
-	    	Year2 = params.getBoolean ("Year2");
-	    	Year3 = params.getBoolean ("Year3");
-	    	if (Year1) Year = 1;
-	    	else if  (Year2) Year = 2;
-	    	else Year = 3;
-	    	
-	    	Sem1 = params.getBoolean ("Sem1");
-	    	Sem2 = params.getBoolean ("Sem2");
-	    	Credit = params.getString ("Credit");
-	    	SA = params.getBoolean ("SA");
-	    	S_T = params.getBoolean ("S_T");
-	    	A_H = params.getBoolean ("A_H");
-	    	Free = params.getBoolean ("Free");
-	    	SBM = params.getBoolean ("SBM");
-	    	ENGG = params.getBoolean ("ENGG");
-	    	FreeE = params.getBoolean ("FreeE");
-	    	compx1 = params.getBoolean ("compx1");
-	    	compx2 = params.getBoolean ("compx2");
-	    	compx3 = params.getBoolean ("compx3");
-	    	compx4 = params.getBoolean ("compx4");
-	    	compx5 = params.getBoolean ("compx5");
-	    	CEMx1 = params.getBoolean ("CEMx1");
-	    	CEMx2 = params.getBoolean ("CEMx2");
-	    	Credneed = 90 - Integer.parseInt(Credit);
-	    	
-	    	String[] Course = params.getStringArray("Course"); 
-	    	String[] Checked = params.getStringArray ("Checked");
-            
-            /*Toast.makeText(view.getContext(),
-                    [1].toString(),
-                    Toast.LENGTH_SHORT).show();*/
-	    	
-	    	studied = new ArrayList<String>();
-	    	notstudied = new ArrayList<String>();
+     	SharedPreferences xMajor1 = getSharedPreferences("Major1", 0);
+     	SharedPreferences xMajor2 = getSharedPreferences("Major2", 0);
+     	SharedPreferences xPure = getSharedPreferences("Pure", 0);
+     	SharedPreferences xYear1 = getSharedPreferences("Year1", 0);
+     	SharedPreferences xYear2 = getSharedPreferences("Year2", 0);
+     	SharedPreferences xYear3 = getSharedPreferences("Year3", 0);
+     	SharedPreferences xSem1 = getSharedPreferences("Sem1", 0);
+     	SharedPreferences xSem2 = getSharedPreferences("Sem2", 0);
+     	SharedPreferences xCredit = getSharedPreferences("Credit", 0);
+     	xadvanced = getSharedPreferences("advanced", 0);
+     	
+     	if (xadvanced.getBoolean("advanced", false)){
+     		Major1 = xMajor1.getBoolean("Major1", true);
+     		Major2 = xMajor2.getBoolean("Major2", false);
+     		Pure = xPure.getBoolean("Pure", false);
+     		Year1 = xYear1.getBoolean("Year1", true);
+     		Year2 = xYear2.getBoolean("Year2", false);
+     		Year3 = xYear3.getBoolean("Year3", false);
+     		Sem1 = xSem1.getBoolean("Sem1", true);
+     		Sem2 = xSem2.getBoolean("Sem2", false);
+     		Credit = xCredit.getString("Credit", "18");
+     	}
+     	else
+     	{
+		    if (params!= null) {
+		    	Major1 = params.getBoolean ("Major1");
+		    	Major2 = params.getBoolean ("Major2");	    	
+		    	Pure = params.getBoolean ("Pure");
+		    	pure = (Pure?"T":"F");
+		    	Year1 = params.getBoolean ("Year1");
+		    	Year2 = params.getBoolean ("Year2");
+		    	Year3 = params.getBoolean ("Year3");
+		    	Sem1 = params.getBoolean ("Sem1");
+		    	Sem2 = params.getBoolean ("Sem2");
+		    	Credit = params.getString ("Credit");
+		    	SA = params.getBoolean ("SA");
+		    	S_T = params.getBoolean ("S_T");
+		    	A_H = params.getBoolean ("A_H");
+		    	Free = params.getBoolean ("Free");
+		    	SBM = params.getBoolean ("SBM");
+		    	ENGG = params.getBoolean ("ENGG");
+		    	FreeE = params.getBoolean ("FreeE");
+		    	compx1 = params.getBoolean ("compx1");
+		    	compx2 = params.getBoolean ("compx2");
+		    	compx3 = params.getBoolean ("compx3");
+		    	compx4 = params.getBoolean ("compx4");
+		    	compx5 = params.getBoolean ("compx5");
+		    	CEMx1 = params.getBoolean ("CEMx1");
+		    	CEMx2 = params.getBoolean ("CEMx2");
+	
+		    	/*
+		    	 * Bonus: helper : converter for course code(a better name show to user)
+		    	 * Sem1 true : give result of fall sem!!
+		    	 * 
+		    	 * Instruction:
+		    	 * 		for (year 1 fall to next sem):
+		    	 * 			for (course 1 to course n of SEM):
+		    	 * 				if (a course should have studied but not studied):
+		    	 * 					if (prerequisite ok(pre_check) && next sem open(check_next)):
+		    	 * 						put to List<String> required
+		    	 * 					else:
+		    	 * 						dun put it
+		    	 * 
+		    	 * 		for (next next sem to year 3 spring):
+		    	 * 			for (course 1 to course n of SEM):
+		    	 * 				if (the course not yet studied):
+		    	 * 					if (prerequisite ok && next sem open):
+		    	 * 						put to List<String> suggested
+		    	 * 					else:
+		    	 * 						dun put it
+		    	 */
+	
+		    	   
+		    	String[] Course = params.getStringArray("Course"); 
+		    	String[] Checked = params.getStringArray ("Checked");
+		        
+		        /*Toast.makeText(view.getContext(),
+		                [1].toString(),
+		                Toast.LENGTH_SHORT).show();*/
+		    	
+		    	studied = new ArrayList<String>();
+		    	notstudied = new ArrayList<String>();
 
-	    	for (int i = 0; i< Course.length; i++){					//catagorize
-	    		if (Checked[i].equals("true"))
-	    			studied.add(Course[i]);
-	    		else
-	    			notstudied.add(Course[i]);
-	    		
-	    	}
+		    	for (int i = 0; i< Course.length; i++){					//catagorize
+		    		if (Checked[i].equals("true"))
+		    			studied.add(Course[i]);
+		    		else
+		    			notstudied.add(Course[i]);
+		    		
+		    		SaveRecord(this.findViewById(android.R.id.content));		//insert data to database
 
+		    	}
+	
+		    }
+     	}
+	 
+    	Credneed = 90 - Integer.parseInt(Credit);
 
-	    	
+     	
+    	if (Year1) Year = 1;
+    	else if  (Year2) Year = 2;
+    	else Year = 3;
+    	
+		if (Major1) major = "COMP";
+    	else major = "CPEG";
+	    
+	    
+    	
+    	List<String> required = find_reqcourse(Year, (Sem1?"Fall":"Spring"));		//find the required course
+    	ArrayAdapter<String> adapter;
+		adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1);
+		for (String i : required)				//put course code to adapter for listview
+			adapter.add(i + "(" + getCredit(i) + ")" + "\n" + getName(i));
+		listView1.setAdapter(adapter);
+		
 
-	    	/*
-	    	 * Bonus: helper : converter for course code(a better name show to user)
-	    	 * Sem1 true : give result of fall sem!!
-	    	 * 
-	    	 * Instruction:
-	    	 * 		for (year 1 fall to next sem):
-	    	 * 			for (course 1 to course n of SEM):
-	    	 * 				if (a course should have studied but not studied):
-	    	 * 					if (prerequisite ok(pre_check) && next sem open(check_next)):
-	    	 * 						put to List<String> required
-	    	 * 					else:
-	    	 * 						dun put it
-	    	 * 
-	    	 * 		for (next next sem to year 3 spring):
-	    	 * 			for (course 1 to course n of SEM):
-	    	 * 				if (the course not yet studied):
-	    	 * 					if (prerequisite ok && next sem open):
-	    	 * 						put to List<String> suggested
-	    	 * 					else:
-	    	 * 						dun put it
-	    	 */
-
-
-	    	SaveRecord(this.findViewById(android.R.id.content));		//insert data to database
-	    	
-	    	List<String> required = find_reqcourse(Year, (Sem1?"Fall":"Spring"));		//find the required course
-	    	ArrayAdapter<String> adapter;
-			adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1);
-			for (String i : required)				//put course code to adapter for listview
-				adapter.add(i + "(" + getCredit(i) + ")" + "\n" + getName(i));
-    		listView1.setAdapter(adapter);
-	    }
 	    
 
 	    		if (Sem1)
@@ -311,7 +314,7 @@ public class Advanced_Activity2 extends Activity {
 	    			Cursor testdata;
 	    			String code;
 	    			for (int yearloop = 1; yearloop < year; yearloop++){
-		    			sql ="SELECT Course.Code from Course, COMP WHERE Course.Code = COMP.Code AND (Pure='All' OR Pure='" + pure + "') AND Year='" + Integer.toString(yearloop) + "' AND Sem='Fall' AND FALL='TRUE' AND COMP.Code NOT IN (SELECT Code FROM Studied)"; 
+		    			sql ="SELECT Course.Code from Course, " + major + " WHERE Course.Code = " + major + ".Code AND (Pure='All' OR Pure='" + pure + "') AND Year='" + Integer.toString(yearloop) + "' AND Sem='Fall' AND FALL='TRUE' AND " + major +".Code NOT IN (SELECT Code FROM Studied)"; 
 		    			testdata = mDbHelper.getTestData(sql); 
 		    			code = DataBaseUtility1.GetColumnValue(testdata, "Code");
 			    		if (!code.equals(""))								//meaning no result
@@ -322,7 +325,7 @@ public class Advanced_Activity2 extends Activity {
 			    			}
 		    			
 		    			
-		    			sql ="SELECT Course.Code from Course, COMP WHERE Course.Code = COMP.Code AND (Pure='All' OR Pure='" + pure + "') AND  Year='" + Integer.toString(yearloop) + "' AND Sem='Spring' AND FALL='TRUE' AND COMP.Code NOT IN (SELECT Code FROM Studied)"; 
+		    			sql ="SELECT Course.Code from Course, "+major+" WHERE Course.Code = "+major+".Code AND (Pure='All' OR Pure='" + pure + "') AND  Year='" + Integer.toString(yearloop) + "' AND Sem='Spring' AND FALL='TRUE' AND "+major+".Code NOT IN (SELECT Code FROM Studied)"; 
 		    			testdata = mDbHelper.getTestData(sql); 
 		    			code = DataBaseUtility1.GetColumnValue(testdata, "Code");
 			    		if (!code.equals(""))								//meaning no result
@@ -333,7 +336,7 @@ public class Advanced_Activity2 extends Activity {
 			   			}
 		    		}
 		    		
-	    			sql ="SELECT Course.Code from Course, COMP WHERE Course.Code = COMP.Code AND (Pure='All' OR Pure='" + pure + "') AND  Year='" + year + "' AND Sem='Fall'  AND FALL='TRUE' AND Course.Code NOT IN (SELECT Code FROM Studied)"; 
+	    			sql ="SELECT Course.Code from Course, "+major+" WHERE Course.Code = "+major+".Code AND (Pure='All' OR Pure='" + pure + "') AND  Year='" + year + "' AND Sem='Fall'  AND FALL='TRUE' AND Course.Code NOT IN (SELECT Code FROM Studied)"; 
 	    			testdata = mDbHelper.getTestData(sql); 
 	    			code = DataBaseUtility1.GetColumnValue(testdata, "Code");
 		    		if (!code.equals(""))								//meaning no result
@@ -352,7 +355,7 @@ public class Advanced_Activity2 extends Activity {
 	    			Cursor testdata;
 	    			String code;
 	    			for (int yearloop = 1; yearloop <= year ; yearloop++){
-		    			sql ="SELECT Course.Code from Course, COMP WHERE Course.Code = COMP.Code AND (Pure='All' OR Pure='" + pure + "') AND  Year='" + Integer.toString(yearloop) + "' AND Sem='Fall' AND SPRING='TRUE' AND COMP.Code NOT IN (SELECT Code FROM Studied)"; 
+		    			sql ="SELECT Course.Code from Course, "+major+" WHERE Course.Code = "+major+".Code AND (Pure='All' OR Pure='" + pure + "') AND  Year='" + Integer.toString(yearloop) + "' AND Sem='Fall' AND SPRING='TRUE' AND "+major+".Code NOT IN (SELECT Code FROM Studied)"; 
 		    			testdata = mDbHelper.getTestData(sql); 
 	    				code = DataBaseUtility1.GetColumnValue(testdata, "Code");
 			    		if (!code.equals(""))								//meaning no result
@@ -362,7 +365,7 @@ public class Advanced_Activity2 extends Activity {
 			    			reqcourse.add(code);
 			    		}
 		    			
-		    			sql ="SELECT Course.Code from Course, COMP WHERE Course.Code = COMP.Code AND (Pure='All' OR Pure='" + pure + "') AND  Year='" + Integer.toString(yearloop) + "' AND Sem='Spring' AND SPRING='TRUE' AND COMP.Code NOT IN (SELECT Code FROM Studied)"; 
+		    			sql ="SELECT Course.Code from Course, "+major+" WHERE Course.Code = "+major+".Code AND (Pure='All' OR Pure='" + pure + "') AND  Year='" + Integer.toString(yearloop) + "' AND Sem='Spring' AND SPRING='TRUE' AND "+major+".Code NOT IN (SELECT Code FROM Studied)"; 
 		    			testdata = mDbHelper.getTestData(sql); 
 		    			code = DataBaseUtility1.GetColumnValue(testdata, "Code");
 		    			if (!code.equals(""))
@@ -413,7 +416,7 @@ public class Advanced_Activity2 extends Activity {
     			String code;
     			
 	    		
-    			sql ="SELECT Course.Code from Course, COMP WHERE Course.Code = COMP.Code AND (Pure='All' OR Pure='" + pure + "') AND  Year='" + year + "' AND Sem='Spring'  AND FALL='TRUE' AND Course.Code NOT IN (SELECT Code FROM Studied)"; 
+    			sql ="SELECT Course.Code from Course, "+major+" WHERE Course.Code = "+major+".Code AND (Pure='All' OR Pure='" + pure + "') AND  Year='" + year + "' AND Sem='Spring'  AND FALL='TRUE' AND Course.Code NOT IN (SELECT Code FROM Studied)"; 
     			testdata = mDbHelper.getTestData(sql); 
     			code = DataBaseUtility1.GetColumnValue(testdata, "Code");
 	    		if (!code.equals(""))								//meaning no result
@@ -425,7 +428,7 @@ public class Advanced_Activity2 extends Activity {
     			}
     			
     			for (int yearloop = year+1; yearloop <= 3; yearloop++){
-	    			sql ="SELECT Course.Code from Course, COMP WHERE Course.Code = COMP.Code AND (Pure='All' OR Pure='" + pure + "') AND Year='" + Integer.toString(yearloop) + "' AND Sem='Fall' AND FALL='TRUE' AND COMP.Code NOT IN (SELECT Code FROM Studied)"; 
+	    			sql ="SELECT Course.Code from Course, "+major+" WHERE Course.Code = "+major+".Code AND (Pure='All' OR Pure='" + pure + "') AND Year='" + Integer.toString(yearloop) + "' AND Sem='Fall' AND FALL='TRUE' AND "+major+".Code NOT IN (SELECT Code FROM Studied)"; 
 	    			testdata = mDbHelper.getTestData(sql); 
 	    			code = DataBaseUtility1.GetColumnValue(testdata, "Code");
 		    		if (!code.equals(""))								//meaning no result
@@ -436,7 +439,7 @@ public class Advanced_Activity2 extends Activity {
 		    			}
 	    			
 	    			
-	    			sql ="SELECT Course.Code from Course, COMP WHERE Course.Code = COMP.Code AND (Pure='All' OR Pure='" + pure + "') AND  Year='" + Integer.toString(yearloop) + "' AND Sem='Spring' AND FALL='TRUE' AND COMP.Code NOT IN (SELECT Code FROM Studied)"; 
+	    			sql ="SELECT Course.Code from Course, "+major+" WHERE Course.Code = "+major+".Code AND (Pure='All' OR Pure='" + pure + "') AND  Year='" + Integer.toString(yearloop) + "' AND Sem='Spring' AND FALL='TRUE' AND "+major+".Code NOT IN (SELECT Code FROM Studied)"; 
 	    			testdata = mDbHelper.getTestData(sql); 
 	    			code = DataBaseUtility1.GetColumnValue(testdata, "Code");
 		    		if (!code.equals(""))								//meaning no result
@@ -456,7 +459,7 @@ public class Advanced_Activity2 extends Activity {
     			Cursor testdata;
     			String code;
     			for (int yearloop = year+1; yearloop <= 3 ; yearloop++){
-	    			sql ="SELECT Course.Code from Course, COMP WHERE Course.Code = COMP.Code AND (Pure='All' OR Pure='" + pure + "') AND  Year='" + Integer.toString(yearloop) + "' AND Sem='Fall' AND SPRING='TRUE' AND COMP.Code NOT IN (SELECT Code FROM Studied)"; 
+	    			sql ="SELECT Course.Code from Course, "+major+" WHERE Course.Code = "+major+".Code AND (Pure='All' OR Pure='" + pure + "') AND  Year='" + Integer.toString(yearloop) + "' AND Sem='Fall' AND SPRING='TRUE' AND "+major+".Code NOT IN (SELECT Code FROM Studied)"; 
 	    			testdata = mDbHelper.getTestData(sql); 
     				code = DataBaseUtility1.GetColumnValue(testdata, "Code");
 		    		if (!code.equals(""))								//meaning no result
@@ -466,7 +469,7 @@ public class Advanced_Activity2 extends Activity {
 		    			addcourse.add(code);
 		    		}
 	    			
-	    			sql ="SELECT Course.Code from Course, COMP WHERE Course.Code = COMP.Code AND (Pure='All' OR Pure='" + pure + "') AND  Year='" + Integer.toString(yearloop) + "' AND Sem='Spring' AND SPRING='TRUE' AND COMP.Code NOT IN (SELECT Code FROM Studied)"; 
+	    			sql ="SELECT Course.Code from Course, "+major+" WHERE Course.Code = "+major+".Code AND (Pure='All' OR Pure='" + pure + "') AND  Year='" + Integer.toString(yearloop) + "' AND Sem='Spring' AND SPRING='TRUE' AND "+major+".Code NOT IN (SELECT Code FROM Studied)"; 
 	    			testdata = mDbHelper.getTestData(sql); 
 	    			code = DataBaseUtility1.GetColumnValue(testdata, "Code");
 	    			if (!code.equals(""))
@@ -542,6 +545,32 @@ public class Advanced_Activity2 extends Activity {
     	public void setToastshown(Boolean toastshown) {
     		this.toastshown = toastshown;
     	}
+    	
+    	public boolean onCreateOptionsMenu(Menu menu)
+    	{
+    	   getMenuInflater().inflate(R.menu.menu, menu);
+    	   return true;
+    	}
+    	
+    	public boolean onOptionsItemSelected(MenuItem item) {
+    	    // Handle presses on the action bar items
+    	    switch (item.getItemId()) {
+    	        case R.id.menu_delete:
+    		    	ResetTable("Studied");
+    		    	ResetTable("NotStudied");
+    		    	
+                 	xadvanced.edit().putBoolean("advanced", false).commit();
+
+    	         	Intent intent = new Intent();
+    	            intent.setClass(this, Advanced_Activity.class);
+    	            startActivity(intent);  
+    	            finish();
+
+    		    	 return true;
+    	        default:
+    	            return super.onOptionsItemSelected(item);
+    	    }
+    	}
         
         
 	TextView textView1;
@@ -582,9 +611,9 @@ public class Advanced_Activity2 extends Activity {
 	int Credneed; 
 	int Year;
 	int SemtoGrad;
+	String major;
 	String pure;
     Boolean toastshown = false;
-
-	
-	
+    
+    SharedPreferences xadvanced	;
 }

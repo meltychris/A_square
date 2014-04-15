@@ -9,6 +9,7 @@ import android.widget.Button;
 import com.example.asquare.R;
 import com.example.gpa_calculator.GPAactivity2;
 import com.example.gpa_calculator.MainActivity;
+import com.example.gpa_calculator.print_course_record;
 
 
 //1.Change the things inside <XXXX>
@@ -26,7 +27,7 @@ public class MainActivity_Test extends ActivityInstrumentationTestCase2<MainActi
 	protected void setUp() throws Exception {
 		super.setUp();
 		mActivity = getActivity();  
-		button1 = (Button)mActivity.findViewById(R.id.button1);
+		ButtonGPAmain1 = (Button)mActivity.findViewById(R.id.ButtonGPAmain1);
 
 	}
 	
@@ -44,23 +45,24 @@ public class MainActivity_Test extends ActivityInstrumentationTestCase2<MainActi
 	 } 
 
 	@SmallTest
-	 public void testbutton1() { 
-		  ActivityMonitor activityMonitor = getInstrumentation().addMonitor(GPAactivity2.class.getName(), null, false);
+	 public void testButtonGPAmain1() { 
+		  ActivityMonitor activityMonitor = getInstrumentation().addMonitor(print_course_record.class.getName(), null, false);
 
 		 //INTERACTIONS 
 		  mActivity.runOnUiThread(new Runnable() {
 			    @Override
 			    public void run() {
 			      // click button and open next activity.
-			      button1.performClick();
+			    	ButtonGPAmain1.performClick();
 			    }
 			  });	
 		  
 		 //CHECK THE RESULT
-		  GPAactivity2 nextActivity = (GPAactivity2) getInstrumentation().waitForMonitorWithTimeout(activityMonitor, 10000);
+		  print_course_record nextActivity = (print_course_record) getInstrumentation().waitForMonitorWithTimeout(activityMonitor, 10000);
 		  assertNotNull(nextActivity);
 		  nextActivity.finish();
 
 	 }
-	Button button1;
+	Button ButtonGPAmain1;
+	
 }

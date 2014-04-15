@@ -115,60 +115,7 @@ public class MainActivity_Test extends ActivityInstrumentationTestCase2<MainActi
 		  nextActivity.finish();
 
 	 }
-	
-	@SmallTest 
-	 public void testbutton4() { 
-		ActivityMonitor activityMonitor = getInstrumentation().addMonitor(MainActivity.class.getName(), null, false);
 
-		 //INTERACTIONS
-		  mActivity.runOnUiThread(new Runnable() {
-			    @Override
-			    public void run() {
-			      // click button and open next activity.
-			      button4.performClick();
-			    }
-			  });	
-		  
-		 //CHECK THE RESULT 
-		 
-
-	 }
-	
-	@SmallTest  
-	 public void testbutton5() { 
-		ActivityMonitor activityMonitor = getInstrumentation().addMonitor(MainActivity.class.getName(), null, false);
-
-		 //INTERACTIONS
-		  mActivity.runOnUiThread(new Runnable() {
-			    @Override
-			    public void run() {
-			      // click button and open next activity.
-			      button5.performClick();
-			    }
-			  });	
-		  
-		 //CHECK THE RESULT
-		
-
-	 }
-	
-	@SmallTest 
-	 public void testbutton6() { 
-		ActivityMonitor activityMonitor = getInstrumentation().addMonitor(MainActivity.class.getName(), null, false);
-
-		 //INTERACTIONS
-		  mActivity.runOnUiThread(new Runnable() {
-			    @Override
-			    public void run() {
-			      // click button and open next activity.
-			      button6.performClick();
-			    }
-			  });	
-		  
-		 //CHECK THE RESULT
-
-
-	 }
 	
 	@SmallTest 
 	 public void testonkeydown() { 
