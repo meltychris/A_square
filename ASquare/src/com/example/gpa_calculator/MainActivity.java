@@ -14,25 +14,71 @@ public class MainActivity extends Activity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.personalinfo1);
+		setContentView(R.layout.gpa_main);
 		
-		button1 = (Button)findViewById(R.id.button1);
+		ButtonGPAmain1 = (Button)findViewById(R.id.ButtonGPAmain1);
+		ButtonGPAmain2 = (Button)findViewById(R.id.ButtonGPAmain2);
+		ButtonGPAmain3 = (Button)findViewById(R.id.ButtonGPAmain3);
 		
-		  button1.setOnClickListener(new View.OnClickListener() {
+		
+		ButtonGPAmain1.setOnClickListener(new View.OnClickListener() {
 
 	            @Override
 	            public void onClick(View view) {
 	            	
 	                //count = listView.getAdapter().getCount();
 	            	Intent intent = new Intent();
-	            	intent.setClass(MainActivity.this, GPAactivity2.class);
+	            	intent.setClass(MainActivity.this, print_course_record.class);
 	                startActivity(intent);
 	                
 
 
 	            }
+	            
+	     
+	            
 	        });
-	}
+		
+		ButtonGPAmain2.setOnClickListener(new View.OnClickListener() {
 
-	private Button button1;
+            @Override
+            public void onClick(View view) {
+            	
+                //count = listView.getAdapter().getCount();
+            	Intent intent = new Intent();
+            	intent.setClass(MainActivity.this, advice.class);
+                startActivity(intent);
+                
+
+
+            }
+            
+     
+            
+        });
+		
+		ButtonGPAmain3.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View view) {
+            	
+                //count = listView.getAdapter().getCount();
+            	Intent intent = new Intent();
+            	intent.setClass(MainActivity.this, add_course_record.class);
+                startActivity(intent);
+                
+
+
+            }
+            
+     
+            
+        });
+	}
+	
+	
+
+	private Button ButtonGPAmain1;
+	private Button ButtonGPAmain2;
+	private Button ButtonGPAmain3;
 }
