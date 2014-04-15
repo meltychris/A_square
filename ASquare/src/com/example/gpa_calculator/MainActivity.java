@@ -78,7 +78,7 @@ public class MainActivity extends Activity {
 	
 	
 
-	private Button ButtonGPAmain1;
-	private Button ButtonGPAmain2;
-	private Button ButtonGPAmain3;
+	Button ButtonGPAmain1;
+	Button ButtonGPAmain2;
+	Button ButtonGPAmain3;
 }

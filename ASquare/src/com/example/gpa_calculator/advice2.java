@@ -30,6 +30,6 @@ public class advice2 extends Activity {
 	
 	
 	
-	 private Button buttonGPAadvice2_1; 
+	 Button buttonGPAadvice2_1; 
 	 TextView textViewGPAadvice2_3;
 }
