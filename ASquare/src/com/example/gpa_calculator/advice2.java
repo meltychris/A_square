@@ -1,5 +1,5 @@
 package com.example.gpa_calculator;
 
-public class advice {
+public class advice2 {
 
 }

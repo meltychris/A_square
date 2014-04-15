@@ -46,7 +46,7 @@ public class MainActivity extends Activity {
             	
                 //count = listView.getAdapter().getCount();
             	Intent intent = new Intent();
-            	intent.setClass(MainActivity.this, advice.class);
+            	intent.setClass(MainActivity.this, advice1.class);
                 startActivity(intent);
                 
 
