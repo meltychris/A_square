@@ -11,6 +11,7 @@
         android:layout_height="wrap_content"
         android:layout_weight="0.00" >
 
+        
         <TextView
             android:id="@+id/textViewGPAmain1"
             android:layout_width="match_parent"
