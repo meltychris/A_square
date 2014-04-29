@@ -28,7 +28,7 @@ public class Advanced_Activity2_Test extends ActivityInstrumentationTestCase2<Ad
 		super(Advanced_Activity2.class);
 
 	}
-	/*
+	
 	@Override
 	protected void setUp() throws Exception {
 		super.setUp();
@@ -102,7 +102,7 @@ public class Advanced_Activity2_Test extends ActivityInstrumentationTestCase2<Ad
 			    }
 			  });	
 		  ActivityMonitor activityMonitor = getInstrumentation().addMonitor(Advanced_Activity2.class.getName(), null, false);
-		  getInstrumentation().waitForMonitorWithTimeout(activityMonitor, 5000);
+		  getInstrumentation().waitForMonitorWithTimeout(activityMonitor, 20000);
 		  
 		//CHECK THE RESULT
 
@@ -126,7 +126,7 @@ public class Advanced_Activity2_Test extends ActivityInstrumentationTestCase2<Ad
 			    }
 			  });	
 		  ActivityMonitor activityMonitor = getInstrumentation().addMonitor(Advanced_Activity2.class.getName(), null, false);
-		  getInstrumentation().waitForMonitorWithTimeout(activityMonitor, 5000);
+		  getInstrumentation().waitForMonitorWithTimeout(activityMonitor, 20000);
 		  
 		//CHECK THE RESULT
 
@@ -148,7 +148,7 @@ public class Advanced_Activity2_Test extends ActivityInstrumentationTestCase2<Ad
 			    }
 			  });	
 		  ActivityMonitor activityMonitor = getInstrumentation().addMonitor(Advanced_Activity2.class.getName(), null, false);
-		  getInstrumentation().waitForMonitorWithTimeout(activityMonitor, 5000);
+		  getInstrumentation().waitForMonitorWithTimeout(activityMonitor, 20000);
 		  
 
 		//INTERACTIONS
@@ -159,11 +159,11 @@ public class Advanced_Activity2_Test extends ActivityInstrumentationTestCase2<Ad
 			    	listView1.performItemClick(
 			    		    listView1.getAdapter().getView(0, null, null), 0, 0);				    }
 			  });	
-		  getInstrumentation().waitForMonitorWithTimeout(activityMonitor, 5000);
+		  getInstrumentation().waitForMonitorWithTimeout(activityMonitor, 20000);
 		  
 		//CHECK THE RESULT
 		assertTrue(mActivity.getToastshown());	
 
-	 }*/
+	 }
 
 }

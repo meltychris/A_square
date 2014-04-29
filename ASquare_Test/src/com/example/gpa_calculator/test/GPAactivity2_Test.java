@@ -57,7 +57,7 @@ public class GPAactivity2_Test extends ActivityInstrumentationTestCase2<GPAactiv
 			  });	
 		  
 		 //CHECK THE RESULT
-		  GPAactivity3 nextActivity = (GPAactivity3) getInstrumentation().waitForMonitorWithTimeout(activityMonitor, 10000);
+		  GPAactivity3 nextActivity = (GPAactivity3) getInstrumentation().waitForMonitorWithTimeout(activityMonitor, 20000);
 		  assertNotNull(nextActivity);
 		  nextActivity.finish();
 
