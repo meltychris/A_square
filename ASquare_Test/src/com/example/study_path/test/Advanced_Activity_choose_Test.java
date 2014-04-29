@@ -127,7 +127,7 @@ public class Advanced_Activity_choose_Test extends ActivityInstrumentationTestCa
 			  });	
 		//CHECK THE RESULT
 		  ActivityMonitor activityMonitor2 = getInstrumentation().addMonitor(Advanced_Activity2.class.getName(), null, false);
-		  Advanced_Activity2 nextActivity = (Advanced_Activity2) getInstrumentation().waitForMonitorWithTimeout(activityMonitor2, 10000);
+		  Advanced_Activity2 nextActivity = (Advanced_Activity2) getInstrumentation().waitForMonitorWithTimeout(activityMonitor2, 200000);
 		  assertNotNull(nextActivity);
 		assertTrue(nextActivity.getIntent().hasExtra("Major1"));
      	assertTrue(nextActivity.getIntent().hasExtra("Major2"));
