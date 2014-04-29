@@ -32,7 +32,7 @@ public class Testexam_count_down extends ActivityInstrumentationTestCase2<Exam_c
 	public Testexam_count_down() {
 		super(Exam_countdown.class);
 	}
-	
+/*	
 	protected void setUp() throws Exception {
 		super.setUp();
 	
@@ -210,5 +210,5 @@ public class Testexam_count_down extends ActivityInstrumentationTestCase2<Exam_c
 	public void testother(){
 	      DataBaseUtility2.ShowMessageBox(mActivity, "AA");
 
-	}
+	}*/
 }
