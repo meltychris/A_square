@@ -116,7 +116,7 @@ public class Testexam_count_down extends ActivityInstrumentationTestCase2<Exam_c
 	      
 	 }
 	
-	@SmallTest 
+/*	@SmallTest 
 		 public void testlistView1() { 
 			//Still doing
 		
@@ -137,7 +137,7 @@ public class Testexam_count_down extends ActivityInstrumentationTestCase2<Exam_c
 			 //CHECK THE RESULT 
 		      assertEquals(expectedinput, actualinput);
 	
-		 }
+		 }*/
 
 	
 	
