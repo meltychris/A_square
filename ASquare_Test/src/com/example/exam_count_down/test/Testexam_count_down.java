@@ -75,7 +75,7 @@ public class Testexam_count_down extends ActivityInstrumentationTestCase2<Exam_c
 			    }
 			  });	
 		  ActivityMonitor activityMonitor = getInstrumentation().addMonitor(Exam_countdown.class.getName(), null, false);
-		  getInstrumentation().waitForMonitorWithTimeout(activityMonitor, 20000);
+		  getInstrumentation().waitForMonitorWithTimeout(activityMonitor, 100000);
 		int actualCount = listView1.getAdapter().getCount();
 
 		 //CHECK THE RESULT 
@@ -107,7 +107,7 @@ public class Testexam_count_down extends ActivityInstrumentationTestCase2<Exam_c
 			      button2.performClick();
 			    }
 			  });	
-		  getInstrumentation().waitForMonitorWithTimeout(activityMonitor, 20000);
+		  getInstrumentation().waitForMonitorWithTimeout(activityMonitor, 100000);
 		  int actualCount = listView1.getAdapter().getCount();
 	  
 		 //CHECK THE RESULT 
@@ -130,7 +130,7 @@ public class Testexam_count_down extends ActivityInstrumentationTestCase2<Exam_c
 			    }
 			  });	
 			  ActivityMonitor activityMonitor = getInstrumentation().addMonitor(Exam_countdown.class.getName(), null, false);
-			  getInstrumentation().waitForMonitorWithTimeout(activityMonitor, 20000);
+			  getInstrumentation().waitForMonitorWithTimeout(activityMonitor, 100000);
 			  String expectedinput = "COMP3111\t\t\t\t\t2014/02/30";
 			  String actualinput = listView1.getAdapter().getItem(0).toString();
 		 
@@ -155,7 +155,7 @@ public class Testexam_count_down extends ActivityInstrumentationTestCase2<Exam_c
 			    }
 			  });	
 		  ActivityMonitor activityMonitor = getInstrumentation().addMonitor(Exam_countdown.class.getName(), null, false);
-		  getInstrumentation().waitForMonitorWithTimeout(activityMonitor, 20000);
+		  getInstrumentation().waitForMonitorWithTimeout(activityMonitor, 100000);
 		int expectedCount = 0;
 		int actualCount = listView1.getAdapter().getCount();
 	  
@@ -179,7 +179,7 @@ public class Testexam_count_down extends ActivityInstrumentationTestCase2<Exam_c
 			  });	
 		  
 		  ActivityMonitor activityMonitor = getInstrumentation().addMonitor(Exam_countdown.class.getName(), null, false);
-		  getInstrumentation().waitForMonitorWithTimeout(activityMonitor, 20000);
+		  getInstrumentation().waitForMonitorWithTimeout(activityMonitor, 100000);
 
 		  
 		 //CHECK THE RESULT
@@ -201,7 +201,7 @@ public class Testexam_count_down extends ActivityInstrumentationTestCase2<Exam_c
 			    }
 			  });	
 		  ActivityMonitor activityMonitor = getInstrumentation().addMonitor(Exam_countdown.class.getName(), null, false);
-		  getInstrumentation().waitForMonitorWithTimeout(activityMonitor, 20000);
+		  getInstrumentation().waitForMonitorWithTimeout(activityMonitor, 100000);
 		  assertEquals("2014/01/01",Date.getText().toString());
 
 	 }
