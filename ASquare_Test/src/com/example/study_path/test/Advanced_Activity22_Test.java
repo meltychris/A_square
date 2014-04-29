@@ -102,7 +102,7 @@ public class Advanced_Activity22_Test extends ActivityInstrumentationTestCase2<A
 			    }
 			  });	
 		  ActivityMonitor activityMonitor = getInstrumentation().addMonitor(Advanced_Activity2.class.getName(), null, false);
-		  getInstrumentation().waitForMonitorWithTimeout(activityMonitor, 20000);
+		  getInstrumentation().waitForMonitorWithTimeout(activityMonitor, 200000);
 		  
 		//CHECK THE RESULT
 
@@ -126,7 +126,7 @@ public class Advanced_Activity22_Test extends ActivityInstrumentationTestCase2<A
 			    }
 			  });	
 		  ActivityMonitor activityMonitor = getInstrumentation().addMonitor(Advanced_Activity2.class.getName(), null, false);
-		  getInstrumentation().waitForMonitorWithTimeout(activityMonitor, 20000);
+		  getInstrumentation().waitForMonitorWithTimeout(activityMonitor, 200000);
 		  
 		//CHECK THE RESULT
 
