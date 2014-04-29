@@ -210,5 +210,5 @@ public class Testexam_count_down extends ActivityInstrumentationTestCase2<Exam_c
 	public void testother(){
 	      DataBaseUtility2.ShowMessageBox(mActivity, "AA");
 
-	}*/
+	}
 }
