@@ -85,15 +85,15 @@ public class Exam_countdown extends Activity {
  	        	add_item(Code.getText().toString(), Date.getText().toString());	
  	        	//add to database
  	        	Calendar tmp = Calendar.getInstance();
- 	        	SimpleDateFormat sdf = new SimpleDateFormat("yyyy/MM/dd");
+ 	        	SimpleDateFormat sdf = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
  	        	try {
-					tmp.setTime(sdf.parse(Date.getText().toString()));
+					tmp.setTime(sdf.parse(Date.getText().toString()+" 12:00:00"));
 				} catch (ParseException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
- 	        	long Dateinmillisecond = tmp.MILLISECOND;
- 	        	createScheduledNotification(Dateinmillisecond);
+ 	        	long Dateinmillisecond = tmp.getTimeInMillis();
+ 	        	createScheduledNotification(Dateinmillisecond,Code.getText().toString(), Date.getText().toString());
  	        	
  	        	ArrayAdapter<String> adapter;
  	        	adapter = new ArrayAdapter<String>(Exam_countdown.this, android.R.layout.simple_list_item_1);   
@@ -202,7 +202,7 @@ public class Exam_countdown extends Activity {
     	return list;		
 	}
 	
-	public void createScheduledNotification(long millisecond)
+	public void createScheduledNotification(long millisecond, String Course, String Date)
 	 {
 	 // Get new calendar object and set the date to now
 	 Calendar calendar = Calendar.getInstance();
@@ -216,8 +216,10 @@ public class Exam_countdown extends Activity {
 	 int id = (int) System.currentTimeMillis();
 
 	 // Prepare the intent which should be launched at the date
+	 
 	 Intent intent = new Intent(this, MyBroadcastReceiver.class);
-
+	 intent.putExtra ("Course", Course);
+     intent.putExtra ("Num", Date);
 	 // Prepare the pending intent
 	 PendingIntent pendingIntent = PendingIntent.getBroadcast(getApplicationContext(), id, intent, PendingIntent.FLAG_UPDATE_CURRENT);
 
