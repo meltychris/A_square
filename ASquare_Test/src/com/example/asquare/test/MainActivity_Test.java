@@ -56,7 +56,7 @@ public class MainActivity_Test extends ActivityInstrumentationTestCase2<MainActi
 	
 	@SmallTest 
 	 public void testbutton1() { 
-		  ActivityMonitor activityMonitor = getInstrumentation().addMonitor(com.example.gpa_calculator.MainActivity.class.getName(), null, false);
+		  ActivityMonitor activityMonitor = getInstrumentation().addMonitor(com.example.gpa_calculator.GPAMainActivity.class.getName(), null, false);
 
 		 //INTERACTIONS
 		  mActivity.runOnUiThread(new Runnable() {
@@ -68,7 +68,7 @@ public class MainActivity_Test extends ActivityInstrumentationTestCase2<MainActi
 			  });	
 		  
 		 //CHECK THE RESULT
-		  com.example.gpa_calculator.MainActivity nextActivity = (com.example.gpa_calculator.MainActivity) getInstrumentation().waitForMonitorWithTimeout(activityMonitor, 20000);
+		  com.example.gpa_calculator.GPAMainActivity nextActivity = (com.example.gpa_calculator.GPAMainActivity) getInstrumentation().waitForMonitorWithTimeout(activityMonitor, 20000);
 		  assertNotNull(nextActivity);
 		  nextActivity.finish();
 

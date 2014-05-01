@@ -176,7 +176,7 @@ public class Advanced_Activity2 extends Activity {
 	    		if (Sem1)
 	    			{
 	    				if((Credneed/(2*(3-Year)+1))>=21) textView1.setText("You need to DEFER");
-	    				else textView1.setText("No need defer Graduation");
+	    				else textView1.setText("No need to defer Graduation");
 	    				SemtoGrad= 2*(3-Year)+1;
 	    			}
 	    		else 
@@ -184,7 +184,7 @@ public class Advanced_Activity2 extends Activity {
 	    				if ( (Year==3 && Credneed!=0) || (Year!=3 && Credneed/(2*(3-Year))>=21))
 	    						textView1.setText("NEED to DEFER Graduation");
 	    					else
-		    					textView1.setText("No need defer Graduation");
+		    					textView1.setText("No need to defer Graduation");
 
 		    			SemtoGrad= 2*(3-Year);
 

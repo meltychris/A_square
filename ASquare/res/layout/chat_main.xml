@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.chatroom.MainChat" >
+
+    
+    
+     <LinearLayout
+        android:id="@+id/layout1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        android:orientation="vertical" >
+        
+       <TextView
+           android:id="@+id/TA"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="TA "
+           android:textColor="#0000FF"
+           android:textSize="40sp"
+           android:textStyle="italic" />
+       
+        <View
+	      android:layout_width="match_parent"
+	      android:layout_height="1dp"
+	      android:background="#111111" />
+        
+        </LinearLayout>
+        
+     <LinearLayout
+        android:id="@+id/TALayout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        android:orientation="horizontal" >
+        
+     <LinearLayout
+        android:id="@+id/TANameLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        android:orientation="vertical" >
+        
+	       <TextView
+	           android:id="@+id/Peter"
+	           android:layout_width="wrap_content"
+	           android:layout_height="wrap_content"
+	           android:text="Peter"
+	           android:textColor="#FF0000"
+	           android:textSize="30sp" />
+	       
+	       <TextView
+	            android:id="@+id/Ken"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:text="Ken"
+	            android:textColor="#FF0000"
+	            android:textSize="30sp" />
+	       
+	       <TextView
+	            android:id="@+id/Brian"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:text="Brian"
+	            android:textColor="#FF0000"
+	            android:textSize="30sp" />
+	       
+	       <TextView
+	            android:id="@+id/Mary"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:text="Mary"
+	            android:textColor="#FF0000"
+	            android:textSize="30sp" />
+	       
+
+       </LinearLayout>
+       
+      <View
+	      android:layout_width="30dp"
+	      android:layout_height="match_parent"
+	      android:background="#FFFFFF" />
+     
+        <LinearLayout
+	        android:id="@+id/TAHelpLayout"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:background="#FFFFFF"
+	        android:orientation="vertical" >
+
+             <TextView
+	            android:id="@+id/PeterHelp"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:text="Help"
+	            android:textSize="30sp" />
+	       
+	       <TextView
+	            android:id="@+id/KenHelp"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:text="Help"
+	            android:textSize="30sp" />
+	       
+	       <TextView
+	            android:id="@+id/BrianHelp"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:text="Help"
+	            android:textSize="30sp" />
+	       
+	       <TextView
+	            android:id="@+id/MaryHelp"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:text="Help"
+	            android:textSize="30sp" />
+	       
+
+            
+       
+        
+        </LinearLayout>
+        
+        <View
+	      android:layout_width="30dp"
+	      android:layout_height="match_parent"
+	      android:background="#FFFFFF" />
+     
+        <LinearLayout
+	        android:id="@+id/TAChatLayout"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:background="#FFFFFF"
+	        android:orientation="vertical" >
+
+             <TextView
+	            android:id="@+id/PeterChat"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:text="Chat"
+	            android:textSize="30sp" />
+	       
+	       <TextView
+	            android:id="@+id/KenChat"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:text="Chat"
+	            android:textSize="30sp" />
+	       
+	       <TextView
+	            android:id="@+id/BrianChat"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:text="Chat"
+	            android:textSize="30sp" />
+	       
+	       <TextView
+	            android:id="@+id/MaryChat"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:text="Chat"
+	            android:textSize="30sp" />
+	       
+
+       
+        
+        </LinearLayout>
+        
+        </LinearLayout>
+        
+     
+      
+     <LinearLayout
+        android:id="@+id/layout2"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        android:orientation="vertical" >
+        
+           <View
+	      android:layout_width="match_parent"
+	      android:layout_height="30dp"
+	      android:background="#FFFFFF" />
+         
+       <TextView
+           android:id="@+id/Mentor"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="Mentor "
+           android:textColor="#0000FF"
+           android:textSize="40sp"
+           android:textStyle="italic" />
+       
+        <View
+	      android:layout_width="match_parent"
+	      android:layout_height="1dp"
+	      android:background="#111111" />
+        
+        </LinearLayout>
+          <LinearLayout
+        android:id="@+id/MentorLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        android:orientation="horizontal" >
+        
+     <LinearLayout
+        android:id="@+id/MentorNameLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        android:orientation="vertical" >
+        
+	       <TextView
+	           android:id="@+id/Chris"
+	           android:layout_width="wrap_content"
+	           android:layout_height="wrap_content"
+	           android:text="Chris"
+	           android:textColor="#FF0000"
+	           android:textSize="30sp" />
+	       
+	       <TextView
+	            android:id="@+id/Alan"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:text="Alan"
+	            android:textColor="#FF0000"
+	            android:textSize="30sp" />
+	    
+       
+       </LinearLayout>
+       
+      <View
+	      android:layout_width="30dp"
+	      android:layout_height="match_parent"
+	      android:background="#FFFFFF" />
+     
+        <LinearLayout
+	        android:id="@+id/MentorHelpLayout"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:background="#FFFFFF"
+	        android:orientation="vertical" >
+
+             <TextView
+	            android:id="@+id/ChrisHelp"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:text="Help"
+	            android:textSize="30sp" />
+	       
+	       <TextView
+	            android:id="@+id/AlanHelp"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:text="Help"
+	            android:textSize="30sp" />
+	     
+        
+        </LinearLayout>
+        
+        <View
+	      android:layout_width="30dp"
+	      android:layout_height="match_parent"
+	      android:background="#FFFFFF" />
+     
+        <LinearLayout
+	        android:id="@+id/MentorChatLayout"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:background="#FFFFFF"
+	        android:orientation="vertical" >
+
+             <TextView
+	            android:id="@+id/ChrisChat"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:text="Chat"
+	            android:textSize="30sp" />
+	       
+	       <TextView
+	            android:id="@+id/AlanChat"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:text="Chat"
+	            android:textSize="30sp" />
+	       
+	     
+       
+        
+        </LinearLayout>
+        
+        </LinearLayout>
+    
+</LinearLayout>

@@ -8,44 +8,74 @@
         android:minSdkVersion="10"
         android:targetSdkVersion="19" />
 
-        <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+
     <application
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
-        <activity
-            android:name="com.example.asquare.MainActivity"
-            android:label="@string/app_name"
-            android:screenOrientation="unspecified" >
+        <activity android:name="com.example.login.LoginActivity" 
+            	android:windowSoftInputMode="adjustPan">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity
-            android:name="com.example.gpa_calculator.MainActivity"
+            android:name="com.example.asquare.MainActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="unspecified" >
+        </activity>
+        <activity
+            android:name="com.example.gpa_calculator.GPAMainActivity"
             android:label="GPA Calculator"
             android:screenOrientation="unspecified" >
         </activity>
         <activity
             android:name="com.example.study_path.Study_Path"
             android:label="Study Path"
-            android:windowSoftInputMode="adjustPan" android:screenOrientation="portrait">
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" >
         </activity>
         <activity android:name="com.example.study_path.data" >
         </activity>
-        <activity android:name="com.example.study_path.Advanced_Activity" android:label="Advanced Path" android:screenOrientation="portrait"></activity>
-        <activity android:name="com.example.study_path.Advanced_Activity2" android:label="Advanced Path" android:screenOrientation="portrait"></activity>
-        <activity android:name="com.example.study_path.Advanced_Activity_choose" android:label="Advanced Path" android:screenOrientation="portrait"></activity>
-        <activity android:screenOrientation="portrait" android:label="Exam Count Down" android:name="com.example.exam_count_down.Exam_countdown"></activity>
-                
-                <receiver android:name="com.example.exam_count_down.MyBroadcastReceiver" >
+        <activity
+            android:name="com.example.study_path.Advanced_Activity"
+            android:label="Advanced Path"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.example.study_path.Advanced_Activity2"
+            android:label="Advanced Path"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.example.study_path.Advanced_Activity_choose"
+            android:label="Advanced Path"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.example.exam_count_down.Exam_countdown"
+            android:label="Exam Count Down"
+            android:screenOrientation="portrait" >
+        </activity>
+
+        <receiver android:name="com.example.exam_count_down.MyBroadcastReceiver" >
         </receiver>
-                <activity android:name="com.example.gpa_calculator.GPAactivity2"></activity>
-                <activity android:name="com.example.gpa_calculator.GPAactivity3"></activity>
-                <activity android:name="com.example.gpa_calculator.print_course_record"></activity>
+
+        <activity android:name="com.example.gpa_calculator.GPAactivity2" >
+        </activity>
+        <activity android:name="com.example.gpa_calculator.GPAactivity3" >
+        </activity>
+        <activity android:name="com.example.gpa_calculator.print_course_record" >
+        </activity>
+        <activity android:name="com.example.chatroom.MainChat" >
+        </activity>
+        <activity android:name="com.example.chatroom.ChatHelpActivity"></activity>
+        <activity android:name="com.example.chatroom.ChatroomActivity"></activity>
+        <activity android:name="com.example.chatroom.MentorMain"></activity>
+        
     </application>
 
 </manifest>

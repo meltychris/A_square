@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/whitepic"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="34dp"
+        android:background="#FFFFFF"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/button1"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:background="#FFFFFF"
+            android:text="Chat Room"/>
+        <View
+		    android:layout_width="1dp"
+		    android:layout_height="match_parent"
+		    android:background="#EEEEFF" />
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:background="#FFFFFF"
+            android:text="Information"
+             />
+	
+
+    </LinearLayout>
+    
+       
+       
+     <LinearLayout
+        android:layout_width="match_parent"
+         android:id="@+id/linearLayout4"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+	  	<View
+	      android:id="@+id/View1"
+	      android:layout_width="fill_parent"
+	      android:layout_weight="1"
+	      android:layout_height="3dp"
+	      android:layout_alignParentBottom="true"
+	      android:background="#1188FF" />
+
+	    <View
+	      android:id="@+id/View2"
+		  android:layout_width="fill_parent"
+	      android:layout_weight="1"
+		  android:layout_height="3dp"
+	      android:layout_alignParentBottom="true"
+	      android:background="#1188FF" />
+
+	 </LinearLayout>
+
+	<View
+	      android:layout_width="match_parent"
+	      android:layout_height="1dp"
+	      android:layout_alignParentBottom="true"
+	      android:background="#111111" />
+	
+<RelativeLayout 
+    android:id="@+id/RelativeLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".Msgbox" >
+
+
+    <EditText
+        android:id="@+id/msg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/Send"
+        android:layout_alignLeft="@+id/msgbraod"
+        android:layout_alignParentBottom="true"
+        android:ems="10"
+        android:inputType="textMultiLine" >
+
+        <requestFocus />
+    </EditText>
+
+    <Button
+        android:id="@+id/Send"
+        style="?android:borderlessButtonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:text="Send" />
+
+    <ListView
+        android:id="@+id/msgbraod"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/Send"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:divider="#222222"
+        android:dividerHeight="1px"
+        android:stackFromBottom="true" >
+
+    </ListView>
+
+</RelativeLayout>
+</LinearLayout>

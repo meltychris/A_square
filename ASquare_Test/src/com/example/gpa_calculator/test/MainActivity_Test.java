@@ -8,19 +8,19 @@ import android.widget.Button;
 
 import com.example.asquare.R;
 import com.example.gpa_calculator.GPAactivity2;
-import com.example.gpa_calculator.MainActivity;
+import com.example.gpa_calculator.GPAMainActivity;
 import com.example.gpa_calculator.print_course_record;
 
 
 //1.Change the things inside <XXXX>
-public class MainActivity_Test extends ActivityInstrumentationTestCase2<MainActivity> {
+public class MainActivity_Test extends ActivityInstrumentationTestCase2<GPAMainActivity> {
 
 	//2.Change MainActivity
-	private MainActivity mActivity;
+	private GPAMainActivity mActivity;
 
 	//3.Change MainActivity
 	public MainActivity_Test() {
-		super(MainActivity.class);
+		super(GPAMainActivity.class);
 	}
 	
 	@Override

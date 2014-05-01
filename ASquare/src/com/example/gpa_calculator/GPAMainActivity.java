@@ -9,7 +9,7 @@ import android.content.Intent;
 import android.view.View;
 import android.widget.Button;
 
-public class MainActivity extends Activity {
+public class GPAMainActivity extends Activity {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -28,7 +28,7 @@ public class MainActivity extends Activity {
 	            	
 	                //count = listView.getAdapter().getCount();
 	            	Intent intent = new Intent();
-	            	intent.setClass(MainActivity.this, print_course_record.class);
+	            	intent.setClass(GPAMainActivity.this, print_course_record.class);
 	                startActivity(intent);
 	                
 
@@ -46,7 +46,7 @@ public class MainActivity extends Activity {
             	
                 //count = listView.getAdapter().getCount();
             	Intent intent = new Intent();
-            	intent.setClass(MainActivity.this, advice1.class);
+            	intent.setClass(GPAMainActivity.this, advice1.class);
                 startActivity(intent);
                 
 
@@ -64,7 +64,7 @@ public class MainActivity extends Activity {
             	
                 //count = listView.getAdapter().getCount();
             	Intent intent = new Intent();
-            	intent.setClass(MainActivity.this, add_course_record.class);
+            	intent.setClass(GPAMainActivity.this, add_course_record.class);
                 startActivity(intent);
                 
 

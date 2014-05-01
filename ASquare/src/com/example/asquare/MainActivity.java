@@ -1,6 +1,8 @@
 package com.example.asquare;
 //don't change the MainActivity and the layout of main !!
 
+import com.example.chatroom.MainChat;
+import com.example.chatroom.MentorMain;
 import com.example.exam_count_down.Exam_countdown;
 import com.example.study_path.Study_Path;
 
@@ -9,6 +11,7 @@ import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.View;
@@ -27,7 +30,7 @@ public class MainActivity extends Activity {
             public void onClick(View v) {
                 // TODO Auto-generated method stub
             	Intent intent = new Intent();
-                intent.setClass(MainActivity.this, com.example.gpa_calculator.MainActivity.class);
+                intent.setClass(MainActivity.this, com.example.gpa_calculator.GPAMainActivity.class);
                 startActivity(intent);
                
         }});
@@ -51,6 +54,32 @@ public class MainActivity extends Activity {
             	Intent intent = new Intent();
                 intent.setClass(MainActivity.this, Exam_countdown.class);
                 startActivity(intent);
+               
+        }});
+        
+        button5 = (ImageButton)findViewById(R.id.imageButton5);
+        button5.setOnClickListener(new ImageButton.OnClickListener(){ 
+            @Override
+            public void onClick(View v) {
+                // TODO Auto-generated method stub
+             	SharedPreferences user = getSharedPreferences("user", 0);
+             	String usertype;
+            	Intent intent = new Intent();
+            	Bundle params = getIntent().getExtras();
+            	
+            	if (params!= null) {
+            		usertype = params.getString ("type");
+             	  
+	             	if (usertype.equals("student")){
+		                intent.setClass(MainActivity.this, MainChat.class);
+		                startActivity(intent);
+	             	}
+	             	else
+	             	{
+		                intent.setClass(MainActivity.this, MentorMain.class);
+		                startActivity(intent);
+	             	}
+            	}
                
         }});
    
