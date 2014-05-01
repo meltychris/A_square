@@ -34,7 +34,7 @@ public class MyBroadcastReceiver extends BroadcastReceiver {
 	     .build();
 
 		notification.number = 5;
-
+		
 		noMgr.notify(1, notification);
 
 	}

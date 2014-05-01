@@ -1,23 +1,27 @@
 package com.example.exam_count_down;
 
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
 import java.util.Random;
 
-import com.example.asquare.R;
 import android.app.Activity;
 import android.app.AlarmManager;
 import android.app.PendingIntent;
 import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
+
+import com.example.asquare.MainActivity;
+import com.example.asquare.R;
 
 
 
@@ -31,7 +35,7 @@ public class Exam_countdown extends Activity {
 	    super.onCreate(savedInstanceState);
 		setContentView(R.layout.exam_main);
 		
-
+	//	createScheduledNotification(1);
 
 		
 	    // TODO Auto-generated method stub
@@ -57,7 +61,7 @@ public class Exam_countdown extends Activity {
 
 		//notification bar
         int j = testing.nextInt();
-        if (!data.isEmpty()){
+ /*       if (!data.isEmpty()){
 	        for (int i = 0; i< data.size(); i++){
 				Intent intent = new Intent(this,MyBroadcastReceiver.class);
 		        intent.putExtra ("Course", data.get(i));
@@ -71,15 +75,26 @@ public class Exam_countdown extends Activity {
 				
 				
 	        }
-        }
+        }*/
 		 
         
 		 button1.setOnClickListener(new Button.OnClickListener(){ 
  	        @Override
  	        public void onClick(View v) {
  	            // TODO Auto-generated method stub
- 	        	add_item(Code.getText().toString(), Date.getText().toString());				//add to database
-
+ 	        	add_item(Code.getText().toString(), Date.getText().toString());	
+ 	        	//add to database
+ 	        	Calendar tmp = Calendar.getInstance();
+ 	        	SimpleDateFormat sdf = new SimpleDateFormat("yyyy/MM/dd");
+ 	        	try {
+					tmp.setTime(sdf.parse(Date.getText().toString()));
+				} catch (ParseException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+ 	        	long Dateinmillisecond = tmp.MILLISECOND;
+ 	        	createScheduledNotification(Dateinmillisecond);
+ 	        	
  	        	ArrayAdapter<String> adapter;
  	        	adapter = new ArrayAdapter<String>(Exam_countdown.this, android.R.layout.simple_list_item_1);   
  	        	List<String> data = new ArrayList<String>();
@@ -187,6 +202,31 @@ public class Exam_countdown extends Activity {
     	return list;		
 	}
 	
+	public void createScheduledNotification(long millisecond)
+	 {
+	 // Get new calendar object and set the date to now
+	 Calendar calendar = Calendar.getInstance();
+	 calendar.setTimeInMillis(System.currentTimeMillis());
+	 // Add defined amount of days to the date
+	 //calendar.add(Calendar.MILLISECOND, millisecond);
+
+	 // Retrieve alarm manager from the system
+	 AlarmManager alarmManager = (AlarmManager) getApplicationContext().getSystemService(getBaseContext().ALARM_SERVICE);
+	 // Every scheduled intent needs a different ID, else it is just executed once
+	 int id = (int) System.currentTimeMillis();
+
+	 // Prepare the intent which should be launched at the date
+	 Intent intent = new Intent(this, MyBroadcastReceiver.class);
+
+	 // Prepare the pending intent
+	 PendingIntent pendingIntent = PendingIntent.getBroadcast(getApplicationContext(), id, intent, PendingIntent.FLAG_UPDATE_CURRENT);
+
+	 // Register the alert in the system. You have the option to define if the device has to wake up on the alert or not
+	 alarmManager.set(AlarmManager.RTC_WAKEUP, millisecond, pendingIntent);
+
+	 
+	 }
+
 
 	
 

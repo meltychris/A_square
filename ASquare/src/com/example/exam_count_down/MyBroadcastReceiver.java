@@ -1,16 +1,20 @@
 package com.example.exam_count_down;
 
 
-import com.example.asquare.R;
+import java.util.Calendar;
 
+import android.app.AlarmManager;
 import android.app.Notification;
 import android.app.NotificationManager;
+import android.app.PendingIntent;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Vibrator;
 import android.widget.Toast;
+
+import com.example.asquare.R;
 
 
 public class MyBroadcastReceiver extends BroadcastReceiver {
@@ -40,8 +44,6 @@ public class MyBroadcastReceiver extends BroadcastReceiver {
 			
 		noMgr.notify(Num , notification);
 
-
-
-	}
+		 }
 
 }
