@@ -97,6 +97,7 @@ public class Testexam_count_down extends ActivityInstrumentationTestCase2<Exam_c
 		  ActivityMonitor activityMonitor = getInstrumentation().addMonitor(Exam_countdown.class.getName(), null, false);
 		  getInstrumentation().waitForMonitorWithTimeout(activityMonitor, 5000);
 		  
+		   mActivity.runOnUiThread(new Runnable() {
 		   @Override
 		    	public void run() {
 		
@@ -117,7 +118,8 @@ public class Testexam_count_down extends ActivityInstrumentationTestCase2<Exam_c
 			    }
 			  });
 			  	  getInstrumentation().waitForMonitorWithTimeout(activityMonitor, 5000);
-			  
+			  	  
+		mActivity.runOnUiThread(new Runnable() {
 			 @Override
 			    public void run() {
 		
