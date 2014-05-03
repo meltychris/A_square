@@ -15,6 +15,7 @@ import android.app.Instrumentation.ActivityMonitor;
 import android.content.SharedPreferences;
 import android.test.ActivityInstrumentationTestCase2;
 import android.test.suitebuilder.annotation.SmallTest;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
@@ -44,6 +45,8 @@ public class Study_Path_Test extends ActivityInstrumentationTestCase2<Study_Path
 	@Override
 	protected void setUp() throws Exception {
 		super.setUp();
+        Log.d("  aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "  aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"); 
+
 		mActivity = getActivity();  
 		button1 = (Button)mActivity.findViewById(R.id.button1);
 		button2 = (Button)mActivity.findViewById(R.id.button2);
@@ -60,19 +63,23 @@ public class Study_Path_Test extends ActivityInstrumentationTestCase2<Study_Path
 	
 	@Override 
 	 protected void tearDown() throws Exception { 
+		setUp();
+
 		 //this method is called every time after any test execution 
 		 // we want to clean the texts 
 		 super.tearDown(); 
 	 } 
 
-
 	@SmallTest // SmallTest: this test doesn't interact with any file system or network. 
-	 public void testView() { // checks if the activity is created 
+	 public void testView() throws Exception { // checks if the activity is created 
+
 		assertNotNull(getActivity()); 
 	 } 
 	
 	@SmallTest 
 	public void testOnCreate() throws Exception {
+		setUp();
+
 		assertFalse(view1.isShown());
 		assertFalse(view2.isShown());
 		assertFalse(view3.isShown());
@@ -94,7 +101,8 @@ public class Study_Path_Test extends ActivityInstrumentationTestCase2<Study_Path
 					 radioButton1.performClick();
 				 }
 			});	
-			getInstrumentation().waitForMonitorWithTimeout(activityMonitor, 50000);
+			getInstrumentation().waitForMonitorWithTimeout(activityMonitor, 10000);
+			assertTrue(getInstrumentation().checkMonitorHit(activityMonitor, 1));
 
 	
 			//CHECK THE RESULT
@@ -124,7 +132,8 @@ public class Study_Path_Test extends ActivityInstrumentationTestCase2<Study_Path
 					 radioButton2.performClick();
 				 }
 			});	
-			getInstrumentation().waitForMonitorWithTimeout(activityMonitor, 50000);
+			getInstrumentation().waitForMonitorWithTimeout(activityMonitor, 10000);
+			assertTrue(getInstrumentation().checkMonitorHit(activityMonitor, 1));
 
 			 //CHECK THE RESULT
 			assertTrue(radioButton2.isChecked());
@@ -150,7 +159,7 @@ public class Study_Path_Test extends ActivityInstrumentationTestCase2<Study_Path
 			 }
 		});	
 		ActivityMonitor activityMonitor = getInstrumentation().addMonitor(Study_Path.class.getName(), null, false);
-		getInstrumentation().waitForMonitorWithTimeout(activityMonitor, 50000);
+		getInstrumentation().waitForMonitorWithTimeout(activityMonitor, 10000);
 		
 		 //CHECK THE RESULT
 		assertEquals("F",mActivity.getPure());
@@ -165,8 +174,10 @@ public class Study_Path_Test extends ActivityInstrumentationTestCase2<Study_Path
 				 checkbox1.performClick();
 			 }
 		});	
-		getInstrumentation().waitForMonitorWithTimeout(activityMonitor, 50000);
-		
+		getInstrumentation().waitForMonitorWithTimeout(activityMonitor, 10000);
+		assertTrue(getInstrumentation().checkMonitorHit(activityMonitor, 1));
+
+
 		 //CHECK THE RESULT
 		assertEquals("T",mActivity.getPure());
 	} 
@@ -180,8 +191,10 @@ public class Study_Path_Test extends ActivityInstrumentationTestCase2<Study_Path
 			 }
 		});	
 		ActivityMonitor activityMonitor = getInstrumentation().addMonitor(Study_Path.class.getName(), null, false);
-		getInstrumentation().waitForMonitorWithTimeout(activityMonitor, 50000);
-		
+		getInstrumentation().waitForMonitorWithTimeout(activityMonitor, 10000);
+		assertTrue(getInstrumentation().checkMonitorHit(activityMonitor, 1));
+
+
 		 //CHECK THE RESULT
 		assertTrue(view1.isShown());
 		assertFalse(view2.isShown());
@@ -198,8 +211,9 @@ public class Study_Path_Test extends ActivityInstrumentationTestCase2<Study_Path
 			 }
 		});	
 		ActivityMonitor activityMonitor = getInstrumentation().addMonitor(Study_Path.class.getName(), null, false);
-		getInstrumentation().waitForMonitorWithTimeout(activityMonitor, 50000);
-		
+		getInstrumentation().waitForMonitorWithTimeout(activityMonitor, 10000);
+		assertTrue(getInstrumentation().checkMonitorHit(activityMonitor, 1));
+
 		 //CHECK THE RESULT
 		assertFalse(view1.isShown());
 		assertTrue(view2.isShown());
@@ -216,7 +230,9 @@ public class Study_Path_Test extends ActivityInstrumentationTestCase2<Study_Path
 			 }
 		});	
 		ActivityMonitor activityMonitor = getInstrumentation().addMonitor(Study_Path.class.getName(), null, false);
-		getInstrumentation().waitForMonitorWithTimeout(activityMonitor, 50000);
+		getInstrumentation().waitForMonitorWithTimeout(activityMonitor, 10000);
+		
+		assertTrue(getInstrumentation().checkMonitorHit(activityMonitor, 1));
 		
 		 //CHECK THE RESULT
 		assertFalse(view1.isShown());
@@ -227,8 +243,9 @@ public class Study_Path_Test extends ActivityInstrumentationTestCase2<Study_Path
 	
 	@SmallTest 
 	 public void testbutton111true()  throws Exception { 
-		  ActivityMonitor activityMonitor = getInstrumentation().addMonitor(Advanced_Activity.class.getName(), null, false);
-       	
+		setUp();
+
+		
 		  SharedPreferences xadvanced = mActivity.getSharedPreferences("advanced", 0);
 		  xadvanced.edit().putBoolean("advanced", false).commit();
 
@@ -242,7 +259,10 @@ public class Study_Path_Test extends ActivityInstrumentationTestCase2<Study_Path
 			    }
 			  });	
 		//CHECK THE RESULT
-		  Advanced_Activity nextActivity = (Advanced_Activity) getInstrumentation().waitForMonitorWithTimeout(activityMonitor, 50000);
+		  ActivityMonitor activityMonitor = getInstrumentation().addMonitor(Advanced_Activity.class.getName(), null, false);
+		  Advanced_Activity nextActivity = (Advanced_Activity) getInstrumentation().waitForMonitorWithTimeout(activityMonitor, 10000);
+			assertTrue(getInstrumentation().checkMonitorHit(activityMonitor, 1));
+
 		  assertNotNull(nextActivity);
 		  nextActivity.finish();
 
@@ -250,8 +270,7 @@ public class Study_Path_Test extends ActivityInstrumentationTestCase2<Study_Path
 	
 	@SmallTest 
 	 public void testbutton111false()  throws Exception { 
-		  ActivityMonitor activityMonitor = getInstrumentation().addMonitor(Advanced_Activity2.class.getName(), null, false);
-      	
+
 		  SharedPreferences xadvanced = mActivity.getSharedPreferences("advanced", 0);
 		  xadvanced.edit().putBoolean("advanced", true).commit();
 
@@ -265,7 +284,11 @@ public class Study_Path_Test extends ActivityInstrumentationTestCase2<Study_Path
 			    }
 			  });	
 		//CHECK THE RESULT
-		  Advanced_Activity2 nextActivity = (Advanced_Activity2) getInstrumentation().waitForMonitorWithTimeout(activityMonitor, 50000);
+		  ActivityMonitor activityMonitor = getInstrumentation().addMonitor(Advanced_Activity2.class.getName(), null, false);
+		  Advanced_Activity2 nextActivity = (Advanced_Activity2) getInstrumentation().waitForMonitorWithTimeout(activityMonitor, 10000);
+			assertTrue(getInstrumentation().checkMonitorHit(activityMonitor, 1));
+
+		  
 		  assertNotNull(nextActivity);
 		  nextActivity.finish();
 
@@ -284,7 +307,7 @@ public class Study_Path_Test extends ActivityInstrumentationTestCase2<Study_Path
 			    }
 			  });	
 		  ActivityMonitor activityMonitor = getInstrumentation().addMonitor(Study_Path.class.getName(), null, false);
-		  getInstrumentation().waitForMonitorWithTimeout(activityMonitor, 50000);
+		  getInstrumentation().waitForMonitorWithTimeout(activityMonitor, 10000);
 		  
 		  mActivity.runOnUiThread(new Runnable() {
 			    @Override
@@ -293,7 +316,9 @@ public class Study_Path_Test extends ActivityInstrumentationTestCase2<Study_Path
 			    		    listView1.getAdapter().getView(0, null, null), 0, 0);	
 			    }
 		  });	
-		  getInstrumentation().waitForMonitorWithTimeout(activityMonitor, 50000);
+		  getInstrumentation().waitForMonitorWithTimeout(activityMonitor, 10000);
+			assertTrue(getInstrumentation().checkMonitorHit(activityMonitor, 1));
+
 		 //CHECK THE RESULT 
 		 assertTrue(mActivity.getToastshown());
 		 
@@ -325,6 +350,6 @@ public class Study_Path_Test extends ActivityInstrumentationTestCase2<Study_Path
 	      DataBaseUtility1.ShowMessageBox(mActivity, "AA");
 
 	}
-		 
+		
 }
 
