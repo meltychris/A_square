@@ -159,7 +159,7 @@ Intent intent = new Intent();
 			  });	
 		//CHECK THE RESULT
 		  ActivityMonitor activityMonitor2 = getInstrumentation().addMonitor(Advanced_Activity2.class.getName(), null, false);
-		  Advanced_Activity2 nextActivity = (Advanced_Activity2) getInstrumentation().waitForMonitorWithTimeout(activityMonitor2, 50000);
+		  Advanced_Activity2 nextActivity = (Advanced_Activity2) getInstrumentation().waitForMonitor(activityMonitor2);
 		  assertNotNull(nextActivity);
 		assertTrue(nextActivity.getIntent().hasExtra("Major1"));
      	assertTrue(nextActivity.getIntent().hasExtra("Major2"));
