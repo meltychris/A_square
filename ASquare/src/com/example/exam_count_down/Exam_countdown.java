@@ -214,15 +214,17 @@ public class Exam_countdown extends Activity {
 	 AlarmManager alarmManager = (AlarmManager) getApplicationContext().getSystemService(getBaseContext().ALARM_SERVICE);
 	 // Every scheduled intent needs a different ID, else it is just executed once
 	 int id = (int) System.currentTimeMillis();
-
+	 
+	 Random testing = new Random(100);
+     int j = testing.nextInt();
 	 // Prepare the intent which should be launched at the date
 	 
 	 Intent intent = new Intent(this, MyBroadcastReceiver.class);
 	 intent.putExtra ("Course", Course);
-     intent.putExtra ("Num", Date);
+	 intent.putExtra ("Num", j);
 	 // Prepare the pending intent
 	 PendingIntent pendingIntent = PendingIntent.getBroadcast(getApplicationContext(), id, intent, PendingIntent.FLAG_UPDATE_CURRENT);
-
+	 
 	 // Register the alert in the system. You have the option to define if the device has to wake up on the alert or not
 	 alarmManager.set(AlarmManager.RTC_WAKEUP, millisecond, pendingIntent);
 
