@@ -91,11 +91,20 @@ public class Testexam_count_down extends ActivityInstrumentationTestCase2<Exam_c
 		      // click button and open next activity.
 		    	Code.setText("AAAAAAAAAAAAA");
 		    	Date.setText("2014/02/30");
-		    	button1.performClick();
+	
 		    	}
 		  	});	
 		  ActivityMonitor activityMonitor = getInstrumentation().addMonitor(Exam_countdown.class.getName(), null, false);
 		  getInstrumentation().waitForMonitorWithTimeout(activityMonitor, 5000);
+		  
+		   @Override
+		    	public void run() {
+		
+		    		button1.performClick();
+		    	}
+		  	});	
+		  getInstrumentation().waitForMonitorWithTimeout(activityMonitor, 5000);
+		  
 		int expectedCount = listView1.getAdapter().getCount() - 1;
 
 		 //INTERACTIONS 
@@ -104,9 +113,17 @@ public class Testexam_count_down extends ActivityInstrumentationTestCase2<Exam_c
 			    public void run() {
 			      // click button and open next activity.
 			      Code.setText("AAAAAAAAAAAAA");
+		
+			    }
+			  });
+			  	  getInstrumentation().waitForMonitorWithTimeout(activityMonitor, 5000);
+			  
+			 @Override
+			    public void run() {
+		
 			      button2.performClick();
 			    }
-			  });	
+			  });
 		  getInstrumentation().waitForMonitorWithTimeout(activityMonitor, 5000);
 		  int actualCount = listView1.getAdapter().getCount();
 	  
