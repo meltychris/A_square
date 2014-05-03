@@ -11,20 +11,25 @@ public class otherAdvising {
 
 	public otherAdvising(String newName, int newPhone, String newEmail,
 			String newAddress, String newIntro) {
-		otherAdvising a = new otherAdvising();
-		a.name = newName;
-		a.telephone = newPhone;
-		a.email = newEmail;
-		a.address = newAddress;
-		a.introduction = newIntro;
+		name = newName;
+		telephone = newPhone;
+		email = newEmail;
+		address = newAddress;
+		introduction = newIntro;
 	}
 
+	// Name of the advising team
 	private String name;
+	// Telephone of the team
 	private int telephone;
+	// Email of the team
 	private String email;
+	// Address of the team
 	private String address;
+	// Short introduction of the team
 	private String introduction;
 
+	//Print function that lists all the information of a team
 	public void print() {
 		System.out.println("Name: " + name + "\n");
 		System.out.println("Telephone: " + telephone + "\n");

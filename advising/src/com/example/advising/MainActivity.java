@@ -1,19 +1,11 @@
 package com.example.advising;
 
-import com.example.advising.*;
-
 import android.R;
-import android.os.Bundle;
 import android.app.Activity;
-import android.app.AlertDialog;
-import android.content.DialogInterface;
 import android.content.Intent;
-import android.content.SharedPreferences;
-import android.view.KeyEvent;
-import android.view.Menu;
+import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.ImageButton;
 
 public class MainActivity extends Activity {
 
@@ -50,7 +42,7 @@ public class MainActivity extends Activity {
 					.add(R.id.container, new PlaceholderFragment()).commit();
 		}
 	}
-
+/*
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 
@@ -73,7 +65,7 @@ public class MainActivity extends Activity {
 
 	/**
 	 * A placeholder fragment containing a simple view.
-	 */
+	 
 	public static class PlaceholderFragment extends Fragment {
 
 		public PlaceholderFragment() {
@@ -87,7 +79,7 @@ public class MainActivity extends Activity {
 			return rootView;
 		}
 	}
-
+*/
 	private Button button1;
 	private Button button2;
 }
