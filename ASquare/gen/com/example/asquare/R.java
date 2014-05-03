@@ -32,10 +32,11 @@ public final class R {
         public static final int exam_cd=0x7f020003;
         public static final int gpa_calculator=0x7f020004;
         public static final int ic_launcher=0x7f020005;
-        public static final int path=0x7f020006;
-        public static final int pic=0x7f020007;
-        public static final int psycho=0x7f020008;
-        public static final int whitepic=0x7f020009;
+        public static final int login=0x7f020006;
+        public static final int path=0x7f020007;
+        public static final int pic=0x7f020008;
+        public static final int psycho=0x7f020009;
+        public static final int whitepic=0x7f02000a;
     }
     public static final class id {
         public static final int A_H=0x7f080038;
