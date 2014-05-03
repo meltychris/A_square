@@ -64,6 +64,60 @@ public class Advanced_Activity_choose_Test extends ActivityInstrumentationTestCa
 	@Override
 	protected void setUp() throws Exception {
 		super.setUp();
+
+
+
+	}
+	
+	@Override 
+	 protected void tearDown() throws Exception { 
+		 //this method is called every time after any test execution 
+		 // we want to clean the texts 
+		 super.tearDown(); 
+	 } 
+
+
+	@SmallTest // SmallTest: this test doesn't interact with any file system or network. 
+	 public void testView() { // checks if the activity is created 
+Intent intent = new Intent();
+     	
+     	intent.putExtra ("Major1", true);
+     	intent.putExtra ("Major2", false);
+     	intent.putExtra ("Pure", false);
+     	intent.putExtra ("Year1", true);
+     	intent.putExtra ("Year2", false);
+     	intent.putExtra ("Year3", false);
+     	intent.putExtra ("Sem1",true);
+     	intent.putExtra ("Sem2",false);
+     	intent.putExtra ("Credit", "18");
+     	intent.putExtra ("SA", false);
+     	intent.putExtra ("S_T", true);
+     	intent.putExtra ("A_H", false);
+     	intent.putExtra ("Free", true);
+     	intent.putExtra ("SBM", false);
+     	intent.putExtra ("ENGG", false);
+     	intent.putExtra ("FreeE", false);
+     	intent.putExtra ("compx1", true);
+     	intent.putExtra ("compx2", false);
+     	intent.putExtra ("compx3", false);
+     	intent.putExtra ("compx4", false);
+     	intent.putExtra ("compx5", false);
+     	intent.putExtra ("CEMx1", false);
+     	intent.putExtra ("CEMx2", false);
+     	
+		setActivityIntent(intent) ;
+		mActivity = getActivity();  
+        listView = (ListView) mActivity.findViewById(R.id.my_list);
+        btn = (Button) mActivity.findViewById(R.id.submit);
+
+        
+		assertNotNull(getActivity()); 
+	 } 
+	
+	
+	
+	@SmallTest 
+	 public void testbtn() { 
 		Intent intent = new Intent();
      	
      	intent.putExtra ("Major1", true);
@@ -95,28 +149,6 @@ public class Advanced_Activity_choose_Test extends ActivityInstrumentationTestCa
         listView = (ListView) mActivity.findViewById(R.id.my_list);
         btn = (Button) mActivity.findViewById(R.id.submit);
 
-
-	}
-	
-	@Override 
-	 protected void tearDown() throws Exception { 
-		 //this method is called every time after any test execution 
-		 // we want to clean the texts 
-		 super.tearDown(); 
-	 } 
-
-
-	@SmallTest // SmallTest: this test doesn't interact with any file system or network. 
-	 public void testView() { // checks if the activity is created 
-		assertNotNull(getActivity()); 
-	 } 
-	
-	
-	
-	@SmallTest 
-	 public void testbtn() { 
-
-
 		//INTERACTIONS
 		  mActivity.runOnUiThread(new Runnable() {
 			    @Override
@@ -127,7 +159,7 @@ public class Advanced_Activity_choose_Test extends ActivityInstrumentationTestCa
 			  });	
 		//CHECK THE RESULT
 		  ActivityMonitor activityMonitor2 = getInstrumentation().addMonitor(Advanced_Activity2.class.getName(), null, false);
-		  Advanced_Activity2 nextActivity = (Advanced_Activity2) getInstrumentation().waitForMonitorWithTimeout(activityMonitor2, 10000);
+		  Advanced_Activity2 nextActivity = (Advanced_Activity2) getInstrumentation().waitForMonitorWithTimeout(activityMonitor2, 50000);
 		  assertNotNull(nextActivity);
 		assertTrue(nextActivity.getIntent().hasExtra("Major1"));
      	assertTrue(nextActivity.getIntent().hasExtra("Major2"));
