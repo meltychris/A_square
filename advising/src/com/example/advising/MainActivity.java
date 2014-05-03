@@ -2,6 +2,7 @@ package com.example.advising;
 
 import com.example.advising.*;
 
+import android.R;
 import android.os.Bundle;
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -11,6 +12,7 @@ import android.content.SharedPreferences;
 import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageButton;
 
 public class MainActivity extends Activity {
@@ -19,16 +21,30 @@ public class MainActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
-        button1 = (ImageButton)findViewById(R.id.imageButton1);
-        button1.setOnClickListener(new ImageButton.OnClickListener(){ 
-            @Override
-            public void onClick(View v) {
-                // TODO Auto-generated method stub
-            	Intent intent = new Intent();
-                intent.setClass(MainActivity.this, Exam_countdown.class);
-                startActivity(intent);
-               
-        }});
+
+		button1 = (Button) findViewById(R.id.button1);
+		button1.setOnClickListener(new Button.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				Intent intent = new Intent();
+				intent.setClass(MainActivity.this,
+						com.example.advising.ustTeam.class);
+				startActivity(intent);
+			}
+		});
+
+		button2 = (Button) findViewById(R.id.button2);
+		button2.setOnClickListener(new Button.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				Intent intent = new Intent();
+				intent.setClass(MainActivity.this,
+						com.example.advising.otherAdvising.class);
+				startActivity(intent);
+			}
+		});
 		if (savedInstanceState == null) {
 			getSupportFragmentManager().beginTransaction()
 					.add(R.id.container, new PlaceholderFragment()).commit();
@@ -72,4 +88,6 @@ public class MainActivity extends Activity {
 		}
 	}
 
+	private Button button1;
+	private Button button2;
 }
