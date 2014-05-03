@@ -1,6 +1,5 @@
 package com.example.advising;
 
-import java.io.*;
 
 public class ustTeam {
 	public ustTeam() {
