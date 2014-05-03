@@ -82,7 +82,7 @@ public class Study_Path_Test extends ActivityInstrumentationTestCase2<Study_Path
 	 }
 	
 	@SmallTest 
-	 public void testradiobutton1() { 
+	 public void testradiobutton1() throws Exception  { 
 		  ActivityMonitor activityMonitor = getInstrumentation().addMonitor(Study_Path.class.getName(), null, false);
 
 		for (int tempyear=1; tempyear <=3 ; tempyear++){
@@ -112,7 +112,7 @@ public class Study_Path_Test extends ActivityInstrumentationTestCase2<Study_Path
 	
 	
 	@SmallTest 
-	public void testradiobutton2() { 
+	public void testradiobutton2() throws Exception  { 
 		  ActivityMonitor activityMonitor = getInstrumentation().addMonitor(Study_Path.class.getName(), null, false);
 
 		for (int tempyear=1; tempyear <=3 ; tempyear++){
@@ -140,7 +140,7 @@ public class Study_Path_Test extends ActivityInstrumentationTestCase2<Study_Path
 	} 
 	
 	@SmallTest 
-	public void testcheckbox1() { 
+	public void testcheckbox1() throws Exception  { 
 		mActivity.setPure("T");
 		//INTERACTIONS
 		mActivity.runOnUiThread(new Runnable() {
@@ -171,7 +171,7 @@ public class Study_Path_Test extends ActivityInstrumentationTestCase2<Study_Path
 		assertEquals("T",mActivity.getPure());
 	} 
 	
-	public void testbutton1() {
+	public void testbutton1() throws Exception  {
 		//INTERACTIONS
 		mActivity.runOnUiThread(new Runnable() {
 			 @Override
@@ -189,7 +189,7 @@ public class Study_Path_Test extends ActivityInstrumentationTestCase2<Study_Path
 		assertEquals("1",mActivity.getYear());
 	}
 	
-	public void testbutton2() {
+	public void testbutton2() throws Exception  {
 		//INTERACTIONS
 		mActivity.runOnUiThread(new Runnable() {
 			 @Override
@@ -207,7 +207,7 @@ public class Study_Path_Test extends ActivityInstrumentationTestCase2<Study_Path
 		assertEquals("2",mActivity.getYear());
 	}
 	
-	public void testbutton3() {
+	public void testbutton3() throws Exception  {
 		//INTERACTIONS
 		mActivity.runOnUiThread(new Runnable() {
 			 @Override
@@ -226,7 +226,7 @@ public class Study_Path_Test extends ActivityInstrumentationTestCase2<Study_Path
 	}
 	
 	@SmallTest 
-	 public void testbutton111true() { 
+	 public void testbutton111true()  throws Exception { 
 		  ActivityMonitor activityMonitor = getInstrumentation().addMonitor(Advanced_Activity.class.getName(), null, false);
        	
 		  SharedPreferences xadvanced = mActivity.getSharedPreferences("advanced", 0);
@@ -249,7 +249,7 @@ public class Study_Path_Test extends ActivityInstrumentationTestCase2<Study_Path
 	 }
 	
 	@SmallTest 
-	 public void testbutton111false() { 
+	 public void testbutton111false()  throws Exception { 
 		  ActivityMonitor activityMonitor = getInstrumentation().addMonitor(Advanced_Activity2.class.getName(), null, false);
       	
 		  SharedPreferences xadvanced = mActivity.getSharedPreferences("advanced", 0);
@@ -272,7 +272,7 @@ public class Study_Path_Test extends ActivityInstrumentationTestCase2<Study_Path
 	 }
 	
 	@SmallTest 
-	 public void testlistView1() { 
+	 public void testlistView1() throws Exception  { 
 		//precondition
 		//assertFalse(mActivity.getToastshown());
 		
@@ -300,7 +300,7 @@ public class Study_Path_Test extends ActivityInstrumentationTestCase2<Study_Path
 	 }
 	
 	@SmallTest 
-	 public void testDataBaseHelper1() { 
+	 public void testDataBaseHelper1() throws Exception  { 
 		//initial
 		DataBaseHelper1 a = new DataBaseHelper1(mActivity);
 		
@@ -321,7 +321,7 @@ public class Study_Path_Test extends ActivityInstrumentationTestCase2<Study_Path
 	 }
 	
 	@SmallTest
-	public void testother(){
+	public void testother() throws Exception {
 	      DataBaseUtility1.ShowMessageBox(mActivity, "AA");
 
 	}
