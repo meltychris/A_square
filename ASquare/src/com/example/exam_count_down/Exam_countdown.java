@@ -215,24 +215,28 @@ public class Exam_countdown extends Activity {
 	 // Every scheduled intent needs a different ID, else it is just executed once
 	 int id = (int) System.currentTimeMillis();
 
-	 // Prepare the intent which should be launched at the date
 	 
+	 
+	 // Prepare the intent which should be launched at the date
+	 id = id +global_j;
 	 Intent intent = new Intent(this, MyBroadcastReceiver.class);
 	 intent.putExtra ("Course", Course);
-     intent.putExtra ("Num", Date);
+	 intent.putExtra ("Num", global_j);
 	 // Prepare the pending intent
-	 PendingIntent pendingIntent = PendingIntent.getBroadcast(getApplicationContext(), id, intent, PendingIntent.FLAG_UPDATE_CURRENT);
-
+	 PendingIntent pendingIntent = PendingIntent.getBroadcast(getApplicationContext(), 234324243+global_id, intent, PendingIntent.FLAG_UPDATE_CURRENT);
+	 global_id++;
+	 global_j++;
 	 // Register the alert in the system. You have the option to define if the device has to wake up on the alert or not
 	 alarmManager.set(AlarmManager.RTC_WAKEUP, millisecond, pendingIntent);
-
+	 
 	 
 	 }
 
 
 	
-
-
+	Random testing = new Random(100);
+    int global_j = testing.nextInt();
+	int global_id = 1;
 	private SimpleDateFormat Dateformat = new SimpleDateFormat("yyyy/MM/dd (E)");    		
 	private Button button1;
 	private Button button2;

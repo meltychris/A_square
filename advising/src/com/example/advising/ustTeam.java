@@ -1,7 +1,5 @@
 package com.example.advising;
 
-import java.io.*;
-
 public class ustTeam {
 	public ustTeam() {
 		name = "HKUST Psychological Team";
@@ -11,12 +9,19 @@ public class ustTeam {
 		introduction = "A Psychological Team managed by SAO, HKUST";
 	}
 
+	//Name of the advising team
 	private String name;
+	//Telephone of the team
 	private int telephone;
+	//Email of the team
 	private String email;
+	//Address of the team
 	private String address;
+	//Short introduction of the team
 	private String introduction;
 
+	
+	//A print function that lists all the information of a team
 	public void print() {
 		System.out.println("Name: " + name + "\n");
 		System.out.println("Telephone: " + telephone + "\n");
@@ -28,7 +33,7 @@ public class ustTeam {
 
 	public static void main(String[] args) {
 		ustTeam a = new ustTeam();
-		System.out.println("HKUST Psychological Team");
+		System.out.println("Welcome to HKUST Psychological Team");
 		a.print();
 	}
 
