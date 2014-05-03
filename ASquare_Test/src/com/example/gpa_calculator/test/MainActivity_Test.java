@@ -58,7 +58,7 @@ public class MainActivity_Test extends ActivityInstrumentationTestCase2<GPAMainA
 			  });	
 		  
 		 //CHECK THE RESULT
-		  print_course_record nextActivity = (print_course_record) getInstrumentation().waitForMonitorWithTimeout(activityMonitor, 10000);
+		  print_course_record nextActivity = (print_course_record) getInstrumentation().waitForMonitor(activityMonitor);
 		  assertNotNull(nextActivity);
 		  nextActivity.finish();
 

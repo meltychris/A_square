@@ -68,7 +68,7 @@ public class MainActivity_Test extends ActivityInstrumentationTestCase2<MainActi
 			  });	
 		  
 		 //CHECK THE RESULT
-		  com.example.gpa_calculator.GPAMainActivity nextActivity = (com.example.gpa_calculator.GPAMainActivity) getInstrumentation().waitForMonitorWithTimeout(activityMonitor, 10000);
+		  com.example.gpa_calculator.GPAMainActivity nextActivity = (com.example.gpa_calculator.GPAMainActivity) getInstrumentation().waitForMonitor(activityMonitor);
 		  assertNotNull(nextActivity);
 		  nextActivity.finish();
 
@@ -88,7 +88,7 @@ public class MainActivity_Test extends ActivityInstrumentationTestCase2<MainActi
 			  });	
 		  
 		 //CHECK THE RESULT
-		  Study_Path nextActivity = (Study_Path) getInstrumentation().waitForMonitorWithTimeout(activityMonitor, 10000);
+		  Study_Path nextActivity = (Study_Path) getInstrumentation().waitForMonitor(activityMonitor);
 		  assertNotNull(nextActivity);
 		  nextActivity.finish();
 
@@ -110,7 +110,7 @@ public class MainActivity_Test extends ActivityInstrumentationTestCase2<MainActi
 			  });	
 		  
 		 //CHECK THE RESULT 
-		  Exam_countdown nextActivity = (Exam_countdown) getInstrumentation().waitForMonitorWithTimeout(activityMonitor, 10000);
+		  Exam_countdown nextActivity = (Exam_countdown) getInstrumentation().waitForMonitor(activityMonitor);
 		  assertNotNull(nextActivity);
 		  nextActivity.finish();
 
