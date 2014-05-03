@@ -102,7 +102,7 @@ public class Study_Path_Test extends ActivityInstrumentationTestCase2<Study_Path
 			});	
 			  
 			ActivityMonitor activityMonitor = getInstrumentation().addMonitor(Study_Path.class.getName(), null, false);
-			getInstrumentation().waitForMonitorWithTimeout(activityMonitor,10000);
+			getInstrumentation().waitForMonitorWithTimeout(activityMonitor,5000);
 		
 
 	
@@ -134,7 +134,7 @@ public class Study_Path_Test extends ActivityInstrumentationTestCase2<Study_Path
 			});	
 	
 			ActivityMonitor activityMonitor = getInstrumentation().addMonitor(Study_Path.class.getName(), null, false);
-			getInstrumentation().waitForMonitorWithTimeout(activityMonitor,10000);
+			getInstrumentation().waitForMonitorWithTimeout(activityMonitor,5000);
 
 			 //CHECK THE RESULT
 			assertTrue(radioButton2.isChecked());
@@ -161,7 +161,7 @@ public class Study_Path_Test extends ActivityInstrumentationTestCase2<Study_Path
 		});	
 	
 		ActivityMonitor activityMonitor = getInstrumentation().addMonitor(Study_Path.class.getName(), null, false);
-		getInstrumentation().waitForMonitorWithTimeout(activityMonitor,10000);
+		getInstrumentation().waitForMonitorWithTimeout(activityMonitor,5000);
 		
 		 //CHECK THE RESULT
 		assertEquals("F",mActivity.getPure());
@@ -175,7 +175,8 @@ public class Study_Path_Test extends ActivityInstrumentationTestCase2<Study_Path
 			 }
 		});	
 
-
+		getInstrumentation().waitForMonitorWithTimeout(activityMonitor,5000);
+		
 		 //CHECK THE RESULT
 		assertEquals("T",mActivity.getPure());
 	} 
@@ -192,7 +193,7 @@ public class Study_Path_Test extends ActivityInstrumentationTestCase2<Study_Path
 		});	
 		
 		ActivityMonitor activityMonitor = getInstrumentation().addMonitor(Study_Path.class.getName(), null, false);
-		getInstrumentation().waitForMonitorWithTimeout(activityMonitor,10000);
+		getInstrumentation().waitForMonitorWithTimeout(activityMonitor,5000);
 
 		 //CHECK THE RESULT
 		assertTrue(view1.isShown());
@@ -213,7 +214,7 @@ public class Study_Path_Test extends ActivityInstrumentationTestCase2<Study_Path
 		});	
 
 		ActivityMonitor activityMonitor = getInstrumentation().addMonitor(Study_Path.class.getName(), null, false);
-		getInstrumentation().waitForMonitorWithTimeout(activityMonitor,10000);
+		getInstrumentation().waitForMonitorWithTimeout(activityMonitor,5000);
 		
 		//CHECK THE RESULT
 		assertFalse(view1.isShown());
@@ -233,7 +234,7 @@ public class Study_Path_Test extends ActivityInstrumentationTestCase2<Study_Path
 		});	
 
 		ActivityMonitor activityMonitor = getInstrumentation().addMonitor(Study_Path.class.getName(), null, false);
-		getInstrumentation().waitForMonitorWithTimeout(activityMonitor,10000);
+		getInstrumentation().waitForMonitorWithTimeout(activityMonitor,5000);
 		
 		 //CHECK THE RESULT
 		assertFalse(view1.isShown());
@@ -314,7 +315,7 @@ public class Study_Path_Test extends ActivityInstrumentationTestCase2<Study_Path
 			    }
 		  });	
 			ActivityMonitor activityMonitor = getInstrumentation().addMonitor(Study_Path.class.getName(), null, false);
-			getInstrumentation().waitForMonitorWithTimeout(activityMonitor,10000);
+			getInstrumentation().waitForMonitorWithTimeout(activityMonitor,5000);
 		
 
 		 //CHECK THE RESULT 
