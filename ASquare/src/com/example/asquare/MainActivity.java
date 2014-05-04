@@ -82,6 +82,16 @@ public class MainActivity extends Activity {
                
         }});
    
+        button6 = (ImageButton)findViewById(R.id.imageButton6);
+        button6.setOnClickListener(new ImageButton.OnClickListener(){ 
+            @Override
+            public void onClick(View v) {
+                // TODO Auto-generated method stub
+            	Intent intent = new Intent();
+                intent.setClass(MainActivity.this, com.example.advising.MainActivity.class);
+                startActivity(intent);
+               
+        }});
 		
 	}
 	
