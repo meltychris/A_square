@@ -94,7 +94,7 @@ public class advice1Test extends ActivityInstrumentationTestCase2<advice1> {
 			  });	
 		  
 		 //CHECK THE RESULT
-		 advice2 nextActivity = (advice2) getInstrumentation().waitForMonitorWithTimeout(activityMonitor, 20000);
+		 advice2 nextActivity = (advice2) getInstrumentation().waitForMonitor(activityMonitor);
 		 assertNotNull(nextActivity);
 		 nextActivity.finish();
 		 
