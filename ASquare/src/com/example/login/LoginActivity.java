@@ -9,6 +9,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.database.Cursor;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -20,6 +21,10 @@ public class LoginActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_login);
+		
+		View backgroundimage = findViewById(R.id.background);
+		Drawable background = backgroundimage.getBackground();
+		background.setAlpha(50);
 		
 		edit_password = (EditText) findViewById(R.id.edit_password);
 		edit_username = (EditText) findViewById(R.id.edit_username);

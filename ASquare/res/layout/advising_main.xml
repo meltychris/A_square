@@ -15,37 +15,67 @@
             android:id="@+id/textViewGPAmain1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Please select a psychological counselling service" />
+            android:text="Please select a psychological counselling service"
+            android:textColor="#0055FF"
+            android:textSize="20sp"
+            android:textStyle="italic" />
+
     </LinearLayout>
+    
+    <View
+        android:layout_height="30dp"
+        android:layout_width="match_parent">
+        
+    </View>
+
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="0.00" >
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="0.00" >
-
-        <Button
-            android:id="@+id/button2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="HKUST Psychological Team" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:orientation="vertical"
         android:layout_weight="0.00" >
 
         <Button
             android:id="@+id/button1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Counselling Services outside HKUST" />
+            android:background="#96D0E7"
+            android:text="HKUST Psychological Team" />
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="match_parent"
+            android:layout_height="87dp"
+            android:src="@drawable/ustpsy" />
+        
     </LinearLayout>
 
+    <View
+        android:layout_height="30dp"
+        android:layout_width="match_parent">
+        
+    </View>
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.00" 
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.00"
+            android:background="#96D0E7"
+            android:text="Counselling Services outside HKUST" />
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.00"
+            android:src="@drawable/councilingservice" />
+
+ </LinearLayout>
 </LinearLayout>
