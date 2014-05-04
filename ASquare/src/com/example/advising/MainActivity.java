@@ -1,6 +1,6 @@
 package com.example.advising;
 
-import android.R;
+import com.example.asquare.R;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
