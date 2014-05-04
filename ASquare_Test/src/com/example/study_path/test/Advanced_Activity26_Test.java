@@ -3,6 +3,7 @@ package com.example.study_path.test;
 
 import android.app.Instrumentation.ActivityMonitor;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.test.ActivityInstrumentationTestCase2;
 import android.test.suitebuilder.annotation.SmallTest;
 import android.view.View;
@@ -34,7 +35,8 @@ public class Advanced_Activity26_Test extends ActivityInstrumentationTestCase2<A
 		super.setUp();
 	
 		Intent intent = new Intent();
-     	
+   
+		  
      	intent.putExtra ("Major1", false);
      	intent.putExtra ("Major2", true);
      	intent.putExtra ("Pure", false);
@@ -66,6 +68,9 @@ public class Advanced_Activity26_Test extends ActivityInstrumentationTestCase2<A
      	
 		setActivityIntent(intent) ;
 		mActivity = getActivity();  
+	  	
+		  SharedPreferences xadvanced = mActivity.getSharedPreferences("advanced", 0);
+		  xadvanced.edit().putBoolean("advanced", false).commit();
 		
 	    button1 = (Button)mActivity.findViewById(R.id.button1);
 	    button2 = (Button)mActivity.findViewById(R.id.button2);

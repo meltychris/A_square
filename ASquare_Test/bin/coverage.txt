@@ -1,0 +1,26 @@
+[EMMA v2.0.5312 report, generated Mon May 05 05:32:11 CST 2014]
+-------------------------------------------------------------------------------
+OVERALL COVERAGE SUMMARY:
+
+[class, %]	[method, %]	[block, %]	[line, %]	[name]
+86%  (89/104)!	74%  (252/341)	75%  (7713/10348)!	72%  (1461.2/2018)!	all classes
+
+OVERALL STATS SUMMARY:
+
+total packages:	7
+total classes:	104
+total methods:	341
+total executable files:	37
+total executable lines:	2018
+
+COVERAGE BREAKDOWN BY PACKAGE:
+
+[class, %]	[method, %]	[block, %]	[line, %]	[name]
+0%   (0/12)!	0%   (0/24)!	0%   (0/303)!	0%   (0/64)!	com.example.advising
+88%  (21/24)!	45%  (34/75)!	36%  (656/1828)!	30%  (114.5/381)!	com.example.chatroom
+100% (5/5)	68%  (17/25)!	61%  (313/511)!	60%  (76/127)!	com.example.login
+100% (8/8)	89%  (34/38)	86%  (785/910)	84%  (176.9/211)	com.example.exam_count_down
+100% (24/24)	93%  (85/91)	87%  (3542/4060)	88%  (623.2/710)	com.example.study_path
+100% (24/24)	93%  (67/72)	88%  (2170/2474)	89%  (417.6/468)	com.example.gpa_calculator
+100% (7/7)	94%  (15/16)	94%  (247/262)	93%  (53/57)	com.example.asquare
+-------------------------------------------------------------------------------

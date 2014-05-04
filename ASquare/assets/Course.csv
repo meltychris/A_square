@@ -1,0 +1,115 @@
+1,COMP1001,Exploring Multimedia and Internet Computing,3,TRUE,TRUE
+2,COMP1021,Introduction to Computer Science,3,TRUE,TRUE
+3,COMP1022P,Introduction to Computing with Java,3,TRUE,TRUE
+4,COMP1022Q,Introduction to Computing with Excel VBA,3,TRUE,TRUE
+5,COMP1029C,C Programming Bridging Course,1,TRUE,TRUE
+6,COMP1029P,Python Programming Bridging Course,1,TRUE,TRUE
+7,COMP1029V,Excel VBA Programming Bridging Course,1,TRUE,TRUE
+8,COMP1004,Programming Fundmentals & Methodology,4,TRUE,TRUE
+9,COMP1900,Academic and Professional Development,0,TRUE,TRUE
+10,COMP1999,Industrial Training,0,TRUE,TRUE
+11,COMP1942,Exploring and Visualizing Data,3,FALSE,TRUE
+12,COMP2011,Introduction to Object-oriented Programming,4,TRUE,TRUE
+13,COMP2012,Object-Oriented Programming and Data Structures,4,TRUE,TRUE
+14,COMP2012H,OOP and Data Structures (Honors Study Track),4,FALSE,TRUE
+15,COMP2021,Unix and Script Programming,3,FALSE,TRUE
+16,COMP2611,Computer Organization,4,FALSE,TRUE
+17,COMP2711,Discrete Mathematical Tools for Computer Science,4,TRUE,TRUE
+18,COMP2900,Academic and Professional Development II,0,TRUE,TRUE
+19,COMP3021,Java Programming,3,FALSE,TRUE
+20,COMP3031,Principles of Programming Languages,3,TRUE,FALSE
+21,COMP3111,Introduction to Software Engineering,4,TRUE,TRUE
+22,COMP3111H,Honors Software Engineering,4,FALSE,TRUE
+23,COMP3071,Honors Competitive Programming,2,FALSE,TRUE
+24,COMP3211,Fundamentals of Artificial Intelligence,3,TRUE,FALSE
+25,COMP3311,Database Management Systems,3,TRUE,TRUE
+26,COMP3511,Operating Systems,3,TRUE,TRUE
+27,COMP3711,Design and Analysis of Algorithms,3,TRUE,TRUE
+28,COMP3711H,Design and Analysis of Algorithms (Honors Study Track),4,FALSE,TRUE
+29,COMP3721,Theory of Computation,3,FALSE,TRUE
+30,COMP3900,Academic and Professional Development III,0,TRUE,TRUE
+31,COMP4021,Internet Computing,3,FALSE,TRUE
+32,COMP4221,Introduction to Natural Language Processing,3,TRUE,FALSE
+33,COMP4311,Principles of Database Design,3,FALSE,TRUE
+34,COMP4321,Search Engines for Web and Enterprise Data,3,TRUE,FALSE
+35,COMP4331,Introduction to Data Mining,3,TRUE,FALSE
+36,COMP4332,Big Data Mining and Management,3,FALSE,TRUE
+37,COMP4411,Computer Graphics,3,FALSE,TRUE
+38,COMP4421,Image Processing,3,TRUE,FALSE
+39,COMP4431,Multimedia Computing,3,TRUE,FALSE
+40,COMP4441,Computer Music,3,FALSE,TRUE
+41,COMP4521,Embedded Systems Software,3,FALSE,TRUE
+42,COMP4611,Design and Analysis of Computer Architectures,3,TRUE,FALSE
+43,COMP4621,Computer Communication Networks I,3,FALSE,TRUE
+44,COMP4622,Computer Communication Networks II,3,TRUE,FALSE
+45,COMP4631,Computer and Communication Security,3,TRUE,FALSE
+46,COMP4900,Academic and Professional Development,0,TRUE,TRUE
+47,COMP4901B,Social Information Network Analysis and Engineering,3,TRUE,FALSE
+48,COMP4911,IT Entrepreneurship,3,TRUE,FALSE
+49,COMP4971A-F,Directed Studies III (Honors Study Track),1,TRUE,FALSE
+50,COMP4971B-F,Directed Studies III (Honors Study Track),2,TRUE,FALSE
+51,COMP4971A-S,Independent Work,1,FALSE,TRUE
+52,COMP4971B-S,Independent Work,2,FALSE,TRUE
+53,COMP4971C-S,Independent Work,3,FALSE,TRUE
+54,COMP4982,Final Year Project,7,TRUE,TRUE
+55,COMP4982H,Final Year Thesis (Honors Study Track),7,TRUE,TRUE
+56,COMP4991,Computer Engineering Final Year Project,8,TRUE,TRUE
+57,COMP4992,Computer Engineering Final Year Thesis,8,TRUE,TRUE
+58,COMP5111,Fundamentals of Software Analysis,3,FALSE,TRUE
+59,COMP5211,Advanced Artificial Intelligence,3,FALSE,TRUE
+60,COMP5212,Machine Learning,3,TRUE,FALSE
+61,COMP5221,Natural Language Processing,3,TRUE,FALSE
+62,COMP5311,Database Architecture and Implementation,3,FALSE,TRUE
+63,COMP5331,Knowledge Discovery in Databases,3,TRUE,FALSE
+64,COMP5411,Advanced Computer Graphics,3,TRUE,FALSE
+65,COMP5421,Computer Vision,3,FALSE,TRUE
+66,COMP5531,Green Computing,3,FALSE,TRUE
+67,COMP5621,Computer Networks,3,TRUE,FALSE
+68,COMP5622,Advanced Computer Communications and Networking,3,FALSE,TRUE
+69,COMP5631,Cryptography and Security,3,TRUE,FALSE
+70,COMP5712,Introduction to Combinatorial Optimization,3,TRUE,FALSE
+71,COMP5713,Computational Geometry,3,FALSE,TRUE
+72,COMP6311D,"Hot Topics on Big Data: Algorithms, Analytics and Applications",3,TRUE,FALSE
+73,COMP6511A,Large-Scale Distributed Systems,3,FALSE,TRUE
+74,COMP6770,Professional Development in Computer Science and Engineering,1,TRUE,TRUE
+75,COMP6911,Computer Science and Engineering Seminar I,0,TRUE,TRUE
+76,COMP6912,Computer Science and Engineering Seminar II,1,TRUE,TRUE
+77,COMP6921,Research Project,1,TRUE,TRUE
+78,COMP6931A,Independent Studies,3,TRUE,TRUE
+79,COMP6990,MPhil Thesis Research,0,TRUE,TRUE
+80,COMP7990,Doctoral Thesis Research,0,TRUE,TRUE
+81,MATH2411,Applied Statistics ,4,TRUE,TRUE
+82,MATH2111,Multivariable Calculus,3,TRUE,TRUE
+83,MATH2011,Introduction to Multivariable Calculus,3,TRUE,TRUE
+84,MATH1018,Concise Calculus,2,TRUE,TRUE
+85,LANG2030,Technical Communication I,4,TRUE,TRUE
+86,LANG1001,English Language II,4,TRUE,TRUE
+87,IELM4110,Engineers in Society,1,TRUE,TRUE
+88,IELM2200,Engineering Management,3,TRUE,TRUE
+89,HLTH1010,Healthy Lifestyle,0,TRUE,TRUE
+90,ELEC1100,Introduction to Electro-Robot Design,4,TRUE,TRUE
+91,ELEC1970,Industrial Training,0,TRUE,TRUE
+92,ELEC2100,Signals and Systems,4,TRUE,TRUE
+93,ELEC2200,Digital Circuits and Systems,4,TRUE,TRUE
+94,ELEC2600,Probability and Random Processes in Engineering,4,TRUE,TRUE
+95,ELEC2930,Academic and Professional Development I,0,TRUE,TRUE
+96,ELEC3930,Academic and Professional Development II,0,TRUE,TRUE
+97,ELEC4410,Digital Communications and Wireless Systems,3,TRUE,TRUE
+98,ELEC4930,Academic and Professional Development III,0,TRUE,TRUE
+99,COMPElective1,COMP Elective Course,3,TRUE,TRUE
+100,COMPElective2,COMP Elective Course,3,TRUE,TRUE
+101,COMPElective3,COMP Elective Course,3,TRUE,TRUE
+102,COMPElective4,COMP Elective Course,3,TRUE,TRUE
+103,COMPElective5,COMP Elective Course,3,TRUE,TRUE
+104,SBM,SBM Course,3,TRUE,TRUE
+105,ENGG,ENGG Course,3,TRUE,TRUE
+106,CommonCore1,Common Core Course,3,TRUE,TRUE
+107,CommonCore2,Common Core Course,3,TRUE,TRUE
+108,CommonCore3,Common Core Course,3,TRUE,TRUE
+109,CommonCore4,Common Core Course,3,TRUE,TRUE
+110,FREE,Free Elective Course,3,TRUE,TRUE
+111,COMP/ELEC/MATH1,COMP or ELEC or MATH Course,3,TRUE,TRUE
+112,COMP/ELEC/MATH2,COMP or ELEC or MATH Course,3,TRUE,TRUE
+113,COMP/ELEC/MATH3,COMP or ELEC or MATH Course,3,TRUE,TRUE
+114,ENGG/SCIE1,ENGG or SCIE Course,3,TRUE,TRUE
+115,ENGG/SCIE2,ENGG or SCIE Course,3,TRUE,TRUE

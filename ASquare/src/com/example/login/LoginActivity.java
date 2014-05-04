@@ -46,10 +46,7 @@ public class LoginActivity extends Activity {
             		new AlertDialog.Builder( LoginActivity.this )
                     .setTitle( "Warning" )
                     .setMessage( "Your Login Informaiton is Wrong!" )
-                    .setPositiveButton( "OK", new DialogInterface.OnClickListener() {
-                        public void onClick(DialogInterface dialog, int which) {
-                       }
-                    })
+                    //.setPositiveButton( "OK",                     )
                     .show();
             	}
             	else

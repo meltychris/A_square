@@ -3,6 +3,7 @@ package com.example.study_path.test;
 
 import android.app.Instrumentation.ActivityMonitor;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.test.ActivityInstrumentationTestCase2;
 import android.test.suitebuilder.annotation.SmallTest;
 import android.view.View;
@@ -63,7 +64,8 @@ public class Advanced_Activity2_Test extends ActivityInstrumentationTestCase2<Ad
      	String[] checked = {"false", "true"};
     	intent.putExtra ("Course", course);
     	intent.putExtra ("Checked", checked);
-     	
+    	 SharedPreferences xadvanced = mActivity.getSharedPreferences("advanced", 0);
+		  xadvanced.edit().putBoolean("advanced", false).commit();
 		setActivityIntent(intent) ;
 		mActivity = getActivity();  
 		
