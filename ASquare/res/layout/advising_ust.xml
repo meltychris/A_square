@@ -1,0 +1,184 @@
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:shrinkColumns="*"
+    android:stretchColumns="*"
+    tools:context="com.example.advising.ustTeamActivity" >
+
+    <TableRow
+        android:layout_width="50dp"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal" >
+
+        <TextView
+            android:id="@+id/TextView1a"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#b0b0b0"
+            android:gravity="center"
+            android:padding="18dip"
+            android:text="Name:"
+            android:textColor="#000000" />
+
+        <TextView
+            android:id="@+id/TextView1b"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#a09f9f"
+            android:gravity="center"
+            android:padding="18dip"
+            android:text="HKUST Psychological Team"
+            android:textColor="#000000" />
+    </TableRow>
+
+    <TableRow
+        android:layout_width="50dp"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal" >
+
+        <TextView
+            android:id="@+id/TextView2a"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#b0b0b0"
+            android:gravity="center"
+            android:padding="18dip"
+            android:text="Telephone:"
+            android:textColor="#000000" />
+
+        <TextView
+            android:id="@+id/TextView2b"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#a09f9f"
+            android:gravity="center"
+            android:padding="18dip"
+            android:text="23586696"
+            android:textColor="#000000" />
+    </TableRow>
+
+    <TableRow
+        android:layout_width="50dp"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal" >
+
+        <TextView
+            android:id="@+id/TextView3a"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#b0b0b0"
+            android:gravity="center"
+            android:padding="18dip"
+            android:text="Email:"
+            android:textColor="#000000" />
+
+        <TextView
+            android:id="@+id/TextView3b"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#a09f9f"
+            android:gravity="center"
+            android:padding="18dip"
+            android:text="counsel@ust.hk"
+            android:textColor="#000000" />
+    </TableRow>
+
+    <TableRow
+        android:layout_width="50dp"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal" >
+
+        <TextView
+            android:id="@+id/TextView4a"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#b0b0b0"
+            android:gravity="center"
+            android:padding="18dip"
+            android:text="Address:"
+            android:textColor="#000000" />
+
+        <TextView
+            android:id="@+id/TextView4b"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#a09f9f"
+            android:gravity="center"
+            android:padding="18dip"
+            android:text="Room 5015 via Lift 3 (next to Bookstore)"
+            android:textColor="#000000" />
+    </TableRow>
+
+    <TableRow
+        android:layout_width="50dp"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal" >
+
+        <TextView
+            android:id="@+id/TextView5a"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#b0b0b0"
+            android:gravity="center"
+            android:padding="18dip"
+            android:text="Opening Hours:"
+            android:textColor="#000000" />
+
+        <TextView
+            android:id="@+id/TextView5b"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#a09f9f"
+            android:gravity="center"
+            android:padding="18dip"
+            android:text="9AM - 5PM"
+            android:textColor="#000000" />
+    </TableRow>
+
+    <TableRow
+        android:layout_width="50dp"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal" >
+
+        <TextView
+            android:id="@+id/TextView6a"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#b0b0b0"
+            android:gravity="center"
+            android:padding="18dip"
+            android:text="Introduction:"
+            android:textColor="#000000" />
+
+        <TextView
+            android:id="@+id/TextView6b"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#a09f9f"
+            android:gravity="center"
+            android:padding="18dip"
+            android:text="Counselling service provided by SAO, HKUST"
+            android:textColor="#000000" />
+    </TableRow>
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="50dp"
+        android:layout_height="match_parent"
+        android:text="Call Now" />
+
+</TableLayout>
