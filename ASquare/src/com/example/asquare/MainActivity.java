@@ -30,7 +30,7 @@ public class MainActivity extends Activity {
             public void onClick(View v) {
                 // TODO Auto-generated method stub
             	Intent intent = new Intent();
-                intent.setClass(MainActivity.this, com.example.gpa_calculator.GPAMainActivity.class);
+                intent.setClass(MainActivity.this, com.example.gpa_calculator.MainActivity.class);
                 startActivity(intent);
                
         }});
