@@ -103,7 +103,7 @@ public class MainActivity extends Activity {
             	
 	   			 Builder MyAlertDialog = new AlertDialog.Builder(MainActivity.this);
 	   			 MyAlertDialog.setTitle("Re-confirmation");
-	   			 MyAlertDialog.setMessage("Do you want delete all course records?");
+	   			 MyAlertDialog.setMessage("Do you want to delete all course records?");
 	   			 
 	   			 
 	   			 //«Ø¥ß«ö¤U«ö¶s
