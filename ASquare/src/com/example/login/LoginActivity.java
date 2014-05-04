@@ -25,6 +25,10 @@ public class LoginActivity extends Activity {
 		edit_username = (EditText) findViewById(R.id.edit_username);
 		Login = (Button) findViewById(R.id.Login);
 		
+		edit_password.setText("STSK");
+		edit_username.setText("STSK");
+
+		
 		Login.setOnClickListener(new Button.OnClickListener(){ 
             @Override
             public void onClick(View v) {

@@ -66,6 +66,8 @@ public class Advanced_Activity2 extends Activity {
      	SharedPreferences xCredit = getSharedPreferences("Credit", 0);
      	xadvanced = getSharedPreferences("advanced", 0);
      	
+
+     	
      	if (xadvanced.getBoolean("advanced", false)){
      		Major1 = xMajor1.getBoolean("Major1", true);
      		Major2 = xMajor2.getBoolean("Major2", false);
@@ -78,7 +80,7 @@ public class Advanced_Activity2 extends Activity {
      		Credit = xCredit.getString("Credit", "18");
      	}
      	else
-     	{
+     	{		          	
 		    if (params!= null) {
 		    	Major1 = params.getBoolean ("Major1");
 		    	Major2 = params.getBoolean ("Major2");	    	
@@ -138,15 +140,18 @@ public class Advanced_Activity2 extends Activity {
 		    	studied = new ArrayList<String>();
 		    	notstudied = new ArrayList<String>();
 
+
 		    	for (int i = 0; i< Course.length; i++){					//catagorize
 		    		if (Checked[i].equals("true"))
 		    			studied.add(Course[i]);
-		    		else
+		    		else				    	
 		    			notstudied.add(Course[i]);
-		    		
+
 		    		SaveRecord(this.findViewById(android.R.id.content));		//insert data to database
 
 		    	}
+             	xadvanced.edit().putBoolean("advanced", true).commit();
+
 	
 		    }
      	}
@@ -258,7 +263,8 @@ public class Advanced_Activity2 extends Activity {
 	    	DataBaseTestAdapter1 mDbHelper = new DataBaseTestAdapter1(this);         
 	    	mDbHelper.createDatabase();       
 	    	mDbHelper.open(); 
-	    	
+	      //	Toast.makeText(this.findViewById(android.R.id.content).getContext(),"saveeee",
+    	    //        Toast.LENGTH_SHORT).show();
 	    	for (String temp : studied)
 		    	if(mDbHelper.SaveData(temp, "Studied"))
 		    	{
@@ -305,21 +311,28 @@ public class Advanced_Activity2 extends Activity {
 	        	mDbHelper.createDatabase();       
 	        	mDbHelper.open(); 
 	        	 
+	        	Toast.makeText(this.findViewById(android.R.id.content).getContext(),"aaa",
+	    	            Toast.LENGTH_SHORT).show();
+	        	
 	        	//Utility.ShowMessageBox(this, "hi");
 	        	List<String> reqcourse = new ArrayList<String>();
 
 	    		//Check for required course
-	    		if (Sem.equals("Fall")){
+	    		//if (Sem.equals("Fall")){
 	    			String sql;
 	    			Cursor testdata;
 	    			String code;
-	    			for (int yearloop = 1; yearloop < year; yearloop++){
+	    		/*	for (int yearloop = 1; yearloop < year; yearloop++){
+	    				Toast.makeText(this.findViewById(android.R.id.content).getContext(),"bbb",
+	    	    	            Toast.LENGTH_SHORT).show();
 		    			sql ="SELECT Course.Code from Course, " + major + " WHERE Course.Code = " + major + ".Code AND (Pure='All' OR Pure='" + pure + "') AND Year='" + Integer.toString(yearloop) + "' AND Sem='Fall' AND FALL='TRUE' AND " + major +".Code NOT IN (SELECT Code FROM Studied)"; 
 		    			testdata = mDbHelper.getTestData(sql); 
 		    			code = DataBaseUtility1.GetColumnValue(testdata, "Code");
 			    		if (!code.equals(""))								//meaning no result
 			    			reqcourse.add(code);
 			    		while (testdata.moveToNext()){ 
+			    			Toast.makeText(this.findViewById(android.R.id.content).getContext(),"ccc",
+				    	            Toast.LENGTH_SHORT).show();
 			    			code = DataBaseUtility1.GetColumnValue(testdata, "Code");
 			    			reqcourse.add(code);
 			    			}
@@ -331,6 +344,8 @@ public class Advanced_Activity2 extends Activity {
 			    		if (!code.equals(""))								//meaning no result
 			    			reqcourse.add(code);
 			    		while (testdata.moveToNext()){ 
+			    			Toast.makeText(this.findViewById(android.R.id.content).getContext(),"ddd",
+				    	            Toast.LENGTH_SHORT).show();
 			    			code = DataBaseUtility1.GetColumnValue(testdata, "Code");
 			    			reqcourse.add(code);
 			   			}
@@ -342,6 +357,8 @@ public class Advanced_Activity2 extends Activity {
 		    		if (!code.equals(""))								//meaning no result
 		    			reqcourse.add(code);
 	    			while (testdata.moveToNext()){ 
+	    				Toast.makeText(this.findViewById(android.R.id.content).getContext(),"eee",
+	    	    	            Toast.LENGTH_SHORT).show();
 	    				code = DataBaseUtility1.GetColumnValue(testdata, "Code");
 	    				reqcourse.add(code);
 		    		
@@ -380,15 +397,31 @@ public class Advanced_Activity2 extends Activity {
 	    		}
 
 	    		//check prereq
+	    		Toast.makeText(this.findViewById(android.R.id.content).getContext(),"fff",
+	    	            Toast.LENGTH_SHORT).show();
 	    		List<String> result = new ArrayList<String>();
 	    		for (String i : reqcourse){
+	    			Toast.makeText(this.findViewById(android.R.id.content).getContext(),"ggg",
+		    	            Toast.LENGTH_SHORT).show();
 	    			String sql ="SELECT Prerequisite.Code from Prerequisite, NotStudied WHERE Prerequisite.Precourse = NotStudied.Code AND Prerequisite.Code='" + i +"'"; 
 	    			Cursor testdata = mDbHelper.getTestData(sql); 
 	    			String code = DataBaseUtility1.GetColumnValue(testdata, "Code");
 	    			if (code.equals(""))		//insert to result if at least one precourse remains
 	    				 result.add(i);
 	    		}
-	    		
+	    	*/
+		    		List<String> result = new ArrayList<String>();
+	    			sql ="SELECT Code FROM NotStudied"; 
+	    			testdata = mDbHelper.getTestData(sql); 
+	    			code = DataBaseUtility1.GetColumnValue(testdata, "Code");
+		    		if (!code.equals(""))								//meaning no result
+		    			reqcourse.add(code);
+		    		while (testdata.moveToNext()){ 
+		    			Toast.makeText(this.findViewById(android.R.id.content).getContext(),"ccc",
+			    	            Toast.LENGTH_SHORT).show();
+		    			code = DataBaseUtility1.GetColumnValue(testdata, "Code");
+		    			result.add(code);
+		    			}
 	        	mDbHelper.close();
 	        	
 

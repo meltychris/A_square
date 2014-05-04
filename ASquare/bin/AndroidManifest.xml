@@ -75,6 +75,12 @@
         <activity android:name="com.example.chatroom.ChatHelpActivity"></activity>
         <activity android:name="com.example.chatroom.ChatroomActivity"></activity>
         <activity android:name="com.example.chatroom.MentorMain"></activity>
+        <activity android:name="com.example.gpa_calculator.add_course_record"></activity>
+        <activity android:name="com.example.gpa_calculator.advice1"></activity>
+        <activity android:name="com.example.gpa_calculator.advice2"></activity>
+        <activity android:name="com.example.gpa_calculator.MainActivity"></activity>
+        <activity android:name="com.example.gpa_calculator.printTGA"></activity>
+        <activity android:name="com.example.gpa_calculator.Student"></activity>
         
     </application>
 

@@ -125,7 +125,6 @@ public class Advanced_Activity_choose extends Activity{
              	xSem1.edit().putBoolean("Sem1", Sem1).commit();
              	xSem2.edit().putBoolean("Sem2", Sem2).commit();
              	xCredit.edit().putString("Credit", Credit).commit();
-             	xadvanced.edit().putBoolean("advanced", true).commit();
 
 
             	
