@@ -37,12 +37,13 @@ public class MainActivity extends Activity {
 				startActivity(intent);
 			}
 		});
-		if (savedInstanceState == null) {
+	}
+/*		if (savedInstanceState == null) {
 			getSupportFragmentManager().beginTransaction()
 					.add(R.id.container, new PlaceholderFragment()).commit();
 		}
 	}
-/*
+
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 
