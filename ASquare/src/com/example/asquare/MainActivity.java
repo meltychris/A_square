@@ -62,7 +62,6 @@ public class MainActivity extends Activity {
             @Override
             public void onClick(View v) {
                 // TODO Auto-generated method stub
-             	SharedPreferences user = getSharedPreferences("user", 0);
              	String usertype;
             	Intent intent = new Intent();
             	Bundle params = getIntent().getExtras();

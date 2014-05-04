@@ -35,7 +35,7 @@ public class MentorMain extends Activity {
 	    msg = (EditText)findViewById(R.id.msg);
 
 	    SharedPreferences shareduser = getSharedPreferences("user", 0);
- 		user = shareduser.getString("user", "error");
+ 		user = shareduser.getString("user", "Ken");
  		
     	view1.setVisibility(View.VISIBLE);
     	view2.setVisibility(View.INVISIBLE);

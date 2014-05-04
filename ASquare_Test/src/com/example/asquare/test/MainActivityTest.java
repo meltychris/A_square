@@ -2,6 +2,8 @@ package com.example.asquare.test;
 
 import com.example.asquare.MainActivity;
 import com.example.asquare.R;
+import com.example.chatroom.MainChat;
+import com.example.chatroom.MentorMain;
 import com.example.exam_count_down.Exam_countdown;
 import com.example.study_path.Study_Path;
 
@@ -9,13 +11,15 @@ import android.app.AlertDialog;
 import android.app.Instrumentation;
 import android.app.Instrumentation.ActivityMonitor;
 import android.content.DialogInterface;
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.test.ActivityInstrumentationTestCase2;
 import android.test.suitebuilder.annotation.SmallTest;
 import android.view.KeyEvent;
 import android.widget.Button;
 import android.widget.ImageButton;
 
-public class MainActivity_Test extends ActivityInstrumentationTestCase2<MainActivity> {
+public class MainActivityTest extends ActivityInstrumentationTestCase2<MainActivity> {
 
 	private MainActivity mActivity;
 	ImageButton button1;
@@ -25,13 +29,16 @@ public class MainActivity_Test extends ActivityInstrumentationTestCase2<MainActi
 	ImageButton button5;
 	ImageButton button6;
 	
-	public MainActivity_Test() {
+	public MainActivityTest() {
 		super(MainActivity.class);
 	}
 	
 	@Override
 	protected void setUp() throws Exception {
 		super.setUp();
+	}
+	
+	private void manualsetUp(){
 		mActivity = getActivity();  
 		button1 = (ImageButton)mActivity.findViewById(R.id.imageButton1);
 		button2 = (ImageButton)mActivity.findViewById(R.id.imageButton2);
@@ -51,16 +58,18 @@ public class MainActivity_Test extends ActivityInstrumentationTestCase2<MainActi
 
 	@SmallTest // SmallTest: this test doesn't interact with any file system or network. 
 	 public void testView() { // checks if the activity is created 
+		manualsetUp();
 		assertNotNull(getActivity()); 
 	 } 
 	
 	@SmallTest 
 	 public void testbutton1() { 
-		  ActivityMonitor activityMonitor = getInstrumentation().addMonitor(com.example.gpa_calculator.MainActivity.class.getName(), null, false);
+		manualsetUp();
+		ActivityMonitor activityMonitor = getInstrumentation().addMonitor(com.example.gpa_calculator.MainActivity.class.getName(), null, false);
 
 		 //INTERACTIONS
 		  mActivity.runOnUiThread(new Runnable() {
-			    @Override
+			  	@Override
 			    public void run() {
 			      // click button and open next activity.
 			      button1.performClick();
@@ -71,12 +80,12 @@ public class MainActivity_Test extends ActivityInstrumentationTestCase2<MainActi
 		  com.example.gpa_calculator.MainActivity nextActivity = (com.example.gpa_calculator.MainActivity) getInstrumentation().waitForMonitor(activityMonitor);
 		  assertNotNull(nextActivity);
 		  nextActivity.finish();
-
 	 }
 	
 	@SmallTest
 	 public void testbutton2() { 
-		  ActivityMonitor activityMonitor = getInstrumentation().addMonitor(Study_Path.class.getName(), null, false);
+		manualsetUp();
+		ActivityMonitor activityMonitor = getInstrumentation().addMonitor(Study_Path.class.getName(), null, false);
 
 		 //INTERACTIONS 
 		  mActivity.runOnUiThread(new Runnable() {
@@ -91,14 +100,14 @@ public class MainActivity_Test extends ActivityInstrumentationTestCase2<MainActi
 		  Study_Path nextActivity = (Study_Path) getInstrumentation().waitForMonitor(activityMonitor);
 		  assertNotNull(nextActivity);
 		  nextActivity.finish();
-
 	 }
 	
 
 	
 	@SmallTest 
-	 public void testbutton3() { 
-		  ActivityMonitor activityMonitor = getInstrumentation().addMonitor(Exam_countdown.class.getName(), null, false);
+	 public void testbutton3() {
+		manualsetUp();
+		ActivityMonitor activityMonitor = getInstrumentation().addMonitor(Exam_countdown.class.getName(), null, false);
 
 		//INTERACTIONS
 		  mActivity.runOnUiThread(new Runnable() {
@@ -113,12 +122,64 @@ public class MainActivity_Test extends ActivityInstrumentationTestCase2<MainActi
 		  Exam_countdown nextActivity = (Exam_countdown) getInstrumentation().waitForMonitor(activityMonitor);
 		  assertNotNull(nextActivity);
 		  nextActivity.finish();
+	 }
+	
+	@SmallTest 
+	 public void testbutton5_Student() { 
+		Intent intent = new Intent();
+     	intent.putExtra ("type", "student");
+		setActivityIntent(intent) ;
+		mActivity = getActivity();  
+		button5 = (ImageButton)mActivity.findViewById(R.id.imageButton5);
 
+		ActivityMonitor activityMonitor = getInstrumentation().addMonitor(MainChat.class.getName(), null, false);
+
+		//INTERACTIONS
+		  mActivity.runOnUiThread(new Runnable() {
+			    @Override
+			    public void run() {
+			      // click button and open next activity.
+			      button5.performClick();
+			    }
+			  });	
+		  
+		 //CHECK THE RESULT 
+		  MainChat nextActivity = (MainChat) getInstrumentation().waitForMonitor(activityMonitor);
+		  assertNotNull(nextActivity);
+		  nextActivity.finish();
+	 }
+	
+	@SmallTest 
+	 public void testbutton5_Mentor() { 
+		Intent intent = new Intent();
+    	intent.putExtra ("type", "mentor");
+		setActivityIntent(intent) ;
+		
+		mActivity = getActivity();  
+		button5 = (ImageButton)mActivity.findViewById(R.id.imageButton5);
+
+		
+		ActivityMonitor activityMonitor = getInstrumentation().addMonitor(MentorMain.class.getName(), null, false);
+
+		//INTERACTIONS
+		  mActivity.runOnUiThread(new Runnable() {
+			    @Override
+			    public void run() {
+			      // click button and open next activity.
+			      button5.performClick();
+			    }
+		  });	
+		  
+		 //CHECK THE RESULT 
+		  MentorMain nextActivity = (MentorMain) getInstrumentation().waitForMonitor(activityMonitor);
+		  assertNotNull(nextActivity);
+		  nextActivity.finish();
 	 }
 
 	
 	@SmallTest 
 	 public void testonkeydown() { 
+		manualsetUp();
 		// register next activity that need to be monitored.
 		Instrumentation inst = getInstrumentation();
 		ActivityMonitor monitor = getInstrumentation().addMonitor(MainActivity.class.getName(), null, false);
@@ -126,8 +187,7 @@ public class MainActivity_Test extends ActivityInstrumentationTestCase2<MainActi
 		// INTERACTIONS 
 		inst.sendKeyDownUpSync(KeyEvent.KEYCODE_BACK);
 
-		  
-		 //CHECK THE RESULT 
+		//CHECK THE RESULT 
 		AlertDialog dialog = mActivity.isExit; 
 		assertTrue(dialog.isShowing());			//test if dialog is opened
 		
@@ -138,7 +198,6 @@ public class MainActivity_Test extends ActivityInstrumentationTestCase2<MainActi
 	        	
 	            performClick(dialog.getButton(DialogInterface.BUTTON_POSITIVE));
 	    		assertTrue(mActivity.isFinishing());
-
 	        } catch (Throwable e) {
 	            e.printStackTrace();
 	        }
