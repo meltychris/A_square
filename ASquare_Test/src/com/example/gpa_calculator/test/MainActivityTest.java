@@ -6,8 +6,11 @@ import android.app.Dialog;
 import android.app.AlertDialog.Builder;
 import android.app.Instrumentation.ActivityMonitor;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.test.ActivityInstrumentationTestCase2;
+import android.test.TouchUtils;
+import android.test.suitebuilder.annotation.MediumTest;
 import android.test.suitebuilder.annotation.SmallTest;
 import android.view.View;
 import android.widget.Button;
@@ -118,14 +121,111 @@ public class MainActivityTest extends ActivityInstrumentationTestCase2<MainActiv
 		 nextActivity.finish();
 	}
 	
+	//see http://stackoverflow.com/questions/17526005/how-to-test-an-alertdialog-in-android
 	@SmallTest
 	public void testButtonGPAmain4() { 
 		
 		//TODO
-		//assertFalse(true);
+		
+		//add record
+		MainActivity.student1.courseRecord[1][1][0][0] = "COMP1001";
+		MainActivity.student1.courseRecord[1][1][0][1] = "3";
+		MainActivity.student1.courseRecord[1][1][0][2] = "A";
+		
+		//INTERACTIONS 
+		 mActivity.runOnUiThread(new Runnable() {
+			    @Override
+			    public void run() {
+			    	// click button and open next activity
+			    	
+			    	//no clicking for dialog test, dont ask me why
+			    	//ButtonGPAmain4.performClick();
+			    	
+			    	
+			    	AlertDialog dialog = mActivity.createAndShowAlertDialogButtonGPAmain4();
+			    	//click Yes!
+			    	//dialog.show();
+			    	dialog.getButton(DialogInterface.BUTTON_POSITIVE).performClick();
+
+			    }
+			  });	
+		  
+		 //CHECK THE RESULT
+	
+	
+		 ActivityMonitor activityMonitor = getInstrumentation().addMonitor(MainActivity.class.getName(), null, false);
+		 getInstrumentation().waitForMonitorWithTimeout(activityMonitor,2000);
+		
+		String testing0 = MainActivity.student1.courseRecord[1][1][0][0];
+		String testing1 = MainActivity.student1.courseRecord[1][1][0][1];
+		String testing2 = MainActivity.student1.courseRecord[1][1][0][2];
+		assertEquals(null, testing0);
+		assertEquals(null, testing1);
+		assertEquals(null, testing2);
+		
+		//if do this, null pointer exception, dont know why
+		//assertTrue(MainActivity.student1.courseRecord[1][1][0][0].equals(null));
 		
 		
 	}
+
+/*	
+	@MediumTest
+	public void testButtonGPAmain4() {
+		ActivityMonitor activityMonitor = getInstrumentation().addMonitor(MainActivity.class.getName(), null, false);
+
+		//add record
+		MainActivity.student1.courseRecord[1][1][0][0] = "COMP1001";
+		MainActivity.student1.courseRecord[1][1][0][1] = "3";
+		MainActivity.student1.courseRecord[1][1][0][2] = "A";
+		
+	    TouchUtils.clickView(this, ButtonGPAmain4);
+
+	    MainActivity myActivity = (MainActivity) activityMonitor.waitForActivityWithTimeout(2000);
+	    //assertNotNull("MyActivity activity not started, activity is null", myActivity);
+
+	    final AlertDialog dialog = myActivity.createAndShowAlertDialogButtonGPAmain4(); // I create getLastDialog method in MyActivity class. Its return last created AlertDialog
+	    
+	    if (dialog.isShowing())
+	    {
+	        try
+	        {
+	        	runTestOnUiThread(new Runnable()
+	        	{
+
+	        		@Override
+	        	    public void run()
+	        		{  	
+	        			//dialog.show();
+	        			//button.performClick()
+	        			dialog.getButton(DialogInterface.BUTTON_POSITIVE).performClick();
+	        	    }
+	        	});
+	        	
+	        	getInstrumentation().waitForIdleSync();
+	        	    
+	        }
+	        catch (Throwable e) 
+	        {
+	            e.printStackTrace();
+	        }
+	    }
+	    
+	    //assertTrue(MainActivity.student1.courseRecord[1][1][0][0].equals("COMP1001"));
+	    
+	    assertTrue((MainActivity.student1.courseRecord[1][1][0][0].equals(null)) &&
+	    			(MainActivity.student1.courseRecord[1][1][0][1].equals(null)) &&
+	    			(MainActivity.student1.courseRecord[1][1][0][2].equals(null))
+	    		);
+	    
+	    
+	    
+	    myActivity.finish();
+	    getInstrumentation().removeMonitor(activityMonitor);
+
+	}
+*/
+	
 	
 	@SmallTest
 	public void testButtonGPAmain5() { 
@@ -147,46 +247,152 @@ public class MainActivityTest extends ActivityInstrumentationTestCase2<MainActiv
 		 nextActivity.finish();
 	}
 	
+	//ref testButtonGPAmain4
+	//running 2nd branch, else if (CGA_without_1st_sem < 1.5), in MainActivity.printCGA()
 	@SmallTest
-	public void testButtonGPAmain6() { 
+	public void testButtonGPAmain6_1() { 
 	
 		//TODO
 		
 		//INTERACTIONS 
-		mActivity.runOnUiThread(new Runnable() {
-			   @Override
-			   public void run() {
-			     // click button and open next activity.
-			    	ButtonGPAmain6.performClick();
+		 mActivity.runOnUiThread(new Runnable() {
+			    @Override
+			    public void run() {
+			    	// click button and open next activity
+			    	
+			    	
+			    	//ButtonGPAmain6.performClick();
+			    	
+			    	AlertDialog dialog = mActivity.createAndShowAlertDialogButtonGPAmain6();
+			    	//click Yes!
+			    	//dialog.show();
+			    	//dialog.getButton(DialogInterface.BUTTON_POSITIVE).performClick();
+			    	assertTrue(dialog.isShowing());
+			    	
+			    	dialog.dismiss();
 			    }
-		});
+			  });	
 		  
-		  
-/*		
-		AlertDialog myAlertDialog = new AlertDialog(MainActivity.this);
+		 //CHECK THE RESULT
+	
+	
+		 ActivityMonitor activityMonitor = getInstrumentation().addMonitor(MainActivity.class.getName(), null, false);
+		 getInstrumentation().waitForMonitorWithTimeout(activityMonitor,2000);
+		
 
-		if(!MyAlertDialog.isShowing())
-		{  
-			MyAlertDialog.show(); 
-		}
-		
-		
-		
-		DialogCredits dialog  = new DialogCredits(this); 
-
-		if(!dialog.isShowing())
-		{  
-		    dialog.show(); 
-		}
-*/		
-		//assertFalse(true);
 	}
 	
+	//ref testButtonGPAmain4
+	//running 1st branch, if ( ( CGA >= 1.5 ) && ( CGA < 1.7 ) ), in MainActivity.printCGA()
+	@SmallTest
+	public void testButtonGPAmain6_2() { 
+	
+		//TODO
+		
+		MainActivity.student1.CGA =  1.6;
+		
+		//INTERACTIONS 
+		 mActivity.runOnUiThread(new Runnable() {
+			    @Override
+			    public void run() {
+			    	// click button and open next activity
+			    	
+			    	
+			    	//ButtonGPAmain6.performClick();
+			    	
+			    	AlertDialog dialog = mActivity.createAndShowAlertDialogButtonGPAmain6();
+			    	//click Yes!
+			    	//dialog.show();
+			    	//dialog.getButton(DialogInterface.BUTTON_POSITIVE).performClick();
+			    	assertTrue(dialog.isShowing());
+			    	
+			    	dialog.dismiss();
+			    }
+			  });	
+		  
+		 //CHECK THE RESULT
+	
+	
+		 ActivityMonitor activityMonitor = getInstrumentation().addMonitor(MainActivity.class.getName(), null, false);
+		 getInstrumentation().waitForMonitorWithTimeout(activityMonitor,2000);
+		
+
+	}
+	
+	//ref testButtonGPAmain4
+	//running 3rd branch, last else, in MainActivity.printCGA()
+	@SmallTest
+	public void testButtonGPAmain6_3() { 
+	
+		//TODO
+		
+		MainActivity.student1.CGA =  1.8;
+		//add record
+		MainActivity.student1.courseRecord[0][1][0][0] = "COMP1001";
+		MainActivity.student1.courseRecord[0][1][0][1] = "3";
+		MainActivity.student1.courseRecord[0][1][0][2] = "A";
+		
+		
+		
+		//INTERACTIONS 
+		 mActivity.runOnUiThread(new Runnable() {
+			    @Override
+			    public void run() {
+			    	// click button and open next activity
+			    	
+			    	
+			    	//ButtonGPAmain6.performClick();
+			    	
+			    	AlertDialog dialog = mActivity.createAndShowAlertDialogButtonGPAmain6();
+			    	//click Yes!
+			    	//dialog.show();
+			    	//dialog.getButton(DialogInterface.BUTTON_POSITIVE).performClick();
+			    	assertTrue(dialog.isShowing());
+			    	
+			    	dialog.dismiss();
+			    }
+			  });	
+		  
+		 //CHECK THE RESULT
+	
+	
+		 ActivityMonitor activityMonitor = getInstrumentation().addMonitor(MainActivity.class.getName(), null, false);
+		 getInstrumentation().waitForMonitorWithTimeout(activityMonitor,2000);
+		
+
+	}
+	
+	//ref testButtonGPAmain4
 	@SmallTest
 	public void testButtonGPAmain7() { 
 	
 		//TODO
-		//assertFalse(true);
+		
+		//INTERACTIONS 
+		 mActivity.runOnUiThread(new Runnable() {
+			    @Override
+			    public void run() {
+			    	// click button and open next activity
+			    	
+			    	
+			    	//ButtonGPAmain7.performClick();
+			    	
+			    	
+			    	AlertDialog dialog = mActivity.createAndShowAlertDialogButtonGPAmain7();
+			    	//click Yes!
+			    	//dialog.show();
+			    	//dialog.getButton(DialogInterface.BUTTON_POSITIVE).performClick();
+			    	assertTrue(dialog.isShowing());
+			    	
+			    	dialog.dismiss();
+			    }
+			  });	
+		  
+		 //CHECK THE RESULT
+	
+	
+		 ActivityMonitor activityMonitor = getInstrumentation().addMonitor(MainActivity.class.getName(), null, false);
+		 getInstrumentation().waitForMonitorWithTimeout(activityMonitor,2000);
 	}
 /*	
 	public class DialogCredits extends Dialog

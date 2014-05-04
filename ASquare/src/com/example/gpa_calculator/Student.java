@@ -28,7 +28,7 @@ public class Student extends Activity {
 		public static final int MAX_SEM_COURSES = 10;
 		//int currentYear;
 		//int currentSem;
-		double CGA = 0;
+		public double CGA = 0;
 		double GGA = 0;	
 		
 		//TGA for each sem
@@ -390,7 +390,7 @@ public class Student extends Activity {
 	}
 */		
 		
-	
+/*	
 	public void delCourseRecord(int year, int sem, int course_to_del) {
 		
 		System.out.println("Delete CourseRecord func starts");
@@ -436,7 +436,7 @@ public class Student extends Activity {
 		
 		
 	}
-	
+*/	
 	//independent of delCourseRecord()
 	public void resetAllRecord() {
 		

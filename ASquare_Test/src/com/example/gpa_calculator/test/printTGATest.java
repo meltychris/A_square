@@ -1,4 +1,3 @@
-/*
 package com.example.gpa_calculator.test;
 
 
@@ -12,6 +11,7 @@ import android.test.ActivityInstrumentationTestCase2;
 import android.test.suitebuilder.annotation.SmallTest;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ListView;
 
 import com.example.asquare.R;
 // com.example.gpa_calculator.GPAactivity2;
@@ -22,27 +22,21 @@ import com.example.gpa_calculator.printTGA;
 import com.example.gpa_calculator.print_course_record;
 
 //1.Change the things inside <XXXX>
-public class printTGATest extends ActivityInstrumentationTestCase2<MainActivity> {
+public class printTGATest extends ActivityInstrumentationTestCase2<printTGA> {
 
 	//2.Change MainActivity
-	private MainActivity mActivity;
+	private printTGA mActivity;
 
 	//3.Change MainActivity
 	public printTGATest() {
-		super(MainActivity.class);
+		super(printTGA.class);
 	}
 	
 	@Override
 	protected void setUp() throws Exception {
 		super.setUp();
 		mActivity = getActivity();  
-		ButtonGPAmain1 = (Button)mActivity.findViewById(R.id.ButtonGPAmain1);
-		ButtonGPAmain2 = (Button)mActivity.findViewById(R.id.ButtonGPAmain2);
-		ButtonGPAmain3 = (Button)mActivity.findViewById(R.id.ButtonGPAmain3);
-		ButtonGPAmain4 = (Button)mActivity.findViewById(R.id.ButtonGPAmain4);
-		ButtonGPAmain5 = (Button)mActivity.findViewById(R.id.ButtonGPAmain5);
-		ButtonGPAmain6 = (Button)mActivity.findViewById(R.id.ButtonGPAmain6);
-		ButtonGPAmain7 = (Button)mActivity.findViewById(R.id.ButtonGPAmain7);
+		listViewGPAprint1 = (ListView) mActivity.findViewById(R.id.listViewGPAprintTGA1);
 
 	}
 	
@@ -59,118 +53,65 @@ public class printTGATest extends ActivityInstrumentationTestCase2<MainActivity>
 		assertNotNull(getActivity()); 
 	} 
 
+	//empty condition to print
 	@SmallTest
-	public void testButtonGPAmain1() { 
-		  ActivityMonitor activityMonitor = getInstrumentation().addMonitor(print_course_record.class.getName(), null, false);
+	public void testListViewGPAprint1() { 
+		
 
 		 //INTERACTIONS 
 		  mActivity.runOnUiThread(new Runnable() {
 			    @Override
 			    public void run() {
-			      // click button and open next activity.
-			    	ButtonGPAmain1.performClick();
+			      
+			    	//listViewGPAprint1.performItemClick(listViewGPAprint1.getAdapter().getView(0, null, null), 0, 0);
+			    	
 			    }
 			  });	
 		  
 		 //CHECK THE RESULT
-		 print_course_record nextActivity = (print_course_record) getInstrumentation().waitForMonitorWithTimeout(activityMonitor, 20000);
-		 assertNotNull(nextActivity);
-		 nextActivity.finish();
-
-	}
-	
-	@SmallTest
-	public void testButtonGPAmain2() { 
-		
-		  ActivityMonitor activityMonitor = getInstrumentation().addMonitor(advice1.class.getName(), null, false);
-
-		 //INTERACTIONS 
-		  mActivity.runOnUiThread(new Runnable() {
-			    @Override
-			    public void run() {
-			      // click button and open next activity.
-			    	ButtonGPAmain2.performClick();
-			    }
-			  });	
-		  
-		 //CHECK THE RESULT
-		  advice1 nextActivity = (advice1) getInstrumentation().waitForMonitorWithTimeout(activityMonitor, 20000);
-		 assertNotNull(nextActivity);
-		 nextActivity.finish();
-	}
-	
-	@SmallTest
-	public void testButtonGPAmain3() { 
-		
-		  ActivityMonitor activityMonitor = getInstrumentation().addMonitor(add_course_record.class.getName(), null, false);
-
-		 //INTERACTIONS 
-		  mActivity.runOnUiThread(new Runnable() {
-			    @Override
-			    public void run() {
-			      // click button and open next activity.
-			    	ButtonGPAmain3.performClick();
-			    }
-			  });	
-		  
-		 //CHECK THE RESULT
-		  add_course_record nextActivity = (add_course_record) getInstrumentation().waitForMonitorWithTimeout(activityMonitor, 20000);
-		 assertNotNull(nextActivity);
-		 nextActivity.finish();
-	}
-	
-	@SmallTest
-	public void testButtonGPAmain4() { 
-		
-		//TODO
-		assertFalse(true);
-		
-		
-	}
-	
-	@SmallTest
-	public void testButtonGPAmain5() { 
-		
 		  ActivityMonitor activityMonitor = getInstrumentation().addMonitor(printTGA.class.getName(), null, false);
-
-		 //INTERACTIONS 
-		  mActivity.runOnUiThread(new Runnable() {
-			    @Override
-			    public void run() {
-			      // click button and open next activity.
-			    	ButtonGPAmain5.performClick();
-			    }
-			  });	
+		  getInstrumentation().waitForMonitorWithTimeout(activityMonitor,1000);
 		  
-		 //CHECK THE RESULT
-		  printTGA nextActivity = (printTGA) getInstrumentation().waitForMonitorWithTimeout(activityMonitor, 20000);
-		 assertNotNull(nextActivity);
-		 nextActivity.finish();
+	    //should be empty, give boolean true
+		  
+		//No need MainActivity.student1.printWarningTGA() != null, as it must not be null, as it is initialized
+		//assertTrue(MainActivity.student1.printWarningTGA() == null);
+	    assertTrue(MainActivity.student1.printTGA().isEmpty());
+
+	  
+
 	}
-	
+
+	//have things to print in TGA
 	@SmallTest
-	public void testButtonGPAmain6() { 
-	
-		//TODO
+	public void testListViewGPAprint2() { 
+			
+		//add record
+		MainActivity.student1.courseRecord[1][1][0][0] = "COMP1001";
+		MainActivity.student1.courseRecord[1][1][0][1] = "3";
+		MainActivity.student1.courseRecord[1][1][0][2] = "D";
+		
 		
 		//INTERACTIONS 
 		mActivity.runOnUiThread(new Runnable() {
-			   @Override
-			   public void run() {
-			     // click button and open next activity.
-			    	ButtonGPAmain6.performClick();
-			    }
-		});
-		  
+			@Override
+			public void run() {
+				      
+				 //listViewGPAprint1.performItemClick(listViewGPAprint1.getAdapter().getView(0, null, null), 0, 0);
+				    	
+			}
+		});	
+			  
+		//CHECK THE RESULT
+		ActivityMonitor activityMonitor = getInstrumentation().addMonitor(printTGA.class.getName(), null, false);
+		getInstrumentation().waitForMonitorWithTimeout(activityMonitor,1000);
+			  
+		assertFalse(MainActivity.student1.printTGA().isEmpty());
+
 		  
 
-	Button ButtonGPAmain1;
-	Button ButtonGPAmain2;
-	Button ButtonGPAmain3;
-	Button ButtonGPAmain4;
-	Button ButtonGPAmain5;
-	Button ButtonGPAmain6;
-	Button ButtonGPAmain7;
+		}	  
+
+	ListView listViewGPAprint1;
 	
 }
-*/
