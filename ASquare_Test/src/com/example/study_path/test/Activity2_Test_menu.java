@@ -2,18 +2,23 @@ package com.example.study_path.test;
 
 
 import android.app.Instrumentation.ActivityMonitor;
+import android.content.ClipData.Item;
 import android.content.Intent;
 import android.test.ActivityInstrumentationTestCase2;
 import android.test.suitebuilder.annotation.SmallTest;
+import android.view.KeyEvent;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ListView;
 
 import com.example.asquare.R;
+import com.example.study_path.Advanced_Activity;
 import com.example.study_path.Advanced_Activity2;
 
 
-public class Advanced_Activity21_Test extends ActivityInstrumentationTestCase2<Advanced_Activity2> {
+public class Activity2_Test_menu extends ActivityInstrumentationTestCase2<Advanced_Activity2> {
 
 	Advanced_Activity2 mActivity;
 	Button button1;
@@ -24,7 +29,7 @@ public class Advanced_Activity21_Test extends ActivityInstrumentationTestCase2<A
 
 
 	
-	public Advanced_Activity21_Test() {
+	public Activity2_Test_menu() {
 		super(Advanced_Activity2.class);
 
 	}
@@ -41,8 +46,8 @@ public class Advanced_Activity21_Test extends ActivityInstrumentationTestCase2<A
      	intent.putExtra ("Year1", true);
      	intent.putExtra ("Year2", false);
      	intent.putExtra ("Year3", false);
-     	intent.putExtra ("Sem1",false);
-     	intent.putExtra ("Sem2",true);
+     	intent.putExtra ("Sem1",true);
+     	intent.putExtra ("Sem2",false);
      	intent.putExtra ("Credit", "18");
      	intent.putExtra ("SA", false);
      	intent.putExtra ("S_T", true);
@@ -90,50 +95,22 @@ public class Advanced_Activity21_Test extends ActivityInstrumentationTestCase2<A
 	
 	
 	@SmallTest 
-	 public void testbutton1() { 
+	 public void testM() { 
 
+		getInstrumentation().invokeMenuActionSync(mActivity, R.id.year1, 0);
 
-		//INTERACTIONS
-		  mActivity.runOnUiThread(new Runnable() {
-			    @Override
-			    public void run() {
-			      // click button and open next activity.
-			    	button1.performClick();
-			    }
-			  });	
-		  ActivityMonitor activityMonitor = getInstrumentation().addMonitor(Advanced_Activity2.class.getName(), null, false);
-		  getInstrumentation().waitForMonitorWithTimeout(activityMonitor, 5000);
+		getInstrumentation().invokeMenuActionSync(mActivity, R.id.menu_delete, 0);
+
+	//CHECK THE RESULT
+
+		  ActivityMonitor activityMonitor = getInstrumentation().addMonitor(Advanced_Activity.class.getName(), null, false);
+		  Advanced_Activity nextactivity = (Advanced_Activity) getInstrumentation().waitForMonitor(activityMonitor);
 		  
-		//CHECK THE RESULT
-
-      	assertTrue(view1.isShown());
-      	assertFalse(view2.isShown());
-  		
-  		assertTrue(listView1.isEnabled());	
-
-	 }
+		  assertNotNull(nextactivity);
+		  nextactivity.finish();
+		  
 	
-	@SmallTest 
-	 public void testbutton2() { 
-
-
-		//INTERACTIONS
-		  mActivity.runOnUiThread(new Runnable() {
-			    @Override
-			    public void run() {
-			      // click button and open next activity.
-			    	button2.performClick();
-			    }
-			  });	
-		  ActivityMonitor activityMonitor = getInstrumentation().addMonitor(Advanced_Activity2.class.getName(), null, false);
-		  getInstrumentation().waitForMonitorWithTimeout(activityMonitor, 5000);
-		  
-		//CHECK THE RESULT
-
-     	assertFalse(view1.isShown());
-     	assertTrue(view2.isShown());
- 		
- 		assertTrue(listView1.isEnabled());	
+      	
 
 	 }
 	

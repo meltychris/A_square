@@ -13,7 +13,7 @@ import com.example.asquare.R;
 import com.example.study_path.Advanced_Activity2;
 
 
-public class Advanced_Activity21_Test extends ActivityInstrumentationTestCase2<Advanced_Activity2> {
+public class Advanced_Activity26_Test extends ActivityInstrumentationTestCase2<Advanced_Activity2> {
 
 	Advanced_Activity2 mActivity;
 	Button button1;
@@ -24,7 +24,7 @@ public class Advanced_Activity21_Test extends ActivityInstrumentationTestCase2<A
 
 
 	
-	public Advanced_Activity21_Test() {
+	public Advanced_Activity26_Test() {
 		super(Advanced_Activity2.class);
 
 	}
@@ -35,15 +35,15 @@ public class Advanced_Activity21_Test extends ActivityInstrumentationTestCase2<A
 	
 		Intent intent = new Intent();
      	
-     	intent.putExtra ("Major1", true);
-     	intent.putExtra ("Major2", false);
+     	intent.putExtra ("Major1", false);
+     	intent.putExtra ("Major2", true);
      	intent.putExtra ("Pure", false);
-     	intent.putExtra ("Year1", true);
+     	intent.putExtra ("Year1", false);
      	intent.putExtra ("Year2", false);
-     	intent.putExtra ("Year3", false);
+     	intent.putExtra ("Year3", true);
      	intent.putExtra ("Sem1",false);
      	intent.putExtra ("Sem2",true);
-     	intent.putExtra ("Credit", "18");
+     	intent.putExtra ("Credit", "0");
      	intent.putExtra ("SA", false);
      	intent.putExtra ("S_T", true);
      	intent.putExtra ("A_H", false);
@@ -136,6 +136,5 @@ public class Advanced_Activity21_Test extends ActivityInstrumentationTestCase2<A
  		assertTrue(listView1.isEnabled());	
 
 	 }
-	
 
 }
