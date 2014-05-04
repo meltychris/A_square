@@ -1,10 +1,27 @@
-/*package com.example.gpa_calculator;
+package com.example.gpa_calculator;
 
 import java.io.*;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.Scanner;
 
-public class Student {
+
+
+
+
+
+import com.example.asquare.R;
+
+import android.os.Bundle;
+import android.app.Activity;
+import android.content.Intent;
+import android.view.View;
+import android.widget.Button;
+
+
+//This file contains all functions used by android
+
+public class Student extends Activity {
 
 		public static final int MAX_STUDY_YEAR = 5;
 		public static final int MAX_SEMESTER = 4;
@@ -28,7 +45,7 @@ public class Student {
 		//course name deleted as required large no. of database or user input
 		
 		//no need to initialize, all null
-		String[][][][] courseRecord = new String[MAX_STUDY_YEAR][MAX_SEMESTER][MAX_SEM_COURSES][3];
+		public String[][][][] courseRecord = new String[MAX_STUDY_YEAR][MAX_SEMESTER][MAX_SEM_COURSES][3];
 		
 
 		//no need to initialize, all 0
@@ -165,76 +182,25 @@ public class Student {
 			}
 			else
 			{
-				System.out.println("The grade cannot be converted, there is a bug");
-				System.out.println("Program exit!");
-				System.exit(0);
+				//TODO change here output
+				//System.out.println("The grade cannot be converted, there is a bug");
+				//System.out.println("Program exit!");
+				//System.exit(0);
 			}
 			
 			return strGrade;
 	
 		}
 		
-
-		public void insertCourseRecordEnquiry()throws IOException {
-			
-			String Answer0 = "Y";
-			
-			while (Answer0.equals("Y"))
-			{					
-				int year;
-				int sem;		
-			
-				Scanner input = new Scanner(System.in);
-
-				System.out.print("Course Study year (Type 1-5) : ");
-				year=Integer.parseInt(input.nextLine()) - 1;
-				
-				String Answer1 = "Y";
-				
-				while (Answer1.equals("Y"))
-				{
-						
-					System.out.print("Which Semester is the course taken in year " + (year+1) + "  Fall (Type 1) / Winter (Type 2) / Spring (Type 3) / Summer (Type 4) : ");
-					sem=Integer.parseInt(input.nextLine()) - 1;
-					
-					String Answer2 = "Y";
-				
-					while (Answer2.equals("Y"))
-					{
-						System.out.print("Course Code (without space): ");
-						String courseCode=input.nextLine();
-				
-						//System.out.print("Course Name: ");
-						//String courseName=input.nextLine();
-
-						System.out.print("Credits Studied: ");
-						String credit=input.nextLine();
-
-						System.out.print("Grade: ");
-						String grade=input.nextLine();
-						
-						//!!
-						insertCourseRecord(year,sem,courseCode, credit, grade);
-						
-						System.out.print("Still have other course information to input for Year" + (year+1) + " Sem" + (sem+1) + "? Y/N: ");
-						Answer2=input.nextLine();
-						
-			
-					}
-					System.out.print("Still have other course information to input for Year" + (year+1) + "? Y/N: ");
-					Answer1=input.nextLine();
-				
-				}
-				System.out.print("Still have other course information to input ? Y/N: ");
-				Answer0=input.nextLine();
-			}
-			
-
-	}
-
-	public void insertCourseRecord(int year, int sem, String courseCode, String credit, String grade)throws IOException {
+	
 		
+	
+	public void insertCourseRecord(int year, int sem, String courseCode, String credit, String grade) {
+	
+	
 		
+	//Now assume android no need to check these
+	/*	
 		//as year sem are array index
 		if (year >= MAX_STUDY_YEAR)
 		{
@@ -247,18 +213,20 @@ public class Student {
 			System.out.println("sem exceeds the range!, insertCourseRecord() end");
 			return;
 		}
+	
 		
 		if (year_sem_course_counter[year][sem] > MAX_SEM_COURSES)
 		{
 			System.out.println("Year " + year + " Sem " + sem + " reach the max. no. of enrolled course!, insertCourseRecord() end");
 			return;
 		}
+	*/	
 		
 		//checked already, whether will out of bound
 		year_sem_course_counter[year][sem]++;
 		
 		//Find null row to insert
-		boolean inserted = false;
+		//boolean inserted = false;
 		for (int course = 0 ; course < MAX_SEM_COURSES ; course++)
 		{		
 			if (courseRecord[year][sem][course][0] == null)
@@ -268,46 +236,32 @@ public class Student {
 				courseRecord[year][sem][course][2] = grade;
 				//courseRecord[year][sem][course][3] = 
 				
-				inserted = true;
+				//inserted = true;
 				
 				//inserted
 				break;
 			}
 		}
 		
+	/*	
 		if (inserted == false)
 		{
 			System.out.println("There is a bug, the recorded is not insered! Fix it! ");
 			return;
 		}
+	*/	
 		
-		//as new record inserted, allthings needed to update
+		//as new record inserted, all things needed to update
 		updateAll();
 	
 		
 	}
 		
 
-
-	//Bottom left position show the button with figure "-x.y" e.g. "-0.3" 
-	//to show the difference between target CGA and actual performance (1 d.p.)
-	
+	//ONLY condition 1 from diff_performance_advice() will come to here
 	//Clicking the above button will show the improvement needed to reach the target CGA,
 	//e.g.: "You need a term grade average (TGA) of A or above to get a CGA A-"
-	public void diff_performance_advice() throws IOException {
-		
-		Scanner input = new Scanner(System.in);
-		
-		System.out.print("What is your current year? (Type 1-5): ");
-		int currentYear=Integer.parseInt(input.nextLine()) - 1;
-		
-		
-		System.out.print("What is your current semester of year" + (currentYear+1) + "? (Fall (Type 1) / Winter (Type 2) / Spring (Type 3) / Summer (Type 4): ");
-		int currentSem=Integer.parseInt(input.nextLine()) - 1;
-		
-		//need to use exception to check input?
-		System.out.print("What is your target CGA (Type 0.0 - 4.3): ");
-		double targetCGA=Double.parseDouble(input.nextLine());
+	public String adviceMinGradePoint(int currentYear, int currentSem, double targetCGA) {
 		
 		//ensure all data in the TGA array,CGA and GGA in the latest version
 		updateAll();
@@ -317,25 +271,23 @@ public class Student {
 				
 		double diffCGA = currentCGA - targetCGA;
 		
-		if (diffCGA < 0) {
-			
-			//currentCGA is poorer
-			System.out.println("Your current CGA is lower than your target CGA! Improvement is needed!");
-			//continue in the this function to give advices
-			
-		}
-		else if (diffCGA > 0){
-			
-			//currentCGA is better
-			System.out.println("Your current CGA is higher than your target CGA!");
-			System.out.println("CGA performance comparison is end");
-			return;
-		}
-		else //diff = 0
+	//	if (diffCGA < 0)
+	//	{
+	//		
+	//		//currentCGA is poorer
+	//		System.out.println("Your current CGA is lower than your target CGA! Improvement is needed!");
+	//		//continue in the this function to give advices
+	//		
+	//	}
+		
+		if (diffCGA > 0)
 		{
-			System.out.println("Your currentCGA same as your target CGA!");
-			System.out.println("CGA performance comparison is end");
-			return;
+			//currentCGA is better
+			return "Your current CGA is higher than your target CGA! \n CGA performance comparison is end";
+		}
+		else if (diffCGA == 0)//diff = 0
+		{
+			return "Your currentCGA same as your target CGA! \n CGA performance comparison is end";
 		}
 	
 		
@@ -350,109 +302,29 @@ public class Student {
 		//cast to +ve
 		diffCGA = (-1)*diffCGA;
 		
-		System.out.print("Do you want advices for rasing grade of courses of the semester to achieve the target CGA? Y/N ");
-		String ans = input.nextLine();
-		if (ans.equals("N"))
-		{
-			System.out.println("End of function of comparing target CGA with actual performance");
-			return;
-		}
 		
-		System.out.println("Now referring to advising function");
 		
-		System.out.println("Choice 1: Advices for rasing grade of courses to achieve the target CGA? (Support 1 course grade raising for each time)");
-		System.out.println("Choice 2: Advices for rasing min. grade point of the semester to achieve the target CGA?");
-		System.out.print("Choice: ");
-		String ans2 = input.nextLine();
-		if (ans2.equals("1"))
-		{
-			adviceOneGrade(diffCGA,currentYear,currentSem);
-		}
-		else if (ans2.equals("2"))
-		{
-			adviceGradePoint(diffCGA,currentYear,currentSem);
-		}
-		else
-		{
-			System.out.println("Invaild input");
-			return;
-		}
+		
 
-		
-		adviceMinGradePoint(diffCGA,currentYear,currentSem);
-		
-		System.out.println("End of function of comparing target CGA with actual performance and giving advices");
-	}
-
-	
-	
-	//only workable when there is 1 course only in that sem!!!!!!!!!
-	//ONLY condition 1 from diff_performance_advice() will come to here
-	//Clicking the above button will show the improvement needed to reach the target CGA,
-	//e.g.: "You need a term grade average (TGA) of A or above to get a CGA A-"
-	public void adviceOneGrade(double diffCGA, int currentYear, int currentSem) {
-		
-		
-		//grade to raise for specific no. of credit course
-	
-		
-		//loop for each course to check what can the user to raise the grade to achieve the targetCGA
-		//year_sem_course_counter[currentYear][currentSem] is from 0-max 5			
-		for (int counter = 0 ; counter <= year_sem_course_counter[currentYear][currentSem] ; counter++)
-		{
-			
-			//diffCGA*total sem credit <= course1 grade*course1 credit
-			//diffCGA*total sem credit / course1 credit = course1 grade <<		
-			if (courseRecord[currentYear][currentSem][counter][1] == null)
-			{
-				//none at all or no further record, stop advice
-				return;
-			}
-			
-			double targetCourseGrade = 
-					(diffCGA*year_sem_credit_counter[currentYear][currentSem]) / 
-					(Double.parseDouble(courseRecord[currentYear][currentSem][counter][1]));
-			
-			//covert targetCourseGrade to real grade A+ to F
-			String strGrade = NumToGrade(targetCourseGrade);
-			
-			//DO NOT print the statement if the current!!!!!!! course 1 is already A+, 4.3
-			if (GradeToNum(courseRecord[currentYear][currentSem][counter][2]) < 4.3)
-			{
-				System.out.println("In order to achieve the target CGA,");
-				System.out.println("You need to obtain grade " + strGrade + " or above from Course " + courseRecord[currentYear][currentSem][counter][0] + ". Now grade of this course is " + courseRecord[currentYear][currentSem][counter][2]);
-			}
-			
-		}
-	
-	}
-
-	
-	//ONLY condition 1 from diff_performance_advice() will come to here
-	//Clicking the above button will show the improvement needed to reach the target CGA,
-	//e.g.: "You need a term grade average (TGA) of A or above to get a CGA A-"
-	public void adviceMinGradePoint(double diffCGA, int currentYear, int currentSem) {
-		
-		
 		//grade point to raise
-		
 		if (year_sem_credit_counter[currentYear][currentSem] == 0)
 		{
-			System.out.println("You don't have any course record in Year" + (currentYear+1) + " " + SemIntToWords(currentSem) + " Semester!");
-			return;
+			return "You don't have any course record in Year" + (currentYear+1) + " " + SemIntToWords(currentSem) + " Semester!";
 		}
 
 	
 		double minTargetGradePoint = diffCGA*year_sem_credit_counter[currentYear][currentSem];
 
-		System.out.println("In order to achieve the target CGA,");
-		System.out.println("You need to raise Minimum Grade Point " + minTargetGradePoint + " or above in Year" + (currentYear+1) + " " + SemIntToWords(currentSem) + " Semester!");
+		
+		//currentCGA is poorer, continue in the this function to give advices
+		return "Your current CGA is lower than your target CGA! \nImprovement is needed! \n " + 
+			"In order to achieve the target CGA, \nYou need to raise Minimum Grade Point " + minTargetGradePoint + " or above in Year" + (currentYear+1) + " " + SemIntToWords(currentSem) + " Semester!";
 	}
 
 		
 		
 	
-	
+/*	
 	public void delCourseRecordEnquiry()throws IOException {
 		
 		//Ask which year
@@ -516,10 +388,10 @@ public class Student {
 		}
 			
 	}
-		
+*/		
 		
 	
-	public void delCourseRecord(int year, int sem, int course_to_del)throws IOException {
+	public void delCourseRecord(int year, int sem, int course_to_del) {
 		
 		System.out.println("Delete CourseRecord func starts");
 		
@@ -566,7 +438,7 @@ public class Student {
 	}
 	
 	//independent of delCourseRecord()
-	public void resetAllRecord()throws IOException {
+	public void resetAllRecord() {
 		
 		System.out.println("Reset All Record");
 		
@@ -606,9 +478,9 @@ public class Student {
 		
 	}
 	
-	/*
+/*	
 	//del then insert?
-	public void modifyCourseRecord()throws IOException {
+	public void modifyCourseRecord() {
 		
 		System.out.println("Modify Course Record");
 		//ask for operation, insert new,del, change content
@@ -625,7 +497,7 @@ public class Student {
 		updateAll();
 		
 	}
-	
+*/	
 	
 	
 	
@@ -637,7 +509,7 @@ public class Student {
 	//int[][] year_sem_credit_counter = new int[MAX_STUDY_YEAR][MAX_SEMESTER];
 	//as they also needed to be updated!
 	
-	public void updateAll() throws IOException {
+	public void updateAll()  {
 		
 		//NOT finished the update func
 		//year_sem_credit_counter  needed to be updated before year_sem_course_counter
@@ -652,7 +524,7 @@ public class Student {
 		calGGA();
 	}
 	
-	public void  update_year_sem_course_counter() throws IOException {
+	public void  update_year_sem_course_counter()  {
 			
 		
 		
@@ -680,7 +552,7 @@ public class Student {
 		
 	}
 	
-	public void update_year_sem_credit_counter() throws IOException {
+	public void update_year_sem_credit_counter() {
 		
 		for (int year = 0; year < MAX_STUDY_YEAR; year++)
 		{			
@@ -709,38 +581,31 @@ public class Student {
 	}
 	
 	
-	public void calAllTGA() throws IOException {
+	public void calAllTGA() {
 		
-		int year = 0;
-		
-
-		while (year < MAX_STUDY_YEAR) {
-			int sem = 0;
-			while (sem < MAX_SEMESTER) {
+		for (int year = 0 ; year < MAX_STUDY_YEAR ; year++)
+		{
+			for (int sem = 0 ; sem < MAX_SEMESTER ; sem++)
+			{
 				calTGA(year,sem);
-				sem++;
 			}
-			year++;
-		}
-		
+		}		
 	}
 	
 	
 
 	//parameter  year,semester
-	public void calTGA(int year, int sem) throws IOException {
+	public void calTGA(int year, int sem) {
 		
 		//as calculation will give out decimal point number
 		double sum_of_grade_point = 0;
 
-		int i = 0;
-		while ( i  < year_sem_course_counter[year][sem] ){
+		for (int i = 0 ;  i  < year_sem_course_counter[year][sem] ; i++)
+		{
 			sum_of_grade_point = sum_of_grade_point + GradeToNum(courseRecord[year][sem][i][2])*Integer.parseInt(courseRecord[year][sem][i][1]);
 
-			i++;
-
 		}
-		
+	
 		if (year_sem_credit_counter[year][sem] == 0)
 		{
 			TGA[year][sem] = 0;
@@ -749,10 +614,9 @@ public class Student {
 		{
 			TGA[year][sem] = sum_of_grade_point/year_sem_credit_counter[year][sem];
 		}
-		
 	}
 	
-	public void calCGA() throws IOException {
+	public void calCGA() {
 		
 		double sum_of_grade_point = 0;
 		int sum_of_all_credit_taken = 0;
@@ -791,7 +655,7 @@ public class Student {
 		
 	}
 	
-	public double cal_CGA_without_1st_sem() throws IOException {
+	public double cal_CGA_without_1st_sem()  {
 		
 		double sum_of_grade_point = 0;
 		int sum_of_all_credit_taken = 0;
@@ -842,7 +706,7 @@ public class Student {
 		return CGA_without_1st_sem;
 	}
 	
-	public void calGGA() throws IOException {
+	public void calGGA() {
 		
 		double sum_of_grade_point = 0;
 		double sum_of_all_credit_taken = 0;
@@ -899,65 +763,92 @@ public class Student {
 	//year semester?
 	//current ?
 	//public static void printGPA(year, semester?) throws IOException {
-	public void printTGA() throws IOException {
+	public ArrayList<String> printTGA()  {
+		
+		
+		calAllTGA();
+		
+		//to pay safe
+		updateAll();
+		
+		ArrayList<String> return_print_arraylist = new ArrayList<String>();
 		
 		for (int year = 0 ; year < MAX_STUDY_YEAR ; year++)
 		{
 			for (int sem = 0 ; sem < MAX_SEMESTER ; sem++)
 			{
-				calTGA(year,sem);
-			}
-			
-
-		}
-		
-		Scanner input = new Scanner(System.in);
-
-		String Answer0 = "Y";
-		
-		while (Answer0.equals("Y"))
-		{
-			System.out.print("Which year TGA you want to see? (Year 1 to 5)");
-			int year=Integer.parseInt(input.nextLine())-1;
-			
-			String Answer1 = "Y";
-			while (Answer1.equals("Y"))
-			{
-				System.out.print("Which semster of year" + (year+1) + " TGA you want to see? (Fall (Type 1) / Winter (Type 2) / Spring (Type 3) / Summer (Type 4) )");
-				int sem=Integer.parseInt(input.nextLine())-1;
 				
-				System.out.println("The TGA of year" + (year+1) + SemIntToWords(sem) + " semester" + "  is " + TGA[year][sem]);
-				
-				//Academic Warning
-				//If your term grade average (TGA) or cumulative grade average (CGA) is less than 1.7 at the end of any regular term
-				//you will be placed on academic warning and required to seek academic advice.
-				//Reference: http://ugadmin.ust.hk/ug-guide/assessment/probation.html
-				if ( TGA[year][sem] < 1.7 )
+				//ignore the semester without any input of course course record
+				if (year_sem_course_counter[year][sem] == 0)
 				{
-					System.out.println("According to UST ACADEMIC REGULATIONS for student, Academic Probation & Dismissal,");
-					System.out.println("You are now placed on Academic Warning and required to seek academic advice.");
-					System.out.println("as your TGA in year " + (year+1) + SemIntToWords(sem) + " semester is < 1.7");
-					System.out.println("Please work hard! :) ");
+					//not break, still have to check other sem
+					continue;
 				}
 				
+				return_print_arraylist.add("Year " + (year+1) + " " + 
+											SemIntToWords(sem) + "\n" + 					 
+											TGA[year][sem]
+											);
 				
-				System.out.print("Still have other semster of year" + (year+1) + " TGA you want to see? Y/N: ");
-				Answer1=input.nextLine();
+			}
+		}
 
-			}			
-			System.out.print("Still have other year TGA you want to see? Y/N: ");
-			Answer0=input.nextLine();
+		return return_print_arraylist;
+	}
+		
+	
+	public ArrayList<String> printWarningTGA()  {
+		
+		//Academic Warning
+		//If your term grade average (TGA) or cumulative grade average (CGA) is less than 1.7 at the end of any regular term
+		//you will be placed on academic warning and required to seek academic advice.
+		//Reference: http://ugadmin.ust.hk/ug-guide/assessment/probation.html
+		
+		//loop all TGA array
+		//if have this condition, record which year,sem , pop-up window in android
+		
+		ArrayList<String> return_print_arraylist = new ArrayList<String>();
+		
+		for (int year = 0 ; year < MAX_STUDY_YEAR ; year++)
+		{
+			for (int sem = 0 ; sem < MAX_SEMESTER ; sem++)
+			{
+				
+				//ignore the semester without any input of course course record
+				if (year_sem_course_counter[year][sem] == 0)
+				{
+					//not break, still have to check other sem
+					continue;
+				}
+				
 
+				//record down if there is a sem TGA is not >= 1.7
+				if ( TGA[year][sem] < 1.7 )
+				{
+					//below 4 lines warning moved to printTGA.java
+					//System.out.println("According to UST ACADEMIC REGULATIONS for student, Academic Probation & Dismissal,");
+					//System.out.println("You are now placed on Academic Warning and required to seek academic advice.");
+					//System.out.println("as your TGA in year " + (year+1) + SemIntToWords(sem) + " semester is < 1.7");
+					//System.out.println("Please work hard! :) ");
+					
+					//as year and sem can only be 1 digit each, combine it together for easy printing
+					//later needed to 1.convert to int, 2.use division to decompose the int to year, sem
+					return_print_arraylist.add(Integer.toString(year+1) + Integer.toString(sem+1));
+				}
+			}
 		}
 		
+		return return_print_arraylist;
 		
-	
+		
+		
 	}
 	
-	public void printCGA() throws IOException {
+	public String printCGA() {
 		
 		calCGA();
-		System.out.println("CGA is " + CGA);
+		//print below
+		//System.out.println("CGA is " + CGA);
 		
 		//Academic Warning
 		//If your term grade average (TGA) or cumulative grade average (CGA) is less than 1.7 at the end of any regular term
@@ -976,79 +867,82 @@ public class Student {
 		
 		if ( ( CGA >= 1.5 ) && ( CGA < 1.7 ) )
 		{
-			System.out.println("According to UST ACADEMIC REGULATIONS for student, Academic Probation & Dismissal,");
-			System.out.println("You are now placed on Academic Warning and required to seek academic advice.");
-			System.out.println("as your CGA is < 1.7");
-			System.out.println("Please work hard! :) ");
+			//System.out.println("According to UST ACADEMIC REGULATIONS for student, Academic Probation & Dismissal,");
+			//System.out.println("You are now placed on Academic Warning and required to seek academic advice.");
+			//System.out.println("as your CGA is < 1.7");
+			//System.out.println("Please work hard! :) ");
+			
+			return ("Your CGA is " + CGA + "\n" +
+					"According to UST ACADEMIC REGULATIONS for student, Academic Probation & Dismissal," + "\n" +
+					"You are now placed on Academic Warning and required to seek academic advice." + "\n" +
+					"as your CGA is < 1.7" +
+					"Please work hard! :) "
+					);
 		}
 		else if (CGA_without_1st_sem < 1.5)
 		{
-			System.out.println("According to UST ACADEMIC REGULATIONS for student, Academic Probation & Dismissal,");
-			System.out.println("You are now put on Academic Probation.");
-			System.out.println("as your CGA is < 1.5 at the end of any fall or spring term, excluding your first regular term at the University.");
-			System.out.println("You need to obtain approval to enroll in courses, and may be required to reduce your study load.");
-			System.out.println("You will remain on academic probation until your CGA rises to 1.5 or above.");
-			System.out.println("Please work hard! :) ");
+			//System.out.println("According to UST ACADEMIC REGULATIONS for student, Academic Probation & Dismissal,");
+			//System.out.println("You are now put on Academic Probation.");
+			//System.out.println("as your CGA is < 1.5 at the end of any fall or spring term, excluding your first regular term at the University.");
+			//System.out.println("You need to obtain approval to enroll in courses, and may be required to reduce your study load.");
+			//System.out.println("You will remain on academic probation until your CGA rises to 1.5 or above.");
+			//System.out.println("Please work hard! :) ");
+			
+			return ("Your CGA is " + CGA + "\n" +
+					"According to UST ACADEMIC REGULATIONS for student, Academic Probation & Dismissal," + "\n" +
+					"You are now put on Academic Probation." + "\n" +
+					"as your CGA is < 1.5 at the end of any fall or spring term, excluding your first regular term at the University." + "\n" +
+					"You need to obtain approval to enroll in courses, and may be required to reduce your study load." + "\n" +
+					"You will remain on academic probation until your CGA rises to 1.5 or above." + "\n" +
+					"Please work hard! :) "
+					);
 		}
+		else //Normal, no warning
+		{
+			return ("Your CGA is " + CGA);
+		}
+		
+		
 
 	}
 	
-	public void printGGA() throws IOException {
+	public String printGGA() {
 		
 		calGGA();
-		System.out.println("GGA is " + GGA);
+		return ("Your GGA is " + GGA);
 	}
 	
-	public void printAllCourses() throws IOException {
+	//for android print_course_record.java
+	public ArrayList<String> printAllCourse(){
 		
-		//print All course records showing currently studying courses,
-		//followed by the courses taken
-					
+		ArrayList<String> return_print_arraylist = new ArrayList<String>();
+		
 		for (int year = 0 ; year < MAX_STUDY_YEAR ; year++)
 		{
 			for (int sem = 0 ; sem < MAX_SEMESTER ; sem++)
 			{					
-				printCourses(year,sem);
+				for (int course = 0 ; course < MAX_SEM_COURSES; course++)
+				{
+					//avoid printing null things
+					if (courseRecord[year][sem][course][0] == null)
+					{
+						break;
+					}
+					
+					return_print_arraylist.add("Year " + (year+1) + " " + 
+											SemIntToWords(sem) + "\n" + 					 
+											courseRecord[year][sem][course][0] + " " +
+											"Credit: " + courseRecord[year][sem][course][1] + " " +
+											"Grade: " + courseRecord[year][sem][course][2]);
+					
+				}
+
 			}
 		}
-	}
-	
-	public void printCourses(int year, int sem) throws IOException {
 		
-		//print List of course records of specific year and sem
+		return return_print_arraylist;
 		
-		System.out.println("-----------------------------------------------------------------------------------");
-		
-		System.out.println("List of courses taken in Year" + (year+1) + " " + SemIntToWords(sem) + " Semester :");
-		
-		System.out.println("-----------------------------------------------------------------------------------");
-		
-		for (int course = 0 ; course < MAX_SEM_COURSES; course++)
-		{
-			//avoid printing null things
-			if (courseRecord[year][sem][course][0] == null)
-			{
-				System.out.println("----------------End of printing Courses of Year " + (year+1) + " " + SemIntToWords(sem) + " Semester " + "-----------------");
-				System.out.println("");
-				break;
-			}
-			
-			System.out.println((course+1) + ". " + 
-								"Course Code: " + courseRecord[year][sem][course][0] + ", " +
-								"Credit: " + courseRecord[year][sem][course][1] + ", " +
-								"Grade: " + courseRecord[year][sem][course][2]);
-			
-								//"Course Name: " + courseRecord[year][sem][course][0] + ", " +
-		}
-		
-
-
 	}
 
-	//public void printChart(){
-	//	
-	//}
 	
-	
-	
-}*/
+}
