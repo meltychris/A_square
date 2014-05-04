@@ -33,9 +33,10 @@
     </LinearLayout>
 
     <RadioGroup
+        android:id="@+id/RadioGroupGPAadvice1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="horizontal" >
 
         <RadioButton
             android:id="@+id/radioButtonGPAadvice1_1"
@@ -84,9 +85,10 @@
     </LinearLayout>
 
     <RadioGroup
+        android:id="@+id/RadioGroupGPAadvice2"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" 
-        android:orientation="horizontal">
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
 
         <RadioButton
             android:id="@+id/radioButtonGPAadvice1_6"

@@ -55,4 +55,56 @@
             android:text="Add Course Record" />
     </LinearLayout>
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.00" >
+
+        <Button
+            android:id="@+id/ButtonGPAmain4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Delete All Course Record" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.00" >
+
+        <Button
+            android:id="@+id/ButtonGPAmain5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="My TGA" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.00" >
+
+        <Button
+            android:id="@+id/ButtonGPAmain6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="My CGA" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.00" >
+
+        <Button
+            android:id="@+id/ButtonGPAmain7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="My GGA" />
+
+    </LinearLayout>
+
 </LinearLayout>
