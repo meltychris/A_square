@@ -82,30 +82,31 @@ public class Exam_countdown extends Activity {
  	        @Override
  	        public void onClick(View v) {
  	            // TODO Auto-generated method stub
- 	        	add_item(Code.getText().toString(), Date.getText().toString());	
- 	        	//add to database
- 	        	Calendar tmp = Calendar.getInstance();
- 	        	SimpleDateFormat sdf = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
- 	        	try {
-					tmp.setTime(sdf.parse(Date.getText().toString()+" 12:00:00"));
-				} catch (ParseException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				}
- 	        	long Dateinmillisecond = tmp.getTimeInMillis();
- 	        	createScheduledNotification(Dateinmillisecond,Code.getText().toString(), Date.getText().toString());
- 	        	
- 	        	ArrayAdapter<String> adapter;
- 	        	adapter = new ArrayAdapter<String>(Exam_countdown.this, android.R.layout.simple_list_item_1);   
- 	        	List<String> data = new ArrayList<String>();
- 	        	data = get_list();									//get from database
- 	        	for (String i : data)
- 	        		adapter.add(i);
- 	        	
-
- 	    		listView1.setAdapter(adapter);
-
- 	    		}
+ 	        	if (!Code.getText().toString().equals("") && !Date.getText().toString().equals("")){
+	 	        	add_item(Code.getText().toString(), Date.getText().toString());	
+	 	        	//add to database
+	 	        	Calendar tmp = Calendar.getInstance();
+	 	        	SimpleDateFormat sdf = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
+	 	        	try {
+						tmp.setTime(sdf.parse(Date.getText().toString()+" 12:00:00"));
+					} catch (ParseException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
+	 	        	long Dateinmillisecond = tmp.getTimeInMillis();
+	 	        	createScheduledNotification(Dateinmillisecond,Code.getText().toString(), Date.getText().toString());
+	 	        	
+	 	        	ArrayAdapter<String> adapter;
+	 	        	adapter = new ArrayAdapter<String>(Exam_countdown.this, android.R.layout.simple_list_item_1);   
+	 	        	List<String> data = new ArrayList<String>();
+	 	        	data = get_list();									//get from database
+	 	        	for (String i : data)
+	 	        		adapter.add(i);
+	 	        	
+	
+	 	    		listView1.setAdapter(adapter);
+ 	        	}
+ 	    	}
  	    });
 		 
 		 button2.setOnClickListener(new Button.OnClickListener(){ 
