@@ -45,7 +45,7 @@ public class add_course_recordTest1 extends ActivityInstrumentationTestCase2<add
 		//Add next course record
 		buttonGPAadd1 = (Button)mActivity.findViewById(R.id.buttonGPAadd1);
 		//Add next course record
-		buttonGPAadd2 = (Button)mActivity.findViewById(R.id.buttonGPAadd2);
+		//buttonGPAadd2 = (Button)mActivity.findViewById(R.id.buttonGPAadd2);
 		//Reset
 		buttonGPAadd3 = (Button)mActivity.findViewById(R.id.buttonGPAadd3);
 
@@ -86,54 +86,39 @@ public class add_course_recordTest1 extends ActivityInstrumentationTestCase2<add
 	//TODO test fail!!!!!!!
 	@SmallTest
 	public void testButtonGPAadd1() { 
-/*
-		ActivityMonitor activityMonitor = getInstrumentation().addMonitor(add_course_record.class.getName(), null, false);
 
-		//set info first
-		//Student student1 = new Student();
-		radioButtonGPAadd1.setChecked(false);
-		radioButtonGPAadd6.setChecked(false);
-		radioButtonGPAadd2.setChecked(true);
-		radioButtonGPAadd7.setChecked(true);
-		editTextGPAadd1.setText("COMP1001");
-		editTextGPAadd2.setText("3");
-		editTextGPAadd3.setText("A+");
-		
 		
 		 //INTERACTIONS 
 		  mActivity.runOnUiThread(new Runnable() {
 			    @Override
 			    public void run() {
 			      // click button and open next activity.
+			    	
+			    	
+			    	
+			    	radioButtonGPAadd1.setChecked(false);
+			    	radioButtonGPAadd6.setChecked(false);
+			    	radioButtonGPAadd2.setChecked(true);
+			    	radioButtonGPAadd7.setChecked(true);
+			    	
+			    	//edittext must have input, otherwise error!
+			    	editTextGPAadd1.setText("COMP1001");
+			    	editTextGPAadd2.setText("3");
+			    	editTextGPAadd3.setText("A+");
+			    	
 			    	buttonGPAadd1.performClick();
 			    }
 			  });	
 		  
 		 //CHECK THE RESULT
-		// add_course_record nextActivity = (add_course_record) getInstrumentation().waitForMonitorWithTimeout(activityMonitor, 20000);
 		 
-		 //ActivityMonitor activityMonitor = getInstrumentation().addMonitor(add_course_record.class.getName(), null, false);
-		 getInstrumentation().waitForMonitorWithTimeout(activityMonitor,5000000);
-*/		  
-		 assertTrue(true);
-		 //assertNotNull(nextActivity);
-		 //nextActivity.finish();
-		
-
+		 ActivityMonitor activityMonitor = getInstrumentation().addMonitor(add_course_record.class.getName(), null, false);
+		 getInstrumentation().waitForMonitorWithTimeout(activityMonitor,5000);
 		  
-		//System.out.println("student1.courseRecord[1][1][0][0] =" + student1.courseRecord[1][1][0][0]);
-		//System.out.println("student1.courseRecord[1][1][0][1] =" + student1.courseRecord[1][1][0][1]);
-		//System.out.println("student1.courseRecord[1][1][0][2] =" + student1.courseRecord[1][1][0][2]);
-
-		
-		//assertTrue(true);
-		
-		//assertTrue(student1.courseRecord[0][0][0][0].equals(null));
-		
-		//assertTrue((student1.courseRecord[1][1][0][0].equals("COMP1001")) &&
-		//			(student1.courseRecord[1][1][0][1].equals("3")) &&
-		//			(student1.courseRecord[1][1][0][2].equals("A+"))
-		//			);
+		 assertTrue((MainActivity.student1.courseRecord[1][1][0][0].equals("COMP1001")) &&
+					(MainActivity.student1.courseRecord[1][1][0][1].equals("3")) &&
+					(MainActivity.student1.courseRecord[1][1][0][2].equals("A+"))
+					);
 
 	}
 	
@@ -146,56 +131,36 @@ public class add_course_recordTest1 extends ActivityInstrumentationTestCase2<add
 	
 	@SmallTest
 	public void testButtonGPAadd3() { 
-/*		
-		ActivityMonitor activityMonitor = getInstrumentation().addMonitor(print_course_record.class.getName(), null, false);
-
+		
 		 //INTERACTIONS 
 		  mActivity.runOnUiThread(new Runnable() {
 			    @Override
 			    public void run() {
-			      // click button and open next activity.
-			    	buttonGPAadd1.performClick();
+			      // click button and open next activity
+			    	
+					RadioGroupGPAadd1.check(R.id.radioButtonGPAadd2);
+					RadioGroupGPAadd2.check(R.id.radioButtonGPAadd7);
+					editTextGPAadd1.setText("COMP1001");
+					editTextGPAadd2.setText("3");
+					editTextGPAadd3.setText("A+");
+			    	
+			    	buttonGPAadd3.performClick();
 			    }
 			  });	
 		  
 		 //CHECK THE RESULT
-		 print_course_record nextActivity = (print_course_record) getInstrumentation().waitForMonitorWithTimeout(activityMonitor, 20000);
-		 assertNotNull(nextActivity);
-		 nextActivity.finish();
-		
-		
-		//radioButtonGPAadd2.setChecked(true);
-		//radioButtonGPAadd7.setChecked(true);
-		RadioGroupGPAadd1.check(R.id.radioButtonGPAadd2);
-		RadioGroupGPAadd2.check(R.id.radioButtonGPAadd7);
-		editTextGPAadd1.setText("COMP1001");
-		editTextGPAadd2.setText("3");
-		editTextGPAadd3.setText("A+");
-		
-		 //INTERACTIONS 
-		//  mActivity.runOnUiThread(new Runnable() {
-		//	    @Override
-		//	    public void run() {
-		//	      // click button and open next activity.
-		//	    	buttonGPAadd3.performClick();
-		//	    }
-		//	  });	
-		 
-		  buttonGPAadd3.performClick(); 
-		  
-		 //CHECK THE RESULT
-
-
+	
+		ActivityMonitor activityMonitor = getInstrumentation().addMonitor(add_course_record.class.getName(), null, false);
+		getInstrumentation().waitForMonitorWithTimeout(activityMonitor,5000);
 		 
 		  
 		 assertTrue((radioButtonGPAadd1.isChecked()) && (radioButtonGPAadd6.isChecked()));
-*/		 
-		 assertTrue(true);
+		 
 	}
 	
 	
 	Button buttonGPAadd1;
-	Button buttonGPAadd2;
+	//Button buttonGPAadd2;
 	Button buttonGPAadd3;
 	
 	RadioGroup RadioGroupGPAadd1;

@@ -1,4 +1,4 @@
-/*
+
 package com.example.gpa_calculator.test;
 
 
@@ -21,6 +21,7 @@ import com.example.asquare.R;
 import com.example.gpa_calculator.MainActivity;
 import com.example.gpa_calculator.add_course_record;
 import com.example.gpa_calculator.advice1;
+import com.example.gpa_calculator.advice2;
 import com.example.gpa_calculator.printTGA;
 import com.example.gpa_calculator.print_course_record;
 
@@ -57,7 +58,7 @@ public class advice1Test extends ActivityInstrumentationTestCase2<advice1> {
      	radioButtonGPAadvice1_8 = (RadioButton)mActivity.findViewById(R.id.radioButtonGPAadvice1_8);
      	radioButtonGPAadvice1_9 = (RadioButton)mActivity.findViewById(R.id.radioButtonGPAadvice1_9);
      	//Your Target TGA
-     	EditText editTextGPAadvice1_1 = (EditText)mActivity.findViewById(R.id.editTextGPAadvice1_1);
+     	editTextGPAadvice1_1 = (EditText)mActivity.findViewById(R.id.editTextGPAadvice1_1);
 
 	}
 	
@@ -76,42 +77,57 @@ public class advice1Test extends ActivityInstrumentationTestCase2<advice1> {
 
 	@SmallTest
 	public void testButtonGPAadvice1_1() { 
-		  ActivityMonitor activityMonitor = getInstrumentation().addMonitor(print_course_record.class.getName(), null, false);
+		  ActivityMonitor activityMonitor = getInstrumentation().addMonitor(advice2.class.getName(), null, false);
 
 		 //INTERACTIONS 
 		  mActivity.runOnUiThread(new Runnable() {
 			    @Override
 			    public void run() {
 			      // click button and open next activity.
+			    	
+			    	RadioGroupadvice1.check(R.id.radioButtonGPAadvice1_2);
+			    	RadioGroupadvice2.check(R.id.radioButtonGPAadvice1_7);
+			    	editTextGPAadvice1_1.setText("4");
+			    	
 			    	buttonGPAadvice1_1.performClick();
 			    }
 			  });	
 		  
 		 //CHECK THE RESULT
-		 print_course_record nextActivity = (print_course_record) getInstrumentation().waitForMonitorWithTimeout(activityMonitor, 20000);
+		 advice2 nextActivity = (advice2) getInstrumentation().waitForMonitorWithTimeout(activityMonitor, 20000);
 		 assertNotNull(nextActivity);
 		 nextActivity.finish();
+		 
+		  
+	
 
 	}
 	
 	@SmallTest
 	public void testButtonGPAadvice1_2() { 
 		
-		  ActivityMonitor activityMonitor = getInstrumentation().addMonitor(advice1.class.getName(), null, false);
-
 		 //INTERACTIONS 
 		  mActivity.runOnUiThread(new Runnable() {
 			    @Override
 			    public void run() {
-			      // click button and open next activity.
+			      // click button and open next activity
+			    	
+			    	RadioGroupadvice1.check(R.id.radioButtonGPAadvice1_2);
+			    	RadioGroupadvice2.check(R.id.radioButtonGPAadvice1_7);
+			    	editTextGPAadvice1_1.setText("4");
+
+			    	
 			    	buttonGPAadvice1_2.performClick();
 			    }
 			  });	
 		  
 		 //CHECK THE RESULT
-		  advice1 nextActivity = (advice1) getInstrumentation().waitForMonitorWithTimeout(activityMonitor, 20000);
-		 assertNotNull(nextActivity);
-		 nextActivity.finish();
+	
+		ActivityMonitor activityMonitor = getInstrumentation().addMonitor(advice1.class.getName(), null, false);
+		getInstrumentation().waitForMonitorWithTimeout(activityMonitor,5000);
+		 
+		  
+		 assertTrue((radioButtonGPAadvice1_1.isChecked()) && (radioButtonGPAadvice1_6.isChecked()));
 	}
 	
 	
@@ -131,4 +147,3 @@ public class advice1Test extends ActivityInstrumentationTestCase2<advice1> {
  	EditText editTextGPAadvice1_1;
 	
 }
-*/
