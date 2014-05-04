@@ -19,15 +19,15 @@ public class ustTeamActivity extends Activity {
 		button1.setOnClickListener(new Button.OnClickListener() {
 			@Override
 			public void onClick(View v) {
-			    String phoneNum="23586696";
+				// TODO Auto-generated method stub
+				Intent myIntentDial = new Intent(Intent.ACTION_DIAL, Uri
+						.parse("tel:23586696"));
 
-			    Intent i=new Intent(Intent.ACTION_DIAL,Uri.parse(phoneNum));
-			    startActivity(i);
-			  }
+				startActivity(myIntentDial);
+			};
 		});
-	
 	}
-	
+
 	private Button button1;
-	
+
 }
