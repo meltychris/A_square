@@ -82,6 +82,10 @@
         <activity android:name="com.example.gpa_calculator.MainActivity"></activity>
         <activity android:name="com.example.gpa_calculator.printTGA"></activity>
         <activity android:name="com.example.gpa_calculator.Student"></activity>
+        <activity android:name="com.example.advising.advising_MainActivity"></activity>
+        <activity android:name="com.example.advising.otherActivity1"></activity>
+        <activity android:name="com.example.advising.otherActivity2"></activity>
+        <activity android:name="com.example.advising.ustTeamActivity"></activity>
         
     </application>
 

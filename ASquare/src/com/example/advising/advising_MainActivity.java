@@ -7,7 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class MainActivity extends Activity {
+public class advising_MainActivity extends Activity {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -20,7 +20,7 @@ public class MainActivity extends Activity {
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
 				Intent intent = new Intent();
-				intent.setClass(MainActivity.this, ustTeamActivity.class);
+				intent.setClass(advising_MainActivity.this, ustTeamActivity.class);
 				startActivity(intent);
 			}
 		});
@@ -31,7 +31,7 @@ public class MainActivity extends Activity {
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
 				Intent intent = new Intent();
-				intent.setClass(MainActivity.this, otherActivity1.class);
+				intent.setClass(advising_MainActivity.this, otherActivity1.class);
 				startActivity(intent);
 			}
 		});

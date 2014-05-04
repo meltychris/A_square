@@ -88,7 +88,7 @@ public class MainActivity extends Activity {
             public void onClick(View v) {
                 // TODO Auto-generated method stub
             	Intent intent = new Intent();
-                intent.setClass(MainActivity.this, com.example.advising.MainActivity.class);
+                intent.setClass(MainActivity.this, com.example.advising.advising_MainActivity.class);
                 startActivity(intent);
                
         }});
