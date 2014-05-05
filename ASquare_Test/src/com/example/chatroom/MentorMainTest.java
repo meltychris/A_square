@@ -133,7 +133,7 @@ public class MentorMainTest extends ActivityInstrumentationTestCase2<MentorMain>
 
 	 }
 	
-	@MediumTest 
+	@UiThreadTest  
 	 public void testSend2() { 
 
 		 //INTERACTIONS
@@ -163,7 +163,7 @@ public class MentorMainTest extends ActivityInstrumentationTestCase2<MentorMain>
 
 	 }
 	
-	@MediumTest 
+	@UiThreadTest  
 	 public void testSend3() { 
 		ActivityMonitor activityMonitor = getInstrumentation().addMonitor(MentorMain.class.getName(), null, false);
 
@@ -196,7 +196,7 @@ public class MentorMainTest extends ActivityInstrumentationTestCase2<MentorMain>
 		  assertEquals("",msg.getText().toString());
 	 }
 	
-	@MediumTest 
+	@UiThreadTest  
 	 public void testSend4andlist() { 
 		ActivityMonitor activityMonitor = getInstrumentation().addMonitor(MentorMain.class.getName(), null, false);
 		

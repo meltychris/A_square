@@ -15,6 +15,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
@@ -37,6 +38,10 @@ public class Advanced_Activity2 extends Activity {
 	  	// TODO Auto-generated method stub  
 		super.onCreate(savedInstanceState);
         setContentView(R.layout.adv_path_main2);  
+        
+		View backgroundimage = findViewById(R.id.background);
+		Drawable background = backgroundimage.getBackground();
+		background.setAlpha(70);
         
     	ResetTable("Studied");
     	ResetTable("NotStudied");

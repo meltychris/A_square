@@ -24,7 +24,11 @@ public class Study_Path extends Activity {
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 	    super.onCreate(savedInstanceState);
-        setContentView(R.layout.path_main);       
+        setContentView(R.layout.path_main);    
+        
+        View backgroundimage = findViewById(R.id.background);
+		Drawable background = backgroundimage.getBackground();
+		background.setAlpha(70);
 	    // TODO Auto-generated method stub
 	    button1 = (Button)findViewById(R.id.button1);
 	    button2 = (Button)findViewById(R.id.button2);

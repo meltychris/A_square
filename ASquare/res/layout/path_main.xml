@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.example.study_path.Study_Path" >
+    tools:context="com.example.study_path.Study_Path"
+     android:id="@+id/background"  >
 
      <LinearLayout
         android:id="@+id/buttonLayout1"

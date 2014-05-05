@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><!-- EMMA v2.0.5312 report, generated Mon May 05 11:01:36 CST 2014 -->
+<?xml version="1.0" encoding="UTF-8"?><!-- EMMA v2.0.5312 report, generated Mon May 05 11:40:53 CST 2014 -->
 
 <report>
   <stats>
@@ -12,8 +12,8 @@
     <all name="all classes">
       <coverage type="class, %" value="88%  (92/104)"/>
       <coverage type="method, %" value="83%  (284/341)"/>
-      <coverage type="block, %" value="87%  (8988/10351)"/>
-      <coverage type="line, %" value="85%  (1689.7/1986)"/>
+      <coverage type="block, %" value="87%  (8975/10351)"/>
+      <coverage type="line, %" value="85%  (1688.7/1986)"/>
 
       <package name="com.example.advising">
         <coverage type="class, %" value="0%   (0/12)"/>
@@ -737,6 +737,605 @@
           </class>
         </srcfile>
       </package>
+      <package name="com.example.chatroom">
+        <coverage type="class, %" value="100% (24/24)"/>
+        <coverage type="method, %" value="87%  (65/75)"/>
+        <coverage type="block, %" value="88%  (1603/1831)"/>
+        <coverage type="line, %" value="85%  (324.4/380)"/>
+
+        <srcfile name="DataBaseUtility3.java">
+          <coverage type="class, %" value="100% (1/1)"/>
+          <coverage type="method, %" value="33%  (1/3)"/>
+          <coverage type="block, %" value="36%  (9/25)"/>
+          <coverage type="line, %" value="38%  (3/8)"/>
+
+          <class name="DataBaseUtility3">
+            <coverage type="class, %" value="100% (1/1)"/>
+            <coverage type="method, %" value="33%  (1/3)"/>
+            <coverage type="block, %" value="36%  (9/25)"/>
+            <coverage type="line, %" value="38%  (3/8)"/>
+
+            <method name="DataBaseUtility3 (): void">
+              <coverage type="method, %" value="0%   (0/1)"/>
+              <coverage type="block, %" value="0%   (0/3)"/>
+              <coverage type="line, %" value="0%   (0/1)"/>
+            </method>
+            <method name="ShowMessageBox (Context, String): void">
+              <coverage type="method, %" value="0%   (0/1)"/>
+              <coverage type="block, %" value="0%   (0/13)"/>
+              <coverage type="line, %" value="0%   (0/4)"/>
+            </method>
+            <method name="GetColumnValue (Cursor, String): String">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (9/9)"/>
+              <coverage type="line, %" value="100% (3/3)"/>
+            </method>
+          </class>
+        </srcfile>
+        <srcfile name="DataBaseHelper3.java">
+          <coverage type="class, %" value="100% (1/1)"/>
+          <coverage type="method, %" value="67%  (6/9)"/>
+          <coverage type="block, %" value="56%  (80/143)"/>
+          <coverage type="line, %" value="50%  (19/38)"/>
+
+          <class name="DataBaseHelper3">
+            <coverage type="class, %" value="100% (1/1)"/>
+            <coverage type="method, %" value="67%  (6/9)"/>
+            <coverage type="block, %" value="56%  (80/143)"/>
+            <coverage type="line, %" value="50%  (19/38)"/>
+
+            <method name="copyDataBase (): void">
+              <coverage type="method, %" value="0%   (0/1)"/>
+              <coverage type="block, %" value="0%   (0/42)"/>
+              <coverage type="line, %" value="0%   (0/10)"/>
+            </method>
+            <method name="onCreate (SQLiteDatabase): void">
+              <coverage type="method, %" value="0%   (0/1)"/>
+              <coverage type="block, %" value="0%   (0/1)"/>
+              <coverage type="line, %" value="0%   (0/1)"/>
+            </method>
+            <method name="onUpgrade (SQLiteDatabase, int, int): void">
+              <coverage type="method, %" value="0%   (0/1)"/>
+              <coverage type="block, %" value="0%   (0/1)"/>
+              <coverage type="line, %" value="0%   (0/1)"/>
+            </method>
+            <method name="createDataBase (): void">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="25%  (6/24)"/>
+              <coverage type="line, %" value="30%  (3/10)"/>
+            </method>
+            <method name="openDataBase (): boolean">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="95%  (21/22)"/>
+              <coverage type="line, %" value="98%  (3/3)"/>
+            </method>
+            <method name="&lt;static initializer&gt;">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (7/7)"/>
+              <coverage type="line, %" value="100% (3/3)"/>
+            </method>
+            <method name="DataBaseHelper3 (Context): void">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (22/22)"/>
+              <coverage type="line, %" value="100% (4/4)"/>
+            </method>
+            <method name="checkDataBase (): boolean">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (15/15)"/>
+              <coverage type="line, %" value="100% (2/2)"/>
+            </method>
+            <method name="close (): void">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (9/9)"/>
+              <coverage type="line, %" value="100% (4/4)"/>
+            </method>
+          </class>
+        </srcfile>
+        <srcfile name="DataBaseTestAdapter3.java">
+          <coverage type="class, %" value="100% (1/1)"/>
+          <coverage type="method, %" value="78%  (7/9)"/>
+          <coverage type="block, %" value="62%  (135/218)"/>
+          <coverage type="line, %" value="67%  (39/58)"/>
+
+          <class name="DataBaseTestAdapter3">
+            <coverage type="class, %" value="100% (1/1)"/>
+            <coverage type="method, %" value="78%  (7/9)"/>
+            <coverage type="block, %" value="62%  (135/218)"/>
+            <coverage type="line, %" value="67%  (39/58)"/>
+
+            <method name="delele_table (): void">
+              <coverage type="method, %" value="0%   (0/1)"/>
+              <coverage type="block, %" value="0%   (0/5)"/>
+              <coverage type="line, %" value="0%   (0/2)"/>
+            </method>
+            <method name="delete_one (String): void">
+              <coverage type="method, %" value="0%   (0/1)"/>
+              <coverage type="block, %" value="0%   (0/14)"/>
+              <coverage type="line, %" value="0%   (0/2)"/>
+            </method>
+            <method name="createDatabase (): DataBaseTestAdapter3">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="25%  (6/24)"/>
+              <coverage type="line, %" value="50%  (3/6)"/>
+            </method>
+            <method name="getTestData (String): Cursor">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="46%  (13/28)"/>
+              <coverage type="line, %" value="57%  (4/7)"/>
+            </method>
+            <method name="open (): DataBaseTestAdapter3">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="50%  (15/30)"/>
+              <coverage type="line, %" value="62%  (5/8)"/>
+            </method>
+            <method name="SaveInfo (String, String): boolean">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="83%  (40/48)"/>
+              <coverage type="line, %" value="77%  (10/13)"/>
+            </method>
+            <method name="SaveData (String, String, String): boolean">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="85%  (44/52)"/>
+              <coverage type="line, %" value="79%  (11/14)"/>
+            </method>
+            <method name="DataBaseTestAdapter3 (Context): void">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (13/13)"/>
+              <coverage type="line, %" value="100% (4/4)"/>
+            </method>
+            <method name="close (): void">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (4/4)"/>
+              <coverage type="line, %" value="100% (2/2)"/>
+            </method>
+          </class>
+        </srcfile>
+        <srcfile name="ChatroomActivity.java">
+          <coverage type="class, %" value="100% (2/2)"/>
+          <coverage type="method, %" value="62%  (5/8)"/>
+          <coverage type="block, %" value="76%  (214/280)"/>
+          <coverage type="line, %" value="76%  (39.5/52)"/>
+
+          <class name="ChatroomActivity$1">
+            <coverage type="class, %" value="100% (1/1)"/>
+            <coverage type="method, %" value="50%  (1/2)"/>
+            <coverage type="block, %" value="26%  (6/23)"/>
+            <coverage type="line, %" value="20%  (1/5)"/>
+
+            <method name="onClick (View): void">
+              <coverage type="method, %" value="0%   (0/1)"/>
+              <coverage type="block, %" value="0%   (0/17)"/>
+              <coverage type="line, %" value="0%   (0/4)"/>
+            </method>
+            <method name="ChatroomActivity$1 (ChatroomActivity): void">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (6/6)"/>
+              <coverage type="line, %" value="100% (1/1)"/>
+            </method>
+          </class>
+          <class name="ChatroomActivity">
+            <coverage type="class, %" value="100% (1/1)"/>
+            <coverage type="method, %" value="67%  (4/6)"/>
+            <coverage type="block, %" value="81%  (208/257)"/>
+            <coverage type="line, %" value="82%  (39.5/48)"/>
+
+            <method name="access$000 (ChatroomActivity): void">
+              <coverage type="method, %" value="0%   (0/1)"/>
+              <coverage type="block, %" value="0%   (0/3)"/>
+              <coverage type="line, %" value="0%   (0/1)"/>
+            </method>
+            <method name="add_item (String): void">
+              <coverage type="method, %" value="0%   (0/1)"/>
+              <coverage type="block, %" value="0%   (0/22)"/>
+              <coverage type="line, %" value="0%   (0/6)"/>
+            </method>
+            <method name="get_list (): List">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="82%  (106/130)"/>
+              <coverage type="line, %" value="90%  (18/20)"/>
+            </method>
+            <method name="ChatroomActivity (): void">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (3/3)"/>
+              <coverage type="line, %" value="100% (1/1)"/>
+            </method>
+            <method name="onCreate (Bundle): void">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (67/67)"/>
+              <coverage type="line, %" value="100% (14/14)"/>
+            </method>
+            <method name="update (): void">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (32/32)"/>
+              <coverage type="line, %" value="100% (7/7)"/>
+            </method>
+          </class>
+        </srcfile>
+        <srcfile name="ChatHelpActivity.java">
+          <coverage type="class, %" value="100% (1/1)"/>
+          <coverage type="method, %" value="100% (4/4)"/>
+          <coverage type="block, %" value="100% (135/135)"/>
+          <coverage type="line, %" value="100% (32/32)"/>
+
+          <class name="ChatHelpActivity">
+            <coverage type="class, %" value="100% (1/1)"/>
+            <coverage type="method, %" value="100% (4/4)"/>
+            <coverage type="block, %" value="100% (135/135)"/>
+            <coverage type="line, %" value="100% (32/32)"/>
+
+            <method name="ChatHelpActivity (): void">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (3/3)"/>
+              <coverage type="line, %" value="100% (1/1)"/>
+            </method>
+            <method name="get_list (): List">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (63/63)"/>
+              <coverage type="line, %" value="100% (15/15)"/>
+            </method>
+            <method name="onCreate (Bundle): void">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (37/37)"/>
+              <coverage type="line, %" value="100% (9/9)"/>
+            </method>
+            <method name="update (): void">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (32/32)"/>
+              <coverage type="line, %" value="100% (7/7)"/>
+            </method>
+          </class>
+        </srcfile>
+        <srcfile name="MainChat.java">
+          <coverage type="class, %" value="100% (13/13)"/>
+          <coverage type="method, %" value="100% (26/26)"/>
+          <coverage type="block, %" value="100% (478/478)"/>
+          <coverage type="line, %" value="100% (88/88)"/>
+
+          <class name="MainChat">
+            <coverage type="class, %" value="100% (1/1)"/>
+            <coverage type="method, %" value="100% (2/2)"/>
+            <coverage type="block, %" value="100% (166/166)"/>
+            <coverage type="line, %" value="100% (28/28)"/>
+
+            <method name="MainChat (): void">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (3/3)"/>
+              <coverage type="line, %" value="100% (1/1)"/>
+            </method>
+            <method name="onCreate (Bundle): void">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (163/163)"/>
+              <coverage type="line, %" value="100% (27/27)"/>
+            </method>
+          </class>
+          <class name="MainChat$1">
+            <coverage type="class, %" value="100% (1/1)"/>
+            <coverage type="method, %" value="100% (2/2)"/>
+            <coverage type="block, %" value="100% (26/26)"/>
+            <coverage type="line, %" value="100% (6/6)"/>
+
+            <method name="MainChat$1 (MainChat): void">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (6/6)"/>
+              <coverage type="line, %" value="100% (1/1)"/>
+            </method>
+            <method name="onClick (View): void">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (20/20)"/>
+              <coverage type="line, %" value="100% (5/5)"/>
+            </method>
+          </class>
+          <class name="MainChat$10">
+            <coverage type="class, %" value="100% (1/1)"/>
+            <coverage type="method, %" value="100% (2/2)"/>
+            <coverage type="block, %" value="100% (26/26)"/>
+            <coverage type="line, %" value="100% (6/6)"/>
+
+            <method name="MainChat$10 (MainChat): void">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (6/6)"/>
+              <coverage type="line, %" value="100% (1/1)"/>
+            </method>
+            <method name="onClick (View): void">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (20/20)"/>
+              <coverage type="line, %" value="100% (5/5)"/>
+            </method>
+          </class>
+          <class name="MainChat$11">
+            <coverage type="class, %" value="100% (1/1)"/>
+            <coverage type="method, %" value="100% (2/2)"/>
+            <coverage type="block, %" value="100% (26/26)"/>
+            <coverage type="line, %" value="100% (6/6)"/>
+
+            <method name="MainChat$11 (MainChat): void">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (6/6)"/>
+              <coverage type="line, %" value="100% (1/1)"/>
+            </method>
+            <method name="onClick (View): void">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (20/20)"/>
+              <coverage type="line, %" value="100% (5/5)"/>
+            </method>
+          </class>
+          <class name="MainChat$12">
+            <coverage type="class, %" value="100% (1/1)"/>
+            <coverage type="method, %" value="100% (2/2)"/>
+            <coverage type="block, %" value="100% (26/26)"/>
+            <coverage type="line, %" value="100% (6/6)"/>
+
+            <method name="MainChat$12 (MainChat): void">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (6/6)"/>
+              <coverage type="line, %" value="100% (1/1)"/>
+            </method>
+            <method name="onClick (View): void">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (20/20)"/>
+              <coverage type="line, %" value="100% (5/5)"/>
+            </method>
+          </class>
+          <class name="MainChat$2">
+            <coverage type="class, %" value="100% (1/1)"/>
+            <coverage type="method, %" value="100% (2/2)"/>
+            <coverage type="block, %" value="100% (26/26)"/>
+            <coverage type="line, %" value="100% (6/6)"/>
+
+            <method name="MainChat$2 (MainChat): void">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (6/6)"/>
+              <coverage type="line, %" value="100% (1/1)"/>
+            </method>
+            <method name="onClick (View): void">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (20/20)"/>
+              <coverage type="line, %" value="100% (5/5)"/>
+            </method>
+          </class>
+          <class name="MainChat$3">
+            <coverage type="class, %" value="100% (1/1)"/>
+            <coverage type="method, %" value="100% (2/2)"/>
+            <coverage type="block, %" value="100% (26/26)"/>
+            <coverage type="line, %" value="100% (6/6)"/>
+
+            <method name="MainChat$3 (MainChat): void">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (6/6)"/>
+              <coverage type="line, %" value="100% (1/1)"/>
+            </method>
+            <method name="onClick (View): void">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (20/20)"/>
+              <coverage type="line, %" value="100% (5/5)"/>
+            </method>
+          </class>
+          <class name="MainChat$4">
+            <coverage type="class, %" value="100% (1/1)"/>
+            <coverage type="method, %" value="100% (2/2)"/>
+            <coverage type="block, %" value="100% (26/26)"/>
+            <coverage type="line, %" value="100% (6/6)"/>
+
+            <method name="MainChat$4 (MainChat): void">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (6/6)"/>
+              <coverage type="line, %" value="100% (1/1)"/>
+            </method>
+            <method name="onClick (View): void">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (20/20)"/>
+              <coverage type="line, %" value="100% (5/5)"/>
+            </method>
+          </class>
+          <class name="MainChat$5">
+            <coverage type="class, %" value="100% (1/1)"/>
+            <coverage type="method, %" value="100% (2/2)"/>
+            <coverage type="block, %" value="100% (26/26)"/>
+            <coverage type="line, %" value="100% (6/6)"/>
+
+            <method name="MainChat$5 (MainChat): void">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (6/6)"/>
+              <coverage type="line, %" value="100% (1/1)"/>
+            </method>
+            <method name="onClick (View): void">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (20/20)"/>
+              <coverage type="line, %" value="100% (5/5)"/>
+            </method>
+          </class>
+          <class name="MainChat$6">
+            <coverage type="class, %" value="100% (1/1)"/>
+            <coverage type="method, %" value="100% (2/2)"/>
+            <coverage type="block, %" value="100% (26/26)"/>
+            <coverage type="line, %" value="100% (6/6)"/>
+
+            <method name="MainChat$6 (MainChat): void">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (6/6)"/>
+              <coverage type="line, %" value="100% (1/1)"/>
+            </method>
+            <method name="onClick (View): void">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (20/20)"/>
+              <coverage type="line, %" value="100% (5/5)"/>
+            </method>
+          </class>
+          <class name="MainChat$7">
+            <coverage type="class, %" value="100% (1/1)"/>
+            <coverage type="method, %" value="100% (2/2)"/>
+            <coverage type="block, %" value="100% (26/26)"/>
+            <coverage type="line, %" value="100% (6/6)"/>
+
+            <method name="MainChat$7 (MainChat): void">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (6/6)"/>
+              <coverage type="line, %" value="100% (1/1)"/>
+            </method>
+            <method name="onClick (View): void">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (20/20)"/>
+              <coverage type="line, %" value="100% (5/5)"/>
+            </method>
+          </class>
+          <class name="MainChat$8">
+            <coverage type="class, %" value="100% (1/1)"/>
+            <coverage type="method, %" value="100% (2/2)"/>
+            <coverage type="block, %" value="100% (26/26)"/>
+            <coverage type="line, %" value="100% (6/6)"/>
+
+            <method name="MainChat$8 (MainChat): void">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (6/6)"/>
+              <coverage type="line, %" value="100% (1/1)"/>
+            </method>
+            <method name="onClick (View): void">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (20/20)"/>
+              <coverage type="line, %" value="100% (5/5)"/>
+            </method>
+          </class>
+          <class name="MainChat$9">
+            <coverage type="class, %" value="100% (1/1)"/>
+            <coverage type="method, %" value="100% (2/2)"/>
+            <coverage type="block, %" value="100% (26/26)"/>
+            <coverage type="line, %" value="100% (6/6)"/>
+
+            <method name="MainChat$9 (MainChat): void">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (6/6)"/>
+              <coverage type="line, %" value="100% (1/1)"/>
+            </method>
+            <method name="onClick (View): void">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (20/20)"/>
+              <coverage type="line, %" value="100% (5/5)"/>
+            </method>
+          </class>
+        </srcfile>
+        <srcfile name="MentorMain.java">
+          <coverage type="class, %" value="100% (5/5)"/>
+          <coverage type="method, %" value="100% (16/16)"/>
+          <coverage type="block, %" value="100% (552/552)"/>
+          <coverage type="line, %" value="100% (104/104)"/>
+
+          <class name="MentorMain">
+            <coverage type="class, %" value="100% (1/1)"/>
+            <coverage type="method, %" value="100% (8/8)"/>
+            <coverage type="block, %" value="100% (370/370)"/>
+            <coverage type="line, %" value="100% (75/75)"/>
+
+            <method name="MentorMain (): void">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (6/6)"/>
+              <coverage type="line, %" value="100% (2/2)"/>
+            </method>
+            <method name="access$000 (MentorMain): void">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (3/3)"/>
+              <coverage type="line, %" value="100% (1/1)"/>
+            </method>
+            <method name="add_info (String): void">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (20/20)"/>
+              <coverage type="line, %" value="100% (6/6)"/>
+            </method>
+            <method name="add_msg (String): void">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (22/22)"/>
+              <coverage type="line, %" value="100% (6/6)"/>
+            </method>
+            <method name="get_info (): List">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (63/63)"/>
+              <coverage type="line, %" value="100% (15/15)"/>
+            </method>
+            <method name="get_msg (): List">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (106/106)"/>
+              <coverage type="line, %" value="100% (18/18)"/>
+            </method>
+            <method name="onCreate (Bundle): void">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (111/111)"/>
+              <coverage type="line, %" value="100% (21/21)"/>
+            </method>
+            <method name="update (): void">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (39/39)"/>
+              <coverage type="line, %" value="100% (7/7)"/>
+            </method>
+          </class>
+          <class name="MentorMain$1">
+            <coverage type="class, %" value="100% (1/1)"/>
+            <coverage type="method, %" value="100% (2/2)"/>
+            <coverage type="block, %" value="100% (29/29)"/>
+            <coverage type="line, %" value="100% (7/7)"/>
+
+            <method name="MentorMain$1 (MentorMain): void">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (6/6)"/>
+              <coverage type="line, %" value="100% (1/1)"/>
+            </method>
+            <method name="onClick (View): void">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (23/23)"/>
+              <coverage type="line, %" value="100% (6/6)"/>
+            </method>
+          </class>
+          <class name="MentorMain$2">
+            <coverage type="class, %" value="100% (1/1)"/>
+            <coverage type="method, %" value="100% (2/2)"/>
+            <coverage type="block, %" value="100% (25/25)"/>
+            <coverage type="line, %" value="100% (6/6)"/>
+
+            <method name="MentorMain$2 (MentorMain): void">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (6/6)"/>
+              <coverage type="line, %" value="100% (1/1)"/>
+            </method>
+            <method name="onClick (View): void">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (19/19)"/>
+              <coverage type="line, %" value="100% (5/5)"/>
+            </method>
+          </class>
+          <class name="MentorMain$3">
+            <coverage type="class, %" value="100% (1/1)"/>
+            <coverage type="method, %" value="100% (2/2)"/>
+            <coverage type="block, %" value="100% (73/73)"/>
+            <coverage type="line, %" value="100% (13/13)"/>
+
+            <method name="MentorMain$3 (MentorMain): void">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (6/6)"/>
+              <coverage type="line, %" value="100% (1/1)"/>
+            </method>
+            <method name="onClick (View): void">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (67/67)"/>
+              <coverage type="line, %" value="100% (12/12)"/>
+            </method>
+          </class>
+          <class name="MentorMain$4">
+            <coverage type="class, %" value="100% (1/1)"/>
+            <coverage type="method, %" value="100% (2/2)"/>
+            <coverage type="block, %" value="100% (55/55)"/>
+            <coverage type="line, %" value="100% (7/7)"/>
+
+            <method name="MentorMain$4 (MentorMain): void">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (6/6)"/>
+              <coverage type="line, %" value="100% (1/1)"/>
+            </method>
+            <method name="onItemClick (AdapterView, View, int, long): void">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (49/49)"/>
+              <coverage type="line, %" value="100% (6/6)"/>
+            </method>
+          </class>
+        </srcfile>
+      </package>
       <package name="com.example.gpa_calculator">
         <coverage type="class, %" value="100% (24/24)"/>
         <coverage type="method, %" value="93%  (67/72)"/>
@@ -1317,605 +1916,6 @@
               <coverage type="method, %" value="100% (1/1)"/>
               <coverage type="block, %" value="100% (3/3)"/>
               <coverage type="line, %" value="100% (1/1)"/>
-            </method>
-          </class>
-        </srcfile>
-      </package>
-      <package name="com.example.chatroom">
-        <coverage type="class, %" value="100% (24/24)"/>
-        <coverage type="method, %" value="87%  (65/75)"/>
-        <coverage type="block, %" value="88%  (1616/1831)"/>
-        <coverage type="line, %" value="86%  (325.4/380)"/>
-
-        <srcfile name="DataBaseUtility3.java">
-          <coverage type="class, %" value="100% (1/1)"/>
-          <coverage type="method, %" value="33%  (1/3)"/>
-          <coverage type="block, %" value="36%  (9/25)"/>
-          <coverage type="line, %" value="38%  (3/8)"/>
-
-          <class name="DataBaseUtility3">
-            <coverage type="class, %" value="100% (1/1)"/>
-            <coverage type="method, %" value="33%  (1/3)"/>
-            <coverage type="block, %" value="36%  (9/25)"/>
-            <coverage type="line, %" value="38%  (3/8)"/>
-
-            <method name="DataBaseUtility3 (): void">
-              <coverage type="method, %" value="0%   (0/1)"/>
-              <coverage type="block, %" value="0%   (0/3)"/>
-              <coverage type="line, %" value="0%   (0/1)"/>
-            </method>
-            <method name="ShowMessageBox (Context, String): void">
-              <coverage type="method, %" value="0%   (0/1)"/>
-              <coverage type="block, %" value="0%   (0/13)"/>
-              <coverage type="line, %" value="0%   (0/4)"/>
-            </method>
-            <method name="GetColumnValue (Cursor, String): String">
-              <coverage type="method, %" value="100% (1/1)"/>
-              <coverage type="block, %" value="100% (9/9)"/>
-              <coverage type="line, %" value="100% (3/3)"/>
-            </method>
-          </class>
-        </srcfile>
-        <srcfile name="DataBaseHelper3.java">
-          <coverage type="class, %" value="100% (1/1)"/>
-          <coverage type="method, %" value="67%  (6/9)"/>
-          <coverage type="block, %" value="56%  (80/143)"/>
-          <coverage type="line, %" value="50%  (19/38)"/>
-
-          <class name="DataBaseHelper3">
-            <coverage type="class, %" value="100% (1/1)"/>
-            <coverage type="method, %" value="67%  (6/9)"/>
-            <coverage type="block, %" value="56%  (80/143)"/>
-            <coverage type="line, %" value="50%  (19/38)"/>
-
-            <method name="copyDataBase (): void">
-              <coverage type="method, %" value="0%   (0/1)"/>
-              <coverage type="block, %" value="0%   (0/42)"/>
-              <coverage type="line, %" value="0%   (0/10)"/>
-            </method>
-            <method name="onCreate (SQLiteDatabase): void">
-              <coverage type="method, %" value="0%   (0/1)"/>
-              <coverage type="block, %" value="0%   (0/1)"/>
-              <coverage type="line, %" value="0%   (0/1)"/>
-            </method>
-            <method name="onUpgrade (SQLiteDatabase, int, int): void">
-              <coverage type="method, %" value="0%   (0/1)"/>
-              <coverage type="block, %" value="0%   (0/1)"/>
-              <coverage type="line, %" value="0%   (0/1)"/>
-            </method>
-            <method name="createDataBase (): void">
-              <coverage type="method, %" value="100% (1/1)"/>
-              <coverage type="block, %" value="25%  (6/24)"/>
-              <coverage type="line, %" value="30%  (3/10)"/>
-            </method>
-            <method name="openDataBase (): boolean">
-              <coverage type="method, %" value="100% (1/1)"/>
-              <coverage type="block, %" value="95%  (21/22)"/>
-              <coverage type="line, %" value="98%  (3/3)"/>
-            </method>
-            <method name="&lt;static initializer&gt;">
-              <coverage type="method, %" value="100% (1/1)"/>
-              <coverage type="block, %" value="100% (7/7)"/>
-              <coverage type="line, %" value="100% (3/3)"/>
-            </method>
-            <method name="DataBaseHelper3 (Context): void">
-              <coverage type="method, %" value="100% (1/1)"/>
-              <coverage type="block, %" value="100% (22/22)"/>
-              <coverage type="line, %" value="100% (4/4)"/>
-            </method>
-            <method name="checkDataBase (): boolean">
-              <coverage type="method, %" value="100% (1/1)"/>
-              <coverage type="block, %" value="100% (15/15)"/>
-              <coverage type="line, %" value="100% (2/2)"/>
-            </method>
-            <method name="close (): void">
-              <coverage type="method, %" value="100% (1/1)"/>
-              <coverage type="block, %" value="100% (9/9)"/>
-              <coverage type="line, %" value="100% (4/4)"/>
-            </method>
-          </class>
-        </srcfile>
-        <srcfile name="DataBaseTestAdapter3.java">
-          <coverage type="class, %" value="100% (1/1)"/>
-          <coverage type="method, %" value="78%  (7/9)"/>
-          <coverage type="block, %" value="62%  (135/218)"/>
-          <coverage type="line, %" value="67%  (39/58)"/>
-
-          <class name="DataBaseTestAdapter3">
-            <coverage type="class, %" value="100% (1/1)"/>
-            <coverage type="method, %" value="78%  (7/9)"/>
-            <coverage type="block, %" value="62%  (135/218)"/>
-            <coverage type="line, %" value="67%  (39/58)"/>
-
-            <method name="delele_table (): void">
-              <coverage type="method, %" value="0%   (0/1)"/>
-              <coverage type="block, %" value="0%   (0/5)"/>
-              <coverage type="line, %" value="0%   (0/2)"/>
-            </method>
-            <method name="delete_one (String): void">
-              <coverage type="method, %" value="0%   (0/1)"/>
-              <coverage type="block, %" value="0%   (0/14)"/>
-              <coverage type="line, %" value="0%   (0/2)"/>
-            </method>
-            <method name="createDatabase (): DataBaseTestAdapter3">
-              <coverage type="method, %" value="100% (1/1)"/>
-              <coverage type="block, %" value="25%  (6/24)"/>
-              <coverage type="line, %" value="50%  (3/6)"/>
-            </method>
-            <method name="getTestData (String): Cursor">
-              <coverage type="method, %" value="100% (1/1)"/>
-              <coverage type="block, %" value="46%  (13/28)"/>
-              <coverage type="line, %" value="57%  (4/7)"/>
-            </method>
-            <method name="open (): DataBaseTestAdapter3">
-              <coverage type="method, %" value="100% (1/1)"/>
-              <coverage type="block, %" value="50%  (15/30)"/>
-              <coverage type="line, %" value="62%  (5/8)"/>
-            </method>
-            <method name="SaveInfo (String, String): boolean">
-              <coverage type="method, %" value="100% (1/1)"/>
-              <coverage type="block, %" value="83%  (40/48)"/>
-              <coverage type="line, %" value="77%  (10/13)"/>
-            </method>
-            <method name="SaveData (String, String, String): boolean">
-              <coverage type="method, %" value="100% (1/1)"/>
-              <coverage type="block, %" value="85%  (44/52)"/>
-              <coverage type="line, %" value="79%  (11/14)"/>
-            </method>
-            <method name="DataBaseTestAdapter3 (Context): void">
-              <coverage type="method, %" value="100% (1/1)"/>
-              <coverage type="block, %" value="100% (13/13)"/>
-              <coverage type="line, %" value="100% (4/4)"/>
-            </method>
-            <method name="close (): void">
-              <coverage type="method, %" value="100% (1/1)"/>
-              <coverage type="block, %" value="100% (4/4)"/>
-              <coverage type="line, %" value="100% (2/2)"/>
-            </method>
-          </class>
-        </srcfile>
-        <srcfile name="ChatroomActivity.java">
-          <coverage type="class, %" value="100% (2/2)"/>
-          <coverage type="method, %" value="62%  (5/8)"/>
-          <coverage type="block, %" value="81%  (227/280)"/>
-          <coverage type="line, %" value="78%  (40.5/52)"/>
-
-          <class name="ChatroomActivity$1">
-            <coverage type="class, %" value="100% (1/1)"/>
-            <coverage type="method, %" value="50%  (1/2)"/>
-            <coverage type="block, %" value="26%  (6/23)"/>
-            <coverage type="line, %" value="20%  (1/5)"/>
-
-            <method name="onClick (View): void">
-              <coverage type="method, %" value="0%   (0/1)"/>
-              <coverage type="block, %" value="0%   (0/17)"/>
-              <coverage type="line, %" value="0%   (0/4)"/>
-            </method>
-            <method name="ChatroomActivity$1 (ChatroomActivity): void">
-              <coverage type="method, %" value="100% (1/1)"/>
-              <coverage type="block, %" value="100% (6/6)"/>
-              <coverage type="line, %" value="100% (1/1)"/>
-            </method>
-          </class>
-          <class name="ChatroomActivity">
-            <coverage type="class, %" value="100% (1/1)"/>
-            <coverage type="method, %" value="67%  (4/6)"/>
-            <coverage type="block, %" value="86%  (221/257)"/>
-            <coverage type="line, %" value="84%  (40.5/48)"/>
-
-            <method name="access$000 (ChatroomActivity): void">
-              <coverage type="method, %" value="0%   (0/1)"/>
-              <coverage type="block, %" value="0%   (0/3)"/>
-              <coverage type="line, %" value="0%   (0/1)"/>
-            </method>
-            <method name="add_item (String): void">
-              <coverage type="method, %" value="0%   (0/1)"/>
-              <coverage type="block, %" value="0%   (0/22)"/>
-              <coverage type="line, %" value="0%   (0/6)"/>
-            </method>
-            <method name="get_list (): List">
-              <coverage type="method, %" value="100% (1/1)"/>
-              <coverage type="block, %" value="92%  (119/130)"/>
-              <coverage type="line, %" value="95%  (19/20)"/>
-            </method>
-            <method name="ChatroomActivity (): void">
-              <coverage type="method, %" value="100% (1/1)"/>
-              <coverage type="block, %" value="100% (3/3)"/>
-              <coverage type="line, %" value="100% (1/1)"/>
-            </method>
-            <method name="onCreate (Bundle): void">
-              <coverage type="method, %" value="100% (1/1)"/>
-              <coverage type="block, %" value="100% (67/67)"/>
-              <coverage type="line, %" value="100% (14/14)"/>
-            </method>
-            <method name="update (): void">
-              <coverage type="method, %" value="100% (1/1)"/>
-              <coverage type="block, %" value="100% (32/32)"/>
-              <coverage type="line, %" value="100% (7/7)"/>
-            </method>
-          </class>
-        </srcfile>
-        <srcfile name="ChatHelpActivity.java">
-          <coverage type="class, %" value="100% (1/1)"/>
-          <coverage type="method, %" value="100% (4/4)"/>
-          <coverage type="block, %" value="100% (135/135)"/>
-          <coverage type="line, %" value="100% (32/32)"/>
-
-          <class name="ChatHelpActivity">
-            <coverage type="class, %" value="100% (1/1)"/>
-            <coverage type="method, %" value="100% (4/4)"/>
-            <coverage type="block, %" value="100% (135/135)"/>
-            <coverage type="line, %" value="100% (32/32)"/>
-
-            <method name="ChatHelpActivity (): void">
-              <coverage type="method, %" value="100% (1/1)"/>
-              <coverage type="block, %" value="100% (3/3)"/>
-              <coverage type="line, %" value="100% (1/1)"/>
-            </method>
-            <method name="get_list (): List">
-              <coverage type="method, %" value="100% (1/1)"/>
-              <coverage type="block, %" value="100% (63/63)"/>
-              <coverage type="line, %" value="100% (15/15)"/>
-            </method>
-            <method name="onCreate (Bundle): void">
-              <coverage type="method, %" value="100% (1/1)"/>
-              <coverage type="block, %" value="100% (37/37)"/>
-              <coverage type="line, %" value="100% (9/9)"/>
-            </method>
-            <method name="update (): void">
-              <coverage type="method, %" value="100% (1/1)"/>
-              <coverage type="block, %" value="100% (32/32)"/>
-              <coverage type="line, %" value="100% (7/7)"/>
-            </method>
-          </class>
-        </srcfile>
-        <srcfile name="MainChat.java">
-          <coverage type="class, %" value="100% (13/13)"/>
-          <coverage type="method, %" value="100% (26/26)"/>
-          <coverage type="block, %" value="100% (478/478)"/>
-          <coverage type="line, %" value="100% (88/88)"/>
-
-          <class name="MainChat">
-            <coverage type="class, %" value="100% (1/1)"/>
-            <coverage type="method, %" value="100% (2/2)"/>
-            <coverage type="block, %" value="100% (166/166)"/>
-            <coverage type="line, %" value="100% (28/28)"/>
-
-            <method name="MainChat (): void">
-              <coverage type="method, %" value="100% (1/1)"/>
-              <coverage type="block, %" value="100% (3/3)"/>
-              <coverage type="line, %" value="100% (1/1)"/>
-            </method>
-            <method name="onCreate (Bundle): void">
-              <coverage type="method, %" value="100% (1/1)"/>
-              <coverage type="block, %" value="100% (163/163)"/>
-              <coverage type="line, %" value="100% (27/27)"/>
-            </method>
-          </class>
-          <class name="MainChat$1">
-            <coverage type="class, %" value="100% (1/1)"/>
-            <coverage type="method, %" value="100% (2/2)"/>
-            <coverage type="block, %" value="100% (26/26)"/>
-            <coverage type="line, %" value="100% (6/6)"/>
-
-            <method name="MainChat$1 (MainChat): void">
-              <coverage type="method, %" value="100% (1/1)"/>
-              <coverage type="block, %" value="100% (6/6)"/>
-              <coverage type="line, %" value="100% (1/1)"/>
-            </method>
-            <method name="onClick (View): void">
-              <coverage type="method, %" value="100% (1/1)"/>
-              <coverage type="block, %" value="100% (20/20)"/>
-              <coverage type="line, %" value="100% (5/5)"/>
-            </method>
-          </class>
-          <class name="MainChat$10">
-            <coverage type="class, %" value="100% (1/1)"/>
-            <coverage type="method, %" value="100% (2/2)"/>
-            <coverage type="block, %" value="100% (26/26)"/>
-            <coverage type="line, %" value="100% (6/6)"/>
-
-            <method name="MainChat$10 (MainChat): void">
-              <coverage type="method, %" value="100% (1/1)"/>
-              <coverage type="block, %" value="100% (6/6)"/>
-              <coverage type="line, %" value="100% (1/1)"/>
-            </method>
-            <method name="onClick (View): void">
-              <coverage type="method, %" value="100% (1/1)"/>
-              <coverage type="block, %" value="100% (20/20)"/>
-              <coverage type="line, %" value="100% (5/5)"/>
-            </method>
-          </class>
-          <class name="MainChat$11">
-            <coverage type="class, %" value="100% (1/1)"/>
-            <coverage type="method, %" value="100% (2/2)"/>
-            <coverage type="block, %" value="100% (26/26)"/>
-            <coverage type="line, %" value="100% (6/6)"/>
-
-            <method name="MainChat$11 (MainChat): void">
-              <coverage type="method, %" value="100% (1/1)"/>
-              <coverage type="block, %" value="100% (6/6)"/>
-              <coverage type="line, %" value="100% (1/1)"/>
-            </method>
-            <method name="onClick (View): void">
-              <coverage type="method, %" value="100% (1/1)"/>
-              <coverage type="block, %" value="100% (20/20)"/>
-              <coverage type="line, %" value="100% (5/5)"/>
-            </method>
-          </class>
-          <class name="MainChat$12">
-            <coverage type="class, %" value="100% (1/1)"/>
-            <coverage type="method, %" value="100% (2/2)"/>
-            <coverage type="block, %" value="100% (26/26)"/>
-            <coverage type="line, %" value="100% (6/6)"/>
-
-            <method name="MainChat$12 (MainChat): void">
-              <coverage type="method, %" value="100% (1/1)"/>
-              <coverage type="block, %" value="100% (6/6)"/>
-              <coverage type="line, %" value="100% (1/1)"/>
-            </method>
-            <method name="onClick (View): void">
-              <coverage type="method, %" value="100% (1/1)"/>
-              <coverage type="block, %" value="100% (20/20)"/>
-              <coverage type="line, %" value="100% (5/5)"/>
-            </method>
-          </class>
-          <class name="MainChat$2">
-            <coverage type="class, %" value="100% (1/1)"/>
-            <coverage type="method, %" value="100% (2/2)"/>
-            <coverage type="block, %" value="100% (26/26)"/>
-            <coverage type="line, %" value="100% (6/6)"/>
-
-            <method name="MainChat$2 (MainChat): void">
-              <coverage type="method, %" value="100% (1/1)"/>
-              <coverage type="block, %" value="100% (6/6)"/>
-              <coverage type="line, %" value="100% (1/1)"/>
-            </method>
-            <method name="onClick (View): void">
-              <coverage type="method, %" value="100% (1/1)"/>
-              <coverage type="block, %" value="100% (20/20)"/>
-              <coverage type="line, %" value="100% (5/5)"/>
-            </method>
-          </class>
-          <class name="MainChat$3">
-            <coverage type="class, %" value="100% (1/1)"/>
-            <coverage type="method, %" value="100% (2/2)"/>
-            <coverage type="block, %" value="100% (26/26)"/>
-            <coverage type="line, %" value="100% (6/6)"/>
-
-            <method name="MainChat$3 (MainChat): void">
-              <coverage type="method, %" value="100% (1/1)"/>
-              <coverage type="block, %" value="100% (6/6)"/>
-              <coverage type="line, %" value="100% (1/1)"/>
-            </method>
-            <method name="onClick (View): void">
-              <coverage type="method, %" value="100% (1/1)"/>
-              <coverage type="block, %" value="100% (20/20)"/>
-              <coverage type="line, %" value="100% (5/5)"/>
-            </method>
-          </class>
-          <class name="MainChat$4">
-            <coverage type="class, %" value="100% (1/1)"/>
-            <coverage type="method, %" value="100% (2/2)"/>
-            <coverage type="block, %" value="100% (26/26)"/>
-            <coverage type="line, %" value="100% (6/6)"/>
-
-            <method name="MainChat$4 (MainChat): void">
-              <coverage type="method, %" value="100% (1/1)"/>
-              <coverage type="block, %" value="100% (6/6)"/>
-              <coverage type="line, %" value="100% (1/1)"/>
-            </method>
-            <method name="onClick (View): void">
-              <coverage type="method, %" value="100% (1/1)"/>
-              <coverage type="block, %" value="100% (20/20)"/>
-              <coverage type="line, %" value="100% (5/5)"/>
-            </method>
-          </class>
-          <class name="MainChat$5">
-            <coverage type="class, %" value="100% (1/1)"/>
-            <coverage type="method, %" value="100% (2/2)"/>
-            <coverage type="block, %" value="100% (26/26)"/>
-            <coverage type="line, %" value="100% (6/6)"/>
-
-            <method name="MainChat$5 (MainChat): void">
-              <coverage type="method, %" value="100% (1/1)"/>
-              <coverage type="block, %" value="100% (6/6)"/>
-              <coverage type="line, %" value="100% (1/1)"/>
-            </method>
-            <method name="onClick (View): void">
-              <coverage type="method, %" value="100% (1/1)"/>
-              <coverage type="block, %" value="100% (20/20)"/>
-              <coverage type="line, %" value="100% (5/5)"/>
-            </method>
-          </class>
-          <class name="MainChat$6">
-            <coverage type="class, %" value="100% (1/1)"/>
-            <coverage type="method, %" value="100% (2/2)"/>
-            <coverage type="block, %" value="100% (26/26)"/>
-            <coverage type="line, %" value="100% (6/6)"/>
-
-            <method name="MainChat$6 (MainChat): void">
-              <coverage type="method, %" value="100% (1/1)"/>
-              <coverage type="block, %" value="100% (6/6)"/>
-              <coverage type="line, %" value="100% (1/1)"/>
-            </method>
-            <method name="onClick (View): void">
-              <coverage type="method, %" value="100% (1/1)"/>
-              <coverage type="block, %" value="100% (20/20)"/>
-              <coverage type="line, %" value="100% (5/5)"/>
-            </method>
-          </class>
-          <class name="MainChat$7">
-            <coverage type="class, %" value="100% (1/1)"/>
-            <coverage type="method, %" value="100% (2/2)"/>
-            <coverage type="block, %" value="100% (26/26)"/>
-            <coverage type="line, %" value="100% (6/6)"/>
-
-            <method name="MainChat$7 (MainChat): void">
-              <coverage type="method, %" value="100% (1/1)"/>
-              <coverage type="block, %" value="100% (6/6)"/>
-              <coverage type="line, %" value="100% (1/1)"/>
-            </method>
-            <method name="onClick (View): void">
-              <coverage type="method, %" value="100% (1/1)"/>
-              <coverage type="block, %" value="100% (20/20)"/>
-              <coverage type="line, %" value="100% (5/5)"/>
-            </method>
-          </class>
-          <class name="MainChat$8">
-            <coverage type="class, %" value="100% (1/1)"/>
-            <coverage type="method, %" value="100% (2/2)"/>
-            <coverage type="block, %" value="100% (26/26)"/>
-            <coverage type="line, %" value="100% (6/6)"/>
-
-            <method name="MainChat$8 (MainChat): void">
-              <coverage type="method, %" value="100% (1/1)"/>
-              <coverage type="block, %" value="100% (6/6)"/>
-              <coverage type="line, %" value="100% (1/1)"/>
-            </method>
-            <method name="onClick (View): void">
-              <coverage type="method, %" value="100% (1/1)"/>
-              <coverage type="block, %" value="100% (20/20)"/>
-              <coverage type="line, %" value="100% (5/5)"/>
-            </method>
-          </class>
-          <class name="MainChat$9">
-            <coverage type="class, %" value="100% (1/1)"/>
-            <coverage type="method, %" value="100% (2/2)"/>
-            <coverage type="block, %" value="100% (26/26)"/>
-            <coverage type="line, %" value="100% (6/6)"/>
-
-            <method name="MainChat$9 (MainChat): void">
-              <coverage type="method, %" value="100% (1/1)"/>
-              <coverage type="block, %" value="100% (6/6)"/>
-              <coverage type="line, %" value="100% (1/1)"/>
-            </method>
-            <method name="onClick (View): void">
-              <coverage type="method, %" value="100% (1/1)"/>
-              <coverage type="block, %" value="100% (20/20)"/>
-              <coverage type="line, %" value="100% (5/5)"/>
-            </method>
-          </class>
-        </srcfile>
-        <srcfile name="MentorMain.java">
-          <coverage type="class, %" value="100% (5/5)"/>
-          <coverage type="method, %" value="100% (16/16)"/>
-          <coverage type="block, %" value="100% (552/552)"/>
-          <coverage type="line, %" value="100% (104/104)"/>
-
-          <class name="MentorMain">
-            <coverage type="class, %" value="100% (1/1)"/>
-            <coverage type="method, %" value="100% (8/8)"/>
-            <coverage type="block, %" value="100% (370/370)"/>
-            <coverage type="line, %" value="100% (75/75)"/>
-
-            <method name="MentorMain (): void">
-              <coverage type="method, %" value="100% (1/1)"/>
-              <coverage type="block, %" value="100% (6/6)"/>
-              <coverage type="line, %" value="100% (2/2)"/>
-            </method>
-            <method name="access$000 (MentorMain): void">
-              <coverage type="method, %" value="100% (1/1)"/>
-              <coverage type="block, %" value="100% (3/3)"/>
-              <coverage type="line, %" value="100% (1/1)"/>
-            </method>
-            <method name="add_info (String): void">
-              <coverage type="method, %" value="100% (1/1)"/>
-              <coverage type="block, %" value="100% (20/20)"/>
-              <coverage type="line, %" value="100% (6/6)"/>
-            </method>
-            <method name="add_msg (String): void">
-              <coverage type="method, %" value="100% (1/1)"/>
-              <coverage type="block, %" value="100% (22/22)"/>
-              <coverage type="line, %" value="100% (6/6)"/>
-            </method>
-            <method name="get_info (): List">
-              <coverage type="method, %" value="100% (1/1)"/>
-              <coverage type="block, %" value="100% (63/63)"/>
-              <coverage type="line, %" value="100% (15/15)"/>
-            </method>
-            <method name="get_msg (): List">
-              <coverage type="method, %" value="100% (1/1)"/>
-              <coverage type="block, %" value="100% (106/106)"/>
-              <coverage type="line, %" value="100% (18/18)"/>
-            </method>
-            <method name="onCreate (Bundle): void">
-              <coverage type="method, %" value="100% (1/1)"/>
-              <coverage type="block, %" value="100% (111/111)"/>
-              <coverage type="line, %" value="100% (21/21)"/>
-            </method>
-            <method name="update (): void">
-              <coverage type="method, %" value="100% (1/1)"/>
-              <coverage type="block, %" value="100% (39/39)"/>
-              <coverage type="line, %" value="100% (7/7)"/>
-            </method>
-          </class>
-          <class name="MentorMain$1">
-            <coverage type="class, %" value="100% (1/1)"/>
-            <coverage type="method, %" value="100% (2/2)"/>
-            <coverage type="block, %" value="100% (29/29)"/>
-            <coverage type="line, %" value="100% (7/7)"/>
-
-            <method name="MentorMain$1 (MentorMain): void">
-              <coverage type="method, %" value="100% (1/1)"/>
-              <coverage type="block, %" value="100% (6/6)"/>
-              <coverage type="line, %" value="100% (1/1)"/>
-            </method>
-            <method name="onClick (View): void">
-              <coverage type="method, %" value="100% (1/1)"/>
-              <coverage type="block, %" value="100% (23/23)"/>
-              <coverage type="line, %" value="100% (6/6)"/>
-            </method>
-          </class>
-          <class name="MentorMain$2">
-            <coverage type="class, %" value="100% (1/1)"/>
-            <coverage type="method, %" value="100% (2/2)"/>
-            <coverage type="block, %" value="100% (25/25)"/>
-            <coverage type="line, %" value="100% (6/6)"/>
-
-            <method name="MentorMain$2 (MentorMain): void">
-              <coverage type="method, %" value="100% (1/1)"/>
-              <coverage type="block, %" value="100% (6/6)"/>
-              <coverage type="line, %" value="100% (1/1)"/>
-            </method>
-            <method name="onClick (View): void">
-              <coverage type="method, %" value="100% (1/1)"/>
-              <coverage type="block, %" value="100% (19/19)"/>
-              <coverage type="line, %" value="100% (5/5)"/>
-            </method>
-          </class>
-          <class name="MentorMain$3">
-            <coverage type="class, %" value="100% (1/1)"/>
-            <coverage type="method, %" value="100% (2/2)"/>
-            <coverage type="block, %" value="100% (73/73)"/>
-            <coverage type="line, %" value="100% (13/13)"/>
-
-            <method name="MentorMain$3 (MentorMain): void">
-              <coverage type="method, %" value="100% (1/1)"/>
-              <coverage type="block, %" value="100% (6/6)"/>
-              <coverage type="line, %" value="100% (1/1)"/>
-            </method>
-            <method name="onClick (View): void">
-              <coverage type="method, %" value="100% (1/1)"/>
-              <coverage type="block, %" value="100% (67/67)"/>
-              <coverage type="line, %" value="100% (12/12)"/>
-            </method>
-          </class>
-          <class name="MentorMain$4">
-            <coverage type="class, %" value="100% (1/1)"/>
-            <coverage type="method, %" value="100% (2/2)"/>
-            <coverage type="block, %" value="100% (55/55)"/>
-            <coverage type="line, %" value="100% (7/7)"/>
-
-            <method name="MentorMain$4 (MentorMain): void">
-              <coverage type="method, %" value="100% (1/1)"/>
-              <coverage type="block, %" value="100% (6/6)"/>
-              <coverage type="line, %" value="100% (1/1)"/>
-            </method>
-            <method name="onItemClick (AdapterView, View, int, long): void">
-              <coverage type="method, %" value="100% (1/1)"/>
-              <coverage type="block, %" value="100% (49/49)"/>
-              <coverage type="line, %" value="100% (6/6)"/>
             </method>
           </class>
         </srcfile>
