@@ -51,6 +51,7 @@ public final class R {
     public static final class id {
         public static final int A_H=0x7f08003a;
 <<<<<<< HEAD
+<<<<<<< HEAD
         public static final int Add=0x7f080090;
         public static final int Alan=0x7f080086;
         public static final int AlanChat=0x7f08008c;
@@ -66,6 +67,23 @@ public final class R {
         public static final int ButtonGPAmain5=0x7f0800c3;
         public static final int ButtonGPAmain6=0x7f0800c4;
         public static final int ButtonGPAmain7=0x7f0800c5;
+=======
+        public static final int Add=0x7f080097;
+        public static final int Alan=0x7f08008d;
+        public static final int AlanChat=0x7f080093;
+        public static final int AlanHelp=0x7f080090;
+        public static final int Brian=0x7f08007c;
+        public static final int BrianChat=0x7f080086;
+        public static final int BrianHelp=0x7f080081;
+        public static final int Button01=0x7f0800d5;
+        public static final int ButtonGPAmain1=0x7f0800c6;
+        public static final int ButtonGPAmain2=0x7f0800c7;
+        public static final int ButtonGPAmain3=0x7f0800c8;
+        public static final int ButtonGPAmain4=0x7f0800c9;
+        public static final int ButtonGPAmain5=0x7f0800ca;
+        public static final int ButtonGPAmain6=0x7f0800cb;
+        public static final int ButtonGPAmain7=0x7f0800cc;
+>>>>>>> refs/remotes/origin/master
 =======
         public static final int Add=0x7f080097;
         public static final int Alan=0x7f08008d;
@@ -124,6 +142,7 @@ public final class R {
         public static final int Question6=0x7f080035;
         public static final int Question99=0x7f080051;
 <<<<<<< HEAD
+<<<<<<< HEAD
         public static final int RadioButton01=0x7f0800d7;
         public static final int RadioButton02=0x7f0800d6;
         public static final int RadioButton03=0x7f0800d8;
@@ -132,6 +151,16 @@ public final class R {
         public static final int RadioButton06=0x7f0800d5;
         public static final int RadioButton07=0x7f0800d3;
         public static final int RadioButton08=0x7f0800d4;
+=======
+        public static final int RadioButton01=0x7f0800dd;
+        public static final int RadioButton02=0x7f0800dc;
+        public static final int RadioButton03=0x7f0800de;
+        public static final int RadioButton04=0x7f0800d8;
+        public static final int RadioButton05=0x7f0800df;
+        public static final int RadioButton06=0x7f0800db;
+        public static final int RadioButton07=0x7f0800d9;
+        public static final int RadioButton08=0x7f0800da;
+>>>>>>> refs/remotes/origin/master
 =======
         public static final int RadioButton01=0x7f0800dd;
         public static final int RadioButton02=0x7f0800dc;
@@ -157,6 +186,7 @@ public final class R {
         public static final int SBM=0x7f08003e;
         public static final int S_T=0x7f080039;
 <<<<<<< HEAD
+<<<<<<< HEAD
         public static final int Send=0x7f08006d;
         public static final int TA=0x7f080070;
         public static final int TAChatLayout=0x7f08007c;
@@ -165,6 +195,16 @@ public final class R {
         public static final int TANameLayout=0x7f080072;
         public static final int TextView01=0x7f0800d0;
         public static final int TextView02=0x7f0800d1;
+=======
+        public static final int Send=0x7f080074;
+        public static final int TA=0x7f080077;
+        public static final int TAChatLayout=0x7f080083;
+        public static final int TAHelpLayout=0x7f08007e;
+        public static final int TALayout=0x7f080078;
+        public static final int TANameLayout=0x7f080079;
+        public static final int TextView01=0x7f0800d6;
+        public static final int TextView02=0x7f0800d7;
+>>>>>>> refs/remotes/origin/master
 =======
         public static final int Send=0x7f080074;
         public static final int TA=0x7f080077;
@@ -190,6 +230,7 @@ public final class R {
         public static final int View1=0x7f080056;
         public static final int View2=0x7f080057;
 <<<<<<< HEAD
+<<<<<<< HEAD
         public static final int View3=0x7f0800ce;
         public static final int ViewGPAprint1=0x7f0800c7;
         public static final int ViewGPAprintTGA1=0x7f0800c9;
@@ -200,15 +241,26 @@ public final class R {
         public static final int ViewGPAprintTGA1=0x7f0800d0;
         public static final int action_settings=0x7f0800e1;
 >>>>>>> refs/remotes/origin/master
+=======
+        public static final int View3=0x7f0800d4;
+        public static final int ViewGPAprint1=0x7f0800ce;
+        public static final int ViewGPAprintTGA1=0x7f0800d0;
+        public static final int action_settings=0x7f0800e1;
+>>>>>>> refs/remotes/origin/master
         public static final int background=0x7f080000;
         public static final int button1=0x7f080053;
+<<<<<<< HEAD
 <<<<<<< HEAD
         public static final int button111=0x7f0800cd;
 =======
         public static final int button111=0x7f0800d3;
 >>>>>>> refs/remotes/origin/master
+=======
+        public static final int button111=0x7f0800d3;
+>>>>>>> refs/remotes/origin/master
         public static final int button2=0x7f080054;
         public static final int button3=0x7f080069;
+<<<<<<< HEAD
 <<<<<<< HEAD
         public static final int buttonGPAadd1=0x7f0800a6;
         public static final int buttonGPAadd2=0x7f0800a7;
@@ -217,6 +269,15 @@ public final class R {
         public static final int buttonGPAadvice1_2=0x7f0800ba;
         public static final int buttonGPAadvice2_1=0x7f0800be;
         public static final int buttonLayout1=0x7f0800cc;
+=======
+        public static final int buttonGPAadd1=0x7f0800ad;
+        public static final int buttonGPAadd2=0x7f0800ae;
+        public static final int buttonGPAadd3=0x7f0800af;
+        public static final int buttonGPAadvice1_1=0x7f0800c0;
+        public static final int buttonGPAadvice1_2=0x7f0800c1;
+        public static final int buttonGPAadvice2_1=0x7f0800c5;
+        public static final int buttonLayout1=0x7f0800d2;
+>>>>>>> refs/remotes/origin/master
 =======
         public static final int buttonGPAadd1=0x7f0800ad;
         public static final int buttonGPAadd2=0x7f0800ae;
@@ -247,8 +308,15 @@ public final class R {
         public static final int elective=0x7f08003c;
         public static final int fall=0x7f080030;
 <<<<<<< HEAD
+<<<<<<< HEAD
         public static final int gridLayout1=0x7f0800da;
         public static final int helplist=0x7f08006a;
+=======
+        public static final int gridLayout1=0x7f0800e0;
+        public static final int gridview=0x7f08006e;
+        public static final int header=0x7f08006a;
+        public static final int helplist=0x7f080071;
+>>>>>>> refs/remotes/origin/master
 =======
         public static final int gridLayout1=0x7f0800e0;
         public static final int gridview=0x7f08006e;
@@ -282,6 +350,7 @@ public final class R {
         public static final int listViewGPAprintTGA1=0x7f0800d1;
         public static final int login_iv=0x7f080009;
 <<<<<<< HEAD
+<<<<<<< HEAD
         public static final int manual_help=0x7f0800dc;
         public static final int menu_delete=0x7f0800dd;
         public static final int msg=0x7f08006c;
@@ -291,9 +360,18 @@ public final class R {
         public static final int msg=0x7f080073;
         public static final int msgbraod=0x7f080075;
 >>>>>>> refs/remotes/origin/master
+=======
+        public static final int menu_delete=0x7f0800e2;
+        public static final int msg=0x7f080073;
+        public static final int msgbraod=0x7f080075;
+>>>>>>> refs/remotes/origin/master
         public static final int my_list=0x7f08001a;
 <<<<<<< HEAD
+<<<<<<< HEAD
         public static final int mybrowser=0x7f0800cb;
+=======
+        public static final int next=0x7f08006d;
+>>>>>>> refs/remotes/origin/master
 =======
         public static final int next=0x7f08006d;
 >>>>>>> refs/remotes/origin/master
@@ -366,6 +444,7 @@ public final class R {
         public static final int advising_other2=0x7f030008;
         public static final int advising_ust=0x7f030009;
 <<<<<<< HEAD
+<<<<<<< HEAD
         public static final int chat_help=0x7f03000a;
         public static final int chat_layout=0x7f03000b;
         public static final int chat_main=0x7f03000c;
@@ -381,6 +460,24 @@ public final class R {
         public static final int path_main=0x7f030016;
         public static final int personalinfo1=0x7f030017;
         public static final int personalinfo2=0x7f030018;
+=======
+        public static final int calendar=0x7f03000a;
+        public static final int calendar_item=0x7f03000b;
+        public static final int chat_help=0x7f03000c;
+        public static final int chat_layout=0x7f03000d;
+        public static final int chat_main=0x7f03000e;
+        public static final int chat_mentor_main=0x7f03000f;
+        public static final int exam_main=0x7f030010;
+        public static final int gpa_add_course_record=0x7f030011;
+        public static final int gpa_advice1=0x7f030012;
+        public static final int gpa_advice2=0x7f030013;
+        public static final int gpa_main=0x7f030014;
+        public static final int gpa_print_course_record=0x7f030015;
+        public static final int gpa_print_tga=0x7f030016;
+        public static final int path_main=0x7f030017;
+        public static final int personalinfo1=0x7f030018;
+        public static final int personalinfo2=0x7f030019;
+>>>>>>> refs/remotes/origin/master
 =======
         public static final int calendar=0x7f03000a;
         public static final int calendar_item=0x7f03000b;
