@@ -1,15 +1,7 @@
 package com.example.gpa_calculator;
 
 import com.example.asquare.R;
-import com.example.gpa_calculator.Student;
 import com.example.gpa_calculator.MainActivity;
-
-
-
-
-
-
-
 import android.os.Bundle;
 import android.view.Gravity;
 import android.view.View;
@@ -19,8 +11,6 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
 import android.app.Activity;
-import android.content.Intent;
-
 
 public class add_course_record extends Activity {
 

@@ -6,6 +6,7 @@ import android.content.ClipData.Item;
 import android.content.Intent;
 import android.test.ActivityInstrumentationTestCase2;
 import android.test.UiThreadTest;
+import android.test.suitebuilder.annotation.MediumTest;
 import android.test.suitebuilder.annotation.SmallTest;
 import android.view.KeyEvent;
 import android.view.Menu;
@@ -95,11 +96,12 @@ public class Activity2_Test_menu extends ActivityInstrumentationTestCase2<Advanc
 	
 	
 	
-	@SmallTest 
+	@MediumTest 
 	 public void testM() { 
 
-		getInstrumentation().invokeMenuActionSync(mActivity, R.id.year1, 0);
-
+		getInstrumentation().invokeMenuActionSync(mActivity, R.id.year1, 0);	//test for default option
+		
+		
 		getInstrumentation().invokeMenuActionSync(mActivity, R.id.menu_delete, 0);
 
 	//CHECK THE RESULT
@@ -109,10 +111,6 @@ public class Activity2_Test_menu extends ActivityInstrumentationTestCase2<Advanc
 		  
 		  assertNotNull(nextactivity);
 		  nextactivity.finish();
-		  
-	
-      	
-
 	 }
 	
 

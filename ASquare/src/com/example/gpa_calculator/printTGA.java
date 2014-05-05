@@ -1,25 +1,11 @@
 package com.example.gpa_calculator;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-
 import com.example.asquare.R;
-
-
-
-
-
-
-
-
-
 import android.os.Bundle;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
-import android.widget.SimpleAdapter;
 import android.app.Activity;
 import android.app.AlertDialog;
-import android.app.ListActivity;
 import android.app.AlertDialog.Builder;
 import android.content.DialogInterface;
 

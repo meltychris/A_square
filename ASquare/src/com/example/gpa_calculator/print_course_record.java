@@ -1,23 +1,11 @@
 package com.example.gpa_calculator;
 
-import java.util.ArrayList;
-import java.util.HashMap;
 
 import com.example.asquare.R;
-
-
-
-
-
-
-
-
 import android.os.Bundle;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
-import android.widget.SimpleAdapter;
 import android.app.Activity;
-import android.app.ListActivity;
 
 
 //ref: http://blog.joomla.org.tw/android/178-ListView%E4%B9%8B%E4%B8%80%EF%BC%9AAdapter%E4%BB%8B%E7%B4%B9%E8%88%87%E4%BD%BF%E7%94%A8.html

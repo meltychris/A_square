@@ -13,14 +13,11 @@ import android.app.PendingIntent;
 import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
-
-import com.example.asquare.MainActivity;
 import com.example.asquare.R;
 
 
@@ -198,7 +195,8 @@ public class Exam_countdown extends Activity {
 	        	list.add(Code + "\t\t\t\t\t" + Date);
 	    	}
 		}
-		
+
+		testdata.close();
 		mDbHelper.close();
     	return list;		
 	}

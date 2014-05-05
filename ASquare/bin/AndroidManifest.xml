@@ -10,7 +10,8 @@
 
     <uses-permission android:name="android.permission.VIBRATE" />
     <uses-permission android:name="android.permission.CALL_PHONE" />
-
+	<uses-permission android:name="android.permission.INTERNET" /> 
+	
     <application
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
@@ -86,6 +87,7 @@
         <activity android:name="com.example.advising.otherActivity1"></activity>
         <activity android:name="com.example.advising.otherActivity2"></activity>
         <activity android:name="com.example.advising.ustTeamActivity"></activity>
+        <activity android:name="com.example.manual.ManualMainActivity"></activity>
         
     </application>
 

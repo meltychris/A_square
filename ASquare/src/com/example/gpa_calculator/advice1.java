@@ -1,18 +1,10 @@
 package com.example.gpa_calculator;
 
 import com.example.asquare.R;
-import com.example.study_path.Advanced_Activity;
-import com.example.study_path.Advanced_Activity_choose;
-
-
-
-
-
 import android.os.Bundle;
 import android.view.Gravity;
 import android.view.View;
 import android.widget.Button;
-import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;

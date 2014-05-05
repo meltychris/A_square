@@ -2,12 +2,10 @@ package com.example.gpa_calculator;
 
 
 import com.example.asquare.R;
-
 import android.os.Bundle;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.AlertDialog.Builder;
-import android.app.Dialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.view.View;

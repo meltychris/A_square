@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.example.asquare.R;
-import com.example.study_path.Advanced_Activity2;
 
 import android.app.Activity;
 import android.content.SharedPreferences;
@@ -156,6 +155,7 @@ public class MentorMain extends Activity {
 	    	}
 		}
 		
+		testdata.close();	
 		mDbHelper.close();
 	    return list;		
 	}
@@ -180,7 +180,8 @@ public class MentorMain extends Activity {
 				list.add(Msg);   
 	    	}
 		}
-		
+
+		testdata.close();
 		mDbHelper.close();
 	    return list;		
 	}

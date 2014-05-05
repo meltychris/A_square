@@ -49,7 +49,7 @@ public final class R {
         public static final int Brian=0x7f080075;
         public static final int BrianChat=0x7f08007f;
         public static final int BrianHelp=0x7f08007a;
-        public static final int Button01=0x7f0800ce;
+        public static final int Button01=0x7f0800cf;
         public static final int ButtonGPAmain1=0x7f0800bf;
         public static final int ButtonGPAmain2=0x7f0800c0;
         public static final int ButtonGPAmain3=0x7f0800c1;
@@ -97,14 +97,14 @@ public final class R {
         public static final int Question5=0x7f080032;
         public static final int Question6=0x7f080035;
         public static final int Question99=0x7f080051;
-        public static final int RadioButton01=0x7f0800d6;
-        public static final int RadioButton02=0x7f0800d5;
-        public static final int RadioButton03=0x7f0800d7;
-        public static final int RadioButton04=0x7f0800d1;
-        public static final int RadioButton05=0x7f0800d8;
-        public static final int RadioButton06=0x7f0800d4;
-        public static final int RadioButton07=0x7f0800d2;
-        public static final int RadioButton08=0x7f0800d3;
+        public static final int RadioButton01=0x7f0800d7;
+        public static final int RadioButton02=0x7f0800d6;
+        public static final int RadioButton03=0x7f0800d8;
+        public static final int RadioButton04=0x7f0800d2;
+        public static final int RadioButton05=0x7f0800d9;
+        public static final int RadioButton06=0x7f0800d5;
+        public static final int RadioButton07=0x7f0800d3;
+        public static final int RadioButton08=0x7f0800d4;
         public static final int RadioGroup1=0x7f080021;
         public static final int RadioGroup2=0x7f080029;
         public static final int RadioGroup3=0x7f08002f;
@@ -125,8 +125,8 @@ public final class R {
         public static final int TAHelpLayout=0x7f080077;
         public static final int TALayout=0x7f080071;
         public static final int TANameLayout=0x7f080072;
-        public static final int TextView01=0x7f0800cf;
-        public static final int TextView02=0x7f0800d0;
+        public static final int TextView01=0x7f0800d0;
+        public static final int TextView02=0x7f0800d1;
         public static final int TextView1a=0x7f08005d;
         public static final int TextView1b=0x7f08005e;
         public static final int TextView2a=0x7f08005f;
@@ -141,13 +141,13 @@ public final class R {
         public static final int TextView6b=0x7f080068;
         public static final int View1=0x7f080056;
         public static final int View2=0x7f080057;
-        public static final int View3=0x7f0800cd;
+        public static final int View3=0x7f0800ce;
         public static final int ViewGPAprint1=0x7f0800c7;
         public static final int ViewGPAprintTGA1=0x7f0800c9;
-        public static final int action_settings=0x7f0800da;
+        public static final int action_settings=0x7f0800db;
         public static final int background=0x7f080000;
         public static final int button1=0x7f080053;
-        public static final int button111=0x7f0800cc;
+        public static final int button111=0x7f0800cd;
         public static final int button2=0x7f080054;
         public static final int button3=0x7f080069;
         public static final int buttonGPAadd1=0x7f0800a6;
@@ -156,7 +156,7 @@ public final class R {
         public static final int buttonGPAadvice1_1=0x7f0800b9;
         public static final int buttonGPAadvice1_2=0x7f0800ba;
         public static final int buttonGPAadvice2_1=0x7f0800be;
-        public static final int buttonLayout1=0x7f0800cb;
+        public static final int buttonLayout1=0x7f0800cc;
         public static final int check=0x7f08001c;
         public static final int checkBox1=0x7f080026;
         public static final int checkbox=0x7f080037;
@@ -175,7 +175,7 @@ public final class R {
         public static final int edit_username=0x7f080004;
         public static final int elective=0x7f08003c;
         public static final int fall=0x7f080030;
-        public static final int gridLayout1=0x7f0800d9;
+        public static final int gridLayout1=0x7f0800da;
         public static final int helplist=0x7f08006a;
         public static final int imageButton1=0x7f08000b;
         public static final int imageButton2=0x7f08000d;
@@ -203,10 +203,12 @@ public final class R {
         public static final int listViewGPAprint1=0x7f0800c8;
         public static final int listViewGPAprintTGA1=0x7f0800ca;
         public static final int login_iv=0x7f080009;
-        public static final int menu_delete=0x7f0800db;
+        public static final int manual_help=0x7f0800dc;
+        public static final int menu_delete=0x7f0800dd;
         public static final int msg=0x7f08006c;
         public static final int msgbraod=0x7f08006e;
         public static final int my_list=0x7f08001a;
+        public static final int mybrowser=0x7f0800cb;
         public static final int password=0x7f080005;
         public static final int radioButton10=0x7f080022;
         public static final int radioButton2=0x7f080023;
@@ -284,13 +286,15 @@ public final class R {
         public static final int gpa_main=0x7f030012;
         public static final int gpa_print_course_record=0x7f030013;
         public static final int gpa_print_tga=0x7f030014;
-        public static final int path_main=0x7f030015;
-        public static final int personalinfo1=0x7f030016;
-        public static final int personalinfo2=0x7f030017;
+        public static final int manual_layout=0x7f030015;
+        public static final int path_main=0x7f030016;
+        public static final int personalinfo1=0x7f030017;
+        public static final int personalinfo2=0x7f030018;
     }
     public static final class menu {
         public static final int chatroom=0x7f070000;
-        public static final int menu=0x7f070001;
+        public static final int manual=0x7f070001;
+        public static final int menu=0x7f070002;
     }
     public static final class string {
         public static final int action_settings=0x7f050001;

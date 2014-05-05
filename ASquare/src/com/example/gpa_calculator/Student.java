@@ -1,22 +1,7 @@
 package com.example.gpa_calculator;
 
-import java.io.*;
 import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Scanner;
-
-
-
-
-
-
-import com.example.asquare.R;
-
-import android.os.Bundle;
 import android.app.Activity;
-import android.content.Intent;
-import android.view.View;
-import android.widget.Button;
 
 
 //This file contains all functions used by android

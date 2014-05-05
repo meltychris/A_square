@@ -79,7 +79,7 @@ public class DataBaseTestAdapter0
      
      
 
- 	public boolean SaveData(String name, String user, String msg) 
+ 	public boolean SaveData(String name, String password) 
  	{
  		try
  		{
@@ -88,11 +88,12 @@ public class DataBaseTestAdapter0
             mDb = mDbHelper.getWritableDatabase(); 
             
             ContentValues cv = new ContentValues();
- 			cv.put("Receiver", name);
- 			cv.put("Sender", user);
- 			cv.put("Msg", msg);
+ 			cv.put("Name", name);
+ 			cv.put("Password", password);
+ 			cv.put("Type", "student");
+
  			
- 			mDb.insert("chatroom", null, cv);
+ 			mDb.insert("user", null, cv);
  			mDb.close();
 
  			Log.d("Saved", "informationsaved");
@@ -105,19 +106,6 @@ public class DataBaseTestAdapter0
  		}
  	}
      
-    public void delele_table()  
-    { 
-    	//mDb.delete("Exam", null, null);
-    	mDb.execSQL("DELETE FROM Exam");
-
-
-    } 
-    
-    public void delete_one(String Course)  
-    { 
-    	mDb.execSQL("DELETE FROM Exam WHERE Code='" + Course +"'");
-
-    } 
 
 } 
 
