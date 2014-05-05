@@ -208,7 +208,7 @@ public class MainActivityTest extends ActivityInstrumentationTestCase2<MainActiv
 			    @Override
 			    public void run() {
 			      // click button and open next activity.
-			      button4.performClick();
+			      button6.performClick();
 			    }
 			  });	
 		  
