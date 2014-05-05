@@ -5,13 +5,8 @@ import java.util.List;
 import android.app.Activity;
 import android.database.Cursor;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.ArrayAdapter;
-import android.widget.Button;
-import android.widget.EditText;
 import android.widget.ListView;
-import android.widget.Toast;
-
 import com.example.asquare.R;
 
 public class ChatHelpActivity  extends Activity {
@@ -54,7 +49,7 @@ public class ChatHelpActivity  extends Activity {
 				list.add(Msg);   
 			}
 		}
-			
+		testdata.close();	
 		mDbHelper.close();
 
 	    return list;		

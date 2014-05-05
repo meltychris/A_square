@@ -1,18 +1,12 @@
 package com.example.gpa_calculator;
 
 import com.example.asquare.R;
-
-
-
-
-
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.app.Activity;
-import android.content.Intent;
 
 
 public class advice2 extends Activity {

@@ -1,12 +1,8 @@
 package com.example.exam_count_down;
 
 
-import java.util.Calendar;
-
-import android.app.AlarmManager;
 import android.app.Notification;
 import android.app.NotificationManager;
-import android.app.PendingIntent;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;

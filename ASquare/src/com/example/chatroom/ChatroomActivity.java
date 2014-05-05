@@ -1,11 +1,7 @@
 package com.example.chatroom;
 
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Calendar;
 import java.util.List;
-
 import android.app.Activity;
 import android.content.SharedPreferences;
 import android.database.Cursor;
@@ -17,11 +13,6 @@ import android.widget.EditText;
 import android.widget.ListView;
 
 import com.example.asquare.R;
-import com.example.exam_count_down.DataBaseTestAdapter2;
-import com.example.exam_count_down.DataBaseUtility2;
-import com.example.exam_count_down.Exam_countdown;
-import com.example.study_path.DataBaseTestAdapter1;
-import com.example.study_path.DataBaseUtility1;
 
 public class ChatroomActivity extends Activity {
 
@@ -101,6 +92,7 @@ public class ChatroomActivity extends Activity {
 				}
 		}
 		
+		testdata.close();	
 		mDbHelper.close();
     	return list;		
 	}

@@ -2,19 +2,11 @@ package com.example.study_path;
 //recalculate the formula
 import java.util.ArrayList;
 import java.util.List;
-
 import com.example.asquare.R;
-import com.example.asquare.R.id;
-import com.example.asquare.R.layout;
-
-
 import android.app.Activity;
-import android.app.AlertDialog;
-import android.app.AlertDialog.Builder;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.database.Cursor;
-import android.database.sqlite.SQLiteDatabase;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.util.Log;
@@ -24,7 +16,6 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -355,7 +346,8 @@ public class Advanced_Activity2 extends Activity {
 	    				reqcourse.add(code);
 		    		
 	    			}
-	    			
+
+	    			testdata.close();
 		        	//Utility.ShowMessageBox(this, result);
 		        	
 	    		}
@@ -383,6 +375,8 @@ public class Advanced_Activity2 extends Activity {
 			    			code = DataBaseUtility1.GetColumnValue(testdata, "Code");
 			    			reqcourse.add(code);
 			    		}
+
+			    		testdata.close();
 		    		}
 	    			
 		        	//Utility.ShowMessageBox(this, result);
@@ -396,6 +390,8 @@ public class Advanced_Activity2 extends Activity {
 	    			String code = DataBaseUtility1.GetColumnValue(testdata, "Code");
 	    			if (code.equals(""))		//insert to result if at least one precourse remains
 	    				 result.add(i);
+
+	    			testdata.close();
 	    		}
 	    	/*
 		    		List<String> result = new ArrayList<String>();
@@ -471,7 +467,8 @@ public class Advanced_Activity2 extends Activity {
 		   			}
 	    		}
 
-    			
+
+    			testdata.close();
 	        	//Utility.ShowMessageBox(this, result);
 	        	
     		}
@@ -499,9 +496,12 @@ public class Advanced_Activity2 extends Activity {
 		    			code = DataBaseUtility1.GetColumnValue(testdata, "Code");
 		    			addcourse.add(code);
 		    		}
+
+		    		testdata.close();
 	    		}
     			
 	        	//Utility.ShowMessageBox(this, result);
+    			
     		}
 
     		//check prereq
@@ -512,6 +512,8 @@ public class Advanced_Activity2 extends Activity {
     			String code = DataBaseUtility1.GetColumnValue(testdata, "Code");
     			if (code.equals(""))		//insert to result if at least one precourse remains
     				 result.add(i);
+
+    			testdata.close();
     		}
     		
         	mDbHelper.close();
@@ -530,7 +532,8 @@ public class Advanced_Activity2 extends Activity {
 	    	String sql ="SELECT Credit from Course WHERE Code='" + Code + "'"; 
 			Cursor testdata = mDbHelper.getTestData(sql); 
 	    	String Credit = DataBaseUtility1.GetColumnValue(testdata, "Credit");
-	    
+
+			testdata.close();
 	    	mDbHelper.close();
 					
 			return Credit;
@@ -546,7 +549,8 @@ public class Advanced_Activity2 extends Activity {
 	    	String sql ="SELECT Name from Course WHERE Code='" + Code + "'"; 
 			Cursor testdata = mDbHelper.getTestData(sql); 
 	    	String Name = DataBaseUtility1.GetColumnValue(testdata, "Name");
-	    
+
+			testdata.close();
 	    	mDbHelper.close();
 					
 			return Name;

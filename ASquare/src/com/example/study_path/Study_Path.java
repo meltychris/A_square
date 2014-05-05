@@ -323,7 +323,8 @@ public class Study_Path extends Activity {
         	sem = DataBaseUtility1.GetColumnValue(testdata, "Sem");
         	adapter.add(code + " (" + sem + ")" + "\n"+ name);
     	}
-    	
+
+		testdata.close();
     	//Utility.ShowMessageBox(this, result);
     	mDbHelper.close();
 				
