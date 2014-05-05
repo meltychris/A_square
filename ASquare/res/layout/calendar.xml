@@ -5,6 +5,24 @@
     android:background="@drawable/background"
     android:orientation="vertical" >
 
+         
+    <LinearLayout
+        android:id="@+id/Question0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        android:orientation="horizontal" >
+
+	     <TextView
+	         android:id="@+id/textView100"
+	         android:layout_width="wrap_content"
+	         android:layout_height="wrap_content"
+	         android:text="You can plan your schedule in the calender below: "
+	         android:textColor="#000000"
+	         android:textSize="25sp" />
+         
+     </LinearLayout> 
+         
     <RelativeLayout
         android:id="@+id/header"
         android:layout_width="fill_parent"
@@ -49,7 +67,6 @@
     </RelativeLayout>
 
     <GridView
-        xmlns:android="http://schemas.android.com/apk/res/android"
         android:id="@+id/gridview"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
@@ -57,5 +74,24 @@
         android:listSelector="@android:color/transparent"
         android:numColumns="7"
         android:stretchMode="columnWidth" />
+    
+         
+    <LinearLayout
+        android:id="@+id/Question0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        android:orientation="horizontal" >
+
+	     <TextView
+	         android:id="@+id/textView100"
+	         android:layout_width="wrap_content"
+	         android:layout_height="wrap_content"
+	         android:text="Remark:\nRemember to have half hour of study time for each credit studied"
+	         android:textColor="#FF0000"
+	         android:textSize="25sp" />
+         
+     </LinearLayout> 
+         
 
 </LinearLayout>
