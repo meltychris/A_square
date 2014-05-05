@@ -12,6 +12,7 @@ import android.app.Instrumentation.ActivityMonitor;
 import android.content.DialogInterface;
 import android.test.ActivityInstrumentationTestCase2;
 import android.test.TouchUtils;
+import android.test.UiThreadTest;
 import android.test.suitebuilder.annotation.SmallTest;
 import android.view.KeyEvent;
 import android.widget.Button;
@@ -53,14 +54,14 @@ public class Testexam_count_down extends ActivityInstrumentationTestCase2<Exam_c
 		 super.tearDown(); 
 	 } 
 
-	@SmallTest // SmallTest: this test doesn't interact with any file system or network. 
+	@UiThreadTest // SmallTest: this test doesn't interact with any file system or network. 
 	 public void testView() { // checks if the activity is created 
 		assertNotNull(getActivity()); 
 	 } 
 
 	
 	
-	@SmallTest 
+	@UiThreadTest 
 	 public void testbutton1() { 
 		 		int expectedCount = listView1.getAdapter().getCount() + 1;
 
@@ -83,7 +84,7 @@ public class Testexam_count_down extends ActivityInstrumentationTestCase2<Exam_c
 
 	 }
 	
-	@SmallTest
+	@UiThreadTest
 	 public void testbutton2() { 
 		  mActivity.runOnUiThread(new Runnable() {
 		    @Override
@@ -130,12 +131,12 @@ public class Testexam_count_down extends ActivityInstrumentationTestCase2<Exam_c
 		  int actualCount = listView1.getAdapter().getCount();
 	  
 		 //CHECK THE RESULT 
-	     // assertEquals(expectedCount, actualCount);
+	      assertEquals(expectedCount, actualCount);
 
 	      
 	 }
 	
-	@SmallTest 
+	@UiThreadTest 
 		 public void testlistView1() { 
 			//Still doing
 		
@@ -162,7 +163,7 @@ public class Testexam_count_down extends ActivityInstrumentationTestCase2<Exam_c
 	
 
 	
-	@SmallTest 
+	@UiThreadTest 
 	 public void testbutton3() { 
 
 		//INTERACTIONS
@@ -183,7 +184,7 @@ public class Testexam_count_down extends ActivityInstrumentationTestCase2<Exam_c
 
 	 }
 	
-	@SmallTest  
+	@UiThreadTest  
 	 public void testCode() { 
 
 
@@ -207,7 +208,7 @@ public class Testexam_count_down extends ActivityInstrumentationTestCase2<Exam_c
 
 	 }
 	
-	@SmallTest 
+	@UiThreadTest 
 	 public void testDate() { 
 
 
@@ -225,7 +226,7 @@ public class Testexam_count_down extends ActivityInstrumentationTestCase2<Exam_c
 
 	 }
 	
-	@SmallTest
+	@UiThreadTest
 	public void testother(){
 	      DataBaseUtility2.ShowMessageBox(mActivity, "AA");
 

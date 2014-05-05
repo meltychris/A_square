@@ -14,7 +14,9 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.test.ActivityInstrumentationTestCase2;
-import android.test.suitebuilder.annotation.SmallTest;
+import android.test.UiThreadTest;
+import android.test.suitebuilder.annotation.MediumTest;
+import android.test.suitebuilder.annotation.MediumTest;
 import android.view.KeyEvent;
 import android.widget.Button;
 import android.widget.ImageButton;
@@ -42,13 +44,13 @@ public class MainChatTest extends ActivityInstrumentationTestCase2<MainChat> {
 	 } 
 
 
-	@SmallTest // SmallTest: this test doesn't interact with any file system or network. 
+	@MediumTest // MediumTest: this test doesn't interact with any file system or network. 
 	 public void testView() { // checks if the activity is created 
 		mActivity = getActivity();  
 		assertNotNull(getActivity()); 
 	 } 
 	
-	@SmallTest 
+	@MediumTest 
 	 public void testPeterChat() { 
 		
 		mActivity = getActivity();  
@@ -71,7 +73,7 @@ public class MainChatTest extends ActivityInstrumentationTestCase2<MainChat> {
 		  nextActivity.finish();
 	 }
 	
-	@SmallTest 
+	@MediumTest 
 	 public void testPeterHelp() { 
 		
 		mActivity = getActivity();  
@@ -94,7 +96,7 @@ public class MainChatTest extends ActivityInstrumentationTestCase2<MainChat> {
 		  nextActivity.finish();
 	 }
 	
-	@SmallTest 
+	@MediumTest 
 	 public void testKenChat() { 
 		
 		mActivity = getActivity();  
@@ -117,7 +119,7 @@ public class MainChatTest extends ActivityInstrumentationTestCase2<MainChat> {
 		  nextActivity.finish();
 	 }
 	
-	@SmallTest 
+	@MediumTest 
 	 public void testKenHelp() { 
 		
 		mActivity = getActivity();  
@@ -140,7 +142,7 @@ public class MainChatTest extends ActivityInstrumentationTestCase2<MainChat> {
 		  nextActivity.finish();
 	 }
 	
-	@SmallTest 
+	@MediumTest 
 	 public void testBrianChat() { 
 		
 		mActivity = getActivity();  
@@ -163,7 +165,7 @@ public class MainChatTest extends ActivityInstrumentationTestCase2<MainChat> {
 		  nextActivity.finish();
 	 }
 	
-	@SmallTest 
+	@MediumTest 
 	 public void testBrianHelp() { 
 		
 		mActivity = getActivity();  
@@ -186,7 +188,7 @@ public class MainChatTest extends ActivityInstrumentationTestCase2<MainChat> {
 		  nextActivity.finish();
 	 }
 	
-	@SmallTest 
+	@MediumTest 
 	 public void testMaryChat() { 
 		
 		mActivity = getActivity();  
@@ -209,7 +211,7 @@ public class MainChatTest extends ActivityInstrumentationTestCase2<MainChat> {
 		  nextActivity.finish();
 	 }
 	
-	@SmallTest 
+	@MediumTest 
 	 public void testMaryHelp() { 
 		
 		mActivity = getActivity();  
@@ -232,7 +234,7 @@ public class MainChatTest extends ActivityInstrumentationTestCase2<MainChat> {
 		  nextActivity.finish();
 	 }
 	
-	@SmallTest 
+	@MediumTest 
 	 public void testAlanChat() { 
 		
 		mActivity = getActivity();  
@@ -255,7 +257,7 @@ public class MainChatTest extends ActivityInstrumentationTestCase2<MainChat> {
 		  nextActivity.finish();
 	 }
 	
-	@SmallTest 
+	@MediumTest 
 	 public void testAlanHelp() { 
 		
 		mActivity = getActivity();  
@@ -278,7 +280,7 @@ public class MainChatTest extends ActivityInstrumentationTestCase2<MainChat> {
 		  nextActivity.finish();
 	 }
 	
-	@SmallTest 
+	@MediumTest 
 	 public void testChrisChat() { 
 		
 		mActivity = getActivity();  
@@ -301,7 +303,7 @@ public class MainChatTest extends ActivityInstrumentationTestCase2<MainChat> {
 		  nextActivity.finish();
 	 }
 	
-	@SmallTest 
+	@MediumTest 
 	 public void testChrisHelp() { 
 		mActivity = getActivity();  
 		ChrisHelp = (TextView)mActivity.findViewById(R.id.ChrisHelp);

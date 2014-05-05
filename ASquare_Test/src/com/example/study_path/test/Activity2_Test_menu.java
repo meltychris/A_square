@@ -5,6 +5,7 @@ import android.app.Instrumentation.ActivityMonitor;
 import android.content.ClipData.Item;
 import android.content.Intent;
 import android.test.ActivityInstrumentationTestCase2;
+import android.test.UiThreadTest;
 import android.test.suitebuilder.annotation.SmallTest;
 import android.view.KeyEvent;
 import android.view.Menu;

@@ -15,6 +15,7 @@ import android.app.Instrumentation.ActivityMonitor;
 import android.content.SharedPreferences;
 import android.test.ActivityInstrumentationTestCase2;
 import android.test.UiThreadTest;
+import android.test.suitebuilder.annotation.MediumTest;
 import android.test.suitebuilder.annotation.SmallTest;
 import android.util.Log;
 import android.view.KeyEvent;
@@ -70,7 +71,7 @@ public class Study_Path_Test extends ActivityInstrumentationTestCase2<Study_Path
 		 super.tearDown(); 
 	 } 
 
-	@SmallTest // SmallTest: this test doesn't interact with any file system or network. 
+	@UiThreadTest // SmallTest: this test doesn't interact with any file system or network. 
 	 public void testView() throws Exception { // checks if the activity is created 
 		try{
 			assertNotNull(getActivity()); 
@@ -81,7 +82,7 @@ public class Study_Path_Test extends ActivityInstrumentationTestCase2<Study_Path
 		 }
 	 } 
 	
-	@SmallTest 
+	@UiThreadTest 
 	public void testOnCreate() throws Exception {
 		try{
 
@@ -98,7 +99,7 @@ public class Study_Path_Test extends ActivityInstrumentationTestCase2<Study_Path
 		 }
 	 }
 	
-	@SmallTest 
+	@UiThreadTest 
 	 public void testradiobutton1() throws Exception  { 
 		try{
 
@@ -136,7 +137,7 @@ public class Study_Path_Test extends ActivityInstrumentationTestCase2<Study_Path
 	} 
 	
 	
-	@SmallTest 
+	@UiThreadTest 
 	public void testradiobutton2() throws Exception  { 
 		try{
 	
@@ -171,7 +172,7 @@ public class Study_Path_Test extends ActivityInstrumentationTestCase2<Study_Path
 		 }
 	} 
 	
-	@SmallTest 
+	@UiThreadTest 
 	public void testcheckbox1() throws Exception  { 
 		try{
 			mActivity.setPure("T");
@@ -289,7 +290,7 @@ public class Study_Path_Test extends ActivityInstrumentationTestCase2<Study_Path
 		 }
 	}
 	
-	@SmallTest 
+	@MediumTest 
 	 public void testbutton111true()  throws Exception { 
 		try{
 			  SharedPreferences xadvanced = mActivity.getSharedPreferences("advanced", 0);
@@ -319,7 +320,7 @@ public class Study_Path_Test extends ActivityInstrumentationTestCase2<Study_Path
 
 	 }
 	
-	@SmallTest 
+	@MediumTest 
 	 public void testbutton111false()  throws Exception { 
 		try{
 			  SharedPreferences xadvanced = mActivity.getSharedPreferences("advanced", 0);
@@ -350,7 +351,7 @@ public class Study_Path_Test extends ActivityInstrumentationTestCase2<Study_Path
 
 	 }
 	
-	@SmallTest 
+	@UiThreadTest 
 	 public void testlistView1() throws Exception  { 
 		//precondition
 		//assertFalse(mActivity.getToastshown());
@@ -384,7 +385,7 @@ public class Study_Path_Test extends ActivityInstrumentationTestCase2<Study_Path
 		 
 	 }
 	
-	@SmallTest 
+	@UiThreadTest 
 	 public void testDataBaseHelper1() throws Exception  { 
 		try {
 				
@@ -411,7 +412,7 @@ public class Study_Path_Test extends ActivityInstrumentationTestCase2<Study_Path
 		 }
 	 }
 	
-	@SmallTest
+	@UiThreadTest
 	public void testother() throws Exception {
 		try{
 	      DataBaseUtility1.ShowMessageBox(mActivity, "AA");

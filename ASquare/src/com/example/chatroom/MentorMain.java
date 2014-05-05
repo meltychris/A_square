@@ -29,8 +29,6 @@ public class MentorMain extends Activity {
 	    Send = (Button)findViewById(R.id.Send);
        	view1 = (View) findViewById(R.id.View1);
     	view2 = (View) findViewById(R.id.View2);
-    	view1.setVisibility(View.VISIBLE);
-    	view2.setVisibility(View.INVISIBLE);
 	    listView = (ListView)findViewById(R.id.msgbraod);
 	    msg = (EditText)findViewById(R.id.msg);
 
@@ -41,6 +39,7 @@ public class MentorMain extends Activity {
     	view2.setVisibility(View.INVISIBLE);
     	type = 0;
     	
+	    setTitle(user + "'s room");
  		update(); 		
  		
  		
@@ -203,7 +202,7 @@ public class MentorMain extends Activity {
 	Button button1;
 	Button button2;
 	String user;
-	String name = "";
+	public String name = "";
 	Integer type;
 	EditText msg;
 }

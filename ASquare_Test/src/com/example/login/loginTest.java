@@ -5,6 +5,8 @@ import com.example.asquare.R;
 
 import android.app.Instrumentation.ActivityMonitor;
 import android.test.ActivityInstrumentationTestCase2;
+import android.test.UiThreadTest;
+import android.test.suitebuilder.annotation.MediumTest;
 import android.test.suitebuilder.annotation.SmallTest;
 import android.widget.Button;
 import android.widget.EditText;
@@ -38,7 +40,7 @@ public class loginTest extends ActivityInstrumentationTestCase2<LoginActivity> {
 		assertNotNull(getActivity()); 
 	 } 
 	
-	@SmallTest 
+	@MediumTest 
 	 public void testLogin_success() { 
 		ActivityMonitor activityMonitor = getInstrumentation().addMonitor(MainActivity.class.getName(), null, false);
 		
@@ -59,7 +61,7 @@ public class loginTest extends ActivityInstrumentationTestCase2<LoginActivity> {
 		  nextActivity.finish();
 	 }
 	
-	@SmallTest 
+	@MediumTest 
 	 public void testLogin_fail() { 
 		ActivityMonitor activityMonitor = getInstrumentation().addMonitor(MainActivity.class.getName(), null, false);
 

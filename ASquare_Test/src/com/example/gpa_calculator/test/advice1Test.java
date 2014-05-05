@@ -9,6 +9,7 @@ import android.app.Instrumentation.ActivityMonitor;
 import android.content.Context;
 import android.os.Bundle;
 import android.test.ActivityInstrumentationTestCase2;
+import android.test.UiThreadTest;
 import android.test.suitebuilder.annotation.SmallTest;
 import android.view.View;
 import android.widget.Button;

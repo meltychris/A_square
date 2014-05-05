@@ -11,7 +11,7 @@ import android.os.Bundle;
 import android.test.ActivityInstrumentationTestCase2;
 import android.test.TouchUtils;
 import android.test.suitebuilder.annotation.MediumTest;
-import android.test.suitebuilder.annotation.SmallTest;
+import android.test.suitebuilder.annotation.MediumTest;
 import android.view.View;
 import android.widget.Button;
 
@@ -56,12 +56,12 @@ public class MainActivityTest extends ActivityInstrumentationTestCase2<MainActiv
 	} 
 
 
-	@SmallTest // SmallTest: this test doesn't interact with any file system or network. 
+	@MediumTest // MediumTest: this test doesn't interact with any file system or network. 
 	public void testView() { // checks if the activity is created 
 		assertNotNull(getActivity()); 
 	} 
 
-	@SmallTest
+	@MediumTest
 	public void testButtonGPAmain1() { 
 		  ActivityMonitor activityMonitor = getInstrumentation().addMonitor(print_course_record.class.getName(), null, false);
 
@@ -81,7 +81,7 @@ public class MainActivityTest extends ActivityInstrumentationTestCase2<MainActiv
 
 	}
 	
-	@SmallTest
+	@MediumTest
 	public void testButtonGPAmain2() { 
 		
 		  ActivityMonitor activityMonitor = getInstrumentation().addMonitor(advice1.class.getName(), null, false);
@@ -101,7 +101,7 @@ public class MainActivityTest extends ActivityInstrumentationTestCase2<MainActiv
 		 nextActivity.finish();
 	}
 	
-	@SmallTest
+	@MediumTest
 	public void testButtonGPAmain3() { 
 		
 		  ActivityMonitor activityMonitor = getInstrumentation().addMonitor(add_course_record.class.getName(), null, false);
@@ -116,13 +116,13 @@ public class MainActivityTest extends ActivityInstrumentationTestCase2<MainActiv
 			  });	
 		  
 		 //CHECK THE RESULT
-		  add_course_record nextActivity = (add_course_record) getInstrumentation().waitForMonitorWithTimeout(activityMonitor, 20000);
+		  add_course_record nextActivity = (add_course_record) getInstrumentation().waitForMonitorWithTimeout(activityMonitor, 5000);
 		 assertNotNull(nextActivity);
 		 nextActivity.finish();
 	}
 	
 	//see http://stackoverflow.com/questions/17526005/how-to-test-an-alertdialog-in-android
-	@SmallTest
+	@MediumTest
 	public void testButtonGPAmain4() { 
 		
 		//TODO
@@ -154,7 +154,7 @@ public class MainActivityTest extends ActivityInstrumentationTestCase2<MainActiv
 	
 	
 		 ActivityMonitor activityMonitor = getInstrumentation().addMonitor(MainActivity.class.getName(), null, false);
-		 getInstrumentation().waitForMonitorWithTimeout(activityMonitor,2000);
+		 getInstrumentation().waitForMonitorWithTimeout(activityMonitor,5000);
 		
 		String testing0 = MainActivity.student1.courseRecord[1][1][0][0];
 		String testing1 = MainActivity.student1.courseRecord[1][1][0][1];
@@ -227,7 +227,7 @@ public class MainActivityTest extends ActivityInstrumentationTestCase2<MainActiv
 */
 	
 	
-	@SmallTest
+	@MediumTest
 	public void testButtonGPAmain5() { 
 		
 		  ActivityMonitor activityMonitor = getInstrumentation().addMonitor(printTGA.class.getName(), null, false);
@@ -242,14 +242,14 @@ public class MainActivityTest extends ActivityInstrumentationTestCase2<MainActiv
 			  });	
 		  
 		 //CHECK THE RESULT
-		  printTGA nextActivity = (printTGA) getInstrumentation().waitForMonitorWithTimeout(activityMonitor, 20000);
+		  printTGA nextActivity = (printTGA) getInstrumentation().waitForMonitorWithTimeout(activityMonitor, 5000);
 		 assertNotNull(nextActivity);
 		 nextActivity.finish();
 	}
 	
 	//ref testButtonGPAmain4
 	//running 2nd branch, else if (CGA_without_1st_sem < 1.5), in MainActivity.printCGA()
-	@SmallTest
+	@MediumTest
 	public void testButtonGPAmain6_1() { 
 	
 		//TODO
@@ -277,14 +277,14 @@ public class MainActivityTest extends ActivityInstrumentationTestCase2<MainActiv
 	
 	
 		 ActivityMonitor activityMonitor = getInstrumentation().addMonitor(MainActivity.class.getName(), null, false);
-		 getInstrumentation().waitForMonitorWithTimeout(activityMonitor,2000);
+		 getInstrumentation().waitForMonitorWithTimeout(activityMonitor,5000);
 		
 
 	}
 	
 	//ref testButtonGPAmain4
 	//running 1st branch, if ( ( CGA >= 1.5 ) && ( CGA < 1.7 ) ), in MainActivity.printCGA()
-	@SmallTest
+	@MediumTest
 	public void testButtonGPAmain6_2() { 
 	
 		//TODO
@@ -314,14 +314,14 @@ public class MainActivityTest extends ActivityInstrumentationTestCase2<MainActiv
 	
 	
 		 ActivityMonitor activityMonitor = getInstrumentation().addMonitor(MainActivity.class.getName(), null, false);
-		 getInstrumentation().waitForMonitorWithTimeout(activityMonitor,2000);
+		 getInstrumentation().waitForMonitorWithTimeout(activityMonitor,5000);
 		
 
 	}
 	
 	//ref testButtonGPAmain4
 	//running 3rd branch, last else, in MainActivity.printCGA()
-	@SmallTest
+	@MediumTest
 	public void testButtonGPAmain6_3() { 
 	
 		//TODO
@@ -357,13 +357,13 @@ public class MainActivityTest extends ActivityInstrumentationTestCase2<MainActiv
 	
 	
 		 ActivityMonitor activityMonitor = getInstrumentation().addMonitor(MainActivity.class.getName(), null, false);
-		 getInstrumentation().waitForMonitorWithTimeout(activityMonitor,2000);
+		 getInstrumentation().waitForMonitorWithTimeout(activityMonitor,5000);
 		
 
 	}
 	
 	//ref testButtonGPAmain4
-	@SmallTest
+	@MediumTest
 	public void testButtonGPAmain7() { 
 	
 		//TODO
@@ -392,7 +392,7 @@ public class MainActivityTest extends ActivityInstrumentationTestCase2<MainActiv
 	
 	
 		 ActivityMonitor activityMonitor = getInstrumentation().addMonitor(MainActivity.class.getName(), null, false);
-		 getInstrumentation().waitForMonitorWithTimeout(activityMonitor,2000);
+		 getInstrumentation().waitForMonitorWithTimeout(activityMonitor,5000);
 	}
 /*	
 	public class DialogCredits extends Dialog

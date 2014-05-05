@@ -6,6 +6,8 @@ import java.util.List;
 import android.app.Instrumentation.ActivityMonitor;
 import android.content.Intent;
 import android.test.ActivityInstrumentationTestCase2;
+import android.test.UiThreadTest;
+import android.test.suitebuilder.annotation.MediumTest;
 import android.test.suitebuilder.annotation.SmallTest;
 import android.view.View;
 import android.widget.ArrayAdapter;
@@ -77,7 +79,7 @@ public class Advanced_Activity_choose_Test extends ActivityInstrumentationTestCa
 	 } 
 
 
-	@SmallTest // SmallTest: this test doesn't interact with any file system or network. 
+	@UiThreadTest // SmallTest: this test doesn't interact with any file system or network. 
 	 public void testView() { // checks if the activity is created 
 Intent intent = new Intent();
      	
@@ -116,7 +118,7 @@ Intent intent = new Intent();
 	
 	
 	
-	@SmallTest 
+	@MediumTest 
 	 public void testbtn() { 
 		Intent intent = new Intent();
      	

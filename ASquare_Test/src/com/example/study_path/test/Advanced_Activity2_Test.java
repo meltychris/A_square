@@ -5,6 +5,7 @@ import android.app.Instrumentation.ActivityMonitor;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.test.ActivityInstrumentationTestCase2;
+import android.test.UiThreadTest;
 import android.test.suitebuilder.annotation.SmallTest;
 import android.view.View;
 import android.widget.Button;
@@ -64,11 +65,12 @@ public class Advanced_Activity2_Test extends ActivityInstrumentationTestCase2<Ad
      	String[] checked = {"false", "true"};
     	intent.putExtra ("Course", course);
     	intent.putExtra ("Checked", checked);
-    	 SharedPreferences xadvanced = mActivity.getSharedPreferences("advanced", 0);
-		  xadvanced.edit().putBoolean("advanced", false).commit();
+
 		setActivityIntent(intent) ;
 		mActivity = getActivity();  
-		
+   	 SharedPreferences xadvanced = mActivity.getSharedPreferences("advanced", 0);
+		  xadvanced.edit().putBoolean("advanced", false).commit();
+		  
 	    button1 = (Button)mActivity.findViewById(R.id.button1);
 	    button2 = (Button)mActivity.findViewById(R.id.button2);
        	view1 = (View) mActivity.findViewById(R.id.View1);
@@ -84,14 +86,14 @@ public class Advanced_Activity2_Test extends ActivityInstrumentationTestCase2<Ad
 	 } 
 
 
-	@SmallTest // SmallTest: this test doesn't interact with any file system or network. 
+	@UiThreadTest // SmallTest: this test doesn't interact with any file system or network. 
 	 public void testView() { // checks if the activity is created 
 		assertNotNull(getActivity()); 
 	 } 
 	
 	
 	
-	@SmallTest 
+	@UiThreadTest 
 	 public void testbutton1() { 
 
 
@@ -115,7 +117,7 @@ public class Advanced_Activity2_Test extends ActivityInstrumentationTestCase2<Ad
 
 	 }
 	
-	@SmallTest 
+	@UiThreadTest 
 	 public void testbutton2() { 
 
 
@@ -139,7 +141,7 @@ public class Advanced_Activity2_Test extends ActivityInstrumentationTestCase2<Ad
 
 	 }
 	
-	@SmallTest 
+	@UiThreadTest 
 	 public void testlistView1() { 
 
 		 mActivity.runOnUiThread(new Runnable() {
