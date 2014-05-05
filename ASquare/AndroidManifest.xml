@@ -88,6 +88,7 @@
         <activity android:name="com.example.advising.otherActivity2"></activity>
         <activity android:name="com.example.advising.ustTeamActivity"></activity>
         <activity android:name="com.example.manual.ManualMainActivity"></activity>
+        <activity android:name="com.example.schedule.CalendarView"></activity>
         
     </application>
 

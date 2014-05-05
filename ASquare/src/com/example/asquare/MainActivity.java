@@ -4,6 +4,8 @@ package com.example.asquare;
 import com.example.chatroom.MainChat;
 import com.example.chatroom.MentorMain;
 import com.example.exam_count_down.Exam_countdown;
+import com.example.schedule.CalendarAdapter;
+import com.example.schedule.CalendarView;
 import com.example.study_path.Study_Path;
 
 import android.os.Bundle;
@@ -53,6 +55,17 @@ public class MainActivity extends Activity {
                 // TODO Auto-generated method stub
             	Intent intent = new Intent();
                 intent.setClass(MainActivity.this, Exam_countdown.class);
+                startActivity(intent);
+               
+        }});
+        
+        button4 = (ImageButton)findViewById(R.id.imageButton4);
+        button4.setOnClickListener(new ImageButton.OnClickListener(){ 
+            @Override
+            public void onClick(View v) {
+                // TODO Auto-generated method stub
+            	Intent intent = new Intent();
+                intent.setClass(MainActivity.this, CalendarView.class);
                 startActivity(intent);
                
         }});
