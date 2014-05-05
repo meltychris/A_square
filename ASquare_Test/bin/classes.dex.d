@@ -69,7 +69,10 @@ C:\Users\stsk\git\A_square\ASquare_Test\bin\classes\com\example\gpa_calculator\t
 C:\Users\stsk\git\A_square\ASquare_Test\bin\classes\com\example\gpa_calculator\test\StudentTest.class \
 C:\Users\stsk\git\A_square\ASquare_Test\bin\classes\com\example\login\loginTest$1.class \
 C:\Users\stsk\git\A_square\ASquare_Test\bin\classes\com\example\login\loginTest$2.class \
+C:\Users\stsk\git\A_square\ASquare_Test\bin\classes\com\example\login\loginTest$3.class \
+C:\Users\stsk\git\A_square\ASquare_Test\bin\classes\com\example\login\loginTest$4.class \
 C:\Users\stsk\git\A_square\ASquare_Test\bin\classes\com\example\login\loginTest.class \
+C:\Users\stsk\git\A_square\ASquare_Test\bin\classes\com\example\manual\test\manualTest.class \
 C:\Users\stsk\git\A_square\ASquare_Test\bin\classes\com\example\study_path\test\Activity2_Test_menu.class \
 C:\Users\stsk\git\A_square\ASquare_Test\bin\classes\com\example\study_path\test\Advanced_Activity21_Test$1.class \
 C:\Users\stsk\git\A_square\ASquare_Test\bin\classes\com\example\study_path\test\Advanced_Activity21_Test$2.class \

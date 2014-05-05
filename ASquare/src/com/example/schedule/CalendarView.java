@@ -15,6 +15,8 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.GridView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -22,6 +24,9 @@ import android.widget.Toast;
 
 public class CalendarView extends Activity {
 
+	Button button1;
+	EditText editText1;
+	TextView textView101;
 	public GregorianCalendar month, itemmonth;// calendar instances.
 
 	public CalendarAdapter adapter;// adapter instance
@@ -60,6 +65,23 @@ public class CalendarView extends Activity {
 			}
 		});
 
+		editText1 = (EditText) findViewById(R.id.editText1);
+		textView101 = (TextView) findViewById(R.id.textView101);
+		button1 = (Button) findViewById(R.id.button1);
+		button1.setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				if (!editText1.getText().toString().equals("")){
+					double temp = Double.parseDouble(editText1.getText().toString());
+					temp = temp / 3.0;
+					
+					textView101.setText("You have to study " + Integer.toString((int) temp) + " hours every day.");
+				}
+
+			}
+		});
+		
+		
 		RelativeLayout next = (RelativeLayout) findViewById(R.id.next);
 		next.setOnClickListener(new OnClickListener() {
 

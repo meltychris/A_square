@@ -1,5 +1,7 @@
 package com.example.login;
 
+import java.io.File;
+
 import com.example.asquare.MainActivity;
 import com.example.asquare.R;
 import com.example.manual.ManualMainActivity;
@@ -10,6 +12,7 @@ import android.test.ActivityInstrumentationTestCase2;
 import android.test.UiThreadTest;
 import android.test.suitebuilder.annotation.MediumTest;
 import android.test.suitebuilder.annotation.SmallTest;
+import android.util.Log;
 import android.widget.Button;
 import android.widget.EditText;
 
@@ -17,6 +20,7 @@ public class loginTest extends ActivityInstrumentationTestCase2<LoginActivity> {
 
 	public loginTest() {
 		super(LoginActivity.class);
+
 	}
 	
 	@Override
@@ -28,7 +32,6 @@ public class loginTest extends ActivityInstrumentationTestCase2<LoginActivity> {
 		Login = (Button) mActivity.findViewById(R.id.Login);
 		Register = (Button) mActivity.findViewById(R.id.Register);
 
-		
 	}
 	
 	@Override 
@@ -36,6 +39,7 @@ public class loginTest extends ActivityInstrumentationTestCase2<LoginActivity> {
 		 //this method is called every time after any test execution 
 		 // we want to clean the texts 
 		 super.tearDown(); 
+	
 	 } 
 
 
@@ -44,7 +48,7 @@ public class loginTest extends ActivityInstrumentationTestCase2<LoginActivity> {
 		assertNotNull(getActivity()); 
 	 } 
 	
-	@MediumTest 
+	@SmallTest 
 	 public void testLogin_success() { 
 		ActivityMonitor activityMonitor = getInstrumentation().addMonitor(MainActivity.class.getName(), null, false);
 		
@@ -58,45 +62,48 @@ public class loginTest extends ActivityInstrumentationTestCase2<LoginActivity> {
 			      Login.performClick();
 			    }
 			  });	
-		  
-		 //CHECK THE RESULT
 		  MainActivity nextActivity = (MainActivity) getInstrumentation().waitForMonitor(activityMonitor);
 		  assertNotNull(nextActivity);
 		  nextActivity.finish();
+
+
+	
 	 }
 	
-	@MediumTest 
+	@UiThreadTest 
 	 public void testLogin_fail() { 
-		ActivityMonitor activityMonitor = getInstrumentation().addMonitor(MainActivity.class.getName(), null, false);
-
-		
+	
 		 //INTERACTIONS
 		  mActivity.runOnUiThread(new Runnable() {
 			  	@Override
 			    public void run() {
 			      // click button and open next activity.
-					edit_password.setText("STSK");
-					edit_username.setText("STSK1");
+					edit_password.setText("STSK1");
+					edit_username.setText("STSK");
 			      Login.performClick();
 			    }
 			  });	
-		  
-		 //CHECK THE RESULT
-		  MainActivity nextActivity = (MainActivity) getInstrumentation().waitForMonitorWithTimeout(activityMonitor, 5000);
-		  assertNull(nextActivity);
+
 	 }
 	
 	@MediumTest 
 	 public void testRegister_success() { 
 		ActivityMonitor activityMonitor = getInstrumentation().addMonitor(MainActivity.class.getName(), null, false);
 		
+		String DB_PATH = "data/data/"+ mActivity.getPackageName()+"/databases/logininfo";
+		  try{
+	            File file = new File(DB_PATH);
+	            file.delete();
+	    }catch(Exception ex)
+	    {}
+		  
 		 //INTERACTIONS
 		  mActivity.runOnUiThread(new Runnable() {
 			  	@Override
 			    public void run() {
 			      // click button and open next activity.
-			  		edit_password.setText("aaaa");
-					edit_username.setText("aaaa");
+			  		edit_password.setText("aaaabb");
+					edit_username.setText("aaaabb");
 			      Register.performClick();
 			    }
 			  });	
@@ -105,13 +112,12 @@ public class loginTest extends ActivityInstrumentationTestCase2<LoginActivity> {
 		  MainActivity nextActivity = (MainActivity) getInstrumentation().waitForMonitor(activityMonitor);
 		  assertNotNull(nextActivity);
 		  nextActivity.finish();
+		  
+		 
 	 }
 	
-	@MediumTest 
+	@UiThreadTest 
 	 public void testRegister_fail() { 
-		ActivityMonitor activityMonitor = getInstrumentation().addMonitor(MainActivity.class.getName(), null, false);
-
-		
 		 //INTERACTIONS
 		  mActivity.runOnUiThread(new Runnable() {
 			  	@Override
@@ -122,10 +128,7 @@ public class loginTest extends ActivityInstrumentationTestCase2<LoginActivity> {
 			      Register.performClick();
 			    }
 			  });	
-		  
-		 //CHECK THE RESULT
-		  MainActivity nextActivity = (MainActivity) getInstrumentation().waitForMonitorWithTimeout(activityMonitor, 5000);
-		  assertNull(nextActivity);
+	
 	 }
 	
 	@MediumTest 

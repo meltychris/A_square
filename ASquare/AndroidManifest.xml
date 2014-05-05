@@ -18,7 +18,7 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity android:name="com.example.login.LoginActivity" 
-            	android:windowSoftInputMode="adjustPan">
+            	android:windowSoftInputMode="adjustPan" android:label="@string/app_name" android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
@@ -27,12 +27,7 @@
         <activity
             android:name="com.example.asquare.MainActivity"
             android:label="@string/app_name"
-            android:screenOrientation="unspecified" >
-        </activity>
-        <activity
-            android:name="com.example.gpa_calculator.GPAMainActivity"
-            android:label="GPA Calculator"
-            android:screenOrientation="unspecified" >
+            android:screenOrientation="portrait" >
         </activity>
         <activity
             android:name="com.example.study_path.Study_Path"
@@ -65,31 +60,26 @@
 
         <receiver android:name="com.example.exam_count_down.MyBroadcastReceiver" >
         </receiver>
+        <activity android:name="com.example.gpa_calculator.print_course_record" android:label="GPA Calculator" android:screenOrientation="portrait">
+        </activity>
+        <activity android:name="com.example.chatroom.MainChat" android:label="Chat Room" android:screenOrientation="portrait">
+        </activity>
+        <activity android:name="com.example.chatroom.ChatHelpActivity" android:label="Notice Board" android:screenOrientation="portrait"></activity>
+        <activity android:name="com.example.chatroom.ChatroomActivity" android:label="Chat Room" android:screenOrientation="portrait"></activity>
+        <activity android:name="com.example.chatroom.MentorMain" android:label="Chat Room" android:screenOrientation="portrait"></activity>
+        <activity android:name="com.example.gpa_calculator.add_course_record" android:label="GPA Calculator" android:screenOrientation="portrait"></activity>
+        <activity android:name="com.example.gpa_calculator.advice1" android:screenOrientation="portrait" android:label="GPA Calculator"></activity>
+        <activity android:name="com.example.gpa_calculator.advice2" android:label="GPA Calculator" android:screenOrientation="portrait"></activity>
+        <activity android:name="com.example.gpa_calculator.MainActivity" android:label="GPA Calculator" android:screenOrientation="portrait"></activity>
+        <activity android:name="com.example.gpa_calculator.printTGA" android:label="GPA Calculator" android:screenOrientation="portrait"></activity>
+        <activity android:name="com.example.gpa_calculator.Student" android:label="GPA Calculator" android:screenOrientation="portrait"></activity>
+        <activity android:name="com.example.advising.advising_MainActivity" android:label="Psychological Advice" android:screenOrientation="portrait"></activity>
+        <activity android:name="com.example.advising.otherActivity1" android:label="Psychological Advice" android:screenOrientation="portrait"></activity>
+        <activity android:name="com.example.advising.otherActivity2" android:label="Psychological Advice" android:screenOrientation="portrait"></activity>
 
-        <activity android:name="com.example.gpa_calculator.GPAactivity2" >
-        </activity>
-        <activity android:name="com.example.gpa_calculator.GPAactivity3" >
-        </activity>
-        <activity android:name="com.example.gpa_calculator.print_course_record" >
-        </activity>
-        <activity android:name="com.example.chatroom.MainChat" >
-        </activity>
-        <activity android:name="com.example.chatroom.ChatHelpActivity"></activity>
-        <activity android:name="com.example.chatroom.ChatroomActivity"></activity>
-        <activity android:name="com.example.chatroom.MentorMain"></activity>
-        <activity android:name="com.example.gpa_calculator.add_course_record"></activity>
-        <activity android:name="com.example.gpa_calculator.advice1"></activity>
-        <activity android:name="com.example.gpa_calculator.advice2"></activity>
-        <activity android:name="com.example.gpa_calculator.MainActivity"></activity>
-        <activity android:name="com.example.gpa_calculator.printTGA"></activity>
-        <activity android:name="com.example.gpa_calculator.Student"></activity>
-        <activity android:name="com.example.advising.advising_MainActivity"></activity>
-        <activity android:name="com.example.advising.otherActivity1"></activity>
-        <activity android:name="com.example.advising.otherActivity2"></activity>
-
-        <activity android:name="com.example.advising.ustTeamActivity"></activity>
-        <activity android:name="com.example.manual.ManualMainActivity"></activity>
-        <activity android:name="com.example.schedule.CalendarView"></activity>
+        <activity android:name="com.example.advising.ustTeamActivity" android:label="Psychological Advice" android:screenOrientation="portrait"></activity>
+        <activity android:name="com.example.manual.ManualMainActivity" android:label="User Manual" android:screenOrientation="portrait"></activity>
+        <activity android:name="com.example.schedule.CalendarView" android:label="Study Time Advice" android:screenOrientation="portrait"></activity>
         
     </application>
 

@@ -105,7 +105,14 @@ public class DataBaseTestAdapter0
  			return false;
  		}
  	}
-     
+ 	
+ 	  public void delele_table()  
+ 	    { 
+ 	    	//mDb.delete("Exam", null, null);
+ 	    	mDb.execSQL("DELETE FROM user");
+
+
+ 	    } 
 
 } 
 

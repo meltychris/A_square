@@ -5,6 +5,7 @@ import com.example.asquare.R;
 import com.example.chatroom.MainChat;
 import com.example.chatroom.MentorMain;
 import com.example.exam_count_down.Exam_countdown;
+import com.example.schedule.CalendarView;
 import com.example.study_path.Study_Path;
 
 import android.app.AlertDialog;
@@ -120,6 +121,26 @@ public class MainActivityTest extends ActivityInstrumentationTestCase2<MainActiv
 		  
 		 //CHECK THE RESULT 
 		  Exam_countdown nextActivity = (Exam_countdown) getInstrumentation().waitForMonitor(activityMonitor);
+		  assertNotNull(nextActivity);
+		  nextActivity.finish();
+	 }
+	
+	@MediumTest 
+	 public void testbutton4() {
+		manualsetUp();
+		ActivityMonitor activityMonitor = getInstrumentation().addMonitor(CalendarView.class.getName(), null, false);
+
+		//INTERACTIONS
+		  mActivity.runOnUiThread(new Runnable() {
+			    @Override
+			    public void run() {
+			      // click button and open next activity.
+			      button4.performClick();
+			    }
+			  });	
+		  
+		 //CHECK THE RESULT 
+		  CalendarView nextActivity = (CalendarView) getInstrumentation().waitForMonitor(activityMonitor);
 		  assertNotNull(nextActivity);
 		  nextActivity.finish();
 	 }

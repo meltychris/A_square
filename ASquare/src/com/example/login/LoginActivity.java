@@ -139,6 +139,7 @@ public class LoginActivity extends Activity {
 		mDbHelper.close();
     	return !Name.equals(input);		
 	}
+
 	
 	public boolean onCreateOptionsMenu(Menu menu)
 	{

@@ -205,10 +205,10 @@ public class Advanced_Activity_choose extends Activity{
 	        	code = DataBaseUtility1.GetColumnValue(testdata, "Code");
 	        	Model temp = new Model(code);
 	        	
-	        	if ((code.equals("CC1") && SA) ||			//name conversion
-	        			(code.equals("CC2") && S_T) ||
-	        			(code.equals("CC3") && A_H) ||
-	        			(code.equals("CC4") && Free) ||
+	        	if ((code.equals("CommonCore1") && SA) ||			//name conversion
+	        			(code.equals("CommonCore2") && S_T) ||
+	        			(code.equals("CommonCore3") && A_H) ||
+	        			(code.equals("CommonCore4") && Free) ||
 	        			(code.equals("SBM") && SBM) ||
 	        			(code.equals("ENGG") && ENGG) ||
 	        			(code.equals("FreeElective") && FreeE) ||
