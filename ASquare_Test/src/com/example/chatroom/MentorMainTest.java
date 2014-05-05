@@ -79,7 +79,7 @@ public class MentorMainTest extends ActivityInstrumentationTestCase2<MentorMain>
     	assertFalse(view2.isShown()); 
 	 } 
 	
-	@MediumTest 
+	@UiThreadTest 
 	 public void testbutton1() { 
 		ActivityMonitor activityMonitor = getInstrumentation().addMonitor(MentorMain.class.getName(), null, false);
 
@@ -98,7 +98,7 @@ public class MentorMainTest extends ActivityInstrumentationTestCase2<MentorMain>
 		  assertFalse(view2.isShown()); 
 	 }
 	
-	@MediumTest 
+	@UiThreadTest 
 	 public void testbutton2() { 
 		ActivityMonitor activityMonitor = getInstrumentation().addMonitor(MentorMain.class.getName(), null, false);
 

@@ -12,6 +12,7 @@ import android.app.Instrumentation.ActivityMonitor;
 import android.content.DialogInterface;
 import android.test.ActivityInstrumentationTestCase2;
 import android.test.TouchUtils;
+import android.test.UiThreadTest;
 import android.test.suitebuilder.annotation.MediumTest;
 import android.test.suitebuilder.annotation.SmallTest;
 import android.view.KeyEvent;
@@ -61,7 +62,7 @@ public class Testexam_count_down extends ActivityInstrumentationTestCase2<Exam_c
 
 	
 	
-	@MediumTest 
+	@UiThreadTest 
 	 public void testbutton1() { 
 		 		int expectedCount = listView1.getAdapter().getCount() + 1;
 
@@ -84,7 +85,7 @@ public class Testexam_count_down extends ActivityInstrumentationTestCase2<Exam_c
 
 	 }
 	
-	@MediumTest
+	@UiThreadTest
 	 public void testbutton2() { 
 		  mActivity.runOnUiThread(new Runnable() {
 		    @Override
@@ -136,7 +137,7 @@ public class Testexam_count_down extends ActivityInstrumentationTestCase2<Exam_c
 	      
 	 }
 	
-	@MediumTest 
+	@UiThreadTest 
 		 public void testlistView1() { 
 			//Still doing
 		
@@ -163,7 +164,7 @@ public class Testexam_count_down extends ActivityInstrumentationTestCase2<Exam_c
 	
 
 	
-	@MediumTest 
+	@UiThreadTest 
 	 public void testbutton3() { 
 
 		//INTERACTIONS
@@ -184,7 +185,7 @@ public class Testexam_count_down extends ActivityInstrumentationTestCase2<Exam_c
 
 	 }
 	
-	@MediumTest  
+	@UiThreadTest  
 	 public void testCode() { 
 
 
@@ -208,7 +209,7 @@ public class Testexam_count_down extends ActivityInstrumentationTestCase2<Exam_c
 
 	 }
 	
-	@MediumTest 
+	@UiThreadTest 
 	 public void testDate() { 
 
 

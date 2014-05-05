@@ -290,7 +290,7 @@ public class Study_Path_Test extends ActivityInstrumentationTestCase2<Study_Path
 		 }
 	}
 	
-	@UiThreadTest
+	
 	@MediumTest 
 	 public void testbutton111true()  throws Exception { 
 		try{
@@ -321,7 +321,7 @@ public class Study_Path_Test extends ActivityInstrumentationTestCase2<Study_Path
 
 	 }
 	
-	@UiThreadTest
+	
 	@MediumTest 
 	 public void testbutton111false()  throws Exception { 
 		try{
