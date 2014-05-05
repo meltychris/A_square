@@ -116,7 +116,42 @@ Intent intent = new Intent();
 		assertNotNull(getActivity()); 
 	 } 
 	
-	
+	@MediumTest // SmallTest: this test doesn't interact with any file system or network. 
+	 public void testCPEGView() { // checks if the activity is created 
+Intent intent = new Intent();
+    	
+    	intent.putExtra ("Major1", false);
+    	intent.putExtra ("Major2", true);
+    	intent.putExtra ("Pure", false);
+    	intent.putExtra ("Year1", true);
+    	intent.putExtra ("Year2", false);
+    	intent.putExtra ("Year3", false);
+    	intent.putExtra ("Sem1",true);
+    	intent.putExtra ("Sem2",false);
+    	intent.putExtra ("Credit", "18");
+    	intent.putExtra ("SA", false);
+    	intent.putExtra ("S_T", true);
+    	intent.putExtra ("A_H", false);
+    	intent.putExtra ("Free", true);
+    	intent.putExtra ("SBM", false);
+    	intent.putExtra ("ENGG", false);
+    	intent.putExtra ("FreeE", false);
+    	intent.putExtra ("compx1", true);
+    	intent.putExtra ("compx2", false);
+    	intent.putExtra ("compx3", false);
+    	intent.putExtra ("compx4", false);
+    	intent.putExtra ("compx5", false);
+    	intent.putExtra ("CEMx1", false);
+    	intent.putExtra ("CEMx2", false);
+    	
+		setActivityIntent(intent) ;
+		mActivity = getActivity();  
+       listView = (ListView) mActivity.findViewById(R.id.my_list);
+       btn = (Button) mActivity.findViewById(R.id.submit);
+
+       
+		assertNotNull(getActivity()); 
+	 } 
 	
 	@MediumTest 
 	 public void testbtn() { 

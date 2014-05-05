@@ -1,5 +1,6 @@
 package com.example.asquare.test;
 
+import com.example.advising.advising_MainActivity;
 import com.example.asquare.MainActivity;
 import com.example.asquare.R;
 import com.example.chatroom.MainChat;
@@ -197,6 +198,25 @@ public class MainActivityTest extends ActivityInstrumentationTestCase2<MainActiv
 		  nextActivity.finish();
 	 }
 
+	@MediumTest 
+	 public void testbutton6() {
+		manualsetUp();
+		ActivityMonitor activityMonitor = getInstrumentation().addMonitor(advising_MainActivity.class.getName(), null, false);
+
+		//INTERACTIONS
+		  mActivity.runOnUiThread(new Runnable() {
+			    @Override
+			    public void run() {
+			      // click button and open next activity.
+			      button4.performClick();
+			    }
+			  });	
+		  
+		 //CHECK THE RESULT 
+		  advising_MainActivity nextActivity = (advising_MainActivity) getInstrumentation().waitForMonitor(activityMonitor);
+		  assertNotNull(nextActivity);
+		  nextActivity.finish();
+	 }
 	
 	@MediumTest 
 	 public void testonkeydown() { 
