@@ -6,11 +6,17 @@ C:\Users\stsk\git\A_square\ASquare_Test\bin\classes\com\example\asquare\test\Mai
 C:\Users\stsk\git\A_square\ASquare_Test\bin\classes\com\example\asquare\test\MainActivityTest$4.class \
 C:\Users\stsk\git\A_square\ASquare_Test\bin\classes\com\example\asquare\test\MainActivityTest$5.class \
 C:\Users\stsk\git\A_square\ASquare_Test\bin\classes\com\example\asquare\test\MainActivityTest$6.class \
+C:\Users\stsk\git\A_square\ASquare_Test\bin\classes\com\example\asquare\test\MainActivityTest$7.class \
 C:\Users\stsk\git\A_square\ASquare_Test\bin\classes\com\example\asquare\test\MainActivityTest.class \
 C:\Users\stsk\git\A_square\ASquare_Test\bin\classes\com\example\asquare\test\R$attr.class \
 C:\Users\stsk\git\A_square\ASquare_Test\bin\classes\com\example\asquare\test\R$drawable.class \
 C:\Users\stsk\git\A_square\ASquare_Test\bin\classes\com\example\asquare\test\R$string.class \
 C:\Users\stsk\git\A_square\ASquare_Test\bin\classes\com\example\asquare\test\R.class \
+C:\Users\stsk\git\A_square\ASquare_Test\bin\classes\com\example\calendar\test\CalendarViewTest$1.class \
+C:\Users\stsk\git\A_square\ASquare_Test\bin\classes\com\example\calendar\test\CalendarViewTest$2.class \
+C:\Users\stsk\git\A_square\ASquare_Test\bin\classes\com\example\calendar\test\CalendarViewTest$3.class \
+C:\Users\stsk\git\A_square\ASquare_Test\bin\classes\com\example\calendar\test\CalendarViewTest$4.class \
+C:\Users\stsk\git\A_square\ASquare_Test\bin\classes\com\example\calendar\test\CalendarViewTest.class \
 C:\Users\stsk\git\A_square\ASquare_Test\bin\classes\com\example\chatroom\MainChatTest$1.class \
 C:\Users\stsk\git\A_square\ASquare_Test\bin\classes\com\example\chatroom\MainChatTest$10.class \
 C:\Users\stsk\git\A_square\ASquare_Test\bin\classes\com\example\chatroom\MainChatTest$11.class \

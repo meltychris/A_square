@@ -14,6 +14,7 @@ import com.example.study_path.Study_Path;
 import android.app.Instrumentation.ActivityMonitor;
 import android.content.SharedPreferences;
 import android.test.ActivityInstrumentationTestCase2;
+import android.test.UiThreadTest;
 import android.test.suitebuilder.annotation.MediumTest;
 import android.test.suitebuilder.annotation.SmallTest;
 import android.util.Log;
@@ -98,7 +99,7 @@ public class Study_Path_Test extends ActivityInstrumentationTestCase2<Study_Path
 		 }
 	 }
 	
-	@MediumTest 
+	@UiThreadTest 
 	 public void testradiobutton1() throws Exception  { 
 		try{
 
@@ -136,7 +137,7 @@ public class Study_Path_Test extends ActivityInstrumentationTestCase2<Study_Path
 	} 
 	
 	
-	@MediumTest 
+	@UiThreadTest 
 	public void testradiobutton2() throws Exception  { 
 		try{
 	
@@ -171,7 +172,7 @@ public class Study_Path_Test extends ActivityInstrumentationTestCase2<Study_Path
 		 }
 	} 
 	
-	@MediumTest 
+	@UiThreadTest 
 	public void testcheckbox1() throws Exception  { 
 		try{
 			mActivity.setPure("T");
@@ -209,7 +210,7 @@ public class Study_Path_Test extends ActivityInstrumentationTestCase2<Study_Path
 		 }
 	} 
 
-	@MediumTest
+	@UiThreadTest
 	public void testbutton1() throws Exception  {
 		try{
 			//INTERACTIONS
@@ -236,7 +237,7 @@ public class Study_Path_Test extends ActivityInstrumentationTestCase2<Study_Path
 		 }
 	}
 	
-	@MediumTest
+	@UiThreadTest
 	public void testbutton2() throws Exception  {
 		try{
 
@@ -263,7 +264,7 @@ public class Study_Path_Test extends ActivityInstrumentationTestCase2<Study_Path
 		 }
 	}
 	
-	@MediumTest
+	@UiThreadTest
 	public void testbutton3() throws Exception  {
 		try{
 			//INTERACTIONS
@@ -289,6 +290,7 @@ public class Study_Path_Test extends ActivityInstrumentationTestCase2<Study_Path
 		 }
 	}
 	
+	@UiThreadTest
 	@MediumTest 
 	 public void testbutton111true()  throws Exception { 
 		try{
@@ -319,6 +321,7 @@ public class Study_Path_Test extends ActivityInstrumentationTestCase2<Study_Path
 
 	 }
 	
+	@UiThreadTest
 	@MediumTest 
 	 public void testbutton111false()  throws Exception { 
 		try{
@@ -350,7 +353,7 @@ public class Study_Path_Test extends ActivityInstrumentationTestCase2<Study_Path
 
 	 }
 	
-	@MediumTest 
+	@UiThreadTest 
 	 public void testlistView1() throws Exception  { 
 		//precondition
 		//assertFalse(mActivity.getToastshown());
