@@ -17,6 +17,8 @@ import android.content.SharedPreferences;
 import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.ImageButton;
 
 public class MainActivity extends Activity {
@@ -105,9 +107,47 @@ public class MainActivity extends Activity {
                 startActivity(intent);
                
         }});
+        
+        initAnimations();
 		
 	}
 	
+	private void initAnimations() {
+		int startOffset = 500, counter = 0;
+		int duration = 750;
+		// TODO Auto-generated method stub
+		Animation butAni1 = AnimationUtils.loadAnimation(this, android.R.anim.slide_in_left);
+		button1.setAnimation(butAni1);
+		butAni1.setStartOffset(startOffset + (counter++)*startOffset/2);
+		butAni1.setDuration(duration);
+		butAni1.start();
+		Animation butAni3 = AnimationUtils.loadAnimation(this, android.R.anim.slide_in_left);
+		button3.setAnimation(butAni3);
+		butAni3.setStartOffset(startOffset + (counter++)*startOffset/2);
+		butAni3.setDuration(duration);
+		butAni3.start();
+		Animation butAni5 = AnimationUtils.loadAnimation(this, android.R.anim.slide_in_left);
+		button5.setAnimation(butAni5);
+		butAni5.setStartOffset(startOffset + (counter++)*startOffset/2);
+		butAni5.setDuration(duration);
+		butAni5.start();
+		Animation butAni2 = AnimationUtils.loadAnimation(this, android.R.anim.slide_in_left);
+		button2.setAnimation(butAni2);
+		butAni2.setStartOffset(startOffset + (counter++)*startOffset/2);
+		butAni2.setDuration(duration);
+		butAni2.start();
+		Animation butAni4 = AnimationUtils.loadAnimation(this, android.R.anim.slide_in_left);
+		button4.setAnimation(butAni4);
+		butAni4.setStartOffset(startOffset + (counter++)*startOffset/2);
+		butAni4.setDuration(duration);
+		butAni4.start();
+		Animation butAni6 = AnimationUtils.loadAnimation(this, android.R.anim.slide_in_left);
+		button6.setAnimation(butAni6);
+		butAni6.setStartOffset(startOffset + (counter++)*startOffset/2);
+		butAni6.setDuration(duration);
+		butAni6.start();
+	}
+
 	public AlertDialog Dialoghelper(){
 		AlertDialog isExit = new AlertDialog.Builder(this).create();
 		isExit.setTitle("A Square");

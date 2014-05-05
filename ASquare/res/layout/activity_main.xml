@@ -1,115 +1,79 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
     android:background="@drawable/pic"
-android:layout_width="match_parent"
-android:layout_height="match_parent"
-android:orientation="vertical">
+    android:orientation="vertical" >
 
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1"
+        android:orientation="horizontal" >
 
-	<LinearLayout android:id="@+id/linearLayout1" 
-		android:layout_height="fill_parent" 
-		android:layout_weight="1"
-		android:layout_width="fill_parent"
-		android:orientation="horizontal">
-		
-		<LinearLayout android:id="@+id/linearLayout11" 
-			android:layout_height="fill_parent" 
-			android:layout_weight="1"
-			android:layout_width="fill_parent"
-			android:orientation="vertical">
+        <ImageButton
+            android:id="@+id/imageButton1"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:background="@drawable/gpa_calculator"
+            android:scaleType="fitCenter" />
 
-	        <ImageButton
-	            android:id="@+id/imageButton1"
-	            android:layout_width="fill_parent"
-	            android:layout_height="fill_parent"
-	            android:background="@drawable/gpa_calculator"
-	            android:scaleType="fitCenter" />
-            
-		</LinearLayout>
-    	<LinearLayout android:id="@+id/linearLayout12" 
-			android:layout_height="fill_parent" 
-			android:layout_weight="1"
-			android:layout_width="fill_parent"
-			android:orientation="vertical">
-		       
-    	    <ImageButton
-    	        android:id="@+id/imageButton2"
-    	        android:layout_width="fill_parent"
-    	        android:layout_height="fill_parent"
-    	        android:background="@drawable/path"
-    	        android:scaleType="fitXY" />
-            
-		</LinearLayout>
-	</LinearLayout>
+        <ImageButton
+            android:id="@+id/imageButton2"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:background="@drawable/path"
+            android:scaleType="fitCenter" />
+    </LinearLayout>
 
-	<LinearLayout android:id="@+id/linearLayout2" 
-		android:layout_height="fill_parent" 
-		android:layout_weight="1"
-		android:layout_width="fill_parent"
-		android:orientation="horizontal">
-	
-			<LinearLayout android:id="@+id/linearLayout21" 
-				android:layout_height="fill_parent" 
-				android:layout_weight="1"
-				android:layout_width="fill_parent"
-				android:orientation="vertical">
-	
-		        <ImageButton
-		            android:id="@+id/imageButton3"
-		            android:layout_width="fill_parent"
-		            android:layout_height="fill_parent"
-		            android:background="@drawable/exam_cd"
-		            android:scaleType="fitXY" />
-	            
-			</LinearLayout>
-	    	<LinearLayout android:id="@+id/linearLayout22" 
-				android:layout_height="fill_parent" 
-				android:layout_weight="1"
-				android:layout_width="fill_parent"
-				android:orientation="vertical">
-			       
-	    	    <ImageButton
-	    	        android:id="@+id/imageButton4"
-	    	        android:layout_width="fill_parent"
-	    	        android:layout_height="fill_parent"
-	    	        android:background="@drawable/advisor"
-	    	        android:scaleType="fitXY" />
-	            
-			</LinearLayout>
-	</LinearLayout>
-	
-	<LinearLayout android:id="@+id/linearLayout3" 
-		android:layout_height="fill_parent"
-		android:layout_weight="1"
-		android:layout_width="fill_parent"
-		android:orientation="horizontal">
-	   
-	    <LinearLayout android:id="@+id/linearLayout31" 
-			android:layout_height="fill_parent" 
-			android:layout_weight="1"
-			android:layout_width="fill_parent"
-			android:orientation="vertical">
-	
-		    <ImageButton
-		        android:id="@+id/imageButton5"
-		        android:layout_width="fill_parent"
-		        android:layout_height="fill_parent"
-		        android:background="@drawable/chatrm"
-		        android:scaleType="fitXY" />
-	            
-		</LinearLayout>
-	    <LinearLayout android:id="@+id/linearLayout32" 
-			android:layout_height="fill_parent" 
-			android:layout_weight="1"
-			android:layout_width="fill_parent"
-			android:orientation="vertical">
-			       
-	    	<ImageButton
-	    	    android:id="@+id/imageButton6"
-	    	    android:layout_width="fill_parent"
-	    	    android:layout_height="fill_parent"
-	    	    android:background="@drawable/psycho"
-	    	    android:scaleType="fitXY" />
-	            
-		</LinearLayout>
-	</LinearLayout>
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1"
+        android:orientation="horizontal" >
+
+        <ImageButton
+            android:id="@+id/imageButton3"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:background="@drawable/exam_cd"
+            android:scaleType="fitCenter" />
+
+        <ImageButton
+            android:id="@+id/imageButton4"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:background="@drawable/advisor"
+            android:scaleType="fitCenter" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1"
+        android:orientation="horizontal" >
+
+        <ImageButton
+            android:id="@+id/imageButton5"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:background="@drawable/chatrm"
+            android:scaleType="fitCenter" />
+
+        <ImageButton
+            android:id="@+id/imageButton6"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:background="@drawable/psycho"
+            android:scaleType="fitCenter" />
+    </LinearLayout>
+
 </LinearLayout>
