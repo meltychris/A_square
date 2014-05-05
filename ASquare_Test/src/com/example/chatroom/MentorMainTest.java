@@ -14,6 +14,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.test.ActivityInstrumentationTestCase2;
+import android.test.UiThreadTest;
 import android.test.suitebuilder.annotation.MediumTest;
 import android.test.suitebuilder.annotation.SmallTest;
 import android.view.KeyEvent;
@@ -116,7 +117,7 @@ public class MentorMainTest extends ActivityInstrumentationTestCase2<MentorMain>
 		  assertTrue(view2.isShown()); 
 	 }
 	
-	@MediumTest 
+	@UiThreadTest 
 	 public void testSend1() { 
 
 		 //INTERACTIONS
@@ -134,8 +135,7 @@ public class MentorMainTest extends ActivityInstrumentationTestCase2<MentorMain>
 	
 	@MediumTest 
 	 public void testSend2() { 
-		
-		
+
 		 //INTERACTIONS
 		  mActivity.runOnUiThread(new Runnable() {
 			  	@Override
