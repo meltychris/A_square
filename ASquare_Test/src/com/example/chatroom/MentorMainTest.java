@@ -14,7 +14,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.test.ActivityInstrumentationTestCase2;
-import android.test.UiThreadTest;
+import android.test.suitebuilder.annotation.MediumTest;
 import android.test.suitebuilder.annotation.SmallTest;
 import android.view.KeyEvent;
 import android.view.View;
@@ -66,19 +66,19 @@ public class MentorMainTest extends ActivityInstrumentationTestCase2<MentorMain>
 	 } 
 
 
-	@UiThreadTest // SmallTest: this test doesn't interact with any file system or network. 
+	@MediumTest // SmallTest: this test doesn't interact with any file system or network. 
 	 public void testView() { // checks if the activity is created 
 		assertNotNull(getActivity()); 
 	 } 
 	
-	@UiThreadTest 
+	@MediumTest 
 	 public void testOnCreate() { 
  		
     	assertTrue(view1.isShown());
     	assertFalse(view2.isShown()); 
 	 } 
 	
-	@UiThreadTest 
+	@MediumTest 
 	 public void testbutton1() { 
 		ActivityMonitor activityMonitor = getInstrumentation().addMonitor(MentorMain.class.getName(), null, false);
 
@@ -97,7 +97,7 @@ public class MentorMainTest extends ActivityInstrumentationTestCase2<MentorMain>
 		  assertFalse(view2.isShown()); 
 	 }
 	
-	@UiThreadTest 
+	@MediumTest 
 	 public void testbutton2() { 
 		ActivityMonitor activityMonitor = getInstrumentation().addMonitor(MentorMain.class.getName(), null, false);
 
@@ -116,7 +116,7 @@ public class MentorMainTest extends ActivityInstrumentationTestCase2<MentorMain>
 		  assertTrue(view2.isShown()); 
 	 }
 	
-	@UiThreadTest 
+	@MediumTest 
 	 public void testSend1() { 
 
 		 //INTERACTIONS
@@ -132,7 +132,7 @@ public class MentorMainTest extends ActivityInstrumentationTestCase2<MentorMain>
 
 	 }
 	
-	@UiThreadTest 
+	@MediumTest 
 	 public void testSend2() { 
 		
 		
@@ -163,7 +163,7 @@ public class MentorMainTest extends ActivityInstrumentationTestCase2<MentorMain>
 
 	 }
 	
-	@UiThreadTest 
+	@MediumTest 
 	 public void testSend3() { 
 		ActivityMonitor activityMonitor = getInstrumentation().addMonitor(MentorMain.class.getName(), null, false);
 
@@ -196,7 +196,7 @@ public class MentorMainTest extends ActivityInstrumentationTestCase2<MentorMain>
 		  assertEquals("",msg.getText().toString());
 	 }
 	
-	@UiThreadTest 
+	@MediumTest 
 	 public void testSend4andlist() { 
 		ActivityMonitor activityMonitor = getInstrumentation().addMonitor(MentorMain.class.getName(), null, false);
 		
