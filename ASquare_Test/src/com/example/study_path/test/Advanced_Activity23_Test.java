@@ -5,7 +5,7 @@ import android.app.Instrumentation.ActivityMonitor;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.test.ActivityInstrumentationTestCase2;
-import android.test.UiThreadTest;
+import android.test.suitebuilder.annotation.MediumTest;
 import android.test.suitebuilder.annotation.SmallTest;
 import android.view.View;
 import android.widget.Button;
@@ -85,14 +85,14 @@ public class Advanced_Activity23_Test extends ActivityInstrumentationTestCase2<A
 	 } 
 
 
-	@UiThreadTest // SmallTest: this test doesn't interact with any file system or network. 
+	@MediumTest // SmallTest: this test doesn't interact with any file system or network. 
 	 public void testView() { // checks if the activity is created 
 		assertNotNull(getActivity()); 
 	 } 
 	
 	
 	
-	@UiThreadTest 
+	@MediumTest 
 	 public void testbutton1() { 
 
 
@@ -116,7 +116,7 @@ public class Advanced_Activity23_Test extends ActivityInstrumentationTestCase2<A
 
 	 }
 	
-	@UiThreadTest 
+	@MediumTest 
 	 public void testbutton2() { 
 
 

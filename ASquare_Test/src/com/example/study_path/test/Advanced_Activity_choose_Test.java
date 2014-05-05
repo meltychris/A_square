@@ -79,7 +79,7 @@ public class Advanced_Activity_choose_Test extends ActivityInstrumentationTestCa
 	 } 
 
 
-	@UiThreadTest // SmallTest: this test doesn't interact with any file system or network. 
+	@MediumTest // SmallTest: this test doesn't interact with any file system or network. 
 	 public void testView() { // checks if the activity is created 
 Intent intent = new Intent();
      	

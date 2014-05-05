@@ -6,7 +6,6 @@ import com.example.study_path.Advanced_Activity_choose;
 
 import android.app.Instrumentation.ActivityMonitor;
 import android.test.ActivityInstrumentationTestCase2;
-import android.test.UiThreadTest;
 import android.test.suitebuilder.annotation.MediumTest;
 import android.test.suitebuilder.annotation.SmallTest;
 import android.widget.Button;
@@ -86,7 +85,7 @@ public class Advanced_Activity_Test extends ActivityInstrumentationTestCase2<Adv
 	 } 
 
 
-	@UiThreadTest // SmallTest: this test doesn't interact with any file system or network. 
+	@MediumTest // SmallTest: this test doesn't interact with any file system or network. 
 	 public void testView() { // checks if the activity is created 
 		assertNotNull(getActivity()); 
 	 } 

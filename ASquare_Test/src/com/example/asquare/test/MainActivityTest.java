@@ -14,7 +14,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.test.ActivityInstrumentationTestCase2;
-import android.test.suitebuilder.annotation.SmallTest;
+import android.test.suitebuilder.annotation.MediumTest;
 import android.view.KeyEvent;
 import android.widget.Button;
 import android.widget.ImageButton;
@@ -56,13 +56,13 @@ public class MainActivityTest extends ActivityInstrumentationTestCase2<MainActiv
 	 } 
 
 
-	@SmallTest // SmallTest: this test doesn't interact with any file system or network. 
+	@MediumTest // MediumTest: this test doesn't interact with any file system or network. 
 	 public void testView() { // checks if the activity is created 
 		manualsetUp();
 		assertNotNull(getActivity()); 
 	 } 
 	
-	@SmallTest 
+	@MediumTest 
 	 public void testbutton1() { 
 		manualsetUp();
 		ActivityMonitor activityMonitor = getInstrumentation().addMonitor(com.example.gpa_calculator.MainActivity.class.getName(), null, false);
@@ -82,7 +82,7 @@ public class MainActivityTest extends ActivityInstrumentationTestCase2<MainActiv
 		  nextActivity.finish();
 	 }
 	
-	@SmallTest
+	@MediumTest
 	 public void testbutton2() { 
 		manualsetUp();
 		ActivityMonitor activityMonitor = getInstrumentation().addMonitor(Study_Path.class.getName(), null, false);
@@ -104,7 +104,7 @@ public class MainActivityTest extends ActivityInstrumentationTestCase2<MainActiv
 	
 
 	
-	@SmallTest 
+	@MediumTest 
 	 public void testbutton3() {
 		manualsetUp();
 		ActivityMonitor activityMonitor = getInstrumentation().addMonitor(Exam_countdown.class.getName(), null, false);
@@ -124,7 +124,7 @@ public class MainActivityTest extends ActivityInstrumentationTestCase2<MainActiv
 		  nextActivity.finish();
 	 }
 	
-	@SmallTest 
+	@MediumTest 
 	 public void testbutton5_Student() { 
 		Intent intent = new Intent();
      	intent.putExtra ("type", "student");
@@ -149,7 +149,7 @@ public class MainActivityTest extends ActivityInstrumentationTestCase2<MainActiv
 		  nextActivity.finish();
 	 }
 	
-	@SmallTest 
+	@MediumTest 
 	 public void testbutton5_Mentor() { 
 		Intent intent = new Intent();
     	intent.putExtra ("type", "mentor");
@@ -177,7 +177,7 @@ public class MainActivityTest extends ActivityInstrumentationTestCase2<MainActiv
 	 }
 
 	
-	@SmallTest 
+	@MediumTest 
 	 public void testonkeydown() { 
 		manualsetUp();
 		// register next activity that need to be monitored.
