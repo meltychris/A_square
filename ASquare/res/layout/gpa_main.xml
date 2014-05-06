@@ -4,107 +4,146 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+	android:background="#FFFF5B"
+    
     tools:context="com.example.study_path.Advanced_Activity" >
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="0.00" >
+        android:layout_height="match_parent"
+        android:layout_weight="8"
+        android:background="#BBDB80"
+         >
 
-        
         <TextView
             android:id="@+id/textViewGPAmain1"
             android:layout_width="match_parent"
-            android:layout_height="45dp"
-            android:text="What do you want to do with GPA Calculator?" />
+            android:layout_height="match_parent"
+            android:text="Please choose from the following"
+            android:textColor="#5555FF"
+            android:textSize="35sp"
+            android:textStyle="italic">
+            
+        </TextView>
+
     </LinearLayout>
 
-    <LinearLayout
+        <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="0.00" >
-
-        <Button
-            android:id="@+id/ButtonGPAmain1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="View My Courses" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="0.00" >
-
-        <Button
-            android:id="@+id/ButtonGPAmain2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Academic Advices" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="0.00" >
-
-        <Button
-            android:id="@+id/ButtonGPAmain3"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Add Course Record" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="0.00" >
-
-        <Button
-            android:id="@+id/ButtonGPAmain4"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Delete All Course Record" />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="0.00" >
-
-        <Button
-            android:id="@+id/ButtonGPAmain5"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="My TGA" />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="0.00" >
-
-        <Button
-            android:id="@+id/ButtonGPAmain6"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="My CGA" />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="0.00" >
-
-        <Button
-            android:id="@+id/ButtonGPAmain7"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="My GGA" />
-
-    </LinearLayout>
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_weight="2" >
+		    <LinearLayout
+		        android:layout_width="match_parent"
+		        android:layout_height="match_parent"
+		        android:layout_weight="1" >
+		
+		        <Button
+		            android:id="@+id/ButtonGPAmain1"
+		            android:layout_width="match_parent"
+		            android:layout_height="wrap_content"
+		            android:background="#FEC8C8"
+		            android:text="View My Courses"
+		            android:textSize="30sp" 
+		            android:textStyle="bold"/>
+		
+		    </LinearLayout>
+		
+		    <LinearLayout
+		        android:layout_width="match_parent"
+		        android:layout_height="match_parent"
+		        android:layout_weight="1" >
+		
+		        <Button
+		            android:id="@+id/ButtonGPAmain2"
+		            android:layout_width="match_parent"
+		            android:layout_height="wrap_content"
+		            android:background="#FEA8A8"
+		            android:text="Academic Advices"
+		            android:textSize="30sp"
+		            android:textStyle="bold" />
+		
+		    </LinearLayout>
+		
+		    <LinearLayout
+		        android:layout_width="match_parent"
+		        android:layout_height="match_parent"
+		        android:layout_weight="1" >
+		
+		        <Button
+		            android:id="@+id/ButtonGPAmain3"
+		            android:layout_width="match_parent"
+		            android:layout_height="wrap_content"
+		            android:background="#FE8888"
+		            android:text="Add Course Record"
+		            android:textSize="30sp"
+		            android:textStyle="bold" />
+		
+		    </LinearLayout>
+		
+		    <LinearLayout
+		        android:layout_width="match_parent"
+		        android:layout_height="match_parent"
+		        android:layout_weight="1" >
+		
+		        <Button
+		            android:id="@+id/ButtonGPAmain4"
+		            android:layout_width="match_parent"
+		            android:layout_height="wrap_content"
+		            android:background="#FE6868"
+		            android:text="Delete All Record"
+		            android:textSize="30sp" 
+		            android:textStyle="bold"/>
+		
+		    </LinearLayout>
+		
+		    <LinearLayout
+		        android:layout_width="match_parent"
+		        android:layout_height="match_parent"
+		        android:layout_weight="1" >
+		
+		        <Button
+		            android:id="@+id/ButtonGPAmain5"
+		            android:layout_width="match_parent"
+		            android:layout_height="wrap_content"
+		            android:background="#FE4848"
+		            android:text="My TGA"
+		            android:textSize="30sp"
+		            android:textStyle="bold" />
+		
+		    </LinearLayout>
+		
+		    <LinearLayout
+		        android:layout_width="match_parent"
+		        android:layout_height="match_parent"
+		        android:layout_weight="1" >
+		
+		        <Button
+		            android:id="@+id/ButtonGPAmain6"
+		            android:layout_width="match_parent"
+		            android:layout_height="wrap_content"
+		            android:background="#FE2828"
+		            android:text="My CGA" 
+		            android:textSize="30sp"
+		            android:textStyle="bold"/>
+		
+		    </LinearLayout>
+		
+		    <LinearLayout
+		        android:layout_width="match_parent"
+		        android:layout_height="match_parent"
+		        android:layout_weight="1" >
+		
+		        <Button
+		            android:id="@+id/ButtonGPAmain7"
+		            android:layout_width="match_parent"
+		            android:layout_height="wrap_content"
+		            android:background="#FE0808"
+		            android:text="My GGA"
+		            android:textSize="30sp" 
+		            android:textStyle="bold"/>
+		
+		    </LinearLayout>
+	 </LinearLayout>
 
 </LinearLayout>
