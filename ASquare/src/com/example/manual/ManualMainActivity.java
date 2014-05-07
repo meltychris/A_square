@@ -15,7 +15,7 @@ public class ManualMainActivity extends Activity {
 			super.onCreate(savedInstanceState);
 			setContentView(R.layout.manual_layout);
 			
-			String myURL = "http://pishon.cse.ust.hk:8181";       
+			String myURL = "file:///android_asset/web/index.htm";       
 	        WebView myBrowser=(WebView)findViewById(R.id.mybrowser);
 
 	        WebSettings websettings = myBrowser.getSettings();
