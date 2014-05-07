@@ -40,7 +40,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="#96D0E7"
-            android:text="HKUST Psychological Team" />
+            android:text="HKUST Psychological Team"
+            android:textSize="20sp"
+            android:textStyle="bold" />
 
         <ImageView
             android:id="@+id/imageView1"
@@ -68,7 +70,8 @@
             android:layout_height="wrap_content"
             android:layout_weight="0.00"
             android:background="#96D0E7"
-            android:text="Counselling Services outside HKUST" />
+            android:text="Counselling Services outside HKUST"
+            android:textStyle="bold" />
 
         <ImageView
             android:id="@+id/imageView2"
