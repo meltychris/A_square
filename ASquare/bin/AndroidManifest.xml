@@ -73,11 +73,11 @@
         <activity android:name="com.example.gpa_calculator.MainActivity" android:label="GPA Calculator" android:screenOrientation="portrait"></activity>
         <activity android:name="com.example.gpa_calculator.printTGA" android:label="GPA Calculator" android:screenOrientation="portrait"></activity>
         <activity android:name="com.example.gpa_calculator.Student" android:label="GPA Calculator" android:screenOrientation="portrait"></activity>
-        <activity android:name="com.example.advising.advising_MainActivity" android:label="Psychological Advising" android:screenOrientation="portrait"></activity>
-        <activity android:name="com.example.advising.otherActivity1" android:label="Psychological Advising" android:screenOrientation="portrait"></activity>
-        <activity android:name="com.example.advising.otherActivity2" android:label="Psychological Advising" android:screenOrientation="portrait"></activity>
+        <activity android:name="com.example.advising.advising_MainActivity" android:label="Psychological Advice" android:screenOrientation="portrait"></activity>
+        <activity android:name="com.example.advising.otherActivity1" android:label="Psychological Advice" android:screenOrientation="portrait"></activity>
+        <activity android:name="com.example.advising.otherActivity2" android:label="Psychological Advice" android:screenOrientation="portrait"></activity>
 
-        <activity android:name="com.example.advising.ustTeamActivity" android:label="Psychological Advising" android:screenOrientation="portrait"></activity>
+        <activity android:name="com.example.advising.ustTeamActivity" android:label="Psychological Advice" android:screenOrientation="portrait"></activity>
         <activity android:name="com.example.manual.ManualMainActivity" android:label="User Manual" android:screenOrientation="portrait"></activity>
         <activity android:name="com.example.schedule.CalendarView" android:label="Study Time Advice" android:screenOrientation="portrait"></activity>
         
