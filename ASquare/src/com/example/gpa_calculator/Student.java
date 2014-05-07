@@ -283,6 +283,7 @@ public class Student extends Activity {
 //			return "Your currentCGA same as your target CGA!";
 //		}
 		
+		
 			
 		//diffCGA is useless onwards	
 //		//cast to +ve
