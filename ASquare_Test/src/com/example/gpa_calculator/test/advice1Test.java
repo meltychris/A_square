@@ -10,6 +10,7 @@ import android.content.Context;
 import android.os.Bundle;
 import android.test.ActivityInstrumentationTestCase2;
 import android.test.UiThreadTest;
+import android.test.suitebuilder.annotation.MediumTest;
 import android.test.suitebuilder.annotation.SmallTest;
 import android.view.View;
 import android.widget.Button;
@@ -77,7 +78,7 @@ public class advice1Test extends ActivityInstrumentationTestCase2<advice1> {
 		assertNotNull(getActivity()); 
 	} 
 
-	@SmallTest
+	@MediumTest
 	public void testButtonGPAadvice1_1() { 
 		  ActivityMonitor activityMonitor = getInstrumentation().addMonitor(advice2.class.getName(), null, false);
 
@@ -106,7 +107,7 @@ public class advice1Test extends ActivityInstrumentationTestCase2<advice1> {
 
 	}
 	
-	@SmallTest
+	@UiThreadTest
 	public void testButtonGPAadvice1_2() { 
 		
 		 //INTERACTIONS 
