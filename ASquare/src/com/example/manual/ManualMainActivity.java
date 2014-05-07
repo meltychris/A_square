@@ -20,7 +20,6 @@ public class ManualMainActivity extends Activity {
 
 	        WebSettings websettings = myBrowser.getSettings();
 	        websettings.setSupportZoom(true);
-	        websettings.setBuiltInZoomControls(true); 
 	        websettings.setJavaScriptEnabled(true);
 	       
 	        myBrowser.setWebViewClient(new WebViewClient());
