@@ -268,11 +268,11 @@ public class Student extends Activity {
 		if (diffCGA > 0)
 		{
 			//currentCGA is better
-			return "Your current CGA is higher than your target CGA! \n CGA performance comparison is end";
+			return "Your current CGA is higher than your target CGA!";
 		}
 		else if (diffCGA == 0)//diff = 0
 		{
-			return "Your currentCGA same as your target CGA! \n CGA performance comparison is end";
+			return "Your currentCGA same as your target CGA!";
 		}
 	
 		
@@ -302,7 +302,7 @@ public class Student extends Activity {
 
 		
 		//currentCGA is poorer, continue in the this function to give advices
-		return "Your current CGA is lower than your target CGA! \nImprovement is needed! \n " + 
+		return "Your current CGA is lower than your target CGA! \nImprovement is needed! \n" + 
 			"In order to achieve the target CGA, \nYou need to raise Minimum Grade Point " + minTargetGradePoint + " or above in Year" + (currentYear+1) + " " + SemIntToWords(currentSem) + " Semester!";
 	}
 

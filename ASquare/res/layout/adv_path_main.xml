@@ -24,9 +24,10 @@
 	         android:id="@+id/textView100"
 	         android:layout_width="wrap_content"
 	         android:layout_height="wrap_content"
-	         android:text="Personal information: "
+	         android:text="Personal information"
 	         android:textColor="#FF0000"
-	         android:textSize="25sp" />
+	         android:textSize="30sp"
+	         android:textStyle="italic" />
          
      </LinearLayout> 
          
@@ -44,7 +45,8 @@
 	         android:layout_width="wrap_content"
 	         android:layout_height="wrap_content"
 	         android:text="Major: "
-	         android:textSize="20sp" />
+	         android:textSize="20sp"
+	         android:textStyle="bold" />
 
 <RadioGroup 
 	    android:id="@+id/RadioGroup1"
@@ -83,7 +85,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Pass Pure Maths: "
-            android:textSize="20sp" />
+            android:textSize="20sp"
+            android:textStyle="bold" />
         
          <CheckBox
          android:id="@+id/checkBox1"
@@ -104,7 +107,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Year: "
-            android:textSize="20sp" />
+            android:textSize="20sp"
+            android:textStyle="bold" />
         
         <RadioGroup 
 	    android:id="@+id/RadioGroup2"
@@ -152,7 +156,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Semester: "
-            android:textSize="20sp" />
+            android:textSize="20sp"
+            android:textStyle="bold" />
         
  <RadioGroup 
 	    android:id="@+id/RadioGroup3"
@@ -192,7 +197,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Studied Credit: "
-            android:textSize="20sp" />
+            android:textSize="20sp"
+            android:textStyle="bold" />
         
          <EditText
              android:id="@+id/editText1"
@@ -220,7 +226,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Studied Common Core: "
-            android:textSize="20sp" />
+            android:textSize="20sp"
+            android:textStyle="bold" />
         
        <LinearLayout
         android:id="@+id/checkbox"
@@ -268,7 +275,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Studied Elective: "
-            android:textSize="20sp" />
+            android:textSize="20sp"
+            android:textStyle="bold" />
         
        <LinearLayout
         android:id="@+id/checkbox"
@@ -305,13 +313,13 @@
         android:background="#FFFFFF"
         android:orientation="horizontal" >
 	     
-              
         <TextView
             android:id="@+id/textView8"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Studied COMP Elective: "
-            android:textSize="20sp" />
+            android:textSize="20sp"
+            android:textStyle="bold" />
       
          </LinearLayout>
          
@@ -386,13 +394,13 @@
         android:background="#FFFFFF"
         android:orientation="horizontal" >
 	     
-              
         <TextView
             android:id="@+id/textView9"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="COMP/ELEC/MATH: "
-            android:textSize="20sp" />
+            android:textSize="20sp"
+            android:textStyle="bold" />
         
         <RadioGroup 
 	    android:id="@+id/RadioGroup5"
