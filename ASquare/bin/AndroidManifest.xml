@@ -62,11 +62,11 @@
         </receiver>
         <activity android:name="com.example.gpa_calculator.print_course_record" android:label="GPA Calculator" android:screenOrientation="portrait">
         </activity>
-        <activity android:name="com.example.chatroom.MainChat" android:label="Chat Room" android:screenOrientation="portrait">
+        <activity android:name="com.example.chatroom.MainChat" android:label="Chatroom" android:screenOrientation="portrait">
         </activity>
         <activity android:name="com.example.chatroom.ChatHelpActivity" android:label="Notice Board" android:screenOrientation="portrait"></activity>
-        <activity android:name="com.example.chatroom.ChatroomActivity" android:label="Chat Room" android:screenOrientation="portrait"></activity>
-        <activity android:name="com.example.chatroom.MentorMain" android:label="Chat Room" android:screenOrientation="portrait"></activity>
+        <activity android:name="com.example.chatroom.ChatroomActivity" android:label="Chatroom" android:screenOrientation="portrait"></activity>
+        <activity android:name="com.example.chatroom.MentorMain" android:label="Chatroom" android:screenOrientation="portrait"></activity>
         <activity android:name="com.example.gpa_calculator.add_course_record" android:label="GPA Calculator" android:screenOrientation="portrait"></activity>
         <activity android:name="com.example.gpa_calculator.advice1" android:screenOrientation="portrait" android:label="GPA Calculator"></activity>
         <activity android:name="com.example.gpa_calculator.advice2" android:label="GPA Calculator" android:screenOrientation="portrait"></activity>
