@@ -55,7 +55,7 @@ public class printTGATest extends ActivityInstrumentationTestCase2<printTGA> {
 	} 
 
 	//empty condition to print
-	@SmallTest
+	@UiThreadTest
 	public void testListViewGPAprint1() { 
 		
 
@@ -88,7 +88,7 @@ public class printTGATest extends ActivityInstrumentationTestCase2<printTGA> {
 	}
 
 	//have things to print in TGA
-	@SmallTest
+	@UiThreadTest
 	public void testListViewGPAprint2() { 
 			
 		//add record

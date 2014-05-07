@@ -10,6 +10,7 @@ import android.content.DialogInterface;
 import android.os.Bundle;
 import android.test.ActivityInstrumentationTestCase2;
 import android.test.TouchUtils;
+import android.test.UiThreadTest;
 import android.test.suitebuilder.annotation.MediumTest;
 import android.test.suitebuilder.annotation.MediumTest;
 import android.view.View;
@@ -75,7 +76,7 @@ public class MainActivityTest extends ActivityInstrumentationTestCase2<MainActiv
 			  });	
 		  
 		 //CHECK THE RESULT
-		 print_course_record nextActivity = (print_course_record) getInstrumentation().waitForMonitorWithTimeout(activityMonitor, 20000);
+		 print_course_record nextActivity = (print_course_record) getInstrumentation().waitForMonitor(activityMonitor);
 		 assertNotNull(nextActivity);
 		 nextActivity.finish();
 
@@ -96,7 +97,7 @@ public class MainActivityTest extends ActivityInstrumentationTestCase2<MainActiv
 			  });	
 		  
 		 //CHECK THE RESULT
-		  advice1 nextActivity = (advice1) getInstrumentation().waitForMonitorWithTimeout(activityMonitor, 20000);
+		  advice1 nextActivity = (advice1) getInstrumentation().waitForMonitor(activityMonitor);
 		 assertNotNull(nextActivity);
 		 nextActivity.finish();
 	}
@@ -116,7 +117,7 @@ public class MainActivityTest extends ActivityInstrumentationTestCase2<MainActiv
 			  });	
 		  
 		 //CHECK THE RESULT
-		  add_course_record nextActivity = (add_course_record) getInstrumentation().waitForMonitorWithTimeout(activityMonitor, 5000);
+		  add_course_record nextActivity = (add_course_record) getInstrumentation().waitForMonitor(activityMonitor);
 		 assertNotNull(nextActivity);
 		 nextActivity.finish();
 	}
@@ -242,14 +243,14 @@ public class MainActivityTest extends ActivityInstrumentationTestCase2<MainActiv
 			  });	
 		  
 		 //CHECK THE RESULT
-		  printTGA nextActivity = (printTGA) getInstrumentation().waitForMonitorWithTimeout(activityMonitor, 5000);
+		  printTGA nextActivity = (printTGA) getInstrumentation().waitForMonitor(activityMonitor);
 		 assertNotNull(nextActivity);
 		 nextActivity.finish();
 	}
 	
 	//ref testButtonGPAmain4
 	//running 2nd branch, else if (CGA_without_1st_sem < 1.5), in MainActivity.printCGA()
-	@MediumTest
+	@UiThreadTest
 	public void testButtonGPAmain6_1() { 
 	
 		//TODO
@@ -284,7 +285,7 @@ public class MainActivityTest extends ActivityInstrumentationTestCase2<MainActiv
 	
 	//ref testButtonGPAmain4
 	//running 1st branch, if ( ( CGA >= 1.5 ) && ( CGA < 1.7 ) ), in MainActivity.printCGA()
-	@MediumTest
+	@UiThreadTest
 	public void testButtonGPAmain6_2() { 
 	
 		//TODO
@@ -321,7 +322,7 @@ public class MainActivityTest extends ActivityInstrumentationTestCase2<MainActiv
 	
 	//ref testButtonGPAmain4
 	//running 3rd branch, last else, in MainActivity.printCGA()
-	@MediumTest
+	@UiThreadTest
 	public void testButtonGPAmain6_3() { 
 	
 		//TODO
@@ -363,7 +364,7 @@ public class MainActivityTest extends ActivityInstrumentationTestCase2<MainActiv
 	}
 	
 	//ref testButtonGPAmain4
-	@MediumTest
+	@UiThreadTest
 	public void testButtonGPAmain7() { 
 	
 		//TODO

@@ -84,7 +84,7 @@ public class add_course_recordTest1 extends ActivityInstrumentationTestCase2<add
 	} 
 
 	//TODO test fail!!!!!!!
-	@SmallTest
+	@UiThreadTest
 	public void testButtonGPAadd1() { 
 
 		
