@@ -4,6 +4,7 @@ import android.app.Instrumentation.ActivityMonitor;
 import android.test.ActivityInstrumentationTestCase2;
 import android.test.suitebuilder.annotation.MediumTest;
 import android.widget.Button;
+import android.widget.ImageView;
 
 import com.example.advising.advising_MainActivity;
 import com.example.advising.otherActivity1;
@@ -28,6 +29,8 @@ public class MainActivityTest extends
 		mActivity = getActivity();
 		button1 = (Button) mActivity.findViewById(R.id.button1);
 		button2 = (Button) mActivity.findViewById(R.id.button2);
+		imageView1 = (ImageView) mActivity.findViewById(R.id.imageView1);
+		imageView2 = (ImageView) mActivity.findViewById(R.id.imageView2);
 
 	}
 
@@ -46,8 +49,7 @@ public class MainActivityTest extends
 
 	@MediumTest
 	public void testButton1() {
-		ActivityMonitor activityMonitor = getInstrumentation().addMonitor(
-				ustTeamActivity.class.getName(), null, false);
+		ActivityMonitor activityMonitor = getInstrumentation().addMonitor(ustTeamActivity.class.getName(), null, false);
 
 		// INTERACTIONS
 		mActivity.runOnUiThread(new Runnable() {
@@ -59,15 +61,36 @@ public class MainActivityTest extends
 		});
 
 		// CHECK THE RESULT
+		ustTeamActivity nextActivity = (ustTeamActivity) getInstrumentation().waitForMonitor(activityMonitor);
+		assertNotNull(nextActivity);
+		nextActivity.finish();
+
+	}
+	
+	@MediumTest
+	public void testimageView1() {
+		ActivityMonitor activityMonitor = getInstrumentation().addMonitor(
+				ustTeamActivity.class.getName(), null, false);
+
+		// INTERACTIONS
+		mActivity.runOnUiThread(new Runnable() {
+			@Override
+			public void run() {
+				// click button and open next activity.
+				imageView1.performClick();
+			}
+		});
+
+		// CHECK THE RESULT
 		ustTeamActivity nextActivity = (ustTeamActivity) getInstrumentation()
-				.waitForMonitorWithTimeout(activityMonitor, 20000);
+				.waitForMonitor(activityMonitor);
 		assertNotNull(nextActivity);
 		nextActivity.finish();
 
 	}
 
 	@MediumTest
-	public void testButtonGPAmain2() {
+	public void testButton2() {
 
 		ActivityMonitor activityMonitor = getInstrumentation().addMonitor(
 				otherActivity1.class.getName(), null, false);
@@ -83,12 +106,38 @@ public class MainActivityTest extends
 
 		// CHECK THE RESULT
 		otherActivity1 nextActivity = (otherActivity1) getInstrumentation()
-				.waitForMonitorWithTimeout(activityMonitor, 20000);
+				.waitForMonitor(activityMonitor);
 		assertNotNull(nextActivity);
 		nextActivity.finish();
 	}
 
+	@MediumTest
+	public void testimageView2() {
+
+		ActivityMonitor activityMonitor = getInstrumentation().addMonitor(
+				otherActivity1.class.getName(), null, false);
+
+		// INTERACTIONS
+		mActivity.runOnUiThread(new Runnable() {
+			@Override
+			public void run() {
+				// click button and open next activity.
+				imageView2.performClick();
+			}
+		});
+
+		// CHECK THE RESULT
+		otherActivity1 nextActivity = (otherActivity1) getInstrumentation()
+				.waitForMonitor(activityMonitor);
+		assertNotNull(nextActivity);
+		nextActivity.finish();
+	}
+
+	
+	
 	Button button1;
 	Button button2;
+	ImageView imageView1;
+	ImageView imageView2;
 
 }
