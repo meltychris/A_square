@@ -15,7 +15,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text=" Advise Your TGA"
-            android:textSize="18sp" />
+            android:textColor="#5555FF"
+            android:textSize="25sp"
+            android:textStyle="italic"/>
 
     </LinearLayout>
 
@@ -28,7 +30,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text=" Required Grade Point to achieve Your TGA:"
-            android:textSize="18sp" />
+            android:textColor="#662266"
+            android:textSize="25sp"
+            android:textStyle="bold" />
 
     </LinearLayout>
 
@@ -41,7 +45,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text=" Calculated Double Grade Point"
-            android:textSize="18sp" />
+            android:textColor="#FF6666"
+            android:textSize="40sp"
+            android:textStyle="bold" />
 
     </LinearLayout>
 
@@ -53,7 +59,10 @@
             android:id="@+id/buttonGPAadvice2_1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Exit GPA Advice" />
+            android:text="Exit GPA Advice"
+            android:background="#FEC8C8"
+            android:textSize="20sp" 
+		    android:textStyle="bold"/>
 
     </LinearLayout>
 

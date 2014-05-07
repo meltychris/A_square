@@ -4,8 +4,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    
     tools:context="com.example.study_path.Advanced_Activity" >
 
+    
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -16,7 +18,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text=" Add Your Course Record"
-            android:textSize="18sp" />
+            android:textColor="#5555FF"
+            android:textSize="25sp"
+            android:textStyle="italic" />
+
     </LinearLayout>
 
     <LinearLayout
@@ -29,7 +34,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text=" Year:"
-            android:textSize="18sp" />
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
     </LinearLayout>
 
     <RadioGroup
@@ -80,7 +87,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text=" Semester:"
-            android:textSize="18sp" />
+            android:textSize="18sp"
+            android:textStyle="bold" />
 
     </LinearLayout>
 
@@ -125,7 +133,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text=" Course Code:"
-            android:textSize="18sp" />
+            android:textSize="18sp"
+            android:textStyle="bold" />
 
     </LinearLayout>
 
@@ -138,7 +147,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:ems="10" >
+            android:ems="10"
+            android:singleLine="true" >
 
             <requestFocus />
         </EditText>
@@ -154,7 +164,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text=" No. of credits:"
-            android:textSize="18sp" />
+            android:textSize="18sp"
+            android:textStyle="bold" />
 
     </LinearLayout>
 
@@ -167,7 +178,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:ems="10" />
+            android:ems="10" 
+            android:singleLine="true"/>
 
     </LinearLayout>
 
@@ -180,7 +192,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text=" Grade:"
-            android:textSize="18sp" />
+            android:textSize="18sp"
+            android:textStyle="bold" />
 
     </LinearLayout>
 
@@ -193,7 +206,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:ems="10" />
+            android:ems="10"
+            android:singleLine="true" />
 
     </LinearLayout>
 
@@ -206,7 +220,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="0.21"
-            android:text="Add Next Course Record" />
+            android:background="#FEC8C8"
+            android:text="Add Next Course Record"
+            android:textSize="20sp" 
+		    android:textStyle="bold" />
 
     </LinearLayout>
 
@@ -218,7 +235,10 @@
             android:id="@+id/buttonGPAadd2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Finish Adding Course Record" />
+            android:background="#FEA8A8"
+            android:text="Finish Adding Course Record"
+            android:textSize="20sp" 
+		    android:textStyle="bold" />
 
     </LinearLayout>
 
@@ -230,7 +250,10 @@
             android:id="@+id/buttonGPAadd3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Reset" />
+            android:background="#FE8888"
+            android:text="Reset" 
+            android:textSize="20sp" 
+		    android:textStyle="bold"/>
 
     </LinearLayout>
 
