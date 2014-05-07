@@ -129,7 +129,7 @@ public class add_course_recordTest1 extends ActivityInstrumentationTestCase2<add
 	//}
 
 	
-	@SmallTest
+	@UiThreadTest
 	public void testButtonGPAadd3() { 
 		
 		 //INTERACTIONS 
