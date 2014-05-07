@@ -262,7 +262,7 @@ public class Student extends Activity {
 		
 		//double currentCGA = 16/13;
 				
-		double diffCGA = currentCGA - targetCGA;
+//		double diffCGA = currentCGA - targetCGA;
 		
 		//	if (diffCGA < 0)
 		//	{
@@ -273,15 +273,15 @@ public class Student extends Activity {
 		//		
 		//	}
 		//	
-		if (diffCGA > 0)
-		{
-			//currentCGA is better
-			return "Your current CGA is higher than your target CGA!";
-		}
-		else if (diffCGA == 0)//diff = 0
-		{
-			return "Your currentCGA same as your target CGA!";
-		}
+//		if (diffCGA > 0)
+//		{
+//			//currentCGA is better
+//			return "Your current CGA is higher than your target CGA!";
+//		}
+//		else if (diffCGA == 0)//diff = 0
+//		{
+//			return "Your currentCGA same as your target CGA!";
+//		}
 		
 			
 		//diffCGA is useless onwards	
