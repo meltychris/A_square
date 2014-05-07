@@ -35,9 +35,7 @@ public class LoginActivity extends Activity {
 		Login = (Button) findViewById(R.id.Login);
 		Register = (Button) findViewById(R.id.Register);
 
-		
-		edit_password.setText("STSK");
-		edit_username.setText("STSK");
+
 
 		
 		Login.setOnClickListener(new Button.OnClickListener(){ 
