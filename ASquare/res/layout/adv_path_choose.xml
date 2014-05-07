@@ -28,7 +28,7 @@
         android:layout_margin="5dp"
         android:text="Choose Pass Courses"
         android:textColor="#FF3300"
-        android:textSize="25sp"
+        android:textSize="20sp"
         android:textStyle="italic" />
    
 </RelativeLayout>
