@@ -59,6 +59,8 @@ public class printTGATest extends ActivityInstrumentationTestCase2<printTGA> {
 	public void testListViewGPAprint1() { 
 		
 
+		
+		
 		 //INTERACTIONS 
 		  mActivity.runOnUiThread(new Runnable() {
 			    @Override
@@ -76,10 +78,12 @@ public class printTGATest extends ActivityInstrumentationTestCase2<printTGA> {
 	    //should be empty, give boolean true
 		  
 		//No need MainActivity.student1.printWarningTGA() != null, as it must not be null, as it is initialized
-		//assertTrue(MainActivity.student1.printWarningTGA() == null);
-	   // assertTrue(MainActivity.student1.printTGA().isEmpty());
+		//assertTrue(MainActivity.student1.printTGA() == null);
+	    //assertTrue(MainActivity.student1.printTGA().isEmpty());
 
-	  
+		  MainActivity.student1.printTGA();
+		  //debugging
+		  assertTrue(true);
 
 	}
 

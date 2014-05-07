@@ -60,6 +60,7 @@ public class advice1Test extends ActivityInstrumentationTestCase2<advice1> {
      	radioButtonGPAadvice1_9 = (RadioButton)mActivity.findViewById(R.id.radioButtonGPAadvice1_9);
      	//Your Target TGA
      	editTextGPAadvice1_1 = (EditText)mActivity.findViewById(R.id.editTextGPAadvice1_1);
+     	editTextGPAadvice1_2 = (EditText)mActivity.findViewById(R.id.editTextGPAadvice1_2);
 
 	}
 	
@@ -89,6 +90,7 @@ public class advice1Test extends ActivityInstrumentationTestCase2<advice1> {
 			    	RadioGroupadvice1.check(R.id.radioButtonGPAadvice1_2);
 			    	RadioGroupadvice2.check(R.id.radioButtonGPAadvice1_7);
 			    	editTextGPAadvice1_1.setText("4");
+			    	editTextGPAadvice1_2.setText("18");
 			    	
 			    	buttonGPAadvice1_1.performClick();
 			    }
@@ -116,6 +118,7 @@ public class advice1Test extends ActivityInstrumentationTestCase2<advice1> {
 			    	RadioGroupadvice1.check(R.id.radioButtonGPAadvice1_2);
 			    	RadioGroupadvice2.check(R.id.radioButtonGPAadvice1_7);
 			    	editTextGPAadvice1_1.setText("4");
+			    	editTextGPAadvice1_2.setText("18");
 
 			    	
 			    	buttonGPAadvice1_2.performClick();
@@ -146,5 +149,6 @@ public class advice1Test extends ActivityInstrumentationTestCase2<advice1> {
 	RadioButton radioButtonGPAadvice1_8;
 	RadioButton radioButtonGPAadvice1_9;
  	EditText editTextGPAadvice1_1;
+ 	EditText editTextGPAadvice1_2;
 	
 }
