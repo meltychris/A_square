@@ -1,7 +1,9 @@
 package com.example.gpa_calculator;
 
 import java.util.ArrayList;
+
 import android.app.Activity;
+import android.widget.Toast;
 
 
 //This file contains all functions used by android
@@ -246,25 +248,31 @@ public class Student extends Activity {
 	//ONLY condition 1 from diff_performance_advice() will come to here
 	//Clicking the above button will show the improvement needed to reach the target CGA,
 	//e.g.: "You need a term grade average (TGA) of A or above to get a CGA A-"
-	public String adviceMinGradePoint(int currentYear, int currentSem, double targetCGA) {
+	public String adviceMinGradePointRequiredForCGA(int currentYear, int currentSem, double no_of_credit_taken_current_sem, double targetCGA) {
 		
 		//ensure all data in the TGA array,CGA and GGA in the latest version
 		updateAll();
 		
 		//create a currentCGA to avoid careless modification of global varable CGA
-		double currentCGA = CGA;
+		
+		
+		//cal CGA from 1st term to right before the current sem
+		//exclude the info in the current sem and any later sem
+		double currentCGA = calCGAUntilYearSem(currentYear, currentSem);
+		
+		//double currentCGA = 16/13;
 				
 		double diffCGA = currentCGA - targetCGA;
 		
-	//	if (diffCGA < 0)
-	//	{
-	//		
-	//		//currentCGA is poorer
-	//		System.out.println("Your current CGA is lower than your target CGA! Improvement is needed!");
-	//		//continue in the this function to give advices
-	//		
-	//	}
-		
+		//	if (diffCGA < 0)
+		//	{
+		//		
+		//		//currentCGA is poorer
+		//		System.out.println("Your current CGA is lower than your target CGA! Improvement is needed!");
+		//		//continue in the this function to give advices
+		//		
+		//	}
+		//	
 		if (diffCGA > 0)
 		{
 			//currentCGA is better
@@ -274,36 +282,50 @@ public class Student extends Activity {
 		{
 			return "Your currentCGA same as your target CGA!";
 		}
-	
+		
+			
+		//diffCGA is useless onwards	
+//		//cast to +ve
+//		diffCGA = (-1)*diffCGA;
+		
+		//start advising
 		
 		
-		
-		//ONLY condition 1 will come to here
-		//Clicking the above button will show the improvement needed to reach the target CGA,
-		//e.g.: "You need a term grade average (TGA) of A or above to get a CGA A-"
-		
-		//ask whether user needs Advice on grade 
-		
-		//cast to +ve
-		diffCGA = (-1)*diffCGA;
-		
-		
-		
-		
-
-		//grade point to raise
-		if (year_sem_credit_counter[currentYear][currentSem] == 0)
+		//for loop to get total credit taken before
+		double total_credit_taken_without_current_sem = 0;
+		//<=
+		for (int year = 0 ; year <= currentYear ; year++)
 		{
-			return "You don't have any course record in Year" + (currentYear+1) + " " + SemIntToWords(currentSem) + " Semester!";
+			//<, skip currentsem, add that out of the loop
+			for (int sem = 0 ; sem < MAX_SEMESTER ; sem++)
+			{
+				//reach the current year AND sem
+				if ((year == currentYear)&&(sem == currentSem))
+				{
+					break;
+				}
+				
+				total_credit_taken_without_current_sem = total_credit_taken_without_current_sem + year_sem_credit_counter[year][sem];
+
+			}
+		}		
+		//add credit of current sem taken also
+		double total_credit_taken = total_credit_taken_without_current_sem + no_of_credit_taken_current_sem;
+		
+		
+		if (total_credit_taken <= 0)
+		{
+			return "You don't have any course record input in our calculator function!";
 		}
-
-	
-		double minTargetGradePoint = diffCGA*year_sem_credit_counter[currentYear][currentSem];
-
+		
+		// = (targetCGA*total_credit_taken)-grade point of year1 fall to summer exclude year2 sem1 and sem after that
+		double minTargetGradePointforCGA = (targetCGA*total_credit_taken)-(currentCGA*total_credit_taken_without_current_sem);
 		
 		//currentCGA is poorer, continue in the this function to give advices
-		return "Your current CGA is lower than your target CGA! \nImprovement is needed! \n" + 
-			"In order to achieve the target CGA, \nYou need to raise Minimum Grade Point " + minTargetGradePoint + " or above in Year" + (currentYear+1) + " " + SemIntToWords(currentSem) + " Semester!";
+		return "Your current CGA is lower than your target CGA! \nImprovement is needed! \n " +
+				"In order to achieve the target CGA " + targetCGA + " in current semester, Year " + (currentYear+1) + " " + SemIntToWords(currentSem) + " Semester, \nYou need to raise Minimum Grade Point " + minTargetGradePointforCGA + " or above!";
+	
+
 	}
 
 		
@@ -606,24 +628,14 @@ public class Student extends Activity {
 		double sum_of_grade_point = 0;
 		int sum_of_all_credit_taken = 0;
 		
-		
-		int year = 0;
-		
-		
 
-		while (year < MAX_STUDY_YEAR)
-		{
-			int sem = 0;
-			while (sem < MAX_SEMESTER)
+		for (int year = 0; year < MAX_STUDY_YEAR ; year++)
+		{	
+			for (int sem = 0;sem < MAX_SEMESTER ; sem++)
 			{				
 				sum_of_grade_point = sum_of_grade_point +  TGA[year][sem]*year_sem_credit_counter[year][sem];
-				
 				sum_of_all_credit_taken = sum_of_all_credit_taken +  year_sem_credit_counter[year][sem];
-				
-				sem++;
-				
 			}
-			year++;
 		}
 		
 		//avoid division by zero NaN
@@ -634,6 +646,47 @@ public class Student extends Activity {
 		else
 		{
 			CGA = sum_of_grade_point/sum_of_all_credit_taken;
+		}
+		
+		
+		
+	}
+	
+	//This function, you pass year2 fall
+	//then only CGA from year1 fall to summer is calculated
+	//exclude the course record of year2 fall and after year2 fall
+	//to avoid the side effect if the users has input some course record that they are not taken yet at the moment
+	public double calCGAUntilYearSem(int currentYear, int currentSem) {
+		
+		double sum_of_grade_point = 0;
+		int sum_of_all_credit_taken = 0;
+		
+		//<=
+		for (int year = 0; year <= currentYear ; year++)
+		{	
+			//<
+			for (int sem = 0 ; sem < MAX_SEMESTER ; sem++)
+			{	
+				//reach the current year AND sem
+				if ((year == currentYear)&&(sem == currentSem))
+				{
+					break;
+				}
+				
+				sum_of_grade_point = sum_of_grade_point +  TGA[year][sem]*year_sem_credit_counter[year][sem];
+				sum_of_all_credit_taken = sum_of_all_credit_taken +  year_sem_credit_counter[year][sem];
+			}
+		}
+		
+		
+		//avoid division by zero NaN
+		if (sum_of_all_credit_taken == 0)
+		{
+			return 0;
+		}
+		else
+		{
+			return (sum_of_grade_point/sum_of_all_credit_taken);
 		}
 		
 		

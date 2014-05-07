@@ -191,7 +191,7 @@ public class add_course_record extends Activity {
 	public void DisplayToast(String str)  
 	{  
 	   Toast toast=Toast.makeText(this, str, Toast.LENGTH_LONG);  
-	   toast.setGravity(Gravity.TOP,0,220);  
+	   //toast.setGravity(Gravity.TOP,0,220);  
 	   toast.show();  
 	 }  
 	

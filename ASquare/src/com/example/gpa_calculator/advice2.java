@@ -49,10 +49,11 @@ public class advice2 extends Activity {
 				Bundle params = getIntent().getExtras();	   	
 				int year = params.getInt ("year");
 				int sem = params.getInt ("sem");
-		    	double targetTGA = params.getDouble ("targetTGA");
+				double no_of_credit_taken_current_sem = params.getDouble ("no_of_credit_taken_current_sem");
+		    	double targetCGA = params.getDouble ("targetCGA");
 		
 		    	//Content to change
-		    	textViewGPAadvice2_3.setText(MainActivity.student1.adviceMinGradePoint(year-1, sem-1, targetTGA));
+		    	textViewGPAadvice2_3.setText(MainActivity.student1.adviceMinGradePointRequiredForCGA(year-1, sem-1, no_of_credit_taken_current_sem, targetCGA));
 		    }
 		};
 		

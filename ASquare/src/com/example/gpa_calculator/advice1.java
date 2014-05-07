@@ -39,6 +39,7 @@ public class advice1 extends Activity {
      	final RadioButton radioButtonGPAadvice1_9 = (RadioButton)findViewById(R.id.radioButtonGPAadvice1_9);
      	//Your Target TGA
      	final EditText editTextGPAadvice1_1 = (EditText)findViewById(R.id.editTextGPAadvice1_1);
+     	final EditText editTextGPAadvice1_2 = (EditText)findViewById(R.id.editTextGPAadvice1_2);
 		//ref Advanced_activity
 	
      	radioButtonGPAadvice1_1.setChecked(true);
@@ -101,15 +102,18 @@ public class advice1 extends Activity {
 				
 				Intent intent = new Intent();
 				
-				String str_targetTGA = editTextGPAadvice1_1.getText().toString();
-
-				double targetTGA = Double.parseDouble(str_targetTGA);
+				
+				String str_no_of_credit_taken_current_sem = editTextGPAadvice1_2.getText().toString();
+				double no_of_credit_taken_current_sem = Double.parseDouble(str_no_of_credit_taken_current_sem);
+				String str_targetCGA = editTextGPAadvice1_1.getText().toString();
+				double targetCGA = Double.parseDouble(str_targetCGA);
 				
 				//transfer info to advice2.java
 	         	//The minus 1 operation did in advice2 when calling function to calculate
 				intent.putExtra ("year", year);
 	         	intent.putExtra ("sem", sem);
-	         	intent.putExtra ("targetTGA", targetTGA);
+	         	intent.putExtra ("no_of_credit_taken_current_sem", no_of_credit_taken_current_sem);
+	         	intent.putExtra ("targetCGA", targetCGA);
 	         	
 						
 				
@@ -154,7 +158,7 @@ public class advice1 extends Activity {
 	public void DisplayToast(String str)  
 	{  
 	   Toast toast=Toast.makeText(this, str, Toast.LENGTH_LONG);  
-	   toast.setGravity(Gravity.TOP,0,220);  
+	   //toast.setGravity(Gravity.TOP,0,220);  
 	   toast.show();  
 	}  
 	
@@ -168,8 +172,9 @@ public class advice1 extends Activity {
 	RadioButton radioButtonGPAadvice1_6;
 	RadioButton radioButtonGPAadvice1_7;
 	RadioButton radioButtonGPAadvice1_8;
-	 RadioButton radioButtonGPAadvice1_9;
- 	 EditText editTextGPAadvice1_1;
+	RadioButton radioButtonGPAadvice1_9;
+ 	EditText editTextGPAadvice1_1;
+ 	EditText editTextGPAadvice1_2;
 
 
 
