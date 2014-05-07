@@ -148,6 +148,7 @@ public class advice1 extends Activity {
 	             	radioButtonGPAadvice1_1.setChecked(true);
 	             	radioButtonGPAadvice1_6.setChecked(true);
 	        	 	editTextGPAadvice1_1.setText("");
+	        	 	editTextGPAadvice1_2.setText("");
 		        	DisplayToast("Cleared");
 	        	 
 	     	}

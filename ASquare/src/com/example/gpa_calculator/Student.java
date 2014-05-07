@@ -322,7 +322,7 @@ public class Student extends Activity {
 		double minTargetGradePointforCGA = (targetCGA*total_credit_taken)-(currentCGA*total_credit_taken_without_current_sem);
 		
 		//currentCGA is poorer, continue in the this function to give advices
-		return "Your current CGA is lower than your target CGA! \nImprovement is needed! \n " +
+		return "Your current CGA is lower than your target CGA! \nImprovement is needed! \n" +
 				"In order to achieve the target CGA " + targetCGA + " in current semester, Year " + (currentYear+1) + " " + SemIntToWords(currentSem) + " Semester, \nYou need to raise Minimum Grade Point " + minTargetGradePointforCGA + " or above!";
 	
 
