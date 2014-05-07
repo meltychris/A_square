@@ -1,27 +1,27 @@
-[EMMA v2.0.5312 report, generated Thu May 08 01:32:24 CST 2014]
+[EMMA v2.0.5312 report, generated Thu May 08 04:53:41 CST 2014]
 -------------------------------------------------------------------------------
 OVERALL COVERAGE SUMMARY:
 
 [class, %]	[method, %]	[block, %]	[line, %]	[name]
-100% (114/114)	91%  (344/376)	91%  (10628/11646)	91%  (2044.8/2254)	all classes
+100% (114/114)	90%  (341/377)	90%  (10538/11740)	89%  (2012.5/2268)	all classes
 
 OVERALL STATS SUMMARY:
 
 total packages:	9
 total classes:	114
-total methods:	376
+total methods:	377
 total executable files:	40
-total executable lines:	2254
+total executable lines:	2268
 
 COVERAGE BREAKDOWN BY PACKAGE:
 
 [class, %]	[method, %]	[block, %]	[line, %]	[name]
-100% (7/7)	80%  (20/25)	79%  (664/839)!	81%  (128/158)	com.example.schedule
-100% (6/6)	87%  (26/30)	87%  (601/690)	86%  (139/162)	com.example.login
-100% (24/24)	93%  (67/72)	88%  (2170/2474)	90%  (414.6/463)	com.example.gpa_calculator
+100% (7/7)	80%  (20/25)	80%  (668/839)!	82%  (129/158)	com.example.schedule
+100% (24/24)	87%  (65/75)	85%  (1559/1839)	83%  (320.2/384)	com.example.chatroom
+100% (8/8)	89%  (34/38)	86%  (787/912)	84%  (173/207)	com.example.exam_count_down
+100% (6/6)	87%  (26/30)	87%  (593/682)	86%  (137/160)	com.example.login
+100% (24/24)	93%  (68/73)	88%  (2259/2576)	89%  (424.6/479)	com.example.gpa_calculator
 100% (12/12)	88%  (21/24)	88%  (267/303)	85%  (52/61)	com.example.advising
-100% (24/24)	89%  (67/75)	91%  (1679/1839)	90%  (345.4/384)	com.example.chatroom
-100% (8/8)	95%  (36/38)	92%  (842/912)	91%  (189/207)	com.example.exam_count_down
 100% (24/24)	95%  (86/91)	96%  (3916/4100)	94%  (668.9/711)	com.example.study_path
 100% (8/8)	100% (19/19)	100% (455/455)	100% (97/97)	com.example.asquare
 100% (1/1)	100% (2/2)	100% (34/34)	100% (11/11)	com.example.manual
