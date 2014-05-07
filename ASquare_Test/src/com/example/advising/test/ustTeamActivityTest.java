@@ -1,7 +1,6 @@
 package com.example.advising.test;
 
 import com.example.advising.otherActivity2;
-import com.example.advising.ustTeamActivity;
 import com.example.asquare.R;
 
 import android.app.Instrumentation;
@@ -15,21 +14,21 @@ import android.view.KeyEvent;
 import android.widget.Button;
 
 
-public class  otherActivity2Test  extends	ActivityInstrumentationTestCase2<ustTeamActivity> {
+public class  ustTeamActivityTest  extends	ActivityInstrumentationTestCase2<otherActivity2> {
 
 	// 2.Change MainActivity
-	private  ustTeamActivity mActivity;
+	private  otherActivity2 mActivity;
 
 	// 3.Change MainActivity
-	public  otherActivity2Test() {
-		super( ustTeamActivity.class);
+	public  ustTeamActivityTest() {
+		super( otherActivity2.class);
 	}
 
 	@Override
 	protected void setUp() throws Exception {
 		super.setUp();
 		mActivity = getActivity();
-		button1 = (Button) mActivity.findViewById(R.id.button1);
+		button3 = (Button) mActivity.findViewById(R.id.button3);
 
 	}
 
@@ -88,6 +87,6 @@ instr.addMonitor(callFilter, null, true);
 
 	
 	
-	Button button1;
+	Button button3;
 
 }

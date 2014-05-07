@@ -114,7 +114,7 @@ public class MainActivity extends Activity {
 	
 	private void initAnimations() {
 		int startOffset = 500, counter = 0;
-		int duration = 750;
+		int duration = 350;
 		// TODO Auto-generated method stub
 		Animation butAni1 = AnimationUtils.loadAnimation(this, android.R.anim.slide_in_left);
 		button1.setAnimation(butAni1);
